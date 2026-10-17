@@ -336,6 +336,10 @@ On the Research page, the **Robotics** cards (VLA Models, World Models, Agentic 
 
 연구 페이지의 **로보틱스** 카드(VLA 모델, 월드 모델, 에이전틱 로보틱스, 체화 지능, 휴머노이드 로봇 지능)는 `_data/domains.yml` 피지컬 슈퍼 인텔리전스의 하위 탭입니다. 설명(`desc`), 이름, 키워드는 거기서 고칩니다. 같은 다섯 항목이 홈 화면 상단 버튼으로도 나타납니다.
 
+Below the robotics cards is a **Live demo** of a Franka Panda arm in MuJoCo. It is embedded from `https://s-elim.github.io/learn/mujoco/embed.html?lab=frankavla` and only loads when a visitor clicks *Launch live demo*. To show a different lab, change `lab=` in `demo_url` in `research.html` (any lab name registered in that course works) and replace the preview image `assets/img/research/franka-libero-demo.webp`.
+
+로보틱스 카드 아래에는 MuJoCo로 구동되는 Franka Panda 로봇팔 **라이브 데모**가 있습니다. `https://s-elim.github.io/learn/mujoco/embed.html?lab=frankavla`에서 가져오며, 방문자가 *라이브 데모 실행*을 누를 때만 불러옵니다. 다른 실습을 보여 주려면 `research.html`의 `demo_url`에서 `lab=` 값을 바꾸고 (그 강좌에 등록된 실습 이름이면 됩니다) 미리보기 이미지 `assets/img/research/franka-libero-demo.webp`를 교체합니다.
+
 The **themes** further down the Research page come from `_data/themes.yml`. Members are listed under a theme when their `interests` match its keywords. To keep someone out of a theme, add their exact name to that theme's `exclude_members: [...]` list.
 
 연구 페이지 아래쪽 **연구 주제**는 `_data/themes.yml`에서 나옵니다. 구성원의 `interests`가 주제의 키워드와 맞으면 그 주제에 표시됩니다. 특정 구성원을 주제에서 빼려면 그 주제의 `exclude_members: [...]` 목록에 정확한 이름을 추가합니다.

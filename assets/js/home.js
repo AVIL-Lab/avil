@@ -116,6 +116,27 @@
     });
   }
 
+  // Live demo: load the iframe only when asked (MuJoCo WebAssembly is ~10 MB),
+  // passing the current theme so the embedded lab matches the page.
+  function initDemo() {
+    document.querySelectorAll("[data-demo]").forEach(function (stage) {
+      var btn = stage.querySelector("[data-demo-launch]");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var dark = document.documentElement.getAttribute("data-theme") === "dark" ||
+          (!document.documentElement.getAttribute("data-theme") && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        var f = document.createElement("iframe");
+        f.className = "demo__frame";
+        f.src = stage.getAttribute("data-src") + "&theme=" + (dark ? "dark" : "light");
+        f.title = "Live MuJoCo demo: Franka Panda VLA-style rollout";
+        f.setAttribute("allow", "fullscreen");
+        stage.appendChild(f);
+        stage.classList.add("is-live");
+        f.focus();
+      });
+    });
+  }
+
   // "2024-03" -> Date at the start (or end) of that month.
   function monthDate(s, end) {
     var p = String(s || "").split("-");
@@ -144,7 +165,7 @@
 
   function ready(fn) { if (document.readyState !== "loading") fn(); else document.addEventListener("DOMContentLoaded", fn); }
   ready(function () {
-    [initBandView, initCounters, initExplorer, initTabGroups, initProgress].forEach(function (fn) {
+    [initBandView, initCounters, initExplorer, initTabGroups, initProgress, initDemo].forEach(function (fn) {
       try { fn(); } catch (e) { if (window.console) console.error(e); }
     });
   });

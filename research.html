@@ -54,27 +54,39 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
         <p class="section__sub">{% include t.html en=psi.summary.en ko=psi.summary.ko %}</p>
       </div>
     </div>
-    <div class="robo-grid">
+    <div class="robo-row">
       {%- for s in psi.sensors %}
       {%- assign rp = none -%}
       {%- for x in psi_pubs -%}{%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign rp = rp | push: x -%}{%- endif -%}{%- endfor -%}
-      {%- assign rj = none -%}
-      {%- for pr in site.data.projects -%}{%- if pr.status == "current" -%}{%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign rj = rj | push: pr -%}{%- endif -%}{%- endif -%}{%- endfor -%}
-      <article class="robo card reveal" id="robotics-{{ s.key }}">
-        <span class="robo__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ s.icon }}"/></svg></span>
-        <h3 class="robo__title">{% include t.html en=s.en ko=s.ko %}</h3>
-        <p class="robo__desc">{% include t.html en=s.desc.en ko=s.desc.ko %}</p>
-        {%- if rj.size > 0 %}
-        <ul class="robo__list robo__list--proj">{% for pr in rj limit: 2 %}<li><span class="tag tag--rlrc">current</span> {% include t.html en=pr.title ko=pr.title_ko %}</li>{% endfor %}</ul>
-        {%- endif %}
-        {%- if rp.size > 0 %}
-        <ul class="robo__list">{% for x in rp limit: 2 %}<li><span class="mono muted">{{ x.year | default: "n.d." }}</span> {{ x.title | default: x.text | truncate: 100 }}</li>{% endfor %}</ul>
-        <a class="link-arrow robo__more" href="{{ '/publications/' | relative_url }}?topic=psi-{{ s.key }}">{{ rp.size }} {% include t.html en="papers" ko="편의 논문" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        {%- else %}
-        <p class="robo__more muted">{% include t.html en="A new direction for the lab; papers will appear here." ko="새로운 연구 방향으로, 논문이 곧 추가됩니다." %}</p>
-        {%- endif %}
-      </article>
+      <a class="robo-tile" id="robotics-{{ s.key }}" href="{{ '/publications/' | relative_url }}?topic=psi-{{ s.key }}" title="{{ s.desc.en | strip | escape }}">
+        <span class="robo-tile__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ s.icon }}"/></svg></span>
+        <span class="robo-tile__title">{% include t.html en=s.en ko=s.ko %}</span>
+        <span class="robo-tile__desc">{% include t.html en=s.desc.en ko=s.desc.ko %}</span>
+        <span class="robo-tile__n mono">{{ rp.size }} {% include t.html en="papers" ko="편" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
       {%- endfor %}
+    </div>
+
+    {%- assign demo_url = "https://s-elim.github.io/learn/mujoco/embed.html?lab=frankavla&height=380" %}
+    <div class="demo card reveal" id="live-demo">
+      <div class="demo__stage" data-demo data-src="{{ demo_url }}">
+        <img class="demo__poster" src="{{ '/assets/img/research/franka-libero-demo.webp' | relative_url }}" alt="7-DOF Franka Panda in MuJoCo after placing a red cube in a tray" width="1000" height="475" loading="lazy">
+        <button type="button" class="demo__launch" data-demo-launch>
+          <svg class="i" aria-hidden="true"><use href="#i-play"/></svg>{% include t.html en="Launch live demo" ko="라이브 데모 실행" %}
+        </button>
+        <span class="demo__badge"><span class="demo__dot"></span>LIVE</span>
+      </div>
+      <div class="demo__text">
+        <p class="eyebrow">{% include t.html en="Live demo" ko="라이브 데모" %}</p>
+        <h3>{% include t.html en="VLA-style rollout on a 7-DOF Franka Panda" ko="7자유도 Franka Panda의 VLA 방식 실행" %}</h3>
+        <p>{% include t.html en="A Franka Panda arm carries out LIBERO-style language instructions in MuJoCo 3.14.0, running entirely in your browser. The task is executed in action chunks through inverse kinematics and impedance control, so you can see how the chunk horizon and perception noise change the motion." ko="Franka Panda 로봇팔이 LIBERO 방식의 언어 지시를 MuJoCo 3.14.0에서 수행하며, 모든 계산은 브라우저 안에서 이루어집니다. 작업은 역기구학과 임피던스 제어를 거쳐 액션 청크 단위로 실행되므로 청크 길이와 인지 노이즈가 움직임을 어떻게 바꾸는지 볼 수 있습니다." %}</p>
+        <ul class="demo__steps">
+          <li>{% include t.html en="Choose a LIBERO suite and an instruction" ko="LIBERO 과제와 지시문을 고릅니다" %}</li>
+          <li>{% include t.html en="Press Run VLA Rollout and watch the arm" ko="Run VLA Rollout을 눌러 로봇팔을 봅니다" %}</li>
+          <li>{% include t.html en="Drag to orbit, Ctrl + drag to push an object" ko="드래그로 시점 회전, Ctrl + 드래그로 물체 밀기" %}</li>
+        </ul>
+        <p class="demo__note muted">{% include t.html en="Loads about 10 MB of MuJoCo WebAssembly on first launch. From the MuJoCo course on" ko="처음 실행할 때 약 10MB의 MuJoCo WebAssembly를 내려받습니다. 출처:" %} <a href="https://s-elim.github.io/learn/mujoco/" target="_blank" rel="noopener">s-elim.github.io</a>.</p>
+      </div>
     </div>
   </div>
 </section>
