@@ -93,6 +93,7 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
       {%- for th in site.data.themes %}
       {%- assign mem = "" | split: "" -%}
       {%- for m in site.data.members -%}
+        {%- if th.exclude_members contains m.name -%}{%- continue -%}{%- endif -%}
         {%- capture _t -%}{{ m.interests | join: " " }}{%- endcapture -%}
         {%- include match.html text=_t mod=th -%}
         {%- if hit -%}{%- assign mem = mem | push: m -%}{%- endif -%}
