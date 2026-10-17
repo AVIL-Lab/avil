@@ -154,12 +154,12 @@
 /* ---- Domain explorer: domains > sensors > papers, projects, equipment, members ---- */
 .domx { display: grid; gap: 0; }
 .domx__domains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.domx__domain { --d: var(--brand); position: relative; display: grid; grid-template-columns: 52px 1fr; grid-template-rows: auto auto auto; column-gap: 14px; row-gap: 2px; align-items: center; padding: 18px; text-align: left; border: 1px solid var(--line); border-radius: var(--radius) var(--radius) var(--radius) var(--radius); background: var(--surface); color: var(--text); overflow: hidden; transition: transform .18s, box-shadow .18s, border-color .18s; }
+.domx__domain { --d: var(--brand); position: relative; display: flex; align-items: center; gap: 14px; padding: 16px 18px; text-align: left; border: 1px solid var(--line); border-radius: var(--radius) var(--radius) var(--radius) var(--radius); background: var(--surface); color: var(--text); overflow: hidden; transition: transform .18s, box-shadow .18s, border-color .18s; }
 .domx__domain::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--d); opacity: .35; transition: opacity .18s; }
 .domx__domain:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .domx__domain[aria-selected="true"] { border-color: var(--d); box-shadow: 0 0 0 1px var(--d), var(--shadow); background: linear-gradient(160deg, var(--surface) 55%, color-mix(in srgb, var(--d) 12%, var(--surface))); }
 .domx__domain[aria-selected="true"]::before { opacity: 1; }
-.domx__icon { grid-row: 1 / span 2; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: color-mix(in srgb, var(--d) 14%, var(--surface)); color: var(--d); }
+.domx__icon { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: color-mix(in srgb, var(--d) 14%, var(--surface)); color: var(--d); }
 .domx__icon .i { width: 26px; height: 26px; }
 .domx__name { font-size: 1.15rem; font-weight: 800; color: var(--ink); line-height: 1.2; }
 .domx__tagline { font-size: .84rem; color: var(--muted); line-height: 1.35; }

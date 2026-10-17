@@ -36,8 +36,6 @@
   <button type="button" role="tab" class="domx__domain" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
     <span class="domx__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ d.icon }}"/></svg></span>
     <span class="domx__name">{% include t.html en=d.en ko=d.ko %}</span>
-    <span class="domx__tagline">{% include t.html en=d.tagline.en ko=d.tagline.ko %}</span>
-    <span class="domx__counts"><span><b class="mono">{{ dmem.size }}</b> {% include t.html en="members" ko="구성원" %}</span><span><b class="mono">{{ dpubs.size }}</b> {% include t.html en="papers" ko="논문" %}</span><span><b class="mono">{{ dproj.size }}</b> {% include t.html en="projects" ko="과제" %}</span></span>
   </button>
   {%- endcapture -%}
   {%- assign tabs_html = tabs_html | append: tab -%}

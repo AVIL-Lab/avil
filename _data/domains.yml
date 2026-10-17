@@ -20,9 +20,6 @@
   ko: 국방 AI
   icon: shield
   color: "#2f6fdf"
-  tagline:
-    en: Intelligent surveillance and automatic target detection and recognition
-    ko: 지능형 감시 및 자동표적탐지/인식
   summary:
     en: >-
       Defense applications of the lab's computer vision and sensor fusion: intelligent
@@ -75,9 +72,6 @@
   ko: 의료 AI
   icon: activity
   color: "#e0365f"
-  tagline:
-    en: Contactless sensing of vital signs and biometric information
-    ko: 생체정보의 비접촉 센싱
   summary:
     en: >-
       Healthcare applications led by the RLRC Multimodal Untact Sensing Leading Research
@@ -128,9 +122,6 @@
   ko: 피지컬 슈퍼 인텔리전스
   icon: bot
   color: "#8b3fe0"
-  tagline:
-    en: Embodied AI that perceives, reasons and acts in 3D
-    ko: 3D 환경에서 인지, 추론, 행동하는 체화 AI
   summary:
     en: >-
       Physical and embodied AI: vision-language-action models, world models, 3D and 6D
