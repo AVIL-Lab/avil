@@ -1,0 +1,97 @@
+# Lab-wide text and contact details, taken from the lab's Wix site (2026-10-17).
+# Every bilingual block has `en` and `ko`; the language switch in the header
+# chooses which one is shown. Korean is the original Wix wording.
+
+name: Advanced Visual Intelligence Lab
+name_ko: 지능형시각정보처리연구실
+short: AVIL
+tagline: Deep Learning & Sensing
+department: Department of Electronic Engineering
+department_ko: 영남대학교 전자공학과
+university: Yeungnam University
+university_url: https://www.yu.ac.kr
+
+about:
+  en: >-
+    The Advanced Visual Intelligence Lab (AVIL) is a research lab in the Department of
+    Electronic Engineering at Yeungnam University working on computer vision and deep
+    learning. Our research covers computer vision, deep learning and sensor fusion (EO,
+    IR, SAR, hyperspectral, polarization and more), applied to intelligent surveillance,
+    AR/VR, automatic target detection and recognition, and healthcare in the defense and
+    medical domains.
+  ko: >-
+    지능형시각정보처리연구실(AVIL)은 컴퓨터비전 및 딥러닝 분야를 연구하는 영남대학교 전자공학과
+    연구실이다. 연구 분야는 컴퓨터 비전 및 딥러닝과 센서 융합(EO, IR, SAR, 초분광, 편광 등)이며
+    이는 국방 및 의료 분야에서 지능형 감시, AR/VR, 자동표적탐지/인식, 헬스케어 등에 응용하고 있다.
+
+purpose:
+  - Our purpose is developing Human-like visual intelligence capability with computer vision.
+  - It aims to develop Scene Interpretation. Especially, agentic AI-based remote object perception using multi-modal physical sensing (EO/IR/HSI/Radar/LiDAR).
+
+# Research areas named in the Wix "About" text.
+areas:
+  - { key: vision, en: Computer Vision & Deep Learning, ko: 컴퓨터 비전 및 딥러닝 }
+  - { key: fusion, en: "Sensor Fusion: EO, IR, SAR, Hyperspectral, Polarization", ko: "센서 융합: EO, IR, SAR, 초분광, 편광" }
+applications:
+  - { en: Intelligent Surveillance, ko: 지능형 감시 }
+  - { en: AR/VR, ko: AR/VR }
+  - { en: Automatic Target Detection & Recognition, ko: 자동표적탐지/인식 }
+  - { en: Healthcare, ko: 헬스케어 }
+modalities: [EO, IR, HSI, SAR, Polarization, Radar, LiDAR]
+
+rlrc:
+  headline:
+    en: Selected to lead the RLRC (Regional Leading Research Center)
+    ko: RLRC(지역혁신 선도연구센터) 총괄 책임 선정
+  summary:
+    en: >-
+      Research on intelligent multimodal untact sensor platforms that fuse multiphysics
+      properties (electronic, radio-wave and optical) with artificial intelligence.
+    ko: 전자, 전파, 광파 등 다중물리 특성과 인공지능이 융합된 지능형 멀티모달 언택트 센서 플랫폼 연구를 진행
+  program:
+    en: >-
+      The Regional Leading Research Center (RLRC) program builds and supports leading
+      research centers specialized in regional innovation fields, so that basic research
+      drives sustainable, self-reliant innovation and growth in the region.
+    ko: >-
+      지역혁신 선도연구센터(RLRC, Regional Leading Research Center) 사업은 기초연구를 기반으로 지역의
+      지속가능 자생적 혁신성장 견인을 위해 지역혁신분야에 특화된 선도연구센터를 구축, 지원하는 사업
+  center:
+    en: >-
+      Led by Prof. Sungho Kim, Yeungnam University established the "Multimodal Untact
+      Sensing Leading Research Center for Lifelogs".
+    ko: 영남대 김성호 교수님을 필두로 '라이프로그용 멀티모달 언택트센싱 선도연구센터'를 설립
+  groups:
+    en: >-
+      The engineering group develops core hardware and software for sensing biometric
+      signals without contact. The physician-scientist group installs the sensors in
+      medical institutions and pursues medical device certification through general and
+      expert clinical studies.
+    ko: >-
+      공학 전문가 그룹은 생체정보를 언택트로 센싱하는 하드웨어와 소프트웨어 원천 기술을 개발,
+      의사과학자 그룹은 센서를 의료기관 등에 설치하여 일반 및 전문가용 임상연구를 통해 의료기기
+      인증 획득을 추진
+  source: https://v.daum.net/v/20230704115101843
+  official: https://www.yu.ac.kr/rlrc/index.do
+
+join:
+  en: >-
+    We work mainly on physical image sensing across many spectral bands and on AI
+    programming. Any motivated student interested in these areas is welcome. Students
+    interested in the lab, please contact us.
+  ko: >-
+    다양한 스펙트럼 영역의 물리 영상 센싱 및 인공지능 프로그래밍을 주로 하며, 이러한 분야에 관심
+    있고 도전적인 학생은 누구나 환영합니다. 연구실에 관심 있는 학생은 아래로 연락 바랍니다.
+
+contact:
+  email: sunghokim@yu.ac.kr
+  phone: 053-810-4379
+  phone_intl: "+82-53-810-4379"
+  address_en: Room 305, Electrical Engineering Building (E-22), 280 Daehak-ro, Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea
+  address_ko: 경상북도 경산시 대학로 280 E-22 전기관 305호
+  map_query: 경상북도 경산시 대학로 280 영남대학교 전기관
+
+partners:
+  - { name: Hanwha Systems, logo: hanwha-systems.webp, w: 360, h: 360 }
+  - { name: LIG Nex1, logo: lig-nex1.webp, w: 360, h: 105 }
+  - { name: Agency for Defense Development, logo: add.webp, w: 360, h: 215 }

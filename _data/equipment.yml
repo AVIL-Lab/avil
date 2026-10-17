@@ -1,0 +1,136 @@
+# Lab equipment from the Wix "Projects" page (보유 장비), 2026-10-17.
+#   category thermal | spectral | visible | aerial | platform | compute
+- name: Deep Learning Server
+  spec: Titan RTX x4, RTX 3090 x4, RTX 4090 x2 등
+  spec_ko: Titan RTX x4, RTX 3090 x4, RTX 4090 x2 등
+  use: Deep learning training
+  use_ko: 딥러닝 학습용
+  category: compute
+- name: IR-CCD imaging drone
+  name_ko: IR-CCD 촬영 드론
+  spec: M-200 + XT
+  spec_ko: M-200 + XT
+  use: IR-CCD aerial image acquisition
+  use_ko: IR-CCD 항공 영상 획득
+  category: aerial
+- name: Black body
+  spec: 80×60 Micro-Bolometer Array, – 20 ~ 100°C
+  spec_ko: 80×60 Micro-Bolometer Array, – 20 ~ 100°C
+  use: Radiant energy analysis
+  use_ko: 방사 에너지 분석용
+  category: thermal
+- name: LWIR camera
+  spec: 'Tau320: LWIR 320x240, uncooled'
+  spec_ko: 'Tau320: LWIR 320x240, 비냉각식'
+  use: Thermal infrared imaging, surveillance systems
+  use_ko: 적외선 열상 획득, 감시시스템
+  category: thermal
+- name: Hyperspectral camera
+  spec: 'SPECIM VNIR: 400-1000 nm, 2 nm spectral resolution'
+  spec_ko: 'SPECIM VNIR: 400-1000nm, 2nm 분광해상도'
+  use: Material analysis
+  use_ko: 물체 재질 분석
+  category: spectral
+- name: Stereo camera
+  spec: Bumblebee
+  spec_ko: Bumblebee
+  use: Stereo image acquisition
+  use_ko: 스테레오 영상 획득
+  category: visible
+- name: DSLR camera
+  spec: 'Canon: 1DX, 5D Mark II, 500D; Sony: NEX-7'
+  spec_ko: 'Cannon: 1DX, 5D Mark II, 500D, SONY: NEX-7'
+  use: Experimental image acquisition and analysis
+  use_ko: 실험영상 획득 및 분석
+  category: visible
+- name: RGB-D camera
+  spec: Kinect
+  spec_ko: Kinect
+  use: RGB-D object recognition
+  use_ko: RGB-D 기반 물체 인식용
+  category: visible
+- name: Mobile robot
+  spec: CRX10 (CNRobot)
+  spec_ko: CRX10 (씨엔로봇)
+  use: Image acquisition from a mobile robot
+  use_ko: 이동로봇 기반 영상획득
+  category: platform
+- name: RC helicopter
+  spec: Hexcopter DJI F550,T-REX 600, Beam 450
+  spec_ko: Hexcopter DJI F550,T-REX 600, Beam 450
+  use: Aerial imaging, simulated targets
+  use_ko: 항공영상촬영, 모의표적
+  category: aerial
+- name: Turn table
+  name_ko: Turn Table
+  spec: VRTB 400 C (0.002° control)
+  spec_ko: VRTB 400 C (2/1000도 제어)
+  use: Multi-view object imaging
+  use_ko: 다중뷰 물체 촬영
+  category: platform
+- name: RC car
+  spec: Traxxas E-MAXX (75 km/h)
+  spec_ko: Traxxas E-MAXX (시속 75km)
+  use: Simulated ground target
+  use_ko: 지상모의표적
+  category: platform
+- name: High-performance laptop
+  name_ko: 고성능 노트북
+  spec: HP Elitebook 8440p
+  spec_ko: HP Elitebook 8440p
+  use: Image acquisition and analysis
+  use_ko: 영상획득 및 분석용
+  category: compute
+- name: Optical table
+  spec: Optical table (1800 mm x 900 mm)
+  spec_ko: 광학정반(1800mmX900mm)
+  use: Optical experiments
+  use_ko: 광학실험용 테이블
+  category: platform
+- name: Camcorder
+  name_ko: 캠코더
+  spec: Sony NEX VG-20
+  spec_ko: 소니 NEX VG-20
+  use: Video acquisition
+  use_ko: 동영상 획득용
+  category: visible
+- name: DSLR lenses
+  name_ko: DSLR용 렌즈류
+  spec: 'Canon: EF 16-24mm F2.8, 50mm F1.2, 24-70mm F2.8, 70-200mm F2.8 / Sony: SEL16F2.8, SEL30F3.5, SEL18-55F3.5-5.6, SEL18-200F3.5-6.3'
+  spec_ko: '캐논: EF 16-24mmF2.8, 50mm F1.2, 24-70mmF2.8, 70-200mmF2.8 / 소니: SEL16F2.8, SEL30F3.5, SEL18-55F3.5-5.6, SEL18-200F3.5-6.3'
+  use: Interchangeable lenses
+  use_ko: 교환용 렌즈
+  category: visible
+- name: FLIR T620 infrared camera
+  name_ko: FLIR T620 Infrared camera
+  spec: LWIR, 640x480, uncooled
+  spec_ko: LWIR, 640x480, 비냉각식
+  use: Thermal infrared imaging, surveillance systems
+  use_ko: 적외선 열상 획득, 감시시스템
+  category: thermal
+- name: Atlas 3.0 SDK
+  spec: MATLAB SDK for SEQ raw file interface
+  spec_ko: MATLAB SDK for SEQ raw file interface
+  use: Temperature image data input/output
+  use_ko: 온도 영상 데이트 입출력용
+  category: thermal
+- name: OKTAL-SE IR simulator
+  name_ko: OKTAL-SE IR 시뮬레이터
+  spec: Infrared thermal image synthesis software
+  spec_ko: 적외선 열영상 합성SW
+  use: Database generation for infrared target detection and identification
+  use_ko: 적외선 표적 탐지/식별용 DB 생성용
+  category: thermal
+- name: DJI M200 drone + XT2
+  name_ko: DJI M200 드론 + XT2
+  spec: Industrial drone, 5 km control range
+  spec_ko: 산업용 드론, 5km 제어
+  use: EO + IR aerial imaging
+  use_ko: EO + IR 항공 촬영
+  category: aerial
+- name: FLIT T560
+  spec: LWIR, 640x480, uncooled
+  spec_ko: LWIR, 640x480, 비냉각식
+  use: Thermal infrared imaging, long-range target detection
+  use_ko: 적외선 열상획득, 원거리 표적 탐지용
+  category: thermal

@@ -1,0 +1,43 @@
+{%- assign lab = site.data.lab -%}
+<footer class="site-footer">
+  <div class="spectrum-line" aria-hidden="true"></div>
+  <div class="wrap site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 40 40"><use href="#brand-mark"/></svg></span>
+        <span class="brand__text"><span class="brand__short">{{ lab.short }}</span><span class="brand__long">{% include t.html en=lab.name ko=lab.name_ko %}</span></span>
+      </a>
+      <p class="site-footer__tag">{{ lab.tagline }}</p>
+      <a class="link-arrow" href="{{ '/contact/' | relative_url }}">{% include t.html en="Join our lab" ko="연구실 지원" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div>
+      <h2 class="site-footer__h">{% include t.html en="Affiliation" ko="소속" %}</h2>
+      <p>{% include t.html en=lab.department ko=lab.department_ko %}</p>
+      <p><a href="{{ lab.university_url }}" target="_blank" rel="noopener">{{ lab.university }}</a></p>
+    </div>
+    <div>
+      <h2 class="site-footer__h">{% include t.html en="Contact" ko="연락처" %}</h2>
+      <p><a href="mailto:{{ lab.contact.email }}">{{ lab.contact.email }}</a></p>
+      <p><a href="tel:{{ lab.contact.phone_intl }}">{{ lab.contact.phone }}</a></p>
+    </div>
+    <div>
+      <h2 class="site-footer__h">{% include t.html en="Address" ko="오시는 길" %}</h2>
+      <p>{% include t.html en=lab.contact.address_en ko=lab.contact.address_ko %}</p>
+    </div>
+  </div>
+  <div class="wrap site-footer__partners">
+    <h2 class="site-footer__h">{% include t.html en="Partners" ko="협력 기관" %}</h2>
+    {%- for p in lab.partners %}
+    <img src="{{ '/assets/img/partners/' | append: p.logo | relative_url }}" alt="{{ p.name }}" width="{{ p.w }}" height="{{ p.h }}">
+    {%- endfor %}
+  </div>
+  <div class="wrap site-footer__base">
+    <span>&copy; {{ site.time | date: "%Y" }} {{ lab.name }}, {{ lab.university }}.</span>
+    <span class="site-footer__links">
+      <a href="{{ '/research/' | relative_url }}">{% include t.html en="Research" ko="연구" %}</a>
+      <a href="{{ '/publications/' | relative_url }}">{% include t.html en="Publications" ko="논문" %}</a>
+      <a href="{{ '/contact/' | relative_url }}">{% include t.html en="Contact" ko="연락처" %}</a>
+      <a href="#top">{% include t.html en="Back to top" ko="맨 위로" %}</a>
+    </span>
+  </div>
+</footer>

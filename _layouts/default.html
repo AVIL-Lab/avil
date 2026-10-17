@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.body_class | default: 'page' }}">
+  {% include icons.html %}
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+  <main id="main" tabindex="-1">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% include palette.html %}
+  <script>window.AVIL = { base: "{{ site.baseurl }}" };</script>
+  <script src="{{ '/assets/js/core.js' | relative_url }}" defer></script>
+  {%- for j in page.js %}
+  <script src="{{ '/assets/js/' | append: j | append: '.js' | relative_url }}" defer></script>
+  {%- endfor %}
+</body>
+</html>

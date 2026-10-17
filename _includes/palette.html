@@ -1,0 +1,13 @@
+<div class="palette" id="palette" hidden>
+  <div class="palette__backdrop js-close-palette"></div>
+  <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Search the site">
+    <label class="palette__field">
+      <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="palette-input" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search members, papers, projects, news, venues..." aria-controls="palette-results">
+      <kbd>Esc</kbd>
+    </label>
+    <ul class="palette__results" id="palette-results" role="listbox"></ul>
+    <p class="palette__hint"><kbd>&uarr;</kbd><kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open</p>
+  </div>
+</div>

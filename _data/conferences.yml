@@ -1,0 +1,949 @@
+# ==========================================================================
+#  AI Conference Deadlines - data source for the /deadlines/ tracker
+# ==========================================================================
+#
+#  Rendered by _pages/deadlines.html and driven by initDeadlineTracker() in
+#  assets/js/main.js. The home page hero reads the same list for its badge.
+#
+#  Fields
+#  ------
+#  name       Conference acronym shown on the card (e.g. CVPR).
+#  edition    Year label rendered next to the name.
+#  category   robotics | vision | aiml | hci  (drives the filter pills and colour)
+#  rank       CORE rank: "A*", "A", "B" ... omit for unranked venues.
+#  location   Host city / country as plain text. "TBA" when unannounced.
+#  flag       Country flag emoji. Omit when the host country is unknown.
+#  dates      When the conference itself runs, as free text.
+#  website    Call-for-papers or conference URL.
+#  note       Optional caveat shown on the card (e.g. dates not yet official).
+#  timeline   Ordered list of dated stages. At least one entry.
+#               label  Stage name (Paper Submission, Rebuttal Ends, ...).
+#               date   YYYY-MM-DD, or "tba" when the call is not out yet.
+#               time   Optional clock time "HH:MM" (defaults to 23:59).
+#               tz     Optional timezone, shown after the date. The countdown
+#                      reads date and time in this zone, so it ends at the same
+#                      instant for every viewer. Understood: AoE, UTC, GMT,
+#                      UTC+H or UTC-H[:MM], PST, PDT, PT, EST, EDT, ET, CET,
+#                      CEST, BST, JST, KST. Without tz, or with any other
+#                      label, the viewer's own clock is used.
+#
+#  The card counts down to the FIRST stage still in the future. Earlier stages
+#  render as done, later ones as upcoming. Adding an abstract, rebuttal or
+#  notification date is just another `timeline` entry - no code change needed.
+#
+#  Scope
+#  -----
+#  Every CORE A* and A ranked venue in AI, computer vision & graphics, HCI and
+#  the ML-adjacent data-mining / IR fields. CORE A*/A venues in systems,
+#  networking, security, software engineering, theory and database internals
+#  are deliberately left out - they are not what this page is for. Three
+#  CORE-unranked venues (CoRL, 3DV, Humanoids) are kept anyway because they
+#  are central to robot learning and 3D vision.
+#
+#  A venue whose current call has closed carries the NEXT edition with a
+#  `tba` stage and a note recording the cycle that just ended, so nothing here
+#  asserts a date that has not been published.
+#
+#  Verified 2026-10-01 against official conference sites. The ccf-deadlines
+#  dataset (github.com/ccfddl/ccf-deadlines) was used only to find candidates;
+#  no date here rests on it alone. Re-check before you submit.
+# ==========================================================================
+
+# ---- Robotics -------------------------------------------------------------
+
+- name: ICRA
+  edition: 2027
+  category: robotics
+  rank: "A*"
+  location: Seoul, South Korea
+  flag: "🇰🇷"
+  dates: May 24-28, 2027
+  website: https://2027.ieee-icra.org/
+  timeline:
+    - label: Paper Submission
+      date: 2026-09-15
+      time: "23:59"
+      tz: PST
+    - label: Supplementary Video Window 2
+      date: 2026-09-22
+      tz: PST
+    - label: Journal Paper Transfer
+      date: 2026-12-31
+    - label: Acceptance Notification
+      date: 2027-01-31
+    - label: Final Submission Opens
+      date: 2027-02-06
+    - label: Author Registration
+      date: 2027-03-05
+
+- name: HRI
+  edition: 2027
+  category: robotics
+  rank: "A*"
+  location: Santa Clara, CA, USA
+  flag: "🇺🇸"
+  dates: March 8-12, 2027
+  website: https://humanrobotinteraction.org/2027/
+  timeline:
+    - label: Abstract Deadline
+      date: 2026-09-11
+      tz: AoE
+    - label: Full Paper Submission
+      date: 2026-09-18
+      tz: AoE
+    - label: Reviews Released
+      date: 2026-10-28
+    - label: Rebuttals Due
+      date: 2026-11-03
+    - label: Decision Notification
+      date: 2026-11-30
+    - label: Camera Ready
+      date: 2026-12-18
+
+- name: IROS
+  edition: 2027
+  category: robotics
+  rank: "A"
+  location: Florence, Italy
+  flag: "🇮🇹"
+  dates: September 26 - October 1, 2027
+  website: https://2027.ieee-iros.org/
+  timeline:
+    - label: Paper Submission
+      date: 2027-03-01
+      time: "23:59"
+      tz: PT
+
+- name: CoRL
+  edition: 2027
+  category: robotics
+  location: TBA
+  website: https://www.corl.org/
+  note: CoRL 2026 closed 28 May 2026 and runs 9-12 Nov 2026 in Austin, TX. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: RSS
+  edition: 2027
+  category: robotics
+  rank: "A*"
+  location: Athens, Greece
+  flag: "🇬🇷"
+  dates: July 6-11, 2027
+  website: https://roboticsconference.org/information/cfp/
+  note: RSS 2027 reviews in two stages. A 6-page extended abstract comes first; only papers invited to Stage 2 submit a final paper.
+  timeline:
+    - label: Extended Abstract
+      date: 2026-12-04
+      tz: AoE
+    - label: Stage 1 Decision
+      date: 2027-02-05
+      tz: AoE
+    - label: Rebuttal Due
+      date: 2027-02-12
+      tz: AoE
+    - label: Stage 2 Decision
+      date: 2027-02-26
+      tz: AoE
+    - label: Final Paper
+      date: 2027-04-16
+      tz: AoE
+    - label: Supplementary Material
+      date: 2027-04-19
+      tz: AoE
+    - label: Acceptance Notification
+      date: 2027-04-30
+      tz: AoE
+    - label: Camera Ready
+      date: 2027-05-14
+      tz: AoE
+
+- name: Humanoids
+  edition: 2027
+  category: robotics
+  location: TBA
+  website: https://www.ieee-ras.org/conferences-workshops/fully-sponsored/humanoids
+  note: Humanoids 2026 closed 24 Jul 2026 and runs Dec 2026 in Santa Clara, CA. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+# ---- Vision, image processing & graphics ---------------------------------
+
+- name: IEEE VR
+  edition: 2028
+  category: vision
+  rank: "A*"
+  location: TBA
+  website: https://ieeevr.org/
+  note: IEEE VR 2027 closed 31 Aug 2026 and runs 27 Feb - 3 Mar 2027 in Melbourne. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: CVPR
+  edition: 2027
+  category: vision
+  rank: "A*"
+  location: Seattle, WA, USA
+  flag: "🇺🇸"
+  dates: June 20-25, 2027
+  website: https://cvpr.thecvf.com/Conferences/2027
+  timeline:
+    - label: Paper Registration
+      date: 2026-11-10
+      tz: AoE
+    - label: Paper Submission
+      date: 2026-11-16
+      tz: AoE
+    - label: Supplementary Material
+      date: 2026-11-23
+      tz: AoE
+    - label: Reviews Released
+      date: 2027-01-25
+    - label: Rebuttal Ends
+      date: 2027-02-01
+      tz: AoE
+    - label: Final Decisions
+      date: 2027-02-25
+
+- name: 3DV
+  edition: 2028
+  category: vision
+  location: TBA
+  website: https://3dvconf.github.io/
+  note: 3DV 2027 closed 28 Aug 2026 and runs 6-9 Apr 2027 in Thessaloniki. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ICCV
+  edition: 2027
+  category: vision
+  rank: "A*"
+  location: Hong Kong
+  flag: "🇭🇰"
+  dates: October 2-8, 2027
+  website: https://iccv.thecvf.com/
+  note: Call for papers not released. ICCV 2025 closed in early March, so expect a March 2027 deadline.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: MICCAI
+  edition: 2027
+  category: vision
+  rank: "A"
+  location: Auckland, New Zealand
+  flag: "🇳🇿"
+  dates: September 27 - October 1, 2027
+  website: https://conferences.miccai.org/2027/en/
+  note: MICCAI 2027 meets at the New Zealand International Convention Centre. Deadline not announced; MICCAI 2026 closed 26 Feb 2026.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: SIGGRAPH
+  edition: 2027
+  category: vision
+  rank: "A*"
+  location: TBA
+  dates: August 8-12, 2027
+  website: https://www.siggraph.org/
+  note: Technical Papers deadline listed as TBD. SIGGRAPH 2026 closed in January 2026.
+  timeline:
+    - label: Technical Papers
+      date: tba
+
+- name: SIGGRAPH Asia
+  edition: 2027
+  category: vision
+  rank: "A*"
+  location: Tokyo, Japan
+  flag: "🇯🇵"
+  dates: November 30 - December 3, 2027
+  website: https://asia.siggraph.org/2026/about-the-event/siggraph-asia-2027/
+  note: SIGGRAPH Asia 2027 meets at the Tokyo International Forum. The Technical Papers call is not out yet; SIGGRAPH Asia 2026 closed 12 May 2026.
+  timeline:
+    - label: Technical Papers
+      date: tba
+
+- name: ACM MM
+  edition: 2027
+  category: vision
+  rank: "A*"
+  location: Hong Kong
+  flag: "🇭🇰"
+  website: https://www.acmmm.org/
+  note: acmmm.org places ACM MM 2027 in Hong Kong; its dates and call are not out yet. ACM MM 2026 closed 1 Apr 2026.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: WACV
+  edition: 2028
+  category: vision
+  rank: "A"
+  location: TBA
+  website: https://wacv.thecvf.com/
+  note: WACV 2027 ran two rounds, closing 26 Jun and 28 Aug 2026, and meets 4-8 Jan 2027 in Buena Vista, FL.
+  timeline:
+    - label: Round 1 Submission
+      date: tba
+
+- name: BMVC
+  edition: 2027
+  category: vision
+  rank: "A"
+  location: TBA
+  website: https://bmvc.org/
+  note: BMVC 2026 closed 29 May 2026 and runs 23-26 Nov 2026 in Lancaster, UK. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ECCV
+  edition: 2028
+  category: vision
+  rank: "A*"
+  location: TBA
+  website: https://eccv.ecva.net/
+  note: ECCV is biennial. ECCV 2026 closed 5 Mar 2026 and runs 8-13 Sep 2026 in Malmö, Sweden.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ISMAR
+  edition: 2027
+  category: vision
+  rank: "A*"
+  location: Kobe, Japan
+  flag: "🇯🇵"
+  website: https://www.ieeeismar.net/2027/
+  note: ISMAR 2027 is confirmed for Kobe but has not posted deadlines. ISMAR 2026 closed 16 Mar 2026.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ICDAR
+  edition: 2027
+  category: vision
+  rank: "A"
+  location: Kuala Lumpur, Malaysia
+  flag: "🇲🇾"
+  dates: August 18-22, 2027
+  website: https://icdar2027.org/call-for-papers
+  note: The call for papers gives 20 Feb 2027 for full papers and the Important Dates page gives 28 Feb; the earlier date is shown until they agree.
+  timeline:
+    - label: Abstract Deadline
+      date: 2027-01-31
+      tz: AoE
+    - label: Paper Submission
+      date: 2027-02-20
+      tz: AoE
+    - label: Reviews Released
+      date: 2027-04-20
+    - label: Rebuttal Due
+      date: 2027-04-27
+      tz: AoE
+    - label: Acceptance Notification
+      date: 2027-05-15
+    - label: Camera Ready
+      date: 2027-06-05
+      tz: AoE
+
+- name: ICME
+  edition: 2027
+  category: vision
+  rank: "A"
+  location: Xiamen, China
+  flag: "🇨🇳"
+  dates: July 13-17, 2027
+  website: https://ieee-cas.org/event/conference/2027-ieee-international-conference-multimedia-expo-icme
+  note: IEEE CASS lists ICME 2027 for Xiamen; the call is not out yet. ICME 2026 closed 31 Dec 2025.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: IEEE VIS
+  edition: 2027
+  category: vision
+  rank: "A"
+  location: TBA
+  website: https://ieeevis.org/year/2026/welcome
+  note: IEEE VIS 2026 closed 31 Mar 2026 and runs November 9-13, 2026 in Boston, Massachusetts, USA. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+# ---- General AI, machine learning & NLP ----------------------------------
+
+- name: ICLR
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: San Francisco, CA, USA
+  flag: "🇺🇸"
+  dates: April 26-30, 2027
+  website: https://iclr.cc/Conferences/2027
+  timeline:
+    - label: Abstract Deadline
+      date: 2026-09-18
+      tz: AoE
+    - label: Paper Submission
+      date: 2026-09-25
+      tz: AoE
+    - label: Reviews Released
+      date: 2026-11-05
+    - label: Author Discussion Ends
+      date: 2026-11-18
+    - label: Final Decisions
+      date: 2026-12-16
+
+- name: WWW
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Dublin, Ireland
+  flag: "🇮🇪"
+  dates: May 10-14, 2027
+  website: https://www2027.thewebconf.org/
+  timeline:
+    - label: Full Paper Abstract
+      date: 2026-10-18
+      tz: AoE
+    - label: Full Paper Submission
+      date: 2026-10-25
+      tz: AoE
+    - label: Short Paper Abstract
+      date: 2026-11-09
+      tz: AoE
+    - label: Short Paper Submission
+      date: 2026-11-16
+      tz: AoE
+
+- name: ICML
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: South America (city TBA)
+  website: https://icml.cc/
+  note: icml.cc places ICML 2027 in South America. The call for papers and its dates are not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: IJCAI
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Kyoto, Japan and Hengqin, China
+  dates: August 7-13, 2027 (Kyoto) and August 15-17, 2027 (Hengqin)
+  website: https://2027.ijcai.org/
+  note: IJCAI-27 is split across two sites.
+  timeline:
+    - label: Abstract Deadline
+      date: 2027-01-04
+      tz: AoE
+    - label: Paper Submission
+      date: 2027-01-11
+      tz: AoE
+    - label: Paper Notification
+      date: 2027-04-21
+      tz: AoE
+
+- name: KDD
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: San Jose, CA, USA
+  flag: "🇺🇸"
+  dates: August 1-5, 2027
+  website: https://kdd2027.kdd.org/
+  note: KDD runs two submission cycles. The second falls in February 2027; its exact date is not published yet.
+  timeline:
+    - label: Round 1 Abstract
+      date: 2026-07-19
+      tz: AoE
+    - label: Round 1 Submission
+      date: 2026-07-26
+      tz: AoE
+    - label: Round 1 Notification
+      date: 2026-11-14
+    - label: Round 2 Submission
+      date: tba
+
+- name: NeurIPS
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Europe (city TBA)
+  website: https://neurips.cc/
+  note: neurips.cc places NeurIPS 2027 in Europe. The call for papers and its dates are not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ACL
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Kyoto, Japan
+  flag: "🇯🇵"
+  dates: August 17-22, 2027
+  website: https://2027.aclweb.org/
+  note: ACL 2027 gives 4 Jan 2027 as its ARR submission deadline; the ARR dates page still lists only January 2027. Commitment and notification dates are TBA.
+  timeline:
+    - label: ARR Submission
+      date: 2027-01-04
+      tz: AoE
+
+- name: EMNLP
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: TBA
+  website: https://2026.emnlp.org/
+  note: EMNLP 2026 closed its ARR cycle 25 May 2026 and runs 24-29 Oct 2026 in Budapest. The 2027 call is not out yet.
+  timeline:
+    - label: ARR Submission
+      date: tba
+
+- name: AAAI
+  edition: 2028
+  category: aiml
+  rank: "A*"
+  location: TBA
+  website: https://aaai.org/conference/aaai/
+  note: AAAI 2027 closed 28 Jul 2026 and runs 16-23 Feb 2027 in Montréal. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: UAI
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: TBA
+  website: https://www.auai.org/
+  note: UAI 2026 closed 25 Feb 2026 and runs 17-21 Aug 2026 in Amsterdam. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: Interspeech
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Campinas, Brazil
+  flag: "🇧🇷"
+  dates: August 29 - September 2, 2027
+  website: https://interspeech2027.org/
+  note: The official key dates give no timezone.
+  timeline:
+    - label: Paper Submission
+      date: 2027-02-09
+    - label: Paper Update
+      date: 2027-02-16
+    - label: Acceptance Notification
+      date: 2027-06-02
+
+- name: ECIR
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Southampton, UK
+  flag: "🇬🇧"
+  dates: March 21-25, 2027
+  website: https://ecir2027.co.uk/
+  timeline:
+    - label: Abstract Deadline
+      date: 2026-09-21
+      tz: AoE
+    - label: Paper Submission
+      date: 2026-10-05
+      tz: AoE
+    - label: Notification
+      date: 2026-12-07
+
+- name: AAMAS
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Hanoi, Vietnam
+  flag: "🇻🇳"
+  dates: May 3-7, 2027
+  website: https://warwick.ac.uk/fac/sci/dcs/aamas2027/
+  timeline:
+    - label: Abstract Deadline
+      date: 2026-10-01
+      tz: AoE
+    - label: Paper Submission
+      date: 2026-10-08
+      tz: AoE
+    - label: Author Notification
+      date: 2026-12-21
+
+- name: NAACL
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: San Francisco, California, USA
+  flag: "🇺🇸"
+  dates: June 1-5, 2027
+  website: https://2027.naacl.org/
+  timeline:
+    - label: ARR Submission
+      date: 2026-10-12
+      time: "23:59"
+      tz: AoE
+    - label: Commitment Deadline
+      date: 2026-12-23
+      tz: AoE
+
+- name: COLT
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Tokyo, Japan
+  flag: "🇯🇵"
+  dates: June 28 - July 2, 2027
+  website: https://learningtheory.org/colt2027/
+  note: COLT 2027 lists every deadline as TBD. COLT 2026 closed 4 Feb 2026.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ICAPS
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: Columbia, SC, USA
+  flag: "🇺🇸"
+  dates: June 27 - July 2, 2027
+  website: https://icaps27.icaps-conference.org/
+  timeline:
+    - label: Abstract Deadline
+      date: 2026-12-07
+      tz: AoE
+    - label: Paper Submission
+      date: 2026-12-14
+      tz: AoE
+    - label: Author Notification
+      date: 2027-02-26
+
+- name: ICDM
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: TBA
+  website: http://icdm2026.neu.edu.cn/
+  note: ICDM 2026 closed 6 Jun 2026 and runs November 12-15, 2026 in Shenyang, China. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: KR
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: TBA
+  website: https://kr.org/KR2026/
+  note: KR 2026 closed 13 Feb 2026 and runs July 20-23, 2026 in Lisbon, Portugal. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: SIGIR
+  edition: 2027
+  category: aiml
+  rank: "A*"
+  location: San Jose, CA, USA
+  flag: "🇺🇸"
+  dates: July 18-24, 2027
+  website: https://sigir2027.org/
+  note: The official call marks these dates as proposed.
+  timeline:
+    - label: Abstract Deadline
+      date: 2027-01-14
+      tz: AoE
+    - label: Paper Submission
+      date: 2027-01-21
+      tz: AoE
+    - label: Notification
+      date: 2027-04-05
+
+- name: AISTATS
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Montréal, Canada
+  flag: "🇨🇦"
+  dates: May 3-6, 2027
+  website: https://virtual.aistats.org/Conferences/2027/CallForPapers
+  timeline:
+    - label: Abstract Deadline
+      date: 2026-09-29
+      tz: AoE
+    - label: Paper Submission
+      date: 2026-10-06
+      tz: AoE
+    - label: Reviews Released
+      date: 2026-11-16
+    - label: Decision Notification
+      date: 2027-01-20
+
+- name: CIKM
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Sydney, Australia
+  flag: "🇦🇺"
+  website: http://www.cikmconference.org/
+  note: cikmconference.org places CIKM 2027 in Sydney; its dates and call are not out yet. CIKM 2026 closed 23 May 2026 and runs November 7-11, 2026 in Rome, Italy.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: EACL
+  edition: 2028
+  category: aiml
+  rank: "A"
+  location: TBA
+  website: https://2027.eacl.org/
+  note: EACL 2027 closed 3 Aug 2026 and runs March 9-14, 2027 in Athens, Greece. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ECAI
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Athens, Greece
+  flag: "🇬🇷"
+  dates: October 2-7, 2027
+  website: https://ecai2027.org/
+  note: The official site gives no timezone for these dates.
+  timeline:
+    - label: Paper Submission
+      date: 2027-04-14
+    - label: Phase 1 Notification
+      date: 2027-05-15
+    - label: Author Notification
+      date: 2027-07-15
+
+- name: ECML-PKDD
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Eindhoven, The Netherlands
+  flag: "🇳🇱"
+  dates: August 30 - September 3, 2027
+  website: https://ecmlpkdd.org/2027/
+  note: ECML-PKDD 2027 is confirmed for Eindhoven, The Netherlands, but the call for papers is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: GECCO
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Kraków, Poland
+  flag: "🇵🇱"
+  dates: July 12-16, 2027
+  website: https://gecco-2027.sigevo.org/
+  note: GECCO 2027 is confirmed for Kraków but has not posted deadlines. GECCO 2026 closed 26 Jan 2026.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ISWC
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: TBA
+  website: https://iswc2026.semanticweb.org/
+  note: ISWC 2026 closed 7 May 2026 and runs October 25-29, 2026 in Bari, Italy. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: PPSN
+  edition: 2028
+  category: aiml
+  rank: "A"
+  location: TBA
+  website: https://ppsn2026.disi.unitn.it/
+  note: PPSN 2026 closed 28 Mar 2026 and runs August 29-September 2, 2026 in University of Trento, Trento, Italy. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: RecSys
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Honolulu, Hawaii, USA
+  flag: "🇺🇸"
+  dates: August 23-27, 2027
+  website: https://recsys.acm.org/recsys27/
+  note: RecSys 2027 is confirmed for Honolulu but has not posted deadlines. RecSys 2026 closed 21 Apr 2026.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: SDM
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: TBA
+  website: https://www.siam.org/conferences-events/siam-conferences/sdm26/
+  note: SDM 2026 closed 17 Apr 2026 and runs November 19-20, 2026 in Salt Lake City, Utah, USA. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: WSDM
+  edition: 2027
+  category: aiml
+  rank: "A"
+  location: Hong Kong SAR, China
+  flag: "🇭🇰"
+  dates: February 15-19, 2027
+  website: https://wsdm-conference.org/2027/
+  timeline:
+    - label: Full Paper Abstract
+      date: 2026-08-17
+      tz: AoE
+    - label: Full Paper Submission
+      date: 2026-08-24
+      tz: AoE
+    - label: Full Paper Notification
+      date: 2026-11-02
+    - label: Short Paper Submission
+      date: 2026-11-17
+      tz: AoE
+    - label: Short Paper Notification
+      date: 2026-12-18
+
+# ---- Human-computer interaction ------------------------------------------
+
+- name: CHI
+  edition: 2028
+  category: hci
+  rank: "A*"
+  location: South Africa (city TBA)
+  flag: "🇿🇦"
+  website: https://chi.acm.org/
+  note: CHI 2027 closed 10 Sep 2026 and runs 10-14 May 2027 in Pittsburgh. SIGCHI has placed CHI 2028 in South Africa; the call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: PerCom
+  edition: 2028
+  category: hci
+  rank: "A*"
+  location: TBA
+  website: https://percom.org/
+  note: PerCom 2027 closed 18 Sep 2026 after an extension and runs 8-12 Mar 2027 in Goa, India. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: UIST
+  edition: 2027
+  category: hci
+  rank: "A*"
+  location: TBA
+  website: https://uist.acm.org/2026/
+  note: UIST 2026 closed 31 Mar 2026 and runs November 2 - 5, 2026 in GM Renaissance Center, Detroit, MI, USA. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ASSETS
+  edition: 2027
+  category: hci
+  rank: "A"
+  location: TBA
+  website: https://assets26.sigaccess.org/
+  note: ASSETS 2026 closed 22 Apr 2026 and runs 25-28 Oct 2026 in Porto, Portugal. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: CSCW
+  edition: 2027
+  category: hci
+  rank: "A"
+  location: TBA
+  website: https://cscw.acm.org/2026/
+  note: CSCW 2026 closed 13 May 2025 and runs October 10-14, 2026 in Salt Lake City, Utah, USA. The 2027 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: DIS
+  edition: 2027
+  category: hci
+  rank: "A"
+  location: Stockholm, Sweden
+  flag: "🇸🇪"
+  dates: June 28 - July 2, 2027
+  website: https://dis.acm.org/2027/call-for-papers/
+  timeline:
+    - label: Title and Abstract
+      date: 2027-01-11
+      tz: AoE
+    - label: Paper Submission
+      date: 2027-01-18
+      tz: AoE
+    - label: Acceptance Notification
+      date: 2027-03-19
+
+- name: HICSS
+  edition: 2028
+  category: hci
+  rank: "A"
+  location: TBA
+  website: https://hicss.hawaii.edu/
+  note: HICSS 2027 closed 15 Jun 2026 and runs January 5-8, 2027 in Big Island, Hawaii, USA. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba
+
+- name: ICWSM
+  edition: 2027
+  category: hci
+  rank: "A"
+  location: Edinburgh, Scotland, UK
+  flag: "🇬🇧"
+  website: https://www.icwsm.org/2027/submit/
+  note: ICWSM takes papers at three deadlines a year.
+  timeline:
+    - label: First Deadline
+      date: 2026-05-15
+      tz: AoE
+    - label: Second Deadline
+      date: 2026-09-15
+      tz: AoE
+    - label: Third Deadline
+      date: 2027-01-15
+      tz: AoE
+    - label: Third-Round Notification
+      date: 2027-03-15
+
+- name: IUI
+  edition: 2028
+  category: hci
+  rank: "A"
+  location: TBA
+  website: https://iui.hosting.acm.org/2027/
+  note: IUI 2027 closed 20 Aug 2026 and runs February 8-11, 2027 in Helsinki, Finland. The 2028 call is not out yet.
+  timeline:
+    - label: Paper Submission
+      date: tba

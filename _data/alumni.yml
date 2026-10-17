@@ -1,0 +1,36 @@
+# Alumni as listed on the lab's Wix site (2026-10-17), newest first.
+#
+#   name_ko     Korean name (Wix lists most alumni in Korean).
+#   name        English spelling, only where the same person appears with that
+#               spelling in the lab's own publication list. Omitted otherwise.
+#   degree      M.S. for everyone listed so far.
+#   graduated   YYYY-MM
+#   next / next_ko  where they went after AVIL, as given on Wix.
+
+- { name_ko: 장예원, name: Yewon Jang, degree: M.S., graduated: 2026-02, next: AICU, next_ko: 에이아이씨유, photo: yewon-jang.webp }
+- { name_ko: 김재호, name: Jaeho Kim, degree: M.S., graduated: 2026-02, next: AICU, next_ko: 에이아이씨유, photo: jaeho-kim.webp }
+- { name_ko: 이성령, name: Seongryeong Lee, degree: M.S., graduated: 2026-02, next: DGIST, next_ko: DGIST, photo: seongryeong-lee.webp }
+- { name_ko: 도새별, name: Saebyeol Do, degree: M.S., graduated: 2026-02, photo: saebyeol-do.webp }
+- { name_ko: 이승언, name: Seungeon Lee, degree: M.S., graduated: 2025-02, next: Samsung Electronics, next_ko: 삼성전자, photo: seungeon-lee.webp }
+- { name_ko: 김민준, name: Minjun Kim, degree: M.S., graduated: 2025-02, next: ADD (Agency for Defense Development), next_ko: ADD (국방과학연구소), photo: minjun-kim.webp }
+- { name_ko: 김도녕, name: Donyung Kim, degree: M.S., graduated: 2025-02, next: Navifra, next_ko: 나비프라(Navifra), photo: donyung-kim.webp }
+- { name_ko: 신연하, name: Yeonha Shin, degree: M.S., graduated: 2024-08, next: FutureDrive, next_ko: 퓨처드라이브(FutureDrive), photo: yeonha-shin.webp }
+- { name: Indah Monisa Firdiantika, degree: M.S., graduated: 2024-08, photo: indah-monisa-firdiantika.webp, aliases: ["Firdiantika, Indah Monisa"] }
+- { name: Chaitali Bhattacharyya, degree: M.S., graduated: 2024-08, next: DGIST, next_ko: DGIST, photo: chaitali-bhattacharyya.webp, aliases: ["Bhattacharyya, Chaitali", "Bhattacharyya, C."] }
+- { name_ko: 조상호, name: Sangho Jo, degree: M.S., graduated: 2023-08, photo: sangho-jo.webp }
+- { name_ko: 송익환, name: Ikhwan Song, degree: M.S., graduated: 2022-02, next: ADD (Agency for Defense Development), next_ko: ADD (국방과학연구소), photo: ikhwan-song.webp }
+- { name_ko: 김종찬, name: Jongchan Kim, degree: M.S., graduated: 2022-02, next: THYROSCOPE, next_ko: THYROSCOPE, photo: jongchan-kim.webp }
+- { name_ko: 김문형, name: Munhyeong Kim, degree: M.S., graduated: 2022-02, next: Hanwha Systems, next_ko: 한화시스템, photo: munhyeong-kim.webp }
+- { name_ko: 박인호, name: Inho Park, degree: M.S., graduated: 2022-02, next: Hanwha Systems, next_ko: 한화시스템, photo: inho-park.webp, aliases: [INHO PARK] }
+- { name_ko: 강병진, name: Byungjin Kang, degree: M.S., graduated: 2022-02, next: LIG Nex1, next_ko: LIG Nex1, photo: byungjin-kang.webp }
+- { name_ko: 류준환, name: Junhwan Ryu, degree: M.S., graduated: 2020-02, next: Hanwha Systems (formerly DGIST), next_ko: 한화시스템 ((前) DGIST), photo: junhwan-ryu.webp, aliases: [류 준 환] }
+- { name_ko: 윤성민, name: Sungmin Yun, degree: M.S., graduated: 2020-02, next: DGB Daegu Bank, next_ko: DGB (대구은행), photo: sungmin-yun.webp }
+- { name_ko: 김덕규, name: Deokkyu Kim, degree: M.S., graduated: 2020-02, photo: deokkyu-kim.webp }
+- { name_ko: 김태환, name: Taehwan Kim, degree: M.S., graduated: 2018-02, next: Doosan Machine Tools, next_ko: 두산공작기계, photo: taehwan-kim.webp, aliases: [김 태 환, "Kim, Taehwan"] }
+- { name_ko: 손민석, name: Minseok Son, degree: M.S., graduated: 2018-02, next: Hyundai Motor Company, next_ko: 현대자동차, photo: minseok-son.webp }
+- { name_ko: 원진주, name: Jin-Ju Won, degree: M.S., graduated: 2017-02, next: ADD (Agency for Defense Development), next_ko: ADD (국방과학연구소), photo: jinju-won.webp }
+- { name_ko: 김희강, name: Heekang Kim, degree: M.S., graduated: 2017-02, next: KCL (formerly DGIST), next_ko: KCL (한국건설생활환경시험연구원) ((前) DGIST), photo: heekang-kim.webp }
+- { name_ko: 김태훈, name: Taehoon Kim, degree: M.S., graduated: 2017-02, next: DGIST, next_ko: DGIST, photo: taehoon-kim.webp, aliases: ["Kim, Taehoon"] }
+- { name_ko: 임윤지, name: Yunji Lim, degree: M.S., graduated: 2015-02, next: Hanwha Thales, next_ko: 한화탈레스, photo: yunji-lim.webp }
+- { name_ko: 심민섭, name: Min-Sheob Shim, degree: M.S., graduated: 2014-02, next: SL, next_ko: SL, photo: minsheob-shim.webp }
+- { name_ko: 하재욱, degree: M.S., graduated: 2012-02, next: DGIST, next_ko: DGIST, photo: jaewook-ha.webp }

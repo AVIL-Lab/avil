@@ -1,0 +1,33 @@
+title: Advanced Visual Intelligence Lab
+short_title: AVIL
+description: >-
+  Advanced Visual Intelligence Lab (AVIL), Department of Electronic Engineering,
+  Yeungnam University. Computer vision, deep learning and multimodal physical sensing
+  (EO, IR, HSI, SAR, radar, LiDAR).
+lang: en
+
+# The site is served from https://avil-lab.github.io/avil/. If the repository is
+# renamed to avil-lab.github.io (or given a custom domain), set baseurl to "".
+url: https://avil-lab.github.io
+baseurl: /avil
+
+timezone: Asia/Seoul
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - tests
+  - vendor
+  - .github

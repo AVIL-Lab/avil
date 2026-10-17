@@ -1,0 +1,492 @@
+# Research projects migrated from the Wix "Projects" page (2026-10-17).
+#   status current | past (as grouped on Wix)
+#   title / title_ko, funder / funder_ko   English translation and Wix original
+#   start / end  YYYY-MM   period  duration text exactly as on Wix
+- status: current
+  title: Advanced Robot Industry Professional Workforce Training Program
+  title_ko: 첨단로봇산업 전문인력양성사업
+  funder: Korea Institute for Robot Industry Advancement (KIRIA)
+  funder_ko: 한국로봇산업진흥원
+  start: 2024-03
+  end: 2029-02
+  period: 2024.03.01-2029.02.28
+- status: current
+  title: Spectral-polarimetric multimodal explainable AI for highly reliable long-range object detection
+  title_ko: 고신뢰 원거리 객체 탐지를 위한 분광-편광 멀티모달 설명가능 인공지능 연구
+  funder: National Research Foundation of Korea (NRF)
+  funder_ko: 한국연구재단
+  start: 2023-06
+  end: 2028-05
+  period: 2023.06.01-2028.05.31
+- status: current
+  title: Deep learning-based image enhancement for submarine payloads and maritime environments
+  title_ko: 잠수함 탑재체 및 해양 환경에 적합한 딥러닝 기반 영상개선 기술
+  funder: Hanwha Systems
+  funder_ko: 한화시스템
+  start: 2023-05
+  end: 2027-04
+  period: 2023.05.01-2027.04.30
+- status: current
+  title: Multimodal Untact Sensing Leading Research Center for Lifelogs (RLRC)
+  title_ko: 라이프로그용 멀티모달 언택트센싱 선도연구센터
+  funder: Yeungnam University Industry-Academic Cooperation Foundation
+  funder_ko: 영남대학교 산학협력단
+  start: 2023-07
+  end: 2030-02
+  period: 2023.07.01-2030.02.28
+- status: current
+  title: LLM core for hyperspectral, thermal and 3D multi-sensing, with defense and manufacturing adapters
+  title_ko: 초분광·열·3D 멀티센싱 LLM 코어 및 국방·제조 산업 어댑터 연구개발
+  funder: Yeungnam University RISE Project Group
+  funder_ko: 영남대학교 RISE 사업단
+  start: 2026-06
+  end: 2026-12
+  period: 2026.06.01-2026.12.31
+- status: current
+  title: 3D VLM-based embodied AI for mobile bimanual manipulation and worker safety
+  title_ko: 모바일 양팔 매니퓰레이션 및 작업자 안전을 위한 3D VLM 기반 embodied AI 연구
+  funder: Yeungnam University RISE Project Group
+  funder_ko: 영남대학교 RISE 사업단
+  start: 2025-09
+  end: 2029-12
+  period: 2025.09.01-2029.12.31
+- status: current
+  title: Integrated high-resolution LiDAR sensor solution for physical AI
+  title_ko: 피지컬 AI를 위한 고해상도 라이다 센서 통합 솔루션 개발
+  funder: Yeungnam University RISE Project Group
+  funder_ko: 영남대학교 RISE 사업단
+  start: 2025-10
+  end: 2029-12
+  period: 2025.10.15-2029.12.31
+- status: current
+  title: SAR-Language Model (SLM) core technology and joint industry-academia commercialization
+  title_ko: SAR-Language Model(SLM) 원천 기술 개발 및 산학 공동 사업화
+  funder: Yeungnam University RISE Project Group
+  funder_ko: 영남대학교 RISE 사업단
+  start: 2026-06
+  end: 2026-12
+  period: 2026.06.01-2026.12.31
+- status: current
+  title: Multi-sensor swarm estimation and identification for early response to loonshot and swarm unmanned surface vessels
+  title_ko: 룬샷/군집 무인 수상정 조기 대응을 위한 다중 센서 기반 군집 추정 및 식별 기술 연구
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2025-12
+  end: 2026-11
+  period: 2025.12.01-2026.11.31
+- status: past
+  title: Object recognition using image features
+  title_ko: 영상 특징량을 이용한 물체인식 기법
+  funder: Yeungnam University
+  funder_ko: 영남대학교
+  start: 2010-03
+  end: 2011-02
+  period: 2010.03-2011.02
+- status: past
+  title: Core technology for motion recognition
+  title_ko: 동작인식 핵심기술 개발
+  funder: DGIST
+  funder_ko: DGIST
+  start: 2010-04
+  end: 2010-10
+  period: 2010.04-2010.10
+- status: past
+  title: 'LED-IT Convergence Industrialization Research Center: smart lighting (hyperspectral recognition for medical use)'
+  title_ko: 'LED-IT융합산업화연구센터: 스마트 조명 개발(의료용 초분광 인식기술)'
+  funder: KIAT
+  funder_ko: KIAT
+  start: 2010-06
+  end: 2014-05
+  period: 2010.06-2014.05
+- status: past
+  title: Multi-target detection and tracking software for dense clutter environments
+  title_ko: 고밀도 클러터 환경에서의 다중 표적 탐지 추적 S/W 개발
+  funder: Samsung Thales
+  funder_ko: 삼성탈레스
+  start: 2011-01
+  end: 2012-06
+  period: 2011.01-2012.06
+- status: past
+  title: Background modeling and object detection for smart surveillance systems
+  title_ko: 스마트 감시시스템을 위한 배경 모델링 및 물체 탐지 기법 연구
+  funder: Yeungnam University
+  funder_ko: 영남대학교
+  start: 2011-03
+  end: 2012-02
+  period: 2011.03-2012.02
+- status: past
+  title: Abnormal event detection and recognition for smart surveillance systems
+  title_ko: 스마트 감시시스템을 위한 특이 이벤트 검출 및 인식 기법 개발
+  funder: NRF (Young Researcher Program)
+  funder_ko: 한국연구재단(신진연구)
+  start: 2011-05
+  end: 2014-04
+  period: 2011.05-2014.04
+- status: past
+  title: Robust recognition based on high-precision 3D vision
+  title_ko: 고정밀 3D 비전 기반 강건 인식 기술
+  funder: DGIST
+  funder_ko: DGIST
+  start: 2011-06
+  end: 2011-12
+  period: 2011.06-2011.12
+- status: past
+  title: Analysis of infrared target signature variation and tracking methods
+  title_ko: 적외선 표적신호 가변 특성 분석 및 추적기법 연구
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2012-11
+  end: 2013-12
+  period: 2012. 11-2013.12
+- status: past
+  title: Object detection for RGB-D data
+  title_ko: RGB-D 데이터용 물체 검출기술 연구
+  funder: DGIST
+  funder_ko: DGIST
+  start: 2012-02
+  end: 2012-11
+  period: 2012.02-2012.11
+- status: past
+  title: Natural feature extraction for building single-camera perception models
+  title_ko: 단일카메라 기반 인지 모델 구축용 Natural Feature 추출기술 개발
+  funder: KEIT, Industrial Core Technology Development Program
+  funder_ko: KEIT, 산업원천기술개발사업
+  start: 2012-10
+  end: 2013-09
+  period: 2012.10-2013.09
+- status: past
+  title: Target recognition based on SAR/IR image fusion
+  title_ko: SAR/IR 영상정보 융합 기반 표적인식기술 개발
+  funder: Defense Acquisition Program Administration (DAPA)
+  funder_ko: 방위사업청
+  start: 2012-10
+  end: 2017-12
+  period: 2012.10-2017.12
+- status: past
+  title: Camouflaged target detection and recognition by cooperative spectral-spatial feature analysis for smart surveillance
+  title_ko: 스마트 감시를 위한 상호협력적인 분광-공간 특징분석 기반 은폐표적 검출 및 인식 기법 연구
+  funder: NRF (Mid-career Researcher Program)
+  funder_ko: 한국연구재단(중견연구)
+  start: 2014-05
+  end: 2017-04
+  period: 2014.05-2017.04
+- status: past
+  title: Software platform for traffic sign and traffic light recognition
+  title_ko: 교통표지판/신호등 정보인식 소프트웨어 플랫폼 개발
+  funder: DGIST
+  funder_ko: DGIST
+  start: 2014-06
+  end: 2014-12
+  period: 2014.06-2014.12
+- status: past
+  title: Smart Electronics Specialization Program
+  title_ko: 스마트전자특성화사업
+  funder: NRF (CK-1)
+  funder_ko: 연구재단(CK-1)
+  start: 2014-09
+  end: 2019-02
+  period: 2014.09-2019.02
+- status: past
+  title: Workforce training in LED-IT convergence core technology for automotive lighting
+  title_ko: 자동차 조명용 LED-IT융합핵심기술 전문인력양성
+  funder: KEIT
+  funder_ko: KEIT
+  start: 2015-06
+  end: 2020-02
+  period: 2015.06-2020.02
+- status: past
+  title: Signal processing algorithms for night cameras
+  title_ko: 야간카메라 신호처리 알고리즘 연구
+  funder: ETRI
+  funder_ko: ETRI
+  start: 2016-02
+  end: 2016-06
+  period: 2016.02-2016.06
+- status: past
+  title: Signal processing algorithms for day-night camera fusion
+  title_ko: 주간-야간 카메라 융합 신호처리 알고리즘 연구
+  funder: ETRI
+  funder_ko: ETRI
+  start: 2016-06
+  end: 2016-11
+  period: 2016.06-2016.11
+- status: past
+  title: Image processing for distortion correction and text region extraction in traditional archival documents
+  title_ko: 전통기록물 왜곡보정 및 문자영역 추출을 위한 영상처리기술 개발
+  funder: Science-Technology-Humanities Convergence Program
+  funder_ko: 과학기술인문융합
+  start: 2016-10
+  end: 2020-07
+  period: 2016.10-2020.07
+- status: past
+  title: Software for measuring and analyzing the infrared radiance of maritime targets
+  title_ko: 해상 표적의 적외선 복사량 계측 및 분석 SW 개발
+  funder: BOGO Co., Ltd.
+  funder_ko: ㈜보고
+  start: 2016-11
+  end: 2016-11
+  period: 2016.11-2016.11
+- status: past
+  title: Micro-UAV detection by fusing hyperspectral and thermal target information
+  title_ko: 표적의 초분광 및 열정보 융합 기반 초소형 무인기 탐지 기법 연구
+  funder: NRF (Basic Research in Science and Engineering)
+  funder_ko: 연구재단(이공학기초)
+  start: 2016-11
+  end: 2018-10
+  period: 2016.11-2018.10
+- status: past
+  title: Integrated vision-radar algorithms
+  title_ko: 비전-Radar 통합 알고리즘 연구 개발
+  funder: ETRI
+  funder_ko: ETRI
+  start: 2017-04
+  end: 2017-11
+  period: 2017.04-2017.11
+- status: past
+  title: Automatic image capture and compositing technology
+  title_ko: 자동 촬영 및 합성 기술 개발
+  funder: Ministry of SMEs and Startups
+  funder_ko: 중소벤처기업부
+  start: 2017-06
+  end: 2018-05
+  period: 2017.06-2018.05
+- status: past
+  title: Observation of target infrared spectral characteristics
+  title_ko: 표적 적외선 분광특성 관측
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2017-12
+  end: 2019-03
+  period: 2017.12-2019.03
+- status: past
+  title: Infrared image tracking in embedded environments
+  title_ko: 임베디드 환경 적외선 영상 추적기술 연구
+  funder: ETRI
+  funder_ko: ETRI
+  start: 2018-04
+  end: 2018-11
+  period: 2018.04-2018.11
+- status: past
+  title: Multi-target information fusion deep learning architecture for target detection and identification robust to environmental change
+  title_ko: 환경 변화에 강인한 표적 검출 및 식별을 위한 다중표적정보 융합 딥러닝 아키텍처 연구
+  funder: NRF (Regional University Outstanding Scientist Program)
+  funder_ko: 연구재단(지역대학우수과학자지원사업)
+  start: 2018-06
+  end: 2023-05
+  period: 2018.06-2023.05
+- status: past
+  title: Intelligent display of naval vessel navigation information
+  title_ko: 지능형 함정 항행정보 전시기술
+  funder: ADD Civil-Military Technology Application Program
+  funder_ko: 국방과학연구소 민군기술적용연구사업
+  start: 2019-06
+  end: 2021-06
+  period: 2019.06-2021.06
+- status: past
+  title: Infrared image-based detectability characteristics and tracking methods
+  title_ko: 적외선 영상기반 피탐특성 및 추적기법 연구
+  funder: ADD Maritime Technology Research Institute
+  funder_ko: 국방과학연구소 해양기술연구원
+  start: 2019-08
+  end: 2019-11
+  period: 2019.08-2019.11
+- status: past
+  title: Real-time tracking software for thermal imaging search devices
+  title_ko: 열영상 기반 탐색장치용 실시간 추적 SW 개발
+  funder: ETRI
+  funder_ko: ETRI
+  start: 2019-09
+  end: 2019-11
+  period: 2019.09-2019.11
+- status: past
+  title: Survey and analysis of multi-wavelength image characteristics
+  title_ko: 다파장영상 특성 조사/분석
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2019-11
+  end: 2021-11
+  period: 2019.11-2021.11
+- status: past
+  title: Defense-specialized AI center
+  title_ko: 인공지능 국방 특화 센터
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2019-12
+  end: 2022-12
+  period: 2019.12-2022.12
+- status: past
+  title: Correlation and causal relations among heterogeneous-sensor target information, and adversarially robust deep learning architectures (Future Defense AI Specialized Research Center)
+  title_ko: 다종센서간 표적정보의 연관관계/인과관계 도출 및 적대적 정보에 강인한 딥러닝 구조 연구(미래 국방 인공지능 특화연구센터)
+  funder: Defense Acquisition Program Administration (DAPA)
+  funder_ko: 방위사업청
+  start: 2019-12
+  end: 2022-12
+  period: 2019.12-2022.12
+- status: past
+  title: Effect of image information fusion on target detection and recognition performance
+  title_ko: 영상정보 융합에 따른 표적탐지 및 인식성능 영향성 연구
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2020-03
+  end: 2022-03
+  period: 2020.03-2022.03
+- status: past
+  title: Detectability characteristics and tactical use analysis through infrared decoy simulation
+  title_ko: 적외선 기만체 모의를 통한 피탐특성 및 전술활용방안 분석
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2020-08
+  end: 2020-12
+  period: 2020.08-2020.12
+- status: past
+  title: Radiometric calibration support for long-range infrared temperature measurement
+  title_ko: 원거리 적외선 온도 계측을 위한 방사교정 작업지원
+  funder: Ministry of SMEs and Startups
+  funder_ko: 중소벤처기업부
+  start: 2020-09
+  end: 2021-08
+  period: 2020.09-2021.08
+- status: past
+  title: Hyperspectral image analysis software
+  title_ko: 초분광 영상 분석 S/W
+  funder: LIG Nex1
+  funder_ko: LIGNex1
+  start: 2020-10
+  end: 2021-07
+  period: 2020.10-2021.07
+- status: past
+  title: Optimal course analysis and real-time small target tracking with deep learning
+  title_ko: 심층학습을 통한 최적침로 분석 및 실시간 소형표적 추적기법 연구
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2021-06
+  end: 2021-12
+  period: 2021.06-2021.12
+- status: past
+  title: VNIR hyperspectral image acquisition and analysis of Seongsan Ilchulbong
+  title_ko: 성산일출봉 VNIR 초분광 영상 획득 및 분석
+  funder: Geocell Co., Ltd.
+  funder_ko: ㈜지오셀
+  start: 2022-02
+  end: 2022-08
+  period: 2022.02-2022.08
+- status: past
+  title: AR-based inspection system for vehicle center-pillar welds
+  title_ko: AR을 이용한 차량 센터필라 용접상태 점검 시스템 개발
+  funder: Daegu-Gyeongbuk Regional Innovation Platform
+  funder_ko: 대구경북 지역혁신 플랫폼
+  start: 2023-01
+  end: 2023-03
+  period: 2023.01.09-2023.03.31
+- status: past
+  title: AR-based seating and position verification system for automated equipment
+  title_ko: AR을 이용한 자동화 설비 안착 및 위치 검증 시스템
+  funder: Daegu-Gyeongbuk Regional Innovation Platform
+  funder_ko: 대구경북 지역혁신 플랫폼
+  start: 2023-08
+  end: 2024-02
+  period: 2023.08.29-2024.02.29
+- status: past
+  title: Human skeleton extraction from LiDAR images
+  title_ko: 라이다 영상 기반 휴먼 스켈레톤 추출 기술 개발
+  funder: Nanosystems Co., Ltd.
+  funder_ko: ㈜나노시스템즈
+  start: 2024-02
+  end: 2024-07
+  period: 2024.02.01-2024.07.31
+- status: past
+  title: On-board SAR target identification with deep learning
+  title_ko: 딥러닝을 이용한 온보드 SAR 표적식별 기술 연구
+  funder: LIG Nex1
+  funder_ko: LIG Nex1
+  start: 2023-04
+  end: 2025-03
+  period: 2023.04.01-2025.03.31
+- status: past
+  title: Deep learning-based multimodal image registration algorithms
+  title_ko: 딥러닝 기반 다종 영상 정합 알고리즘 개발
+  funder: Hanwha Systems
+  funder_ko: 한화시스템
+  start: 2023-01
+  end: 2025-06
+  period: 2023.01.01-2025.06.30
+- status: past
+  title: RF/IR decoy modeling for naval vessels
+  title_ko: 함정용 RF/IR 기만기 모델링 연구
+  funder: Agency for Defense Development (ADD)
+  funder_ko: 국방과학연구소
+  start: 2022-11
+  end: 2024-12
+  period: 2022.11-2024.12
+- status: past
+  title: LiDAR-based 3D object recognition and interaction core technology for next-generation mobile manipulators
+  title_ko: 차세대 모바일매니퓰레이터용 LiDAR 기반 3D 객체 인식 및 상호작용 핵심 기술 개발
+  funder: KISTI
+  funder_ko: KISTI
+  start: 2024-05
+  end: 2024-12
+  period: 2024.05.-2024.12.
+- status: past
+  title: Multimodal human-care mobility sensing-AI component technology and its application
+  title_ko: 멀티모달 휴먼케어 모빌리티 센싱-AI 부품 원천 기술 개발 및 적용 연구
+  funder: Daegu-Gyeongbuk Regional Innovation Platform
+  funder_ko: 대구경북 지역혁신 플랫폼
+  start: 2024-05
+  end: 2024-12
+  period: 2024.05-2024.12
+- status: past
+  title: Gyeongbuk wind energy cluster workforce development
+  title_ko: 경북지역 풍력에너지 클러스터 인재양성산업
+  funder: Korea Institute of Energy Technology Evaluation and Planning (KETEP)
+  funder_ko: 한국에너지기술평가원
+  start: 2021-01
+  end: 2025-12
+  period: 2021.01-2025.12
+- status: past
+  title: Workforce training for ICT-convergence textile manufacturing
+  title_ko: ICT융합섬유 제조과정 전문인력양성사업
+  funder: Korea Textile Development Institute
+  funder_ko: 한국섬유개발연구원
+  start: 2021-01
+  end: 2025-12
+  period: 2021.01-2025.12
+- status: past
+  title: Radar-equipped AI headlamp system
+  title_ko: 레이더 장착 AI 헤드램프 시스템 개발
+  funder: Daegu-Gyeongbuk Regional Innovation Platform
+  funder_ko: 대구경북 지역혁신 플랫폼
+  start: 2022-11
+  end: 2027-11
+  period: 2022.11.01-2027.11.01
+- status: past
+  title: Applying AI automatic detection to high-resolution infrared imagery
+  title_ko: 고해상 적외선 영상 AI 자동탐지 기술 적용방안 연구
+  funder: Korean space security society (한국우주안보학회)
+  funder_ko: 한국우주안보학회
+  start: 2025-03
+  end: 2025-11
+  period: 2025.03.01-2025.11.30
+- status: past
+  title: Object detection and recognition algorithms using hyperspectral cameras
+  title_ko: 초분광 카메라를 이용한 객체탐지/인식 알고리즘 개발
+  funder: LIG Nex1
+  funder_ko: LIG Nex1
+  start: 2024-11
+  end: 2026-04
+  period: 2024.11.01-2026.04.30
+- status: past
+  title: 'Hyperspectral infrared analysis: image measurement database and comparative analysis'
+  title_ko: 초분광 적외선 해석/영상 측정 DB구축 및 비교분석
+  funder: Juwon Co., Ltd.
+  funder_ko: 주식회사 주원
+  start: 2023-07
+  end: 2026-06
+  period: 2023.07.01-2026.06.30
+- status: past
+  title: Dataset acquisition and super-resolution for better surface surveillance and reconnaissance by unmanned underwater vehicles
+  title_ko: 무인잠수정 수상감시정찰 성능 향상을 위한 데이터셋 취득 및 초해상도 기술 연구
+  funder: Hanwha Systems
+  funder_ko: 한화시스템
+  start: 2023-05
+  end: 2026-04
+  period: 2023.05.01-2026.04.30

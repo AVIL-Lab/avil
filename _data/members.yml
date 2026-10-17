@@ -1,0 +1,134 @@
+# Current members, in the order the lab's Wix site listed them (2026-10-17).
+#
+#   name        English name as displayed.
+#   name_ko     Korean name, when the Wix page gave one.
+#   role        postdoc | phd | ms | undergrad  (drives the group headings)
+#   photo       file in assets/img/members/
+#   interests   research areas as listed by the member
+#   email / web contact shown on the card (both optional)
+#   aliases     extra spellings used in author lists, so the publications page
+#               can mark lab members. The display name is always included.
+
+- name: Anusha Ganesan
+  role: postdoc
+  photo: anusha-ganesan.webp
+  interests: [Deep Learning, Ensemble Learning, Multi-Modal Systems]
+  email: anushan90@gmail.com
+
+- name: Alnaasan Manar
+  role: postdoc
+  photo: alnaasan-manar.webp
+  interests: [Deep Learning, Object Detection and Segmentation, Text Detection and Recognition]
+  email: manaralnaasan@gmail.com
+  aliases: [Manar Alnaasan]
+
+- name: Huanheng Zhang
+  name_ko: 장환헝
+  role: phd
+  photo: huanheng-zhang.webp
+  interests: [Human Pose Estimation (HPE), Pose Understanding and Action]
+  email: zhanghuanheng-3@yu.ac.kr
+
+- name: Uday Debnath
+  role: phd
+  photo: uday-debnath.webp
+  interests: [Remote Sensing, Physiological Measurement, Multimodal Sensor Fusion]
+  email: udaydebnath@yu.ac.kr
+  aliases: [Debnath U, "Debnath, U."]
+
+- name: Sreya Deb Srestha
+  role: phd
+  photo: sreya-deb-srestha.webp
+  interests: [Remote Sensing, Physiological Measurement, Multimodal Sensor Fusion]
+  email: deb.sreya.srestha@gmail.com
+  aliases: [SD Srestha, Srestha SD, Sreshta SD, "Srestha, S.D."]
+
+- name: Tanvir Ahmmed
+  role: ms
+  photo: tanvir-ahmmed.webp
+  interests: [Raman Spectroscopy for Biomedical Analysis, Non-invasive Physiological Measurement, Multimodal AI (VLM), Machine Learning for Spectral Analysis]
+  email: tanvir.ahmmed.turzo131@gmail.com
+
+- name: Nur Nahar Queen
+  role: ms
+  photo: nur-nahar-queen.webp
+  interests: [FMCW Radar Signal Processing, Non-contact Physiological Measurement, Multimodal Sensor Fusion for Vital Sign Monitoring]
+  email: queennur.scholar@yu.ac.kr
+
+- name: Selim Sarowar
+  role: ms
+  photo: selim-sarowar.webp
+  interests: [Vision-Language-Action (VLA) & World Models, Embodied AI ~ Physical AI, 6D Pose Estimation & VLMs]
+  web: https://s-elim.github.io
+  aliases: [Md Selim Sarowar]
+
+- name: Haekang Song
+  name_ko: 송해강
+  role: ms
+  photo: haekang-song.webp
+  interests: [Explainable AI (XAI), Diffusion Model]
+  email: songsunriver@gmail.com
+  aliases: ["Song, Haekang"]
+
+- name: Jungeun Park
+  name_ko: 박정은
+  role: ms
+  photo: jungeun-park.webp
+  interests: [Hyperspectral Imaging (HSI), Image Dehazing]
+  email: eun-ni@yu.ac.kr
+  aliases: [JungEun Park, "Park, Jungeun"]
+
+- name: Eunyeob Kim
+  name_ko: 김은엽
+  role: ms
+  photo: eunyeob-kim.webp
+  interests: [Hyperspectral Imaging (HSI), Image Classification]
+  email: yup4943@yu.ac.kr
+
+- name: Joseph Park
+  name_ko: 박요셉
+  role: ms
+  photo: joseph-park.webp
+  interests: [Object Detection, Deep Learning]
+  email: dytpq339@gmail.com
+
+- name: Ilhan Sin
+  name_ko: 신일한
+  role: ms
+  photo: ilhan-sin.webp
+  interests: [Vision-Language-Action (VLA), Image Classification, Image Dehazing]
+  email: hanny0923aks@yu.ac.kr
+  aliases: [Sin I]
+
+- name: Yuseong Cheon
+  name_ko: 천우성
+  role: ms
+  photo: yuseong-cheon.webp
+  interests: [Vision-Language-Action (VLA), World Model, Vision Language Model (VLM)]
+  email: cjsdntjd1234@gmail.com
+
+- name: Wonjong Lee
+  name_ko: 이원종
+  role: ms
+  photo: wonjong-lee.webp
+  interests: [Deblur, FMCW Radar]
+  email: jk07059@naver.com
+
+- name: Bomin Kim
+  name_ko: 김보민
+  role: undergrad
+  photo: bomin-kim.webp
+  email: qhals9955@naver.com
+
+- name: Dongik Lee
+  name_ko: 이동익
+  role: undergrad
+  photo: dongik-lee.webp
+  email: dongik10115959@gmail.com
+  aliases: [Lee Dongik]
+
+- name: Hyeonji Choi
+  name_ko: 최현지
+  role: undergrad
+  photo: hyeonji-choi.webp
+  email: enfljk1@yu.ac.kr

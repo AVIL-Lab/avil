@@ -1,0 +1,41 @@
+---
+layout: null
+permalink: /search.json
+---
+{%- assign out = "" | split: "" -%}
+[
+{"t":"page","title":"Home","sub":"Advanced Visual Intelligence Lab","url":"/"},
+{"t":"page","title":"Professor","sub":"Prof. Sungho Kim","url":"/professor/"},
+{"t":"page","title":"Members","sub":"Current members and alumni","url":"/members/"},
+{"t":"page","title":"Research","sub":"Areas, sensing modalities, themes","url":"/research/"},
+{"t":"page","title":"Projects","sub":"Current and past projects, RLRC, equipment","url":"/projects/"},
+{"t":"page","title":"Publications","sub":"International and domestic journals and conferences","url":"/publications/"},
+{"t":"page","title":"News","sub":"Conferences, awards, lab events","url":"/news/"},
+{"t":"page","title":"Gallery","sub":"Photos from lab life","url":"/gallery/"},
+{"t":"page","title":"AI Conference Deadlines","sub":"Live countdowns for CORE A* and A venues","url":"/deadlines/"},
+{"t":"page","title":"Top Q1 Journals","sub":"SCIE-Q1 journals in robotics, vision and AI","url":"/journals/"},
+{"t":"page","title":"Contact","sub":"Address, email, joining the lab","url":"/contact/"},
+{%- assign p = site.data.professor -%}
+{"t":"member","title":{{ p.name | append: " (" | append: p.name_ko | append: ")" | jsonify }},"sub":{{ p.title | append: ", Principal Investigator" | jsonify }},"url":"/professor/"},
+{%- for m in site.data.members %}
+{"t":"member","title":{% capture n %}{{ m.name }}{% if m.name_ko %} ({{ m.name_ko }}){% endif %}{% endcapture %}{{ n | jsonify }},"sub":{{ m.interests | join: ", " | default: m.role | jsonify }},"extra":{{ m.role | jsonify }},"url":"/members/#{{ m.name | slugify }}"},
+{%- endfor %}
+{%- for a in site.data.alumni %}
+{"t":"alumni","title":{% capture n %}{{ a.name | default: a.name_ko }}{% if a.name and a.name_ko %} ({{ a.name_ko }}){% endif %}{% endcapture %}{{ n | jsonify }},"sub":{% capture s %}{{ a.degree }} {{ a.graduated }}{% if a.next %}, {{ a.next }}{% endif %}{% endcapture %}{{ s | jsonify }},"extra":{{ a.next_ko | jsonify }},"url":"/members/#alumni"},
+{%- endfor %}
+{%- for pr in site.data.projects %}
+{"t":"project","title":{{ pr.title | jsonify }},"sub":{{ pr.funder | append: ", " | append: pr.period | jsonify }},"extra":{{ pr.title_ko | append: " " | append: pr.funder_ko | jsonify }},"url":"/projects/#{{ pr.status }}"},
+{%- endfor %}
+{%- for e in site.data.events %}
+{"t":"news","title":{{ e.en | jsonify }},"sub":{{ e.when | append: " · " | append: e.ko | jsonify }},"url":"/news/#e-{{ e.date }}-{{ forloop.index }}"},
+{%- endfor %}
+{%- for c in site.data.conferences %}
+{"t":"conf","title":{{ c.name | append: " " | append: c.edition | jsonify }},"sub":{{ c.location | append: " · " | append: c.category | jsonify }},"url":"/deadlines/#conf-{{ c.name | slugify }}"},
+{%- endfor %}
+{%- for j in site.data.journals %}
+{"t":"journal","title":{{ j.name | jsonify }},"sub":{% capture s %}{{ j.abbr }} · IF {{ j.jif }} · {{ j.publisher }}{% endcapture %}{{ s | jsonify }},"extra":{{ j.issn | jsonify }},"url":"/journals/#journal-{{ j.name | slugify }}"},
+{%- endfor %}
+{%- for x in site.data.publications %}
+{"t":"pub","title":{{ x.title | default: x.text | jsonify }},"sub":{% capture s %}{{ x.year | default: "n.d." }} · {% if x.authors %}{{ x.authors }}{% endif %}{% if x.venue %} · {{ x.venue }}{% endif %}{% endcapture %}{{ s | jsonify }},"url":"/publications/?q={{ x.title | default: x.text | truncatewords: 6, '' | url_encode }}"}{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+]

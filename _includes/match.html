@@ -1,0 +1,8 @@
+{%- comment -%}
+  Sets `hit` to true when include.text matches any word (case-insensitive) or
+  acronym (case-sensitive) of include.mod. Callers read `hit` afterwards.
+{%- endcomment -%}
+{%- assign hit = false -%}
+{%- assign _low = include.text | downcase -%}
+{%- for w in include.mod.words -%}{%- if _low contains w -%}{%- assign hit = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- unless hit -%}{%- for a in include.mod.acronyms -%}{%- if include.text contains a -%}{%- assign hit = true -%}{%- break -%}{%- endif -%}{%- endfor -%}{%- endunless -%}

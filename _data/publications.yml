@@ -1,0 +1,2751 @@
+# Publications migrated from the lab's Wix site (International and Domestic pages),
+# 2026-10-17. Fields: region (international|domestic), type (journal|conference),
+# year, and either authors/title/venue or the verbatim citation in `text`.
+# Add new papers at the top of the matching year.
+- region: international
+  type: journal
+  year: 2026
+  authors: Huanheng Zhang, Soon Kwon, Sungho Kim
+  title: Mitigating Token Role Drift under Occlusion with No Inference Overhead for Compositional-Token Pose Estimation
+  venue: Neurocomputing, 693, 133857, 2026
+- region: international
+  type: journal
+  year: 2026
+  authors: Debnath U, Srestha SD, Kim S
+  title: 'Feasibility of Heart Rate Monitoring in Hemodialysis Patients Using Visible Imaging: A Pilot Study'
+  venue: Frontiers in Physiology, 17, 1909505, 2026
+- region: international
+  type: journal
+  year: 2026
+  authors: Kim J, Kim S, Sreshta SD, Debnath U, Choo YJ, Chang MC
+  title: 'Long-wave Infrared Imaging for Respiratory Rate Measurement in a Patient with Amyotrophic Lateral Sclerosis: A Case Report'
+  venue: Journal of International Medical Research, 54(3), 03000605261429206, 2026
+- region: international
+  type: journal
+  year: 2026
+  authors: Md Selim Sarowar, Manar Alnaasan, and Sungho Kim*
+  title: 'C3G-VM6D: Data-Efficient C3G Vision Model Aided 6D Pose Estimation Based on RGB-D Data'
+  venue: 'IEEE Access, 14, 34223-34238, 2026. DOI: 10.1109/ACCESS.2026.3666439'
+- region: international
+  type: journal
+  year: 2026
+  text: Srestha, S.D.; Kim, S. A hybrid CNN-spectral architecture for non-contact respiratory rate estimation using multi-region optical-flow analysis. PLoS ONE 2026, 21, e0325340.
+- region: international
+  type: journal
+  year: 2026
+  text: 'Debnath U, Kim S. Advanced signal-processing framework for remote photoplethysmography-based heart rate measurement: Integrating adaptive Kalman filtering with discrete wavelet transformation. PLoS One. 2026 Jan 20;21(1):e0340097.'
+- region: international
+  type: conference
+  year: 2026
+  authors: Md Selim Sarowar, Md Tanvir Islam, Sungho Kim*, and Sangtae Ahn
+  title: 'GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model'
+  venue: 37th British Machine Vision Conference (BMVC'26), United Kingdom, 2026. Rank A
+- region: international
+  type: conference
+  year: 2026
+  authors: Debnath U, SD Srestha, Kim S
+  title: Adaptive Multi-ROI Motion-Aware rPPG Framework for Heart Rate Monitoring of Hemodialysis Patients
+  venue: 2026 48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), July 2026. IEEE
+- region: international
+  type: conference
+  year: 2026
+  authors: Md Selim Sarowar and Sungho Kim*
+  title: Structured Gaussian Spatial Tokens for 3D Depth-Aware Vision-Language-Action Models
+  venue: ICML Workshop 2026 (ICMLw'26). Rank A*
+- region: international
+  type: conference
+  year: 2026
+  authors: Eunyeob Kim and Sungho Kim
+  title: Rapid Hyperspectral Classification of Camouflaged Objects in Complex Environments
+  venue: CVPR Workshop Precognition 2026, 2026
+- region: international
+  type: conference
+  year: 2026
+  authors: JungEun Park and Sungho Kim
+  title: Spectral-Faithful HSI Dehazing via Physics-Aware Wavelength-Adaptive Loss
+  venue: WiCV, CVPR Workshop 2026, 2026
+- region: international
+  type: conference
+  year: 2026
+  authors: Song, Haekang, and Sungho Kim
+  title: Enhancing TES Accuracy in Complex Thermal Scenes via Vision-Language Model-Guided Spectral Retrieval
+  venue: Algorithms, Technologies, and Applications for Multispectral and Hyperspectral Imaging XXXII, Vol. 14025, SPIE, 2026
+- region: international
+  type: conference
+  year: 2026
+  authors: Eunyeob Kim, Joseph Park, Sungho Kim
+  title: Hybrid CNN-Transformer Framework for ROI-Aware Gas Recognition in Visible-NIR Hyperspectral Imagery
+  venue: Proc. SPIE 14025, Algorithms, Technologies, and Applications for Multispectral and Hyperspectral Imaging XXXII, 140250G, 2026
+- region: international
+  type: conference
+  year: 2026
+  authors: Park, Jungeun, and Sungho Kim
+  title: Generation and Analysis of Haze-Synthesized Hyperspectral Images in Front-View Scenes
+  venue: Algorithms, Technologies, and Applications for Multispectral and Hyperspectral Imaging XXXII, Vol. 14025, SPIE, 2026
+- region: domestic
+  type: journal
+  year: 2026
+  authors: 박요셉, 허석행, 조용진, 방혜원, 김성호. (2026)
+  title: 'STIR-YOLO: Small Target IR-YOLO 저시정(안개) 환경에서 IR 특화 검출기를 이용한 원거리 보행자 검출'
+  venue: '제어로봇시스템학회 논문지, 32(5), 667-676. DOI: 10.5302/J.ICROS.2026.26.0024'
+- region: domestic
+  type: journal
+  year: 2026
+  authors: 김은엽, 허석행, 조용진, 방혜원, 김성호. (2026)
+  title: CNN과 Transformer를 결합한 하이브리드 딥러닝 기반의 가시광–근적외선 초분광 영상 가스 식별 연구
+  venue: '제어로봇시스템학회 논문지, 32(3), 337-344. DOI: 10.5302/J.ICROS.2026.25.0334'
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Sin I, Kim S, Jeong N
+  title: Domain-Specific Image Classification for USV Identification in Maritime Surveillance
+  venue: 한국과학기술학회 학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Sin I, Kim S
+  title: 안개 환경 객체 인식을 위한 대기 산란 모델 기반 EO 및 위성 영상 디헤이징 원리
+  venue: 한국전자파학회 학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Tanvir Ahmmed*, Sungho Kim*, Haekang Song**, Lee Dongik***
+  title: Hybrid Preprocessing and PCA-PLS-DA Classification of Synthetic SERS Spectra for Type II Diabetes Analysis
+  venue: Korean Institute of Electromagnetic Engineering and Science (KIEES) 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Sin I, Kim S
+  title: Restoration and Object Detection Performance Analysis of Low-Light and Haze-Degraded Images in Fire-Disaster Environments
+  venue: 제어로봇시스템학회 국내학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: 이원종, 김성호
+  title: 저조도 환경에서 EO 카메라 한계 보완을 위한 mmWave 레이더 보조 센싱 기반 물체 탐지 가능성 검증
+  venue: 제41회 제어·로봇·시스템학회 학술대회 논문집, 대구, 2026. 7
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Debnath U, SD Srestha, Kim S
+  title: Occlusion-Aware Real-Time Human Pose Estimation Using YOLOv11
+  venue: 제어로봇시스템학회 국내학술대회 논문집, 2026 Jul:966-67
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Tanvir Ahmmed, Sungho Kim*
+  title: 'AI Enhanced Raman Spectroscopy for Non-Invasive Glucose Estimation: Analysis of Technology and Approach Trends'
+  venue: Institute of Control, Robotics and Systems (ICROS) 2026, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: 최현지, 김보민, 박정은, 김성호
+  title: 'CLIP 에서 LLaVA까지: 비전-언어 모델 아키텍처 및 학습 전략에 관한 기술 동향 분석'
+  venue: 제41회 제어·로봇·시스템학회 학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Sin I, Kim S
+  title: A Review of EO-Based Object Perception and Radar-Assisted Range Compensation for Robust Robotic Grasping in Low-Light Environments
+  venue: 대한전자공학회 학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: 이원종, 김성호, 신일한, 강태웅
+  title: mmWave FMCW 레이더를 이용한 비접촉식 호흡수 측정 및 GT 센서 비교 분석
+  venue: 대한전자공학회 학술대회 논문집, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Tanvir Ahmmed, Sungho Kim*
+  title: A Wavelet-based Hybrid Preprocessing Pipeline using Synthetic Raman Spectral Data for AI-ready Signal Enhancement
+  venue: Institute of Electronics and Information Engineers (IEIE) Conference 2026, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: 이원종, 김성호, 정남훈
+  title: 레이더-EO 정렬 기반 해상 표적 ROI 생성 및 보정 파이프라인
+  venue: 2026 한국군사과학기술학회 종합학술대회 논문집, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: 이동익, 김보민, 최현지, 김성호, 정남훈
+  title: 적외선 영상 블라인드 초해상화를 위한 디퓨전 기반 복원 기법
+  venue: 2026 한국군사과학기술학회 종합학술대회, 2026
+- region: international
+  type: journal
+  year: 2025
+  text: Debnath, U., Kim, S. A comprehensive review of heart rate measurement using remote photoplethysmography and deep learning. BioMed Eng OnLine 24, 73 (2025).
+- region: international
+  type: journal
+  year: 2025
+  text: Srestha, S.D.; Debnath, U.; Kim, S. Adaptive multi-ROI spectral analysis and signal quality weighting for respiratory rate estimation using rPPG method. In Proc. 25th Int. Conf. Control, Automation and Systems (ICCAS), 2025; pp. 1021–1024. IEEE.
+- region: international
+  type: journal
+  year: 2025
+  text: 'Kim J, Kim S, Srestha SD, Debnath U, Chang MC. Benefit of long-wave infrared camera in the measurement of respiratory rate: A pilot study. Journal of International Medical Research. 2025;53(12).'
+- region: international
+  type: journal
+  year: 2025
+  text: Srestha, S.D.; Kim, S. A systematic review of contactless respiratory rate measurement using RGB cameras. Physiol. Meas. 2025, 46, 09TR01.
+- region: international
+  type: journal
+  year: 2025
+  authors: Lee, Seongryeong, and Sungho Kim
+  title: 'DDR-Net: Dual-Stream for Degraded Infrared Image Restoration Network'
+  venue: 'IEEE Access 13 (2025): 206531-206546'
+- region: international
+  type: journal
+  year: 2025
+  authors: Sungho Kim, Yewon Jang, Jaeho Kim, Kyeong Jin Jeong
+  title: 'LSC-TES: Local spectral curvature-based accurate temperature-emissivity separation in indoor environments'
+  venue: 'Infrared Physics & Technology 148 (2025): 105837'
+- region: international
+  type: journal
+  year: 2025
+  authors: Yewon Jang, Sungho Kim, and Min Cheol Chang
+  title: 'Usefulness of digital infrared thermography video using FLIR T560 in detecting hypothermia associated with complex regional pain syndrome type I: A CARE-compliant case report'
+  venue: 'Medicine 104.25 (2025): e41876'
+- region: international
+  type: journal
+  year: 2025
+  authors: Yewon Jang, Sungho Kim, and Min Cheol Chang
+  title: 'Usefulness of digital infrared thermography video using the FLIR T560 in detecting hypothermia associated with lumbosacral radiculopathy following spinal stenosis: A CARE-compliant case report'
+  venue: 'Medicine 104.11 (2025): e41874'
+- region: international
+  type: conference
+  year: 2025
+  authors: Yewon Jang, and Sungho Kim
+  title: Experimental setup and compensation method to improve the accuracy of TES-based direct emissivity estimation using LWIR hyperspectral cameras
+  venue: Signal Processing, Sensor/Information Fusion, and Target Recognition XXXIV. Vol. 13479. SPIE, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Uday Debnath, Sreya Deb Srestha, Sungho Kim
+  title: Real-Time Heart Rate Estimation Using RGB Camera and Green Channel Analysis
+  venue: CEIC, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Uday Debnath, Sreya Deb Srestha, Sungho Kim
+  title: Real-Time Heart Rate Estimation Using RGB Camera and Green Channel Analysis
+  venue: CEIC, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 천우성, 김성호
+  title: '로보틱 에이전트 AI: 다중모달 인터페이스, Sim-to-Real 강화학습, 그리고 모션 플래닝의 통합'
+  venue: CEIC, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Selim Sarowar, and Sungho Kim
+  title: 'VLMPE: A Systematic Review of VLM Aided 3D Pose Estimation For Hand Grasping'
+  venue: CEIC 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Selim Sarowar, and Sungho Kim
+  title: 'VLM6D: VLM based 6Dof Pose Estimation based on RGB-D Images'
+  venue: IEIE Fall 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 박요셉, 김성호
+  title: 풍력발전기블레이드결함의초분광영상기반분석및 O&M 적용
+  venue: 대한전자공학회(IEIE) 추계학술대회, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 김은엽, 김성호
+  title: 로봇팔 파지에서 물체 재질 검출을 위한 딥러닝 기반 초분광 영상 분류 성능 비교
+  venue: 대한전자공학회(IEIE) 추계학술대회, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 장환헝, 권순, 김성호
+  title: 원격 제어 모빌리티용 상호작용을 위한 실시간 보행자 자세 인식 기술(Real-Time Pedestrian Pose Estimation Technology for Interaction in Remote-Controlled Mobility)
+  venue: 대한전자공학회(IEIE) 추계학술대회, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Sreya Deb Srestha, Uday Debnath, Sungho Kim
+  title: Real-time respiration rate measurement system using webcam
+  venue: KIEES, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 이성령, 김재호, 장예원, 김성호
+  title: 의료 서비스 로봇을 위한 다중 센서 기반 비접촉 생체신호 측정 시스템
+  venue: KRoC, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 장예원, 김재호, 김성호
+  title: TES 기반 직접 방식을 활용한 중파 및 장파 적외선에서의 표적 온도 및 방사율 추정
+  venue: IPIU, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 김재호, 김성호
+  title: 카메라의 모션 모델을 고려한 이미지 디블러링 데이터셋 구축 방법 연구
+  venue: IPIU, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 이성령, 김성호
+  title: 다양한 조도 환경에서의 심박수 추정을 위한 IEM + rPPG Extractor Fusion Network
+  venue: IPIU, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 김성호, 이동익, 김보민, 최현지, 송해강, 김은엽, 박요셉, 박정은
+  title: 적외선 스펙트럼 영상을 활용한 AI 기반 자동 탐지 기술의 최근 동향 분석
+  venue: 한국우주안보학회 춘계학술대회, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 송해강, 김성호
+  title: 'Efficient Feature Matching for Robotic Manipulation: A Survey'
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 박정은, 김성호
+  title: 야외 물류 AI로봇을 위한 초분광 영상 DEHAZING 기술 동향 조사
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 박요셉, 김성호
+  title: 저시정 환경에서 원거리 모니터링을 위한 LWIR 카메라 기반 객체 검출
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 김은엽, 김성호
+  title: '블레이드 결함 검출을 위한 초분광 이미지 분류 딥러닝: Survey'
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: 김보민, 이동익, 최현지, 김성호
+  title: ONNX를 이용한 모바일용 이미지 매칭 시스템 구현
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Uday Debnath, Sungho Kim
+  title: Survey and Comprehensive Performance Analysis of Deep Learning Methods for Non-Contact Heart Rate Measurement using Remote Photoplethysmography
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Sreya Deb Srestha, Sungho Kim
+  title: 'Non-contact respiratory rate monitoring with RGB cameras: A survey of existing methods and challenges'
+  venue: ICROS, 2025
+- region: domestic
+  type: conference
+  year: 2025
+  authors: Anusha Ganesan, Sungho Kim
+  title: 'Recent Advances in SNR Improvement Techniques for Heart Rate Extraction: A Survey'
+  venue: ICROS, 2025
+- region: international
+  type: journal
+  year: 2024
+  authors: S. Lee, D. Kim, I. Park, G. Kim and S. Kim
+  title: Perceptible Lightweight Zero-Mean Normalized Cross-Correlation for Infrared Template Matching
+  venue: in IEEE Access, vol. 12, pp. 164777-164791, 2024
+- region: international
+  type: journal
+  year: 2024
+  authors: Kim, M., Jang, O., Song, H., Shin, H., Ok, J., Back, M., ... & Kim, S
+  title: 'Soft Segmented Randomization: Enhancing Domain Generalization in SAR ATR for Synthetic-to-Measured'
+  venue: IEEE Access. (2024)
+- region: international
+  type: journal
+  year: 2024
+  authors: D. Kim, S. Lee, I. Park, G. Kim and S. Kim
+  title: 'RecNet: Reinforcement Common Feature Mapping Network for Fast Template Matching in Visible-LWIR Images'
+  venue: in IEEE Access, vol. 12, pp. 195890-195905, 2024
+- region: international
+  type: journal
+  year: 2024
+  authors: Shin, Y., Shin, H., Ok, J., Back, M., Youn, J., & Kim, S
+  title: 'DCEF2-YOLO: Aerial detection YOLO with deformable convolution–efficient feature fusion for small target detection'
+  venue: Remote Sensing, 16(6), 1071. (2024)
+- region: international
+  type: journal
+  year: 2024
+  authors: Manar Alnaasan, Wail Al Zoubi, Salh Alhammadi, Jee-Hyun Kang, Sungho Kim, Young Gun Ko
+  title: 'Well-defined high entropy-metal nanoparticles: Detection of the multi-element particles by deep learning'
+  venue: Journal of Energy Chemistry, Vol. 98, 2024, (262-273)
+- region: international
+  type: journal
+  year: 2024
+  authors: Sangho Jo, Ohtae Jang, Chaitali Bhattacharyya, Minjun Kim, Taeseok Lee, Yewon Jang, Haekang Song, Hyukmin Kwon, Saebyeol Do, and Sungho Kim
+  title: 'S-LIGHT: Synthetic Dataset for the Separation of Diffuse and Specular Reflection Images'
+  venue: Sensors (Basel). 2024 Apr 3;24(7):2286
+- region: international
+  type: conference
+  year: 2024
+  authors: Haekang Song, Sungho Kim
+  title: XAI-Driven Domain Gap Analysis for Improved SAR Image Classification
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Yewon Jang, Jaeho Kim, Donyung Kim, Seongryeong Lee, Sungho Kim
+  title: Direct Emissivity Estimation in Indoor Environment with Long-wave Infrared Imaging
+  venue: CDICS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Seongryeong Lee, Donyung Kim, Jaeho Kim, Yewon Jang, Sungho Kim
+  title: Resource-Efficient rPPG Signal Processing via Single-Frame AI Collaborative Model for Edge Computing Applications
+  venue: CDICS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Jaeho Kim, Donyung Kim, Seongryeong Lee, Yewon Jang, Sungho Kim
+  title: Non-contact espiratory Rate Estimation from Various Distances using a Long-Wave Infrared Camera
+  venue: CDICS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Donyung Kim, Seongryeong Lee, Yewon Jang, Jaeho Kim, Sungho Kim
+  title: Camera Parameter-Free Pedestrian Localization for Indoor Digital Twin Applications
+  venue: CDICS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Jaeho Kim, Sungho Kim
+  title: Non-Contact Respiratory Rate Estimation Using LWIR Camera
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Minjun Kim, Sungho Kim
+  title: Real-Time High-Resolution SAR Imaging Using a Commercial W-Band Radar and Rail System
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Yewon Jang, Sungho Kim
+  title: Estimating Emissivity Based on the Difference between Indoor Background Temperature and Target Temperature
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Donyung Kim, Sungho Kim
+  title: Compact Monocular Camera-Based Indoor Object Trajectory Extraction System for Enhanced Monitoring
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Saebyeol Do, Sungho Kim
+  title: Unsupervised Learning for Classifying Real SAR Images from Synthetic SAR Images
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Seongryeong Lee, Sungho Kim
+  title: 'RetinexPulse: Tough Remote Optical Volume Pulse Wave Measurement Technique in Various Illumination Environments'
+  venue: ICCAS, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Bhattacharyya, Chaitali, Sungho Kim
+  title: Human Pose Estimation from Noisy Point Cloud Using Unsupervised Learning
+  venue: SPIE-OPTICS&PHOTONICS International Congress, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Seongryeong Lee, Sungho Kim
+  title: 'ECG2GAN: An rPPG Signal Enhancement Model for Realistic Signal Generation'
+  venue: SPIE-OPTICS&PHOTONICS International Congress, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Seungeon Lee, Donyung Kim, Sungho Kim
+  title: A deep learning-based template matching through other field of view infrared image pair for real-time mixed reality
+  venue: Real-Time Image Processing and Deep Learning 2024. Vol. 13034. SPIE, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Donyung Kim, and Sungho Kim
+  title: 'Generation of 3D LWIR thermal maps based on deep learning SLAM: feasibility and evaluation'
+  venue: Artificial Intelligence and Machine Learning for Multi-Domain Operations Applications VI. Vol. 13051. SPIE, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Kim, MinJun, and Sungho Kim
+  title: Synthetic SAR data domain randomization for unseen SAR ATR
+  venue: Algorithms for Synthetic Aperture Radar Imagery XXXI. Vol. 13032. SPIE, 2024
+- region: international
+  type: conference
+  year: 2024
+  authors: Shin, Yeonha, and Sungho Kim
+  title: 'Attention Based Region Proposal and VITwice: Detection with Only VIT'
+  venue: 2024 International Conference on Electronics, Information, and Communication (ICEIC). IEEE, 2024
+- region: domestic
+  type: journal
+  year: 2024
+  authors: 김승한, 김성호
+  title: AR 마커를 이용한 혼합현실 기반 구조물 안착 확인 시스템
+  venue: '제어로봇시스템학회 논문지 30.7 (2024): 770-777'
+- region: domestic
+  type: conference
+  year: 2024
+  authors: "\uFEFF박요셉, 김은엽, 김승한, 장예원, 김성호"
+  title: YOLOv8 기반 3D 객체 인식 및 자세 추정 기술개발
+  venue: 한국정밀공학회 추계학술대회, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김은엽, 김성호, 김재호, 김승한, 박요셉
+  title: PPO(Proximal Policy Optimization) 기반 Mycobot280을 사용한 비정형 물체 Grasping
+  venue: 한국정밀공학회 추계학술대회, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김승한, 김성호, 이성령, 김은엽, 박요셉
+  title: 비정형 물체 파지를 위한 구조광 기반 깊이 맵 생성
+  venue: 한국정밀공학회 추계학술대회, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 장예원, 김성호
+  title: Notch filter를 활용한 dehazing의 주파수 대역 특성 연구
+  venue: ICROS, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 박정은, 김성호
+  title: 3D 휴먼 자세 추정을 위한 Residual Pose 기법 적용 및 특성 분석
+  venue: ICROS, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김재호,김성호
+  title: 회전형 카메라 영상의 화질 개선을 위한 디블러링 기술 동향 연구
+  venue: ICROS, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김은엽, 김성호
+  title: DQN, Policy Gradient를 활용한 비정형물체 Grasping 동향조사
+  venue: ICROS, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김승한, 김성호
+  title: 이진 구조광 시스템에서 정현파와 구형파 패턴의 깊이 맵 정확성 비교
+  venue: ICROS, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 도새별, 송해강, 김성호
+  title: 해상용 디코이 플레어 적외선 복사 거동 모델링 연구
+  venue: KIMST 종합학술대회, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 이성령, 장예원, 김성호
+  title: 비접촉 심박수 추정을 위한 파장 대역별 광학 이미징 연구 동향 조사
+  venue: IEIE 하계종합학술대회, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김도녕, 김재호, 김성호
+  title: 가시 영상 장파장 적외선 영상 템플릿 매칭을 위한 비업샘플링 매핑 기법
+  venue: IEIE 하계종합학술대회, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 정찬결, 김성호
+  title: 협동로봇을 위한 YOLOv4 기반 사람 쓰러짐 사고 감지 기술
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 장예원, 김성호
+  title: TES와 열적외선 영상을 활용한 비접촉 체온 측정
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 서정섭, 김성호
+  title: 자동화된 SAR Imaging 을 위한 임베디드 기반 모션 및 레이더 제어
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 박정훈, 이성령, Bhattacharyya Chaitali, 김승한, 김성호
+  title: AR 환경에서 ArUco Marker 를 이용한 용접점 탐지 및 오차 계산 알고리즘 연구
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 박정은, 김성호
+  title: 'Comparision of Human pose estimation using RGB and Depth image : A survey'
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김재호, 김성호
+  title: 비접촉 영상 기반 호흡 주기 추정 기술의 동향 분석
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김승한, 김성호
+  title: ArUco Marker 를 활용한 3 차원 가상 좌표 축의 거리 측정 정확도 연구
+  venue: IPIU, 2024
+- region: domestic
+  type: conference
+  year: 2024
+  authors: 김민준, 서정섭, 신연하, 김성호
+  title: 합성 개구 레이더를 활용한 콘크리트 내외부 크랙 검출 및 분할
+  venue: IPIU, 2024
+- region: international
+  type: journal
+  year: 2023
+  text: Bhattacharyya, C.; Kim, S. Black Ice Classification with Hyperspectral Imaging and Deep Learning. Appl. Sci. 2023, 13, 11977.
+- region: international
+  type: journal
+  year: 2023
+  text: Jang, O.; Jo, S.; Kim, S. Deriving Controllable Local Optimal Solutions through an Environment Parameter Fixed Algorithm. Appl. Sci. 2023, 13, 7110.
+- region: international
+  type: journal
+  year: 2023
+  authors: Manar Alnaasan; Sungho Kim
+  title: Handwritten Multi-Scale Chinese Character Detector with Blended Region Attention Features and Light-Weighted Learning
+  venue: Sensors 2023, 23, 2305
+- region: international
+  type: conference
+  year: 2023
+  authors: Bhattacharyya, Chaitali, and Sungho Kim
+  title: Survey and Performance Analysis on Point Cloud Classification Models
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Lee, Seungeon, and Sungho Kim
+  title: Comparative Analysis of IR-IR Image Matching Applying the Deep Learning-Based Template Matching Techniques
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Lee, Seongryeong, and Sungho Kim
+  title: Face Image-Based BVP Estimation Using a 2D Camera
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Shin, Yeonha, and Sungho Kim
+  title: Analysis of Technique Characteristics Based on YOLOv5 for Real-Time Small Object Detection
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Song, Haekang, and Sungho Kim
+  title: 'Exploring Object Detection Techniques in SAR Imagery: Addressing Limited Datasets and Leveraging Data Augmentation'
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Jeong, Changyeol, et al
+  title: 'Advancements in Electro-Optical and Infrared Maritime Detection: A Survey'
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Do, Saebyeol, and Sungho Kim
+  title: Technology Trend for Compression of Deep Learning Model Algorithm
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Kim, Donyung, and Sungho Kim
+  title: 'Deep Learning based EO-LWIR Image Registration Obstacles: Survey'
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Firdiantika, Indah Monisa, and Sungho Kim
+  title: One-Stage Infrared Ships Detection with Attention Mechanism
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: international
+  type: conference
+  year: 2023
+  authors: Kim, MinJun, and Sungho Kim
+  title: Adaptation of Synthetic SAR to Measured SAR Using Complex Value Conditional GAN
+  venue: 2023 23rd International Conference on Control, Automation and Systems (ICCAS). IEEE, 2023
+- region: domestic
+  type: journal
+  year: 2023
+  authors: Firdiantika, Indah Monisa, et al
+  title: Edge Computing-Based Stacked Package Recognition for AGV
+  venue: '한국통신학회 학술대회논문집 (2023): 842-843'
+- region: domestic
+  type: journal
+  year: 2023
+  authors: 이성령, et al
+  title: 2D 카메라 얼굴 영상기반 비접촉형 심박수 측정 방식의 정확도 향상을 위한 ROI 추출 최적화 연구
+  venue: '제어로봇시스템학회 논문지 29.3 (2023): 272-278'
+- region: domestic
+  type: journal
+  year: 2023
+  text: 이승언, 송해강, 장오태, 김정호, 김성호.(2023).생존성 향상을 위한 기만체 중첩 목적의 함정 최적 침로 기법.제어로봇시스템학회 논문지,29(4),294-300.
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 신연하, 이성령, 송해강, 장예원, 김성호
+  title: 건성안 모니터링을 위한 비접촉 편광 카메라 기반 TMH Segmentation
+  venue: 한국정보과학회 학술발표논문집, 2023, 674-676
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 장예원, 김성호
+  title: Temperature and Emissivity Separation(TES)
+  venue: KIMST 추계학술대회, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 서정섭, 장오태, 김민준, 김성호(영남대학교), 이경민, 김경태(포항공과대학교)
+  title: Texas Instruments AWR1642와 Linear Stage를 이용한 FMCW Radar 기반 SAR Imaging 연구
+  venue: KIMST 추계학술대회, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: Bhattacharyya Chaitali, Seongryeong Lee, Yewon Jang, Saebyeol Do and Sungho Kim
+  title: ArUco Marker-Based Automatic Distance and Angle Measurement Using OpenCV
+  venue: ICROS, 2023, 190-192
+- region: domestic
+  type: conference
+  year: 2023
+  authors: Firdiantika, Indah Monisa, and Sungho Kim
+  title: Improving YOLOv5 with Attention Mechanism for Detecting Infrared Small Object
+  venue: ICROS, 2023, 187-189
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 장오태, 조상호, 김성호
+  title: Uncertainty 를 이용한 One-Task 딥러닝 네트워크의 하이퍼파라미터(Loss Weight) 최적화
+  venue: ICROS, 2023, 119-120
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 장예원, 이성령, Chaitali, 김성호
+  title: OpenCV를 활용한 카메라 캘리브레이션과 마커 기반 증강현실
+  venue: ICROS, 2023, 477-482
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 이승언, 김성호
+  title: 산업용, 로봇 비전을 위한 IR-IR 영상 정합 기법 비교 및 분석
+  venue: ICROS, 2023, 125-128
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 신연하, 김성호
+  title: 향상된 어텐션 맵을 활용한 Cascade-VIT 적외선 보행자 검출 네트워크
+  venue: ICROS, 2023, 117-118
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 김민준, 김성호
+  title: 비파괴 풍력 검사를 위한 SAR 영상 기반 크랙 검출 기술 동향 분석
+  venue: ICROS, 2023, 121-124
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 김도녕, 김성호
+  title: XR 기반 풍력 발전기 모니터링을 위한 EO-IR 영상 정합 딥러닝 모델 개발
+  venue: ICROS, 2023, 114-116
+- region: domestic
+  type: conference
+  year: 2023
+  authors: Indah Monisa firdiantika, Sungho Kim
+  title: SAR Ship Detection using Deep Learning for Marine Surveillance
+  venue: IPIU, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 장예원, 이성령, 도새별 , 김성호
+  title: 국방, 의료, 제조 산업에서의 증강 현실 활용 동향 분석
+  venue: IPIU, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 신연하, 김성호
+  title: 저수준의 스크래치로 경계 상자 회귀 VGG 모델 구현
+  venue: IPIU, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 송해강, Bhattacharyya Chaitali, 김성호
+  title: 게임 이론에 기반한 초분광 영상 분류 모델의 해석
+  venue: IPIU, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 김민준, 김성호
+  title: 열화상 이미지에서 가시광 영역 이미지로 컬러화에 대한 연구
+  venue: IPIU, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 김도녕, 장오태, 조상호, 김성호
+  title: 거리 시간별 함정 및 채프 RF/IR 신호 모사 및 추적
+  venue: IPIU, 2023
+- region: domestic
+  type: conference
+  year: 2023
+  authors: 권혁민, 장오태, 신연하, 김성호
+  title: 최적의 파라미터 도출을 위한 레이더 센서 분석
+  venue: IPIU, 2023
+- region: international
+  type: journal
+  year: 2022
+  authors: Sungho Kim; Jungsub Shin
+  title: 'AS-polRI: Analysis of apparent spectral polarization radiant intensity in the midwave infrared band for man-made object detection'
+  venue: Infrared Physics & Technology 2022, 127
+- region: international
+  type: journal
+  year: 2022
+  authors: Junhwan Ryu; Jongchan Kim; Heegon Kim; Sungho Kim
+  title: Multispectral interaction convolutional neural network for pedestrian detection
+  venue: Computer Vision and Image Understanding 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Seongryeong Lee and Sungho Kim
+  title: ROI area that can increase SNR of non-contact heart rate measurement based on face image using 2D camera
+  venue: ICCAS, 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Hyeokmin Kwon and Sungho Kim
+  title: Trend Analysis of Registration Technology Between Infrared Images
+  venue: ICCAS, 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Yeonha Shin and Sungho Kim
+  title: Infrared Pedestrian Dataset Training using Swin Transformer model
+  venue: ICCAS, 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Donyung Kim and Sungho Kim
+  title: Analyzing Angle detection in aerial image
+  venue: ICCAS, 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Seungeon Lee, Ohtae Jang, Wangheon Lee and Sungho Kim
+  title: Comparative Analysis of IR-IR Image Matching Using Classical Techniques
+  venue: ICCAS, 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Ohtae Jang, Sangho jo and Sungho Kim
+  title: A comparative survey on SAR image Segmentation using deep learning
+  venue: ICCAS, 2022
+- region: international
+  type: conference
+  year: 2022
+  authors: Haekang Song and Sungho Kim
+  title: 'Explainable artificial intelligence (XAI): How to make image analysis deep learning models transparent'
+  venue: ICCAS, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 신연하, 김정호, 김성호
+  title: 원거리 표적 자동 온도계측 GUI
+  venue: KIMST 추계학술대회, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 장오태, 김정호, 김성호
+  title: PIDNet을 통한 적외선 해상 선박 영상 실시간 분할
+  venue: KIMST 추계학술대회, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 이승언, 이성령, 조상호, 김성호
+  title: Face Landmark 기반 얼굴 검출 및 심박수 측정
+  venue: ICROS, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 신연하, 김성호
+  title: Transformer 기반 소형 객체 검출 연구 동향 분석
+  venue: ICROS, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 김도녕, 장오태, 김성호
+  title: 염색원단 불량 검사를 위한 실시간 온 디바이스 딥러닝 검출기
+  venue: ICROS, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 조상호, 김성호
+  title: 편광된 가시광선을 활용한 딥러닝 기술동향
+  venue: IPIU, 2022
+- region: domestic
+  type: conference
+  year: 2022
+  authors: 신연하, 김종찬, 장오태, 김도녕, 김성호
+  title: 다중 센서 데이터 및 심층학습 네트워크를 통한 원거리 온도추정
+  venue: IPIU, 2022
+- region: international
+  type: journal
+  year: 2021
+  authors: Byungjin Kang, Inho Park, Changmin Ok and Sungho Kim
+  title: 'ODPA-CNN: One Dimensional Parallel Atrous Convolution Neural Network for Band-Selective Hyperspectral Image Classification'
+  venue: Applied Sciences, 12, 174, 2021
+- region: international
+  type: journal
+  year: 2021
+  authors: INHO PARK, JONGMIN JEONG, AND SUNGHO KIM
+  title: 'Accent for Visible and Infrared Registration (AVIR): Attention Block for Increasing Patch Matching Rate Through Edge Emphasis INHO'
+  venue: 'IEEE Access, 9: 160661-160674, 2021'
+- region: international
+  type: journal
+  year: 2021
+  authors: Munhyeong Kim, Jongmin Jeong and Sungho Kim
+  title: 'ECAP-YOLO: Efficient Channel Attention Pyramid YOLO for Small Object Detection in Aerial Image'
+  venue: Remote Sensing, 13, 4851, 2021
+- region: international
+  type: journal
+  year: 2021
+  authors: Manar Alnaasan and Sungho Kim
+  title: 'FAN-MCCD: Fast and Accurate Network for Multi-Scale Chinese Character Detection'
+  venue: Sensors, 21, 7289, 2021
+- region: international
+  type: journal
+  year: 2021
+  authors: Jongchan Kim and Sungho Kim
+  title: Temperature Estimation Adaptive to Variables over Distance Using Infrared–LiDAR
+  venue: Applied Sciences, 11, 4063, 2021
+- region: international
+  type: journal
+  year: 2021
+  authors: Sungho Kim, Jungsub Shin and Sunho Kim
+  title: 'AT2ES: Simultaneous Atmospheric Transmittance-Temperature-Emissivity Separation Using Online Upper Midwave Infrared Hyperspectral Images'
+  venue: Remote Sensing, 13, 1249, 2021
+- region: international
+  type: journal
+  year: 2021
+  authors: Ikhwan Song and Sungho Kim
+  title: 'AVILNet: A New Pliable Network with a Novel Metric for Small-Object Segmentation and Detection in Infrared Images'
+  venue: Remote Sensing, 13, 555, 2021
+- region: international
+  type: conference
+  year: 2021
+  authors: Sangho Jo and Sungho Kim
+  title: Hyperspectral Imaging labelling tool using preprocessing and edge detection
+  venue: ICCAS, 2021
+- region: international
+  type: conference
+  year: 2021
+  authors: Jongchan Kim, Inho Park and Sungho Kim
+  title: A Fusion Framework for Multi-Spectral Pedestrian Detection using EfficientDet
+  venue: ICCAS, 2021
+- region: international
+  type: conference
+  year: 2021
+  authors: MunhyeongKim and SunghoKim
+  title: YOLO based robotic grasping
+  venue: ICCAS, 2021
+- region: international
+  type: conference
+  year: 2021
+  authors: Byungjin Kang and Sungho Kim
+  title: Analysis of the influence of 3D-CNN on spatial random information in hyperspectral image classification
+  venue: ICCAS, 2021
+- region: international
+  type: conference
+  year: 2021
+  authors: Kang, Byungjin, Kim, Sungho, Shin, Jungsub, Kim, Sun Ho, Kang, Byungjin
+  title: Paint detection in shortwave and midwave hyperspectral using one dimensional CNN and guided grad-CAM band selection
+  venue: Proc. of SPIE, 11727, 2021
+- region: domestic
+  type: journal
+  year: 2021
+  authors: 김성호, 옥창민
+  title: 원거리 초분광 데이터 분류를 위한 환경 인자의 영향성 분석
+  venue: Journal of Institute of Control, Robotics and Systems, 27(8):602-607, 2021
+- region: domestic
+  type: journal
+  year: 2021
+  authors: 박인호, 김성호
+  title: 적대적 공격에 강인한 적대적 학습 기반의 초분광 영상 분류기 설계
+  venue: Journal of Institute of Control, Robotics and Systems, 27(6):389-400, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 김종찬, 김성호
+  title: 심층 학습 네트워크를 이용한 보행자 검출에서 Grad-CAM을 통한 결과 비교 및 분석
+  venue: KIMST 종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 조상호, 서보경, 김성호
+  title: 잡음 및 광원에 강인한 초분광 영상 edge검출
+  venue: KIMST 종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 신연하, 장오태, 김종찬, 김성호
+  title: 심층 학습 네트워크를 이용한 온도 추정을 위한 데이터셋 구축
+  venue: IEIE 추계학슬대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 장오태, 김정호, 김성호
+  title: 심층학습을 통한 함정의 최적 침로 분석
+  venue: IEIE 추계학슬대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 서보경, 김정호, 김성호
+  title: Deeplab v3를 활용한 고정밀 해상선박 분할 기법
+  venue: IEIE 추계학슬대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: Manar Alnaasan, Sungho Kim
+  title: Siammask-based IR ship tracking
+  venue: IEIE 추계학슬대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 박인호, 김성호, 정종민
+  title: 객체의 크기 및 가로세로 정규화에 따른 딥러닝 분류기 성능 분석
+  venue: IEIE 하계종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 김문형, 김성호, 정종민
+  title: YOLO 기반 항공 영상 소형 표적 검출 특성 분석
+  venue: IEIE 하계종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 강병진, 조상호, 옥창민, 김성호
+  title: 1D-CNN을 이용한 초분광 이미지 분류에서 Dilated Convolution의 영향 분석
+  venue: IEIE 하계종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 김종찬, 김성호
+  title: 원적외선 카메라에서 온도 추정을 위한 Digital Count의 거리에 따른 변화 분석
+  venue: IEIE 하계종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 김도녕, 서보경, 장오태, 김성호
+  title: 심층 학습 네트워크 이용한 항공 영상 객체의 방향 정보 regression
+  venue: IEIE 하계종합학술대회, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 조상호, 정재현, 이현정, 김예원, 김예진, 김민수, 김성호
+  title: 딥러닝 기반 X-ray 촬영 자세 판단 및 폐렴 질병 분석 프로그램
+  venue: IPIU, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 박인호, 강병진, 김성호
+  title: FGSM 기반의 적대적 공격에 대한 초분광 분류기의 영향성 분석
+  venue: IPIU, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: Manar Alnaasan, Sungho Kim
+  title: 'FAN-CCD: Fast and Accurate Network for Chinese Character Detection'
+  venue: IPIU, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 김종찬, 김성호
+  title: 보행자 검출을 위한 다중 스펙트럼 융합 심층 학습 네트워크 실험
+  venue: IPIU, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 김문형, 김성호
+  title: ArUco마커와 딥러닝을 이용한 자동 빈피킹 기법
+  venue: IPIU, 2021
+- region: domestic
+  type: conference
+  year: 2021
+  authors: 강병진, 김성호, 신정섭, 김선호
+  title: Band Selection for Paint Detection in Mid-wave Infrared Hyperspectral Image using 1-Dimensional Convolutional Neural Network and Guided Grad-CAM
+  venue: IPIU, 2021
+- region: international
+  type: journal
+  year: 2020
+  authors: Sungho Kim
+  title: Novel Air Temperature Measurement Using Midwave Hyperspectral Fourier Transform Infrared Imaging in the Carbon Dioxide Absorption Band
+  venue: Remote Sensing, 12, 1860, 2020
+- region: international
+  type: journal
+  year: 2020
+  authors: Sungho Kim, Jungsub Shin, Joonmo Ahn, and Sunho Kim
+  title: Extremely Robust Remote-Target Detection Based on Carbon Dioxide-Double Spikes in Midwave Spectral Imaging
+  venue: Sensors, 20, 2896, 2020
+- region: international
+  type: conference
+  year: 2020
+  authors: Inho Park, Sungho Kim
+  title: Performance Indicator Survey for Object Detection
+  venue: ICCAS, 2020
+- region: domestic
+  type: journal
+  year: 2020
+  authors: 김성호, 황영배, 이왕헌
+  title: '특집호 서문: 딥러닝 및 머신비전의 산업적 적용'
+  venue: Journal of Institute of Control, Robotics and Systems, 26(11):883, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 김성호, 김정호
+  title: 해상 환경에서 적외선 함정 및 기만체 모의 기술 연구
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 박인호, 김성호
+  title: 초분광 이미지 CNN 분류기의 효율적인 적대적 공격 적용
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 조상호, 유준상, 김예진, 서보경, 권유빈, 김성호
+  title: Deeplabv3를 이용한 특이점 검출
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: Jongchan Kim, Munhyeong Kim, Inho Park, Sungho Kim
+  title: Detection performance comparison and analysis according to object size and network scaling in aerial images
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 송익환, 김성호, 김정호
+  title: IR 소형 표적 추적을 위한 네트워크 최적화 설계 실험
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 유준상, 김성호
+  title: XAI 를 위한 Attribution Method 접근법 분석 및 동향
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 김문형, 김성호
+  title: 딥러닝을 이용한 TCP/IP 소켓통신 기반 빈피킹
+  venue: KIMST, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 김성호, 김정호
+  title: 적외선 표적복사 특성 분석을 위한 합성영상 생성 연구
+  venue: KRoC, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 송익환, 김성호
+  title: 그물망 구조의 재귀 특성을 이용한 오토 인코더 신경망의 해상 소형 물체 탐지 실험
+  venue: ICROS, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 김문형, 김성호, 정종민
+  title: 초분광 이미지 기술 및 최신 딥러닝 응용 동향
+  venue: ICROS, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 강병진, 김성호, 신정섭, 김선호
+  title: SAR-EO 영상 융합 기반 표적 탐지 기술 동향 분석
+  venue: ICROS, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 박인호, 강병진, 김종찬, 김문형, 김성호, 정종민
+  title: 다중센서 융합을 위한 센서별(EO, IR, Hyperspectral, Lidar, SAR) 특성 조사 및 분석
+  venue: ICROS, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 김종찬, 김덕규, 김성호
+  title: 해양 환경에서 심층 신경망을 이용한 단일 영상 안개 제거 기법 비교 분석
+  venue: IPIU, 2020
+- region: domestic
+  type: conference
+  year: 2020
+  authors: 김예진, 류준환, 김성호
+  title: 반사분광 및 복사분광을 위한 초분광 이미지 획득 방법과 최신 동향
+  venue: IPIU, 2020
+- region: international
+  type: journal
+  year: 2019
+  authors: Sungmin Yun and Sungho Kim
+  title: 'TIR-MS: Thermal Infrared Mean-Shift for Robust Pedestrian Head Tracking in Dynamic Target and Background variations'
+  venue: Applied Sciences, 2019, 9, 3015, 2019
+- region: international
+  type: journal
+  year: 2019
+  authors: Junhwan Ryu and Sungho Kim
+  title: Heterogeneous Gray-Temperature Fusion-Based Deep Learning Architecture for Far Infrared Small Target Detection
+  venue: Journal of Sensors, vol. 2019, Article ID 4658068, 2019
+- region: international
+  type: journal
+  year: 2019
+  authors: Sungho Kim , Jungho Kim, Jinyong Lee, and Junmo Ahn
+  title: 'AS-CRI: A New Metric of FTIR-Based Apparent Spectral-Contrast Radiant Intensity for Remote Thermal Signature Analysis'
+  venue: Remote Sensing, 11(7):777, 2019
+- region: international
+  type: journal
+  year: 2019
+  authors: Junhwan Ryu and Sungho Kim
+  title: 'Chinese Character Boxes: Single Shot Detector Network for Chinese Character Detection'
+  venue: Applied Sciences, 9(2):315, 2019
+- region: international
+  type: journal
+  year: 2019
+  authors: Sohyun Kim, Gwang-Il Jang, Sungho Kim, and Junmo Kim
+  title: Computationally Efficient Automatic Coast Mode Target Tracking Based on Occlusion Awareness in Infrared Images
+  venue: Sensors, 18(4):996, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Sungmin Yun and Sungho kim
+  title: Recurrent YOLO and LSTM-based IR single pedestrian tracking
+  venue: ICCAS, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Ikhwan Song and Sungho Kim
+  title: Decomposition of Random Vector of GAN and Basis Vector Assembly for Chinese Character Generation
+  venue: ICCAS, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Junhwan Ryu and Sungho Kim
+  title: 'Feature Map Swap: Multispectral Data Fusion Method for Pedestrian Detection'
+  venue: ICCAS, pp. 319-323, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Deokkyu Kim and Sungho Kim
+  title: Extrinsic parameter calibration of 2D radar-camera using point matching and generative optimization
+  venue: ICCAS, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Junhwan Ryu, Sungho Kim
+  title: Feature Map Random Transfer-based Heterogeneous Data Fusion for Pedestrian Detection in Far IR Images
+  venue: BMVC Workshop on Object Detection and Recognition for Security Screening, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Sungho Kim and Jungho Kim, Jinyong Lee, and Junmo Ahn
+  title: Hyperspectral Remote Temperature Estimation Robust to Atmospheric Variation with Fourier Transform Infrared and Deep Learning
+  venue: MLDM, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Deokkyu Kim, Sungho Kim
+  title: Extrinsic parameter calibration of 2D LiDAR-camera using edge matching and removal of infrared cut filter
+  venue: Proc. SPIE, 11018, 110181B, 2019
+- region: international
+  type: conference
+  year: 2019
+  authors: Sungmin Yun and Sungho Kim
+  title: Robust infrared target tracking using thermal information in Mean-Shift
+  venue: Proc. of SPIE Vol. 10995, 1099509, 2019
+- region: domestic
+  type: journal
+  year: 2019
+  authors: 김 태 환 , 김 성 호
+  title: Multi-Modal 영역제안 및 CNN-SVM 기반 야간 원거리 원적외선 보행자 검출
+  venue: Journal of Institute of Control, Robotics and Systems, 25(8):713-721, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 윤성민, 김성호
+  title: Long Short-Term Memory (LSTM) 이용한 IR 단일 보행자 추적
+  venue: IEIE하계종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 송익환, 김성호
+  title: 해상 환경에서 해무 제거 기법 적용 및 비교 분석
+  venue: IEIE하계종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 류준환, 김성호
+  title: 무작위 특징 맵 전송을 이용한 특징 레벨에서의 원적외선 이종 데이터 융합
+  venue: IEIE하계종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  text: 김종찬, 류준환, 김승원, 서보경, 김성호, "보행자 검출에서 심층 학습 네트워크를 이용한 다양한 시나리오에 따른 다중 스펙트럼 센서의 비교 및 분석, IEIE하계종합학술대회, 2019.
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 김덕규, 김성호
+  title: MLP 기반의 2D LiDAR를 이용한 보행자 검출 네트워크
+  venue: IEIE하계종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 오지용, 윤성민, 김성호
+  title: 임베디드 시스템을 위한 적외선 영상추적 알고리즘의 속도개선 방법
+  venue: 2019 대한임베디드공학회 추계학술대회, pp. 151-152, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 류준환, 김성호
+  title: Identity Mapping을 이용한 검출기 네트워크의 성능 개선
+  venue: 2019 한국군사과학기술학회 종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: Ikhwan Song, Sungho Kim
+  title: Small Target Detection with 14-bit Thermal Information for Long Range Distances
+  venue: 2019 한국군사과학기술학회 종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 윤성민, 김성호
+  title: IR-ROLO (Thermal Infrared Recurrent YOLO) 기반 해상 환경 선박 탐지 추적 시스템
+  venue: 2019 한국군사과학기술학회 종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 윤성민, 김성호
+  title: IR Pedestrian tracking을 위한 Brightness-based IR-ADNet Brightness-based IR-ADNet for IR pedestrian tracking
+  venue: 2019 한국군사과학기술학회 종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 류준환, 김성호
+  title: 원적외선 영상에서 보행자 검출을 위한 이종 데이터 융합 방법
+  venue: 2019 한국군사과학기술학회 종합학술대회, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 윤성민, 김성호
+  title: IR Recurrent Neural Network
+  venue: ICROS, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 류준환, 송익환, 김 성 호
+  title: 고문서 초서 영역 검출 및 번역을 위한 검출 결과 넘버링
+  venue: ICROS, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 김덕규, 김성호
+  title: 딥러닝 기반 2D LiDAR와 Camera의 Decision level fusion을 이용한 보행자 검출
+  venue: ICROS, pp. 76-77, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 류준환, 김성호
+  title: 딥러닝 기반 원적외선 보행자 검출에서 입력 데이터 및 정규화 방법에 따른 성능 비교 분석
+  venue: 제31회 영상처리 및 이해에 관한 워크샵(IPIU), 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 김덕규, 지창현, 김성호
+  title: 적외선 차단 필터 제거와 에지 매칭을 이용한 2D 라이다-카메라 캘리브레이션
+  venue: 제31회 영상처리 및 이해에 관한 워크샵(IPIU), 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 윤성민, 김성호
+  title: 14-bit Radiometry histogram rebinning 통한 Tracking 성능 향상
+  venue: 제31회 영상처리 및 이해에 관한 워크샵(IPIU), 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 김덕규, 지창현, 김성호
+  title: 2D 라이다-비전 센서 융합을 위한 딥러닝 기반 보행자 검출
+  venue: 제 14 회 한국로봇종합학술대회 논문집, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 윤성민, 김성호, 이혜민
+  title: 개선된 Grayscale mapping 기법을 활용한 적외선 온도데이터 변환
+  venue: 제 14 회 한국로봇종합학술대회 논문집, 2019
+- region: domestic
+  type: conference
+  year: 2019
+  authors: 류준환, 김성호
+  title: 겉보기 온도 데이터 입력 기반 적외선 소형 드론 검출을 위한 Single-Shot Detector
+  venue: 제 14 회 한국로봇종합학술대회 논문집, 2019
+- region: international
+  type: journal
+  year: 2018
+  authors: Sungho Kim , Jungho Kim, Jinyong Lee, and Junmo Ahn
+  title: Midwave FTIR-Based Remote Surface Temperature Estimation Using a Deep Convolutional Neural Network in a Dynamic Weather Environment
+  venue: Micromachines, 9(10):495, 2018
+- region: international
+  type: journal
+  year: 2018
+  authors: Taehwan Kim, Sungho Kim
+  title: 'Pedestrian detection at night time in FIR domain: Comprehensive study about temperature and brightness and new benchmark'
+  venue: Pattern Recognition, 79(8):44-54, 2018
+- region: international
+  type: journal
+  year: 2018
+  authors: Sungho Kim, Woo-Jin Song and So-Hyun Kim
+  title: Double Weight-Based SAR and Infrared Sensor Fusion for Automatic Ground Target Recognition with Deep Learning
+  venue: Remote Sensing, 10(1):1-24, 2018
+- region: international
+  type: conference
+  year: 2018
+  authors: Jiyong Oh, Ki-Seok Kim, Miryong Park, and Sungho Kim
+  title: A Comparative Study on Camera-Radar Calibration Methods
+  venue: 2018 15th International Conference on Control, Automation, Robotics and Vision (ICARCV), pp. 1057-1062, 2018
+- region: international
+  type: conference
+  year: 2018
+  authors: Junhwan Ryu and Sungho Kim
+  title: Chinese character detection using modified Single Shot Multibox Detector
+  venue: ICCAS, pp. 1313-1315, 2018
+- region: international
+  type: conference
+  year: 2018
+  authors: Sungho Kim, Taehwan Kim
+  title: RADIOMETRIC TEMPERATURE-BASED PEDESTRIAN DETECTION FOR 24 HOUR SURVEILLANCE
+  venue: IEEE ICME, 2018
+- region: international
+  type: conference
+  year: 2018
+  authors: Junhwan Ryu, Sungho Kim
+  title: Small infrared target detection by data-driven proposal and deep learning-based classification
+  venue: Proc. of SPIE, vol. 10624, 106241J, 2018
+- region: domestic
+  type: journal
+  year: 2018
+  authors: 류 준 환, 김 성 호
+  title: 데이터 기반 영역 제안 및 심층 학습 분류 네트워크를 이용한 소형 적외선 드론 검출
+  venue: Journal of Institute of Control, Robotics and Systems, 24(12):1146-1151, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 김성호, 김태환
+  title: 콘볼루션 신경망을 활용한 공구 상태 진단
+  venue: 한국정밀공학회 2018 년도 추계학술대회논문집, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 이지혜, 김종찬, 김승원, 류준환, 김덕규, 윤성민, 김성호
+  title: 적외선 영상에서 공간필터 및 CFAR 검출기를 이용한 초소형 드론 검출 성능 비교
+  venue: 2018 한국군사과학기술학회 추계학술대회, pp. 1-2, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 윤성민, 김성호, 이혜민
+  title: 해상 환경에서 실시간 적외선 선박 추적을 위한 임베디드 플랫폼 개발
+  venue: 2018 한국군사과학기술학회 추계학술대회, pp. 1-2, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 류준환, 김성호
+  title: 적외선 소형 드론 검출을 위한 Single-Shot Detector 최적화
+  venue: 2018 한국군사과학기술학회 추계학술대회, pp. 1011-1012, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 김성호, 김정호, 이진용, 안준모
+  title: 중적외선 초분광 영상과 딥러닝을 이용한 원거리 온도 계측
+  venue: 2018 한국군사과학기술학회 추계학술대회, pp. 1327-1328, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 김덕규, 지창현, 김성호
+  title: 적외선 차단 필터 제거와 에지 매칭을 이용한 2D 라이다-카메라 캘리브레이션
+  venue: 2018 한국군사과학기술학회 추계학술대회, pp. 1003-1004, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 류준환, 김민성, 최현철, 김성호, 이민호
+  title: 초서 검출을 위한 텍스트 영역 및 라인 분할
+  venue: 2018년 대한전자공학회 하계학술대회 논문집, pp. 628-630, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 윤성민, 김성호, 이혜민
+  title: Size-varying infrared UAV tracking using modified mean shift based-Kalman filter
+  venue: 2018 한국군사과학기술학회 종합학술대회, pp. 577-578, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 김성호, 김정호, 이진용, 안준모
+  title: FTIR 기반 적외선 초분광 영상의 복사계측 및 분광 특성 분석
+  venue: 2018 한국군사과학기술학회 종합학술대회, pp. 309-310, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 김덕규, 지창현, 김성호
+  title: 2D 라이다에서 max bin 배경 추정 기법을 이용한 보행자 검출 연구
+  venue: 2018 한국군사과학기술학회 종합학술대회, pp. 597-598, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 류준환, 김성호
+  title: 데이터 기반 영역 제안 및 딥러닝 분류 네트워크를 이용한 소형 적외선 드론 검출
+  venue: 2018 한국군사과학기술학회 종합학술대회, pp. 471-472, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 류준환, 김민성, 최현철, 김성호
+  title: 랜덤 문자 선택을 활용한 YOLO v2 기반 필기체 한자 검출
+  venue: IPIU, 2018
+- region: domestic
+  type: conference
+  year: 2018
+  authors: 김종직, 김성호
+  title: 열화상 기반 몰드 변압기 열화 진단 기술 최근 동향
+  venue: IPIU, 2018
+- region: international
+  type: journal
+  year: 2017
+  authors: Sungho Kim
+  title: Infrared variation reduction by simultaneous background suppression and target contrast enhancement for deep convolutional neural networkbased automatic target recognition
+  venue: Optical Engineering, 56(6), 063108, 2017
+- region: international
+  type: conference
+  year: 2017
+  authors: M. S. Son, S. H. Kim
+  title: Dempster-Shafer Theory-based CCD and IR Sensor Fusion for 24 Hour Pedestrian Detection
+  venue: 12th International Symposium on Automotive Lighting (ISAL), pp. 97-103, 2017
+- region: international
+  type: conference
+  year: 2017
+  authors: Sungho Kim
+  title: Infrared Variation Optimized Deep Convolutional Neural Network for Robust Automatic Ground Target Recognition
+  venue: IEEE CVPR Workshop, 195-202, 2017
+- region: international
+  type: conference
+  year: 2017
+  authors: Taehwan Kim, Sungho Kim
+  title: Remote Pedestrians Detection at Night-time in FIR Image using Contrast Filtering and Locally Projected Region-based CNN
+  venue: Proc. of SPIE, 10177, 101772G, 2017
+- region: domestic
+  type: journal
+  year: 2017
+  authors: 손민석, 김성호, Masoud Afrakhteh, 이은령, 박미룡
+  title: Dempster-Shafer Theory 기반의 CCD-IR 영상 융합 기법을 이용한 주/야간 보행자 검출 성능 향상 연구
+  venue: Journal of Institute of Control, Robotics and Systems, 23(6), 482-488, 2017
+- region: domestic
+  type: journal
+  year: 2017
+  authors: 원진주, 김성호, 송우진, 김소현
+  title: IR 영상 기반 자동 표적 인식 환경 영향 분석
+  venue: Journal of Institute of Control, Robotics and Systems, 23(2), 131-137, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 최재휘, 이지혜, 이서현, 김태환, 류준환, 김성호
+  title: 원적외선 카메라를 이용한 드론 검출용 DB 구축
+  venue: 2017년 한국군사과학기술학회 추계학술대회, pp. 731-732, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 류준환, 김태환, 김성호
+  title: YOLO v2 를 이용한 적외선 소형 무인기 검출
+  venue: 2017년 한국군사과학기술학회 추계학술대회, pp. 792-793, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 손민석, 김성호, 이은령, 박미룡
+  title: LIDAR와 CCD카메라 융합 기반의 보행자 후보영역 설정 기법 연구
+  venue: 2017년 한국군사과학기술학회 추계학술대회, pp. 671-672, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 김태환, 김성호, 이은령, 박미룡
+  title: Radar 계측 정보와 딥러닝 융합 기반 객체 검출
+  venue: 2017년 한국군사과학기술학회 추계학술대회, pp. 713-714, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 김태환, 김성호
+  title: 고서 번역을 위한 영역제안 및 딥러닝 기반 초서 검출
+  venue: ICROS, pp. 367-368, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: Jaeho Lee, Sungho Kim, “
+  title: LED-based traffic lane detection at night-time for ADAS
+  venue: 제 29 회 영상처리 및 이해에 관한 워크샵, pp. 1-3, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 손민석, 김성호
+  title: AEBS를 위한 CCD와 IR카메라 융합 기반의 주/야간 보행자 검출 기법 연구
+  venue: 제 29 회 영상처리 및 이해에 관한 워크샵, pp. 1-4, 2017
+- region: domestic
+  type: conference
+  year: 2017
+  authors: 김태환, 김성호
+  title: 원적외선 영상에서 계절별 야간 보행자-배경 온도 특성 분석
+  venue: 제 29 회 영상처리 및 이해에 관한 워크샵, pp. 1-5, 2017
+- region: international
+  type: journal
+  year: 2016
+  authors: Sungho Kim, Jin-Ju Won
+  title: Closely Spaced Target Detection using Intensity Sorting-based Context Awareness
+  venue: 'J Electr Eng Technol 11(6): 1839-1845, 2016'
+- region: international
+  type: journal
+  year: 2016
+  authors: Sungho Kim, Heekang Kim
+  title: Hyperspectral image-based analysis of weathering sensitivity forsafety diagnosis of Seongsan Ilchulbong Peak
+  venue: International Journal of Applied Earth Observation and Geoinformation, 52, 485–501, 2016
+- region: international
+  type: journal
+  year: 2016
+  authors: Sungho Kim, Woo-Jin Song and So-Hyun Kim
+  title: Robust Ground Target Detection by SAR and IR Sensor Fusion Using Adaboost-Based Feature Selection
+  venue: Sensors, 16(7), 1117, 1-27, 2016
+- region: international
+  type: journal
+  year: 2016
+  authors: Heekang Kim, Soon Kwon, and Sungho Kim
+  title: Hyperspectral Image-Based Night-Time Vehicle Light Detection Using Spectral Normalization and Distance Mapper for Intelligent Headlight Control
+  venue: Sensors, 16(7), 1058, 1-15, 2016
+- region: international
+  type: journal
+  year: 2016
+  authors: Sungho Kim and Kyung-Tae Kim
+  title: Adjacent Infrared Multitarget Detection Using Robust Background Estimation
+  venue: Journal of Sensors, Vol. 2016, pp. 1-10, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Taehwan Kim, Sungho Kim*, Eunryung Lee, Miryong Park
+  title: Comparative Analysis of RADAR-IR Sensor Fusion Methods for Object Detection
+  venue: 17th International Conference on Control, Automation and Systems (ICCAS 2017), pp. 1576-1580, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Taehoon Kim and Sungho Kim
+  title: Encoding with Discriminative Dictionary Obtained by Support Vector Machine for Pedestrian Detection
+  venue: The First International Conference on Consumer Electronics (ICCE) Asia, pp. 508-511, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Taehwan Kim, Taehoon Kim, Minseok Son, Sungho Kim, Eunryung Lee, Masoud afrakhteh, and Miryong Park
+  title: Pedestrian detection in the Radiometric Temperature based Far infrared Thermal images at Night time
+  venue: The First International Conference on Consumer Electronics (ICCE) Asia, pp. 477-478, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Heekang Kim and Sungho Kim
+  title: Band Selection for Plastic Classification using NIR Hyperspectral Image
+  venue: 16th International Conference on Control, Automation and Systems (ICCAS 2016), pp. 302-304, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Taehwan Kim and Sungho Kim
+  title: Sign language translation system using latent feature values of sign language images
+  venue: 2016 13th International Conference on Ubiquitous Robots and Ambient Intelligence (URAI), 228-233, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Sungho Kim, Heekang Kim
+  title: Minimum Removal and Maximum Normalization of VNIR Hyperspectral Image for Shade and Specular Invariance
+  venue: Proc. of SPIE, 9840, 98401Z-1~98401Z-6, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Jin-Ju Won, Sungho Kim
+  title: Rotation Invariant Automatic Infrared Target Recognition using G-Radon
+  venue: MATEC Web of Conferences 56, 02005, 2016
+- region: international
+  type: conference
+  year: 2016
+  authors: Heekang Kim, Sungho Kim
+  title: Per-Norm Based Automotive Headlamp Detection in Hypersepctral Image for Visible Light Communication
+  venue: International Journal of Computer and Electrical Engineering, 8(1), 12-21, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 손민석, 김성호, 이은령, 마수드, 박미룡
+  title: 차량용 HUD의 인지성 향상을 위한 증강현실(AR) 기법 연구
+  venue: 2016 한국자동차공학회 추계학술대회 및 전시회, pp. 1302-1303, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 김태환, 김태훈, 손민석, 김성호, 이은령, 마수드, 박미룡
+  title: 방사 측정 온도 기반의 적외선 영상에서 야간 원거리 보행자 검출
+  venue: 2016년 한국과학기술학회 추계학술대회, pp. 757-758, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 원진주, 김성호, 조영래, 송우진, 김소현
+  title: 엔트로피를 이용한 SAR-IR 융합기반 표적 인식 연구
+  venue: 2016년 한국과학기술학회 추계학술대회, pp. 797-798, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 김태환, 김태훈, 손민석, 김성호, 이은령, 마수드, 박미룡
+  title: ADAS 용 보행자 검출을 위한 적외선 데이터베이스 구축 동향과 방사 분석 온도 기반의 적외선 데이터베이스 구축
+  venue: 2016년 대한전자공학회 하계학술대회 논문집, 771-774, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 손민석, 김성호, 이은령, 마수드, 박미룡
+  title: AEB를 위한 CCD와 IR카메라 융합 기반의 주/야간 보행자 검출 기술 동향 분석
+  venue: 2016년 대한전자공학회 하계학술대회 논문집, 974-977, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 김성호, 김희강
+  title: NIR 초분광 영상의 효과적인 플라스틱 분류를 위한 Dark-Threshold 기반 전처리 기법
+  venue: 2016년 대한전자공학회 하계학술대회 논문집, 689-692, 2016
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 김태환, 김성호
+  title: 수화 이미지와 고유 특징값을 이용한 수화 번역 시스템
+  venue: 2016년 제28회 영상처리 및 이해에 관한 워크샵, pp.1-6, 2016.2.15-17
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 안홍기, 김성호
+  title: 히스토그램 매칭을 이용한 CCD/IR 영상 융합
+  venue: 제11회 한국로봇종합학술대회, pp. 287-288, 2016.1.24-27
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 김희강, 김성호
+  title: Active High Beam을 위한 초분광 영상 기반 차량 전조등 검출
+  venue: 제11회 한국로봇종합학술대회, pp. 346-347, 2016.1.24-27
+- region: domestic
+  type: conference
+  year: 2016
+  authors: 김태훈, 김성호
+  title: SVM과 HOG 기반 보행자 검출에서 변형된 p-norm 정규화 기법의 효과
+  venue: 제11회 한국로봇종합학술대회, pp. 395-396, 2016.1.24-27
+- region: international
+  type: journal
+  year: 2015
+  authors: Sungho Kim
+  title: Sea-Based Infrared Scene Interpretation by Background Type Classification and Coastal Region Detection for Small Target Detection
+  venue: Sensor, 2015, pp. 24487-24513, 2015
+- region: international
+  type: journal
+  year: 2015
+  authors: Sungho Kim and Min-Sheob Shim
+  title: Biologically Motivated Novel Localization Paradigm by High-Level Multiple Object Recognition in Panoramic Images
+  venue: The Scientific World Journal, 2015, pp. 1-15, 2015
+- region: international
+  type: journal
+  year: 2015
+  authors: Sungho Kim
+  title: High-Speed Incoming Infrared Target Detection by Fusion of Spatial and Temporal Detectors
+  venue: Sensors, 2015, pp. 7267-7293, 2015
+- region: international
+  type: journal
+  year: 2015
+  authors: Sungho Kim
+  title: Unsupervised Spectral-Spatial Feature Selection-Based Camouflaged Object Detection Using VNIR Hyperspectral Camera
+  venue: The Scientific World Journal, 2015, pp. 1-8, 2015
+- region: international
+  type: conference
+  year: 2015
+  authors: Jin-Ju Won, Sungho Kim, Youngrea Cho, Woo-Jin Song, So-Hyun Kim
+  title: Synthetic SAR/IR Database Generation for sensor fusion-based A.T.R
+  venue: The 12th International Conference on Ubiquitous Robots and Ambient Intelligence (URAI 2015), pp. 421-424, 2015
+- region: international
+  type: conference
+  year: 2015
+  authors: Heekang Kim and Sungho Kim
+  title: Automated Target Detection using K-means based on Per-Norm for Invariant Illumination in Hyperspectral Image
+  venue: The 12th International Conference on Ubiquitous Robots and Ambient Intelligence (URAI 2015), pp. 570-572, 2015
+- region: international
+  type: conference
+  year: 2015
+  authors: Sungho Kim, Soon Kwon
+  title: Improvement of traffic sign recognition by accurate ROI refinement
+  venue: 2015 15th International Conference on Control, Automation and Systems (ICCAS 2015), pp. 926-928, 2015
+- region: international
+  type: conference
+  year: 2015
+  authors: Yunji Lim, Sungho Kim, Yeongrae Job, Woo Jin Song, Sohyeon Kim
+  title: BMVT-M based IR and SAR ground target detection
+  venue: Proc. of SPIE, 9476, 947617, 2015
+- region: international
+  type: conference
+  year: 2015
+  authors: Sungho Kim, Min-Sheob Shim
+  title: Cooperative spectral and spatial feature fusion for camouflaged target
+  venue: Proc. of SPIE, 9472, 94721M, 2015
+- region: domestic
+  type: journal
+  year: 2015
+  authors: 임윤지, 김태훈, 김성호, 송우진, 김경태, 김소현
+  title: BMVT-M을 이용한 IR 및 SAR 융합기반 지상표적 탐지
+  venue: Journal of Institute of Control, Robotics and Systems, 21권, 11호, pp. 1017-1026, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 임윤지, 김성호
+  title: 초분광 영상 기반 약품 분류 연구
+  venue: 2015년도 정기총회 및 추계학술대회, pp. 2557-2560, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 원진주, 김성호
+  title: 초분광 회전불변 기술자의 영상잡음 영향 분석
+  venue: 2015년 대한전자공학회 하계학술대회 논문집, pp. 679-682, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 안홍기, 김성호
+  title: ROI 설정 기반의 야간운전 신호등 탐색 기법
+  venue: 2015년 대한전자공학회 하계학술대회 논문집, pp. 749-752, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김희강, 김성호
+  title: 초분광 영상의 조명 불변성을 위한 Per-Norm 기반 분광 정규화 기법
+  venue: 2015년 대한전자공학회 하계학술대회 논문집, pp. 659-662, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김태훈, 김성호
+  title: Scoring Method를 이용한 multi-class SVMs 구현
+  venue: 2015년 대한전자공학회 하계학술대회 논문집, pp. 1397-1398, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김희강, 김성호
+  title: 초분광 영상의 조명 불변성을 위한 분광 정규화 기법 비교 분석
+  venue: ICROS, pp. 163-164, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 임윤지, 조영래, 송우진, 김소현, 김성호
+  title: BMVT-M 기반 IR&SAR 표적 탐지
+  venue: 2015년 제 27회 영상처리 및 이해에 관한 워크샵, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 원진주, 권순, 김성호
+  title: 칼라와 HOG를 이용한 교통표지판 검출 및 인식
+  venue: 2015년 제 27회 영상처리 및 이해에 관한 워크샵, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김희강, 안창회, 김성호
+  title: 비전센서와 기울기센서를 활용한 무선 공유기 측위
+  venue: 2015년 제 27회 영상처리 및 이해에 관한 워크샵, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김태훈, 김성호
+  title: 저 사양 디바이스에서 부분 갱신 및 지연 지우기 기반 3D 렌더링
+  venue: 2015년 제 27회 영상처리 및 이해에 관한 워크샵, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김준광, 정우영, 권순, 김영덕, 김성호
+  title: HSV채널을 이용한 국내형 축사 내의 표식 객체 검출 방법
+  venue: 2015년 제 27회 영상처리 및 이해에 관한 워크샵, 2015
+- region: domestic
+  type: conference
+  year: 2015
+  authors: 김성호
+  title: 방향-곡률 기술자 기반 적외선 표적 식별 기법
+  venue: 2015년도 한국통신학회 동계종합학술발회 논문집, pp. 663-664, 2015
+- region: international
+  type: journal
+  year: 2014
+  authors: Sungho Kim, Joohyoung Lee
+  title: Small Infrared Target Detection by Region-Adaptive Clutter Rejection for Sea-Based Infrared Search and Track
+  venue: Sensors, Vol. 14, 2014
+- region: international
+  type: journal
+  year: 2014
+  text: Sungho Kim, Sun-Gu Sun and Kyung-Tae Kim, "Analysis of Infrared Signature Variation and Robust Filter-Based Supersonic Target Detection, The Scientific World Journal, Vol. 2014, pp. 1-17, 2014.
+- region: international
+  type: journal
+  year: 2014
+  authors: Sungho Kim, Sun-Gu Sun and Kyung-Tae Kim
+  title: Highly efficient supersonic small infrared target detection using temporal contrast filter
+  venue: Electronics Letters, Vol. 50, No. 2, pp. 81-83, 2014
+- region: international
+  type: conference
+  year: 2014
+  authors: Sungho Kim, Kyung-Tae Kim, Sohyun Kim
+  title: Variation Analysis of 24 Hour Winter Infrared Images for Small Target Detection
+  venue: The 9th International Conference on Computer Science & Education (ICCSE), Aug. 22-24, Vnacouver, Canada, 2014
+- region: international
+  type: conference
+  year: 2014
+  authors: Sungho Kim, Kyung-Tae Kim, Sohyun Kim
+  title: Infrared Small Target Discrimination using Sequential Forward Feature Selection with AUC Mettric
+  venue: IEEE International Conference on Industrial Technology (ICIT), 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 임윤지, 원진주, 최유정, 김성호
+  title: M-GMM을 이용한 적외선 영상 기반 침입자 탐지
+  venue: 2014년도 정기총회 및 추계학술대회, pp. 2557-2560, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 김태훈, 김성호
+  title: 기하학적 방법을 이용한 선형 SVM 구현
+  venue: 2014년 제27회 신호처리합동학술대회 논문집 제27권 1호, pp. 1-3, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 최유정, 황보석, 임윤지, 원진주, 김성호
+  title: 향상된 잡음에 강인한 배경 제거 기반 적외선 이동 객체 검출
+  venue: 2014년 제27회 신호처리합동학술대회 논문집 제27권 1호, pp. 1-3, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 임윤지, 황보석, 김성호
+  title: 향상된 BooleanMap 기반 IR 표적 탐지
+  venue: 2014년 제27회 신호처리합동학술대회 논문집 제27권 1호, pp. 1-4, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 원진주, 김성호
+  title: HOG-KNN 기반 적외선 지상 표적 인식
+  venue: 2014년 제27회 신호처리합동학술대회 논문집 제27권 1호, pp. 1-3, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 문관영, 김성호
+  title: 다중 형태학필터와 Otsu 문턱치 기반 적외선 소형 지상표적 탐지 기법
+  venue: 2014년 제27회 신호처리합동학술대회 논문집 제27권 1호, pp. 1-4, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 김성호, 선선구, 김소현, 김경태
+  title: 능동파괴체계를 위한 시공간 필터뱅크 기반 초고속 이동표적 탐지 기법
+  venue: 제9회 한국로봇종합학술대회, pp. 353-354, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 임윤지, 김성호
+  title: SAR/IR 센서 정보 융합 연구를 위한 합성영상 생성
+  venue: 2014년도 대한전자공학회 하계학술대회, 제37권 1호, pp. 890-892, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 김성호, 임윤지
+  title: 적외선 소형표적 탐지를 위한 동계/춘계/하계 24시간 적외선 신호 가변성 분석
+  venue: 2014년도 대한전자공학회 하계학술대회, 제37권 1호, pp. 898-899, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 김성호, 권순
+  title: 스마트 내비게이션을 위한 TPLF 기반 다중차선 검출 기법
+  venue: 한국정보통신공학회 종합학술대회, pp. 896-897, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 임윤지, 김성호
+  title: 히스테리시스 문턱치 기반 지상 표적 검출 기법
+  venue: ICROS 학술대회, pp. 185-186, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 김성호, 심민섭
+  title: 재질 구분을 위한 학습 기반 기반 초분광 영상 밴드 선택 기법
+  venue: ICROS 학술대회, pp. 5-6, 2014
+- region: domestic
+  type: conference
+  year: 2014
+  authors: 임윤지, 심민섭, 김성호
+  title: 통계적 특성기반 초분광 영상 밴드 선택을 통한 재질 분류 및 검출기법
+  venue: 한국통신학회 2014년도 동계종합학술발표회, pp. 374-375, 2014
+- region: international
+  type: journal
+  year: 2013
+  authors: Sungho Kim
+  title: Analysis of small infrared target features and learning-based false detection removal for infrared search and track
+  venue: Pattern Analysis and Applications, Published online, 2013
+- region: international
+  type: conference
+  year: 2013
+  authors: Min-Sheob Shim, Sungho Kim, Jasoon Jang
+  title: Material Classification using Hyperspectral Images (HSI) and LED Light
+  venue: The 2nd International Conference on Advanced Electromaterials (ICAE), 2013
+- region: international
+  type: conference
+  year: 2013
+  authors: Min-Sheob Shim, Sungho Kim
+  title: Concealed target detection using Hyperspectral Imagers based on Intersection Kernel of SVM
+  venue: Proc. of SPIE, Vol. 8743, 874325, 2013 (SCOPUS)
+- region: international
+  type: conference
+  year: 2013
+  authors: Sungho Kim, Sun-Gu Sun, Soon Kwon, and Kyung-Tae Kim
+  title: Robust coastal region detection method using image segmentation and sensor LOS information for infrared search and track
+  venue: Proc. of SPIE, Vol. 8744, 87440D, 2013 (SCOPUS)
+- region: international
+  type: conference
+  year: 2013
+  authors: Sungho Kim and In So Kweon
+  title: Omnidirectional Object Recognition Based Mobile Robot Localization
+  venue: Lecture Notes in Electrical Engineering (LNEE), Vol. 240, pp. 975-981, 2013 (SCOPUS)
+- region: domestic
+  type: journal
+  year: 2013
+  authors: 심민섭, 김성호
+  title: 초분광 영상 특징선택과 밴드비 기법을 이용한 유사색상의 특이재질 검출기법
+  venue: Journal of Institute of Control, Robotics and Systems, 19권, 12호, pp. 1081-1088, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 양유경, 이주형, 김소현
+  title: Integration of Region-Adaptive Clutter Removal for Infrared Search and Track
+  venue: 제26회 영상처리 및 이해에 관한 워크샵(IPIU), 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 권인소
+  title: 'P-RIF: Perceptually Robust Invariant Feature'
+  venue: 제25회 영상처리 및 이해에 관한 워크샵(IPIU), 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 심민섭, 김성호
+  title: 초분광 영상 기반 물체 재질 최적 분류 기법 연구
+  venue: 제25회 영상처리 및 이해에 관한 워크샵(IPIU), 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김철홍, 김성호, 조현웅, 송우진, 김경태, 김소현
+  title: IR/SAR 영상의 정보융합 기반 표적식별 연구 동향 분석
+  venue: ICROS 학술대회, pp. 242-243, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 권순
+  title: RGB-D 카메라를 이용한 3D 물체 검출 및 자세 추정 기법
+  venue: ICROS 학술대회, pp. 566-567, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  text: 박채훈, 최유경, 유동근, 환순민, 김성호, 권인소, 온라인 어휘 트리", 제8회 한국로봇종합학술대회, pp. 531-532, 2013.
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 최유경, 권인소
+  title: P-RIF 특징량을 이용한 물체 인식 기법 연구
+  venue: 제8회 한국로봇종합학술대회, pp. 533-534, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 심민섭, 김성호
+  title: P-RIF 특징량 기반 IR 표적 인식 및 자세추정
+  venue: 2013년 한국군사과학기술학회 종합학술대회, pp. 1024-1025, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 심민섭, 김성호
+  title: Simulated Annealing 기반 초분광 특징 선택을 통한 은닉표적 검출기법
+  venue: 2013년 한국군사과학기술학회 종합학술대회, pp. 919-920, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 선선구, 김경태
+  title: TCF 기반 초고속 적외선 표적 탐지 기법
+  venue: 2013년 한국군사과학기술학회 종합학술대회, pp. 909-910, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 김소현, 송우진, 김경태
+  title: OKTAL-SE 기반 적외선 모의영상 생성 기법
+  venue: 제9회 국방기술학술대회, pp. 295-296, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 임윤지, 김성호
+  title: IR Target detection using STDM and adaptive threshold
+  venue: 2013년도 제 26회 신호처리합동학술대회논문집, 제26권 1호, pp. 148-151, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 이용락, 김성호
+  title: 초분광 영상 및 K-means 알고리즘을 이용한 재질분류 기법
+  venue: 2013년도 제 26회 신호처리합동학술대회논문집, 제26권 1호, pp. 170-171, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 이세정, 김성호
+  title: P-RIF 특징량의 기술자 압축에 따른 인식률 연구
+  venue: 2013년도 제 26회 신호처리합동학술대회논문집, 제26권 1호, pp. 141-143, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김승민, 김성호
+  title: 가변적 ROI를 통한 다중 차선 인식 기법
+  venue: 2013년도 제 26회 신호처리합동학술대회논문집, 제26권 1호, pp. 189-192, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 김성호, 선선구
+  title: 적외선 소형 표적 탐지 알고리즘 개발을 위한 합성영상 생성 연구
+  venue: 한국통신학회 2013년도 동계종합학술발표회, pp. 728-729, 2013
+- region: domestic
+  type: conference
+  year: 2013
+  authors: 심민섭, 김성호
+  title: 초분광 영상 및 SVM을 이용한 재질 분류
+  venue: 한국통신학회 2013년도 동계종합학술발표회, pp. 96-97, 2013
+- region: international
+  type: journal
+  year: 2012
+  authors: Sungho Kim, Soon Kwon, In So Kweon
+  title: A Perceptual Visual Feature Extraction Method Achieved by Imitating V1 and V4 of the Human Visual System
+  venue: Cognitive Computation, Published online (DOI 10.1007/s12559-012-9194-8), 2012
+- region: international
+  type: journal
+  year: 2012
+  authors: Sungho Kim
+  title: Two-point correction and minimum filter-based nonuniformity correction for scan-based aerial infrared cameras
+  venue: Optical Engineering, Vol. 51, No. 10, 106401, 2012
+- region: international
+  type: journal
+  year: 2012
+  authors: Sungho Kim
+  title: Robust Corner Detection by Image-Based Direct Curvature Field Estimation for Mobile Robot Navigation
+  venue: International Journal of Advanced Robotic Systems, Vol. 9, No. 187, pp. 1-12, 2012
+- region: international
+  type: journal
+  year: 2012
+  authors: Sungho Kim, Joohyoung Lee
+  title: Scale invariant small target detection by optimizing signal-to-clutter ratio in heterogeneous background for infrared search and track
+  venue: 'Pattern Recognition, 45(1): 393-406, 2012'
+- region: international
+  type: conference
+  year: 2012
+  authors: Ho-jun Seo, Uk-eob Park, Sungho Kim, Soon Kwon
+  title: Human Body Extraction Using Kinect
+  venue: 2012 Korea-Japan-China International Workshop, pp. 137-139, 2012
+- region: international
+  type: conference
+  year: 2012
+  authors: Min-Sheob Shim, Sungho Kim
+  title: Objects Classification Using Hyperspectral Image
+  venue: 2012 Korea-Japan-China International Workshop, pp. 20-21, 2012
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim, In So Kweon and Wang-Heon Lee
+  title: Orientation based multi-scale corner detection for mobile robot application
+  venue: 2012 12th International Conference on Control, Automation and Systems Oct. 17-21, 2012 in ICC, Jeju Island, Korea, 2012, pp. 466-468 (SCOPUS)
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim
+  title: Target attribute-based false alarm rejection in small infrared target detection
+  venue: Proc. of SPIE, Vol. 8537, 85370G-1, 2012 (SCOPUS)
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim, Min-Sheob Shim, Byungin Choi, Jieun Kim, and Yukyung Yang
+  title: Image and Sensor LOS-based Automatic Horizontal Line Detection and Tracking for Infrared Search and Track
+  venue: 2012 IEEE International Conference on Automation Science and Engineering (CASE), Seoul, Korea. August 20-24, 2012, pp. 714-719
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim, Chaehoon Park, Yukyung Choi, Soon Kwon and In So Kweon
+  title: Feature point detection by combining advantages of intensity-based approach and edge-based approach
+  venue: World Academy of Science, Engineering and Technology, Vol. 68, pp. 1242-1247, 2012 (SCOPUS)
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim, Soon Kwon, and Byungin Choi
+  title: Robust Horizontal Line Detection and Tracking in Occluded Environment for Infrared Cameras
+  venue: International Conference on Image Processing, Computer Vision, and Pattern Recognition (IPCV'12), Las Vegas, 2012. 7. 16-19
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim, Byungin Choi, Jieun Kim, Soon Kwon, and Kyung-Tae Kim
+  title: Three plot correlation-based small infrared target detection in dense sun-glint environment for infrared search and track
+  venue: Proc. of SPIE, vol. 8393, 83930T, 2012 (SCOPUS)
+- region: international
+  type: conference
+  year: 2012
+  authors: Sungho Kim, Chansu Lee
+  title: Analysis of Japanese Drama using Emotional Speech Recognition
+  venue: Jeongseon, 1-3 Feb. 2012, pp. 562-563
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 심민섭, 김성호
+  title: Sparsity 특성을 반영한 해리스 코너 기반 SUSurE 반복률 향상 연구
+  venue: 2012년도 제25회 신호처리합동학술대회논문집, 제 25권 1호, pp. 82-85, 2012
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 김성호, 최병인, 김지은, 양유경
+  title: 적외선 소형표적 특징 추출 및 분류 기반 오탐지 저감 기법 연구
+  venue: 제3회 감시정찰정보학술대회, 국방과학연구소, 2012.7.12
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 심민섭, 김성호
+  title: Sparsity 특성을 이용한 해리스 코너 검출 속도 개선 기법
+  venue: 제7회 한국로봇종합학술대회, 강릉, 2012.6.21-23
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 김성호, 박채훈, 최유경, 권인소
+  title: 밝기 및 윤곽선 기반 코너 검출 기법
+  venue: 제7회 한국로봇종합학술대회, 강릉, 2012.6.21-23
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 심민섭, 김성호
+  title: 초분광 영상을 이용한 은폐물 검출
+  venue: 2012년 한국군사과학기술학회 종합학술대회, 경주, 2012
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 김성호, 권순
+  title: RGB-D 센서를 이용한 데이터베이스 구축용 3D 물체 분할 기법 연구
+  venue: 2012년 한국군사과학기술학회 종합학술대회, 경주, 2012
+- region: domestic
+  type: conference
+  year: 2012
+  authors: 김성호, 하재욱, 권순
+  title: 초분광 영상처리 기법 및 응용 동향 분석
+  venue: 2012년 제24회 영상처리 및 이해에 관한 워크샵, 2012
+- region: international
+  type: journal
+  year: 2011
+  authors: Sungho Kim
+  title: Min-local-LoG filter for detecting small targets in cluttered background
+  venue: 'Electronics Letters, 48(2): 105-106, 2011'
+- region: international
+  type: journal
+  year: 2011
+  authors: Sungho Kim, Joo-Hyoung Lee
+  title: Robust scale invariant target detection using the scale-space theory and optimization for IRST
+  venue: 'Pattern Analysis and Applications”, 14(1): 57-66, 2011'
+- region: international
+  type: journal
+  year: 2011
+  authors: Sungho Kim
+  title: Double Layered-Background Removal Filter for Detecting Small Infrared Targets in Heterogenous Backgrounds
+  venue: 'Journal of Infrared, Millimeter, and Terahertz Waves, 32(1): 79-101, 2011'
+- region: international
+  type: conference
+  year: 2011
+  authors: Sungho Kim, Taek Lyul Song, Byungin Choi, Boo-Hwan Lee, and Wang-Heon Lee
+  title: Spatio-Temporal Filter Based Small Infrared Target Detection in highly Cluttered Sea Background
+  venue: 11th International Conference on Control, Automation and Systems (ICCAS), Kintex, 26-29 Oct. 2011. pp. 1142-1146
+- region: international
+  type: conference
+  year: 2011
+  authors: Sungho Kim, Yukyung Yang, Joohyoung Lee
+  title: Horizontal Small Target Detection with Cooperative Background Estimation and Removal Filters
+  venue: The 36th International Conference on Acoustics, Speech and Signal Processing (ICASSP), Prague, 22-27 May. 2011. pp. 1761-1764
+- region: domestic
+  type: conference
+  year: 2011
+  authors: 김성호, 권순, 박채훈, 최유경, 권인소
+  title: TVF와 GVF를 이용한 특징점 추출 기법
+  venue: 2011년 제 24회 신호처리종합학술대회 논문집 제 24권 1호, pp. 483-484, 2011
+- region: domestic
+  type: conference
+  year: 2011
+  authors: 김성호, 박채훈, 최유경, 권인소
+  title: 곡률-방향 공간 정보 기반 영상 기술자
+  venue: 2011년 대한전자공학회 추계학술대회 논문집, pp. 721-724, 2011
+- region: domestic
+  type: conference
+  year: 2011
+  authors: 김성호, 박채훈, 최유경, 권인소
+  title: 영상 곡률 공간 정보를 이용한 코너 검출 기법
+  venue: ICROS, 조선대, 2011.5.27-28, pp. 266-270
+- region: domestic
+  type: conference
+  year: 2011
+  authors: Sungho Kim, In So Kweon
+  title: Boosted MCMC-based Object Detection in Cluttered Background
+  venue: 2011년 제 23회 영상처리 및 이해에 관한 워크샵, 2011.2.16-18, pp. 36-37
+- region: international
+  type: journal
+  year: 2010
+  authors: Sungho Kim
+  title: Robust Object Categorization and Segmentation Motivated by Visual Contexts in the Human Visual System
+  venue: EURASIP Journal on Advances in Signal Processing, Vol. 2011, Article ID 102418, pp. 1-22, 2010
+- region: international
+  type: journal
+  year: 2010
+  authors: Sungho Kim, Yukyung Yang, Byungin Choi
+  title: Realistic infrared sequence generation by physics-based infrared target modeling for infrared search and track
+  venue: Optical Engineering, 49(11):1-7, 116401, 2010
+- region: international
+  type: conference
+  year: 2010
+  authors: Sungho Kim, In So Kweon
+  title: Large Object Detection in Cluttered Background using Boosted Markov Chain Monte Carlo
+  venue: International Conference on Control, Automation, Robotics and Vision (ICARV10), Singapore, 7-10 Dec. 2010
+- region: domestic
+  type: conference
+  year: 2010
+  authors: 이찬수, 천성용, 김성호, 이장우
+  title: IPTV를 위한 HMM기반 손제스처 인식 시스템
+  venue: 제23회 신호처리합동학술대회논문집, pp. 118-119, 2010
+- region: domestic
+  type: conference
+  year: 2010
+  authors: 김성호, 양유경, 이주형
+  title: 적외선 소형표적 탐지를 위한 오경보 감소 기법 동향 및 적용 사례 분석
+  venue: 제23회 신호처리합동학술대회논문집, pp. 110-113, 2010
+- region: domestic
+  type: conference
+  year: 2010
+  authors: 김성호, 권인소
+  title: 다중 물체 인식 기반 위치 추정
+  venue: 2010 한국군사과학기술학회, pp. 774-7, 2010
+- region: international
+  type: journal
+  year: 2009
+  authors: Sungho Kim, Yukyung Yang, Joohyoung Lee, Yongchan Park
+  title: Small Target Detection Utilizing Robust Methods of the Human Visual System for IRST
+  venue: Journal of Infrared Millimeter and Terahertz Waves (IRMMWTHz), 30(9):994-1011, 2009
+- region: international
+  type: journal
+  year: 2009
+  authors: Sungho Kim, Yukyung Yang, Joohyoung Lee
+  title: Robust detection of horizontal small targets using synergistic spatial filtering
+  venue: Electronics Letters (EL), 45(12):620-621, 2009
+- region: international
+  type: journal
+  year: 2009
+  authors: Sungho Kim, In So Kweon
+  title: Simultaneous Place and Object Recognition using Collaborative Context Information
+  venue: 'Image and Vision Computing (IVC), 27(6): 824-833, 2009'
+- region: international
+  type: conference
+  year: 2009
+  authors: Yukyung Yang, Sungho Kim, and Yongchan Park
+  title: Clutter Reduction using Track Classification and Clutter Map Generation
+  venue: The 34th International Conference on Infrared, Millimeter, and Terahertz Waves, Busan, 21-25 Sept. 2009
+- region: international
+  type: conference
+  year: 2009
+  authors: Sungho Kim, Yukyung Yang, and Joohyoung Lee
+  title: Robust Horizontal Target Detection with Cooperative Spatial Filtering
+  venue: The 34th International Conference on Infrared, Millimeter, and Terahertz Waves, Busan, 21-25 Sept. 2009
+- region: international
+  type: conference
+  year: 2009
+  authors: Wonkyum Lee, Joohwan Chun, Byuing In Choi, Yukyung Yang, Sungho Kim
+  title: Hybrid Real-Time Tracking of Non-Rigid Objects Under Occlusions
+  venue: SPIE Defense and Security, Orlando FL., 2009
+- region: international
+  type: conference
+  year: 2009
+  authors: Byungin Choi, Sanghoon Nam, Jungsu Youn, Yukyung Yang, Sungho Kim
+  title: A novel clustering method using weighted sub-sampling for an infrared search and track system
+  venue: SPIE Defense and Security, Orlando FL., 2009
+- region: domestic
+  type: conference
+  year: 2009
+  authors: 이영탁, 박창현, 왕희집, 표성열, 양혁석, 김세하, 김병혁, 김성호, 양유경, 이주형
+  title: 스캔방식의 열상 시스템용 모의영상 투사 장치 개발
+  venue: 2009 한국군사과학기술학회, pp. 947-950, 2009
+- region: domestic
+  type: conference
+  year: 2009
+  authors: 김성호, 양유경, 이주형
+  title: 적외선 소형표적 탐지 알고리즘의 오경보 감소 기법 동향 분석
+  venue: 2009 한국군사과학기술학회, pp. 1149-1152, 2009
+- region: domestic
+  type: conference
+  year: 2009
+  authors: 김성호, 양유경, 이주형, 김창우, 최병인
+  title: 적외선 탐색 및 추적을 위한 적외선 모의표적영상 생성 기법
+  venue: 제1회 감시정찰정보 학술대회, pp. 331-334, 2009
+- region: international
+  type: journal
+  year: 2008
+  authors: Sungho Kim, Kuk-Jin Yoon, In So Kweon
+  title: Object Recognition using a Generalized Robust Invariant Feature and Gestalt’s law of Proximity and Similarity
+  venue: Pattern Recognition (PR), Volume 41, Issue 2, pp. 726-741, February 2008
+- region: international
+  type: journal
+  year: 2008
+  authors: Sungho Kim, In So Kweon
+  title: Scalable Representation for 3D Object Recogntion using Feature Sharing and View Clustering
+  venue: Pattern Recognition (PR), Volume 41 , Issue 2, pp. 754-773,, February 2008
+- region: international
+  type: conference
+  year: 2008
+  authors: Sungho Kim, Yukyung Yang, Joohyoung Lee, and Yongchan Park
+  title: Robust Scale Invariant Small Target Detection using the Laplacian Scale-Space Theory
+  venue: SPIE Defense and Security, Orlando FL., 2008
+- region: domestic
+  type: journal
+  year: 2008
+  authors: 양유경, 김성호
+  title: 적외선 주사 영상에서 소형 표적의 탐지 및 추적을 위한 신뢰성 있는 측정치 선택 기법
+  venue: 한국군사과학기술학회지, 제11권 제1호, pp. 75-84, 2008
+- region: domestic
+  type: journal
+  year: 2008
+  authors: 김성호, 양유경
+  title: 라플라스 스케일스페이스 이론과 적응 문턱치를 이용한 크기 불변 표적 탐지 기법
+  venue: 한국군사과학기술학회지, 제11권 제1호, pp. 66-74, 2008
+- region: domestic
+  type: conference
+  year: 2008
+  authors: 양유경, 김성호, 이주형, 윤은숙, 이재윤, 박용찬
+  title: 적외선 영상에서 트랙의 동적 특성 분류를 통한 클러터 제거 기법
+  venue: 2008 한국군사과학기술학회, pp. 292-295, 2008
+- region: domestic
+  type: conference
+  year: 2008
+  authors: 김소현, 김성호, 양유경, 이주형, 박용찬
+  title: Min-Local-LoG 기반 적외선 소형표적 탐지 및 실시간 구현
+  venue: 2008 한국군사과학기술학회, pp. 311-314, 2008
+- region: international
+  type: journal
+  year: 2007
+  authors: Sungho Kim, In So Kweon
+  title: Robust Model-based Scene Interpretation by Multilayered Context Information
+  venue: Computer Vision and Image Understanding (CVIU), 105(3):167-187, 2007
+- region: international
+  type: conference
+  year: 2007
+  authors: Sungho Kim, In So Kweon, and Chil-Woo Lee
+  title: Visual Categorization Robust to Large Intra-Class Variations using Entropy-guided Codebook
+  venue: 2007 IEEE International Conference on Robotics and Automation (ICRA07), Roma, Italy, 10-14 April 2007
+- region: international
+  type: conference
+  year: 2007
+  authors: Sungho Kim, In So Kweon
+  title: Object Categorization Robust to Surface Markings using Entropy-guided Codebook
+  venue: IEEE Workshop on Applications of Computer Vision (WACV), Austin, Texas, USA, Feb. 21-22, 2007
+- region: international
+  type: conference
+  year: 2007
+  authors: Sungho Kim, In So Kweon
+  title: Visual Context-based Object Categorization and Segmentation Robust to Background Clutter
+  venue: The 13th Korea-Japan Joint Workshop on Frontiers of Computer Vision (FCV), 2007
+- region: domestic
+  type: conference
+  year: 2007
+  authors: 양유경, 김성호, 윤은숙, 이주형, 송대범
+  title: 적외선 주사 영상에서의 소형 표적 탐지 추적 알고리즘
+  venue: 제5회 지상무기 학술대회, 2007
+- region: domestic
+  type: conference
+  year: 2007
+  authors: 김성호, 양유경, 김소현, 홍석민
+  title: 크기불변특징량 기반 소형표적 탐지 기법
+  venue: 2007 한국군사과학기술학회, 한국해양대, 부산, pp. 473-476, 2007
+- region: international
+  type: journal
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: 'Scene Interpretation: Unified Modeling of Visual Context by Particle-based Belief Propagation in Hierarchical Graphical Model'
+  venue: LNCS 3852:963-972 (ACCV’06), 2006
+- region: international
+  type: journal
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: Scalable Representation and Learning for 3D Object Recognition using Shared Feature-based View Clustering
+  venue: LNCS 3852:561-570 (ACCV’06), 2006
+- region: international
+  type: journal
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: 'Biologically Motivated Perceptual Feature: Generalized Invariant Feature'
+  venue: LNCS 3852:305-314 (ACCV’06), 2006
+- region: international
+  type: journal
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: 3D Target Recognition using Cooperative Feature Map Binding under Markov Chain Monte Carlo
+  venue: 'Pattern Recognition Letters (PRL), 27 (7): 811-821, 2006'
+- region: international
+  type: journal
+  year: 2006
+  authors: Gijeong Jang, Sungho Kim, Inso Kweon
+  title: Single-Camera Panoramic Stereo System with Single-Viewpoint Optics
+  venue: Optics Letters, 31(1):41-43, 2006
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim, Ouk Choi, In So Kweon
+  title: Place and Object Recognition using Bidirectional Context Information in Video
+  venue: 2nd International Joint Workshop of KAIST-RCV and U.Tokyo- Ikeuchi Lab. on Robust Vision Technology, Institute of Industrial Science University of Tokyo, Japan, July 22-23 2006
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim and In So Kweon
+  title: Synergistic Place and Object Recognition using Bidirectional Context Information
+  venue: 17th British Machine Vision Conference (BMVC’06), Edinburgh, UK, 4-7 Sept., 2006, pp. 629-638
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: Multi-Modal Sequential Monte Carlo for On-Line Hierarchical Graph Structure Estimation in Model-based Scene Interpretation
+  venue: 18th International Conference on Pattern Recognition (ICPR), Hong Kong, 20-24, Aug. 2006
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: Simultaneous Classification and Visual Word Selection using Entropy-based Minimum Description Length
+  venue: 18th International Conference on Pattern Recognition (ICPR), Hong Kong, 20-24, Aug. 2006
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim, Kuk-Jin Yoon and In So Kweon
+  title: Background Robust Object Labeling by Voting of Weight-Aggregated Local Features
+  venue: 18th International Conference on Pattern Recognition (ICPR), Hong Kong, 20-24, Aug. 2006
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim, Kuk-Jin Yoon and In So Kweon
+  title: Object Recognition using Generalized Robust Invariant Feature and Gestalt Law of Proximity and Similarity
+  venue: 5th IEEE Workshop on Perceptual Organization in Computer Vision (in conjunction with CVPR’06) (POCV), New York, NY, 17-22 June, 2006
+- region: international
+  type: conference
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: Model-based Video Interpretation using Static and Temporal Context
+  venue: The 12th Korea-Japan Joint Workshop on Frontiers of Computer Vision (FCV), Tokushima, Japan, 2-3, February 2006
+- region: domestic
+  type: journal
+  year: 2006
+  authors: 김성호, 권인소
+  title: 비디오에서 양방향 문맥 정보를 이용한 상호 협력적인 위치 및 물체 인식
+  venue: 로봇공학회 논문지, 제1권 2호, 2006
+- region: domestic
+  type: journal
+  year: 2006
+  authors: 김성호, 김준식, 권인소
+  title: 지능형 이동 로봇에서 강인 물체 인식을 위한 영상 문맥 정보 활용 기법
+  venue: 로봇공학회 논문지, 제1권 1호, 2006
+- region: domestic
+  type: conference
+  year: 2006
+  authors: 김정호, 김성호, 장기정, 권인소
+  title: 단일 카메라 전방향 스테레오 시스템을 이용한 위치 추정 및 환경 지도 작성
+  venue: 제1회 한국지능로봇 하계 종합 학술대회, 라마다 플라자 호텔, 2006. 6. 14-16. pp. 529-534
+- region: domestic
+  type: conference
+  year: 2006
+  authors: Sungho Kim and In So Kweon
+  title: Collaborative Place and Object Recognition using Bidirectional Context Information
+  venue: 제1회 한국지능로봇 하계 종합 학술대회, 라마다 플라자 호텔, 2006. 6. 14-16. pp. 432-439
+- region: domestic
+  type: conference
+  year: 2006
+  authors: Sungho Kim, In So Kweon
+  title: Simultaneous Place and Multiple Object Recognition using Particle-based Belief Propagation in Hierarchical Graphical Model
+  venue: Workshop on Image Processing and Image Understanding (IPIU), Je-Ju, Korea, Feb. 8-10, 2006
+- region: international
+  type: journal
+  year: 2005
+  authors: Sungho Kim, Gijeong Jang, In So Kweon
+  title: An Effective 3D Target Recognition Imitating Robust Methods of Human Visual System
+  venue: Pattern Analysis and Applications (PAA), 8(3):211-226, 2005
+- region: international
+  type: journal
+  year: 2005
+  authors: Sungho Kim, In So Kweon
+  title: Automatic Model-based 3D Object Recognition by Combining Feature Matching with Tracking
+  venue: Machine Vision and Applications (MVA), 16(5):267-272, 2005
+- region: international
+  type: journal
+  year: 2005
+  authors: Sungho Kim, Gijeong Jang, Wang-heon Lee and In So Kweon
+  title: Combined Model-based 3D Object Recognition
+  venue: International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI), 19(7):839-852, 2005
+- region: international
+  type: conference
+  year: 2005
+  authors: Sungho Kim, In So Kweon
+  title: Visual Context-based Scene Interpretation in Indoor Environment
+  venue: The 2nd International Conference on Ubiquitous Robots and Ambient Intelligence, KAIST, Daejeon, Korea, 2-6, November 2005. pp. 341-346
+- region: international
+  type: conference
+  year: 2005
+  authors: Gijeong Jang, Sungho Kim, Inso Kweon
+  title: Single Camera Catadioptric Stereo System
+  venue: 'ICCV2005 Workshop: The 6th Workshop on Omnidirectional Vision, Camera Networks and Non-classical cameras (OMNIVIS2005), Beijing, China, 21 Oct., 2005'
+- region: international
+  type: conference
+  year: 2005
+  authors: Sungho Kim, In So Kweon
+  title: Hierarchical Context-based 3D Object Recognition for Scene Interpretation
+  venue: The 4th KAIST- Tsinghua Joint Workshop on Pattern Recognition, KAIST, Korea, Sept. 2 2005. pp. 15-30
+- region: international
+  type: conference
+  year: 2005
+  authors: Zhe Lin, Sungho Kim, and In So Kweon
+  title: Recognition-based Indoor Topological Navigation using Robust Invariant Features
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Edmonton, Canada, 2-6 August, 2005
+- region: international
+  type: conference
+  year: 2005
+  authors: Gijeong Jang, Sungho Kim, Jeongho Kim, and In So Kweon
+  title: Metric Localization using a Single Artificial Landmark for Indoor Mobile Robots
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Edmonton, Canada, 2-6 August, 2005, pp. 412-417
+- region: international
+  type: conference
+  year: 2005
+  authors: Gijeong Jang, Jun-Sik Kim, Sungho Kim, and Inso Kweon
+  title: PR-SLAM in Particle Filter Framework
+  venue: Proceeding of the 6th IEEE International Symposium on Computational Intelligence in Robotics and Automation (CIRA), Espoo, Finland, June 27-30, 2005
+- region: international
+  type: conference
+  year: 2005
+  authors: Zhe Lin, Sungho Kim, In So Kweon
+  title: Robust Invariant Features for Object Recognition and Mobile Robot Navigation
+  venue: 9th IAPR workshop on Machine Vision Applications, May 16-18, 2005, Tsukuba Science City, Japan, pp. 55-58
+- region: international
+  type: conference
+  year: 2005
+  authors: Sungho Kim, Zhe Lin, In So Kweon
+  title: Hierarchical Visual Context-based Object Recognition
+  venue: 1st International Joint Workshop of KAIST-RCV and U.Tokyo- Ikeuchi Lab. on Robust Vision Technology, KAIST, Daejeon, Korea, April 26-27 2005
+- region: international
+  type: conference
+  year: 2004
+  authors: Sungho Kim, In So Kweon
+  title: Combined Model-based 3D Object Recognition
+  venue: The 3rd Tsinghua-KAIST Joint Workshop on Pattern Recognition, Tsinghua Univ. Beijing, China, Dec. 16-17 2004. pp. 92-103
+- region: international
+  type: conference
+  year: 2004
+  authors: Zhe Lin, Sungho Kim, Wang-Heon Lee, In So Kweon
+  title: Robust Invariant Feature Extraction for Object Recognition and Natural Landmark based Autonomous Navigation
+  venue: The 1st International Conference on Ubiquitous Robots and Ambient Intelligence, COEX, Seoul, Korea, 1-3 December, 2004. pp.78-84
+- region: international
+  type: conference
+  year: 2004
+  authors: Sungho Kim, Zhe Lin, Wnag-heon Lee, In So Kweon
+  title: 3D Object Recognition System based on the Robust Properties of Human Visual System
+  venue: The 1st International Conference on Ubiquitous Robots and Ambient Intelligence, COEX, Seoul, Korea, 1-3 December, 2004. pp.250-256
+- region: international
+  type: conference
+  year: 2004
+  authors: Sungho Kim, Gi-Jeong Jang, Wang-heon Lee and In So Kweon
+  title: How Human Visual Systems Recognize Objects -A Novel Computational Model
+  venue: IEEE 17th International Conference on Pattern Recognition (ICPR), Cambridge, United Kingdom, 23-26 August, 2004. pp. 61-64
+- region: domestic
+  type: conference
+  year: 2004
+  authors: 이왕헌, 김성호, 김인철, 권인소
+  title: 상향식/하향식 정보를 결합한 효과적인 3D 자동물체인식 시스템
+  venue: 한국군사과학기술학회 2004년 종합학술대회, KAIST 창의학습관, 2004. 8. 26. pp.435-438
+- region: international
+  type: conference
+  year: 2003
+  authors: Sungho Kim, Inso Kweon, Incheol Kim
+  title: Robust Model-based 3D Object Recognition by Combining Feature Matching with Tracking
+  venue: IEEE International Conference on Robotics and Automation, (ICRA) Sept. 14-19, Taipei, Taiwan, 2003
+- region: international
+  type: conference
+  year: 2003
+  authors: Gijeong Jang, Sungho Kim, Wangheon Lee, Inso Kweon
+  title: Robust Self-localization of Mobile Robots using Artificial and Natural Landmarks
+  venue: Preceedings 2003 IEEE International Symposium on Computational Intelligence in Robotics and Automation(CIRA), July 16-20, Kobe, Japan, 2003
+- region: domestic
+  type: conference
+  year: 2003
+  authors: 권인소, 장기정, 김성호, 이완헌
+  title: 인공표식과 자연표식을 결합한 강인한 자기위치추정
+  venue: 한국정밀공학회(KSPE) 2003 춘계학술대회, 2003, 6
+- region: international
+  type: conference
+  year: 2002
+  authors: Sung-Ho Kim, In-Cheol Kim, In-So Kweon
+  title: Probabilistic Model-based Object Recognition Using Local Zernike Moments
+  venue: IAPR workshop on Machine Vision Applications, Dec. 11-14, 2002, Nara-ken New Public Hall, Nara, Japan
+- region: international
+  type: conference
+  year: 2002
+  authors: Gijeong Jang, Sungho Kim, Wangheun Lee, In so,Kweon
+  title: Self-Localization of Indoor Mobile Robots using Sonar and Color Landmarks
+  venue: International Workshop on Intelligent Robots, April 27, 2002, Hanyang Univ. Korea
+- region: international
+  type: conference
+  year: 2002
+  authors: Gijeong Jang, Sungho Kim, Wangheon Lee, Inso Kweon
+  title: Color Landmark Based Self-Localization for Indoor Mobile Robots
+  venue: International Conference on Robotics & Automation (ICRA), May 11-15 2002, Washington, DC, USA, pp1032-1042
+- region: international
+  type: conference
+  year: 2002
+  authors: Gijeong Jang, Sungho Kim, Inso Kweon
+  title: Landmark-based Localization for Indoor Mobile Robots
+  venue: 3rd International Workshop on Human-friendly Welfare Robotic Systems, Jan 2002, Daejon, Korea. PP27-32
+- region: domestic
+  type: conference
+  year: 2002
+  authors: 김성호, 김인철, 권인소
+  title: 특징량 매칭과 추적 기술의 결합에 의한 강인한 모델 기반 3D 물체 인식
+  venue: 기계의 날 선포 및 2002년도 기계관련 산학연 연합심포지엄(대한기계학회), 서울, 대한민국, 2002, 11
+- region: domestic
+  type: conference
+  year: 2002
+  authors: 김성호, 김인철, 권인소
+  title: 지역 Zernike 모멘트를 이용한 모델 기반 확률적 물체 인식
+  venue: Workshop on Image Processing and Image Understanding, Je-Ju, Korea, Jan, 2002
+- region: international
+  type: conference
+  year: 2001
+  authors: Kuk-jin Yoon, Gi-jeong Jang, Sung-ho Kim, In-so Kweon
+  title: Fast Landmark Tracking and Localization Algorithm for the Mobile Self-localization
+  venue: IFAC Workshop on Mobile Robot Technology, May 20-30, 2001, Jejudo Island , Korea, pp190-195
+- region: domestic
+  type: journal
+  year: 2001
+  authors: 윤국진, 장기정, 김성호, 권인소
+  title: 이동 로봇을 위한 컬러 표식 기반 자기 위치 추정 기법
+  venue: Journal of Automation and System Engineering, Vol. 7, No. 9, September, 2001
+- region: international
+  type: journal
+  year: null
+  authors: Manar Alnaasan, Selim Sarowar, and Sungho Kim
+  title: Explainable Parkinsons Disease Gait Recognition Using Multimodal RGB-D Fusion and Large Language Models
+  venue: arXiv.2512.04425
+- region: international
+  type: journal
+  year: null
+  authors: Selim Sarowar, and Sungho Kim
+  title: 'Vision-Language-Action and Vision Language Models for Robot Manipulation : A Comprehensive Review Towards Real-World Applications'
+  venue: in International Journal of Control, Automation, and Systems
+- region: domestic
+  type: journal
+  year: null
+  authors: 김재호, 김재욱, 우희조, 김성호
+  title: 블러 성분 추출 모델 기반 해상용 이미지 디블러링 데이터셋 구축

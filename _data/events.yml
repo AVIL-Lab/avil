@@ -1,0 +1,438 @@
+# Lab events, one per photo, migrated from the Wix "Pictures" page (2026-10-17).
+# Drives the News page, the home page news list and the Gallery.
+#   date  YYYY-MM-DD (first day of the event)   when  date text as written on Wix
+#   tag   conference | award | rlrc | graduation | lab | field
+#   ko    original caption   en  English translation
+#   photo file in assets/img/gallery/ (thumbnail: same name in gallery/thumbs/)
+- date: '2026-07-29'
+  when: 2026/07/29
+  tag: conference
+  ko: EMBC 2026 학회 참여
+  en: Attended EMBC 2026
+  photo: 6f551c_f74fdaf10dd6426d98b862eaf3413f6a.webp
+- date: '2026-07-09'
+  when: 2026/07/09
+  tag: conference
+  ko: ICML 2026 학회 참여 및 워크샵 논문 발표
+  en: Attended ICML 2026 and presented a workshop paper
+  photo: 6f551c_9394ee6d002b4fa78b046777a9d58b21.webp
+- date: '2026-07-03'
+  when: 2026/07/03
+  tag: conference
+  ko: ICROS 2026 학회 참여
+  en: Attended ICROS 2026
+  photo: 6f551c_0fc5aad300ea41ffad54f83a2d5b7cbf.webp
+- date: '2026-06-23'
+  when: 2026/06/23
+  tag: conference
+  ko: 대한전자공학회 2026 학회 참여
+  en: Attended the IEIE 2026 conference
+  photo: 6f551c_f116caddacb5413a9ed2b54c79249627.webp
+- date: '2026-06-10'
+  when: 2026/06/10
+  tag: conference
+  ko: 한국군사과학기술학회 2026 학회 참여
+  en: Attended the 2026 conference of the Korea Institute of Military Science and Technology (KIMST)
+  photo: 6f551c_d0668572085f483dbd4a257f9e091592.webp
+- date: '2026-06-03'
+  when: 2026/06/03
+  tag: conference
+  ko: CVPR 2026 학회 참여 및 워크샵 논문 발표
+  en: Attended CVPR 2026 and presented workshop papers
+  photo: 6f551c_61beceb588a24ec38bae30f621ca77bd.webp
+- date: '2026-04-29'
+  when: 2026/04/29
+  tag: conference
+  ko: SPIE 2026 학회 참여
+  en: Attended SPIE 2026
+  photo: 6f551c_d951e1552f67411dab2fb48a63ff38ef.webp
+- date: '2026-04-15'
+  when: 2026/04/15
+  tag: rlrc
+  ko: RLRC 4차년도 Kick-off
+  en: RLRC Year 4 kick-off
+  photo: 6f551c_3a42827cf4fe4317813736bca8ec139e.webp
+- date: '2026-04-06'
+  when: 2026/04/06
+  tag: lab
+  ko: 봄 산책
+  en: Spring walk
+  photo: 6f551c_e718b11db69547de82f0a301d44c07c8.webp
+- date: '2026-02-20'
+  when: 2026/02/20
+  tag: graduation
+  ko: 석사 졸업식(도새별,이성령,장예원,김재호)
+  en: Master's graduation (Saebyeol Do, Seongryeong Lee, Yewon Jang, Jaeho Kim)
+  photo: 6f551c_535fcca2f85f4e14a62dc2bfa00316ab.webp
+- date: '2026-01-30'
+  when: 2026/01/30
+  tag: lab
+  ko: 연구실 홈커밍데이
+  en: Lab homecoming day
+  photo: 6f551c_1bad3f1772f8480ebffb58d6ec36d613.webp
+- date: '2026-01-23'
+  when: 2026/01/23
+  tag: award
+  ko: Elsevier 세계 상위 2% 과학자선정 공로상 수상(김성호교수)
+  en: Prof. Sungho Kim received an award for being named among Elsevier's World's Top 2% Scientists
+  photo: 6f551c_f34bbf61913a4fa28ba0bb272e1a3817.webp
+- date: '2026-01-15'
+  when: 2026/01/15~01/16
+  tag: award
+  ko: 첨단로봇인재양성사업 한국로봇산업진흥원장상 수상(이성령석사)
+  en: Seongryeong Lee (M.S.) received the President's Award of the Korea Institute for Robot Industry Advancement in the Advanced Robot Talent Development Program
+  photo: 6f551c_6d3ebe0643694800bc91b83ba0538de2.webp
+- date: '2025-11-05'
+  when: 2025/11/05~11/06
+  tag: conference
+  ko: 한국우주안보학회 2025 학회 참여 및 논문 발표
+  en: Attended the 2025 conference of the Korean space security society and presented a paper
+  photo: 6f551c_282c8bfe32af4455ae9840ccf01c5eb0.webp
+- date: '2025-10-19'
+  when: 2025/10/19~10/25
+  tag: conference
+  ko: IROS 2025 학회 참여 및 late breaking 논문 발표
+  en: Attended IROS 2025 and presented a late-breaking paper
+  photo: 6f551c_9ec0dac284424e3cb1106b9864ba44c7.webp
+- date: '2025-08-21'
+  when: 2025/08/21~08/22
+  tag: conference
+  ko: 평창 KIEES 2025 학회 참여
+  en: Attended KIEES 2025 in Pyeongchang
+  photo: 6f551c_889cf66ebe344e26be4edf5fa7f7aeac.webp
+- date: '2025-06-25'
+  when: 2025/06/25~06/27
+  tag: conference
+  ko: 전주 ICROS 2025 학회 참여
+  en: Attended ICROS 2025 in Jeonju
+  photo: 6f551c_bc60e7a40d9f4f20bdbf152d8a172b14.webp
+- date: '2025-06-11'
+  when: 2025/06/11~06/15
+  tag: conference
+  ko: CVPR 2025 학회 참여 및 워크샵 논문 발표
+  en: Attended CVPR 2025 and presented a workshop paper
+  photo: 6f551c_81373fd7e0a14a8495062e8c805ec56a.webp
+- date: '2025-04-15'
+  when: 2025/04/15
+  tag: award
+  ko: 스승의 날 & 교수님 우수연구상 수상
+  en: Teachers' Day, and the professor received an Outstanding Research Award
+  photo: 290dae_91e063ae39e645a08dbbc20aabab17d2.webp
+- date: '2025-04-11'
+  when: 2025/04/11~04/21
+  tag: conference
+  ko: 미국 SPIE DCS 2025 학회 참여
+  en: Attended SPIE DCS 2025 in the USA
+  photo: 290dae_bbea1d696dfb4e409c23bf57d33542d5.webp
+- date: '2025-04-04'
+  when: 2025/04/04
+  tag: lab
+  ko: 봄산책
+  en: Spring walk
+  photo: 290dae_810a206a7d974aff97ae36e91b258f28.webp
+- date: '2025-02-12'
+  when: 2025/02/12~02/14
+  tag: conference
+  ko: KRoC 2025 학회 참여
+  en: Attended KRoC 2025
+  photo: 290dae_fb86e57c2fe845e9bd18312a9940aeae.webp
+- date: '2025-02-05'
+  when: 2025/02/05~02/07
+  tag: conference
+  ko: IPIU 2025 학회 참여
+  en: Attended IPIU 2025
+  photo: 290dae_965bb4e3bb604d02932db3d78cda1dda.webp
+- date: '2024-12-20'
+  when: 2024/12/20
+  tag: rlrc
+  ko: RLRC 2차년도 성과 발표회
+  en: RLRC Year 2 results presentation
+  photo: 290dae_0f933caad4034ac2b95cb0e384356f09.webp
+- date: '2024-12-05'
+  when: 2024/12/05~12/11
+  tag: conference
+  ko: 싱가포르 CDICS 2025 학회 참여
+  en: Attended CDICS 2025 in Singapore
+  photo: 290dae_e43b62c9185846e1a3c29aa779a244f0.webp
+- date: '2024-10-29'
+  when: 2024/10/29~10/31
+  tag: conference
+  ko: ICCAS 2024 학회 참여
+  en: Attended ICCAS 2024
+  photo: 290dae_48d9b35a22ac47a8a861b2b348ab6fee.webp
+- date: '2024-08-30'
+  when: 2024/8/30
+  tag: lab
+  ko: 하계방학 자체 평가 및 2학기 계획발표
+  en: Summer break self-review and fall semester plan presentations
+  photo: 6f551c_b65d0123b784413cb349a57f6496e1c1.webp
+- date: '2024-08-20'
+  when: 2024/08/20
+  tag: graduation
+  ko: 2023학년도 졸업식
+  en: Graduation ceremony, 2023 academic year
+  photo: 6f551c_39c06419faf7476dadd3c830f5dd64c1.webp
+- date: '2024-07-17'
+  when: 2024/07/17~07/18
+  tag: rlrc
+  ko: RLRC 중간 점검 및 워크샵
+  en: RLRC interim review and workshop
+  photo: 290dae_8d17ba0d528e4fa0a2162d0bed00cdb0.webp
+- date: '2024-07-03'
+  when: 2024/07/03~07/04
+  tag: conference
+  ko: ICROS2024 학회 참여
+  en: Attended ICROS 2024
+  photo: 290dae_99460d50c310425ab3b00f13423a8948.webp
+- date: '2024-06-25'
+  when: 2024/06/25~06/28
+  tag: conference
+  ko: 대한전자공학회 참석
+  en: Attended the IEIE conference
+  photo: 290dae_5d92d2ed6dcc4a128bd3d95608806054.webp
+- date: '2024-05-13'
+  when: 2024/05/13
+  tag: lab
+  ko: 스승의날
+  en: Teachers' Day
+  photo: 290dae_3fe17ce3f741414e95dbff0df080d54a.webp
+- date: '2024-04-22'
+  when: 2024/04/22~04/26
+  tag: conference
+  ko: 일본 SPIE(OPTM)학회 참석
+  en: Attended SPIE OPTM in Japan
+  photo: 290dae_1377c50d42b14ce88a74ed208695c82a.webp
+- date: '2024-04-19'
+  when: 2024/04/19
+  tag: rlrc
+  ko: RLRC 2차년도 kick-off
+  en: RLRC Year 2 kick-off
+  photo: 290dae_563c9b4d94c14d4baa338e42f0e76ec3.webp
+- date: '2024-04-17'
+  when: 2024/04/17~04/28
+  tag: conference
+  ko: 미국 SPIE DCS 2024 학회 참석
+  en: Attended SPIE DCS 2024 in the USA
+  photo: 290dae_5f95ec7975d74c0fa5fa1492f9c905cd.webp
+- date: '2024-04-05'
+  when: 2024/04/05
+  tag: lab
+  ko: 벚꽃 산책
+  en: Cherry blossom walk
+  photo: 290dae_77f19a6cb8c04563923f1e0415314313.webp
+- date: '2024-03-29'
+  when: 2024/03/29
+  tag: lab
+  ko: 벚꽃 산책
+  en: Cherry blossom walk
+  photo: 487919_295a306516014921b84498e46e0f7d13.webp
+- date: '2024-02-29'
+  when: 2024/02/29
+  tag: lab
+  ko: 연구실 공사 뒷풀이
+  en: Lab renovation celebration
+  photo: 487919_9f3ab9410ab744579ea7056ced6cb891.webp
+- date: '2024-02-02'
+  when: 2024/02/02
+  tag: rlrc
+  ko: RLRC 성과 워크샵
+  en: RLRC results workshop
+  photo: 487919_e2691672e4304966817917f3d6429122.webp
+- date: '2024-01-31'
+  when: 2024/01/31
+  tag: conference
+  ko: IPIU 학회
+  en: IPIU conference
+  photo: 487919_448c38c5c938484a9f51e734bea7b69a.webp
+- date: '2023-12-23'
+  when: 2023/12/23
+  tag: lab
+  ko: 홈커밍데이
+  en: Homecoming day
+  photo: 487919_beb3ab311e8e44209ef2cf267a08d626.webp
+- date: '2023-10-20'
+  when: 2023/10/20
+  tag: rlrc
+  ko: RLRC 개소식
+  en: RLRC opening ceremony
+  photo: 487919_d8ad2f8118684c78970e4ef099b82521.webp
+- date: '2023-10-17'
+  when: 2023/10/17
+  tag: conference
+  ko: ICCAS 학회
+  en: ICCAS conference
+  photo: 487919_4ddf755509864fe694430c44def3f6b4.webp
+- date: '2023-07-20'
+  when: 2023/07/20
+  tag: lab
+  ko: 팔공산 워크숍
+  en: Workshop at Palgongsan
+  photo: 487919_18a448dd27c84fb1ad8373f9f216e90b.webp
+- date: '2023-06-21'
+  when: 2023/06/21
+  tag: conference
+  ko: ICROS 학회
+  en: ICROS conference
+  photo: 487919_29cce32c80c84e6d886af0ccd58b731a.webp
+- date: '2023-05-15'
+  when: 2023/05/15
+  tag: lab
+  ko: 스승의 날
+  en: Teachers' Day
+  photo: 487919_8b6ee28a94bc44d69f0f0e2a922a3217.webp
+- date: '2023-05-12'
+  when: 2023/05/12
+  tag: lab
+  ko: 청도 워크샵
+  en: Workshop in Cheongdo
+  photo: 487919_c7fd1a19ce6942ad8d593db4476c9001.webp
+- date: '2023-03-31'
+  when: 2023/03/31
+  tag: lab
+  ko: 연구실 벚꽃 산책
+  en: Lab cherry blossom walk
+  photo: 487919_9417be6160ce4c80a6d2660da93e51e8.webp
+- date: '2023-03-31'
+  when: 2023/03/31
+  tag: lab
+  ko: 체커혁민
+  en: 체커혁민
+  photo: 487919_8a8c255da9364608a5d6fdbb53bc6755.webp
+- date: '2023-02-22'
+  when: 2023/02/22
+  tag: graduation
+  ko: 졸업식 & 입학식
+  en: Graduation and entrance ceremony
+  photo: 487919_1470de21222f45efb0f278cbee743aac.webp
+- date: '2023-02-08'
+  when: 2023/02/08
+  tag: conference
+  ko: IPIU 학회
+  en: IPIU conference
+  photo: 487919_ea2bd0fe3276466791a7bac86b4ec93e.webp
+- date: '2022-11-29'
+  when: 2022/11/29
+  tag: conference
+  ko: ICCAS 학회
+  en: ICCAS conference
+  photo: 487919_05be6d302d52490ca93ebff2767becd6.webp
+- date: '2022-11-16'
+  when: 2022/11/16
+  tag: conference
+  ko: 제주 풍력 학회
+  en: Wind energy conference in Jeju
+  photo: 487919_cfa3d2afbca34493a58783eccd0982ee.webp
+- date: '2022-09-30'
+  when: 2022/09/30
+  tag: conference
+  ko: 세미나
+  en: Seminar
+  photo: 487919_d4304da59a98423dabf8d11648f184c8.webp
+- date: '2022-06-23'
+  when: 2022/06/23
+  tag: conference
+  ko: ICROS 학회
+  en: ICROS conference
+  photo: 487919_6e0bd4d450964576bfd9cc78085c9039.webp
+- date: '2022-05-15'
+  when: 2022/05/15
+  tag: lab
+  ko: 스승의 날
+  en: Teachers' Day
+  photo: 487919_f6725414c4b04d338c67829c5dfeb2b3.webp
+- date: '2022-04-01'
+  when: 2022/04/01
+  tag: lab
+  ko: 연구실 벚꽃 산책
+  en: Lab cherry blossom walk
+  photo: 487919_564fa1e1e1234a75812f045e6a53aa6e.webp
+- date: '2022-02-26'
+  when: 2022/02/26
+  tag: lab
+  ko: 성산 일출봉
+  en: Seongsan Ilchulbong
+  photo: 487919_1f1a9ac401a043ed8771f6f098292d05.webp
+- date: '2021-06-23'
+  when: 2021/06/23
+  tag: conference
+  ko: 하계전자공학회
+  en: IEIE summer conference
+  photo: 487919_7c5e2da558d34690a00f14194200300f.webp
+- date: '2021-05-15'
+  when: 2021/05/15
+  tag: lab
+  ko: 스승의 날
+  en: Teachers' Day
+  photo: 487919_fb298b7a3fc847949a4a96282fe5842d.webp
+- date: '2021-03-30'
+  when: 2021/03/30
+  tag: lab
+  ko: 연구실 벚꽃 산책
+  en: Lab cherry blossom walk
+  photo: 487919_2d71f955399a4c9e9af554f0c5576c5d.webp
+- date: '2020-11-20'
+  when: 2020/11/20
+  tag: field
+  ko: M200 + XT2 시험 촬영
+  en: M200 + XT2 test imaging flight
+  photo: 487919_277f0924b3c444a397f34c54e3374a83.webp
+- date: '2020-07-29'
+  when: 2020/07/29
+  tag: lab
+  ko: 하계 워크샵
+  en: Summer workshop
+  photo: 487919_74cba39460a7473a95b302221b7d16f5.webp
+- date: '2020-07-21'
+  when: 2020/07/21
+  tag: field
+  ko: 다중센서 표적영상 획득
+  en: Multi-sensor target image acquisition
+  photo: 487919_2de03348a8f443c9a7c6c37597198d64.webp
+- date: '2019-05-16'
+  when: 2019/05/16
+  tag: conference
+  ko: ICROS 학회
+  en: ICROS conference
+  photo: 487919_2ccde8ef4ee04d64b5017c048d993e7e.webp
+- date: '2018-11-09'
+  when: 2018/11/09
+  tag: conference
+  ko: KIMST 추계학술대회
+  en: KIMST fall conference
+  photo: 487919_7329f97e67154c0b97ed37dbf09edaec.webp
+- date: '2018-06-14'
+  when: 2018/06/14
+  tag: conference
+  ko: KIMST 하계종합학술대회
+  en: KIMST summer conference
+  photo: 487919_35884910ac264c0a8e0be39fdb76052d.webp
+- date: '2017-09-12'
+  when: 2017/09/12
+  tag: lab
+  ko: 연구실 산책
+  en: Lab walk
+  photo: 487919_6b20aed9ab8749a29fde303e80704877.webp
+- date: '2016-04-05'
+  when: 2016/04/05
+  tag: lab
+  ko: 연구실 벚꽃 산책
+  en: Lab cherry blossom walk
+  photo: 487919_b2d5bcab4bc44e12b576fb882d52f780.webp
+- date: '2015-02-05'
+  when: 2015/02/05
+  tag: conference
+  ko: IPIU 학회
+  en: IPIU conference
+  photo: 487919_41b4135c7b7d4e929cb9d69455e9f6e2.webp
+- date: '2014-01-09'
+  when: 2014/01/09
+  tag: lab
+  ko: 머신비전 워크샵
+  en: Machine vision workshop
+  photo: 487919_119b5c4cca964b4eaedb8323052574d8.webp
+- date: '2013-01-31'
+  when: 2013/01/31
+  tag: lab
+  ko: 동계 워크샵
+  en: Winter workshop
+  photo: 487919_8c7eef3d34f441dca8638b71d14d6354.webp

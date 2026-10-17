@@ -1,0 +1,61 @@
+{%- assign lab = site.data.lab -%}
+<header class="site-header" id="top">
+  <div class="site-header__bar wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ lab.name }} home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><use href="#brand-mark"/></svg>
+      </span>
+      <span class="brand__text">
+        <span class="brand__short">{{ lab.short }}</span>
+        <span class="brand__long">{% include t.html en=lab.name ko=lab.name_ko %}</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        {%- for item in site.data.navigation %}
+        {%- if item.children %}
+        {%- assign open = false -%}
+        {%- for c in item.children %}{% if page.url == c.url %}{% assign open = true %}{% endif %}{% endfor %}
+        <li class="nav__item nav__item--menu">
+          <button type="button" class="nav__link nav__trigger{% if open %} is-active{% endif %}" aria-expanded="false" aria-haspopup="true">
+            {% include t.html en=item.en ko=item.ko %}
+            <svg class="i i--sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+          <ul class="nav__menu">
+            {%- for c in item.children %}
+            <li><a class="nav__menu-link{% if page.url == c.url %} is-active{% endif %}" href="{{ c.url | relative_url }}"{% if page.url == c.url %} aria-current="page"{% endif %}>
+              <svg class="i" aria-hidden="true"><use href="#i-{{ c.icon }}"/></svg>{% include t.html en=c.en ko=c.ko %}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- else %}
+        {%- assign active = false -%}
+        {%- if page.url == item.url %}{% assign active = true %}{% endif -%}
+        <li class="nav__item"><a class="nav__link{% if active %} is-active{% endif %}" href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{% include t.html en=item.en ko=item.ko %}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <div class="tools">
+      <button type="button" class="tool tool--search js-open-palette" aria-label="Search the site (Ctrl+K)">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <span class="tool__label">Search</span>
+        <kbd class="tool__kbd">Ctrl K</kbd>
+      </button>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-switch__btn" data-set-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+      <button type="button" class="tool js-theme" aria-label="Toggle dark mode">
+        <svg class="i theme-icon theme-icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="i theme-icon theme-icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <button type="button" class="tool tool--menu js-menu" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <svg class="i" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="spectrum-line" aria-hidden="true"></div>
+</header>

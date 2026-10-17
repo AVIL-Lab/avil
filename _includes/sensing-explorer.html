@@ -1,0 +1,79 @@
+{%- comment -%}
+  Tabbed explorer: one panel per modality in _data/modalities.yml, listing the
+  equipment, members, projects and publications whose text matches it.
+{%- endcomment -%}
+<div class="explorer" data-explorer>
+  <div class="explorer__tabs" role="tablist" aria-label="Sensing modality">
+    {%- for mod in site.data.modalities %}
+    <button type="button" role="tab" class="explorer__tab mod--{{ mod.key }}" id="tab-{{ mod.key }}" aria-controls="panel-{{ mod.key }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% unless forloop.first %} tabindex="-1"{% endunless %}>
+      <svg class="i" aria-hidden="true"><use href="#i-{{ mod.icon }}"/></svg>
+      {% include t.html en=mod.en ko=mod.ko %}
+    </button>
+    {%- endfor %}
+  </div>
+
+  {%- for mod in site.data.modalities %}
+  {%- assign n_pub = 0 -%}{%- assign pub_list = "" | split: "" -%}
+  {%- for x in site.data.publications -%}
+    {%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}
+    {%- include match.html text=_t mod=mod -%}
+    {%- if hit -%}{%- assign n_pub = n_pub | plus: 1 -%}{%- if pub_list.size < 3 -%}{%- assign pub_list = pub_list | push: x -%}{%- endif -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign n_proj = 0 -%}{%- assign proj_list = "" | split: "" -%}
+  {%- for pr in site.data.projects -%}
+    {%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}
+    {%- include match.html text=_t mod=mod -%}
+    {%- if hit -%}{%- assign n_proj = n_proj | plus: 1 -%}{%- if proj_list.size < 3 -%}{%- assign proj_list = proj_list | push: pr -%}{%- endif -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign mem_list = "" | split: "" -%}
+  {%- for m in site.data.members -%}
+    {%- capture _t -%}{{ m.interests | join: " " }}{%- endcapture -%}
+    {%- include match.html text=_t mod=mod -%}
+    {%- if hit -%}{%- assign mem_list = mem_list | push: m -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign eq_list = "" | split: "" -%}
+  {%- for e in site.data.equipment -%}{%- if mod.equipment contains e.category -%}{%- assign eq_list = eq_list | push: e -%}{%- endif -%}{%- endfor -%}
+
+  <div class="explorer__panel mod--{{ mod.key }}" role="tabpanel" id="panel-{{ mod.key }}" aria-labelledby="tab-{{ mod.key }}"{% unless forloop.first %} hidden{% endunless %}>
+    <div class="explorer__counts">
+      <div><span class="explorer__num">{{ n_pub }}</span><span>{% include t.html en="papers" ko="논문" %}</span></div>
+      <div><span class="explorer__num">{{ n_proj }}</span><span>{% include t.html en="projects" ko="과제" %}</span></div>
+      <div><span class="explorer__num">{{ mem_list.size }}</span><span>{% include t.html en="members" ko="구성원" %}</span></div>
+      <div><span class="explorer__num">{{ eq_list.size }}</span><span>{% include t.html en="instruments" ko="장비" %}</span></div>
+    </div>
+    <div class="explorer__cols">
+      <div>
+        <h3>{% include t.html en="Latest papers" ko="최근 논문" %}</h3>
+        {%- if pub_list.size > 0 %}
+        <ul class="explorer__list">
+          {%- for x in pub_list %}<li><span class="mono muted">{{ x.year | default: "n.d." }}</span> {{ x.title | default: x.text | truncate: 120 }}</li>{% endfor %}
+        </ul>
+        <a class="link-arrow" href="{{ '/publications/' | relative_url }}?topic={{ mod.key }}">{% include t.html en="See all matching papers" ko="관련 논문 모두 보기" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        {%- else %}<p class="muted">{% include t.html en="No papers matched yet." ko="해당 논문이 없습니다." %}</p>{% endif %}
+      </div>
+      <div>
+        <h3>{% include t.html en="Projects" ko="과제" %}</h3>
+        {%- if proj_list.size > 0 %}
+        <ul class="explorer__list">
+          {%- for pr in proj_list %}<li><span class="tag tag--{% if pr.status == 'current' %}rlrc{% else %}lab{% endif %}">{{ pr.status }}</span> {% include t.html en=pr.title ko=pr.title_ko %}</li>{% endfor %}
+        </ul>
+        {%- else %}<p class="muted">{% include t.html en="No projects matched." ko="해당 과제가 없습니다." %}</p>{% endif %}
+        {%- if eq_list.size > 0 %}
+        <h3>{% include t.html en="Equipment" ko="보유 장비" %}</h3>
+        <ul class="chips">{% for e in eq_list %}<li class="chip" title="{{ e.spec }}">{{ e.name }}</li>{% endfor %}</ul>
+        {%- endif %}
+      </div>
+      <div>
+        <h3>{% include t.html en="Members" ko="구성원" %}</h3>
+        {%- if mem_list.size > 0 %}
+        <ul class="explorer__people">
+          {%- for m in mem_list %}
+          <li><a href="{{ '/members/' | relative_url }}#{{ m.name | slugify }}"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" width="36" height="48" loading="lazy"><span>{{ m.name }}</span></a></li>
+          {%- endfor %}
+        </ul>
+        {%- else %}<p class="muted">{% include t.html en="Matched through papers and projects." ko="논문과 과제로 연결됩니다." %}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

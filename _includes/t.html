@@ -1,0 +1,2 @@
+{%- comment -%} Bilingual text: prints both languages; the header switch hides one. {%- endcomment -%}
+{%- if include.ko and include.ko != include.en -%}<span class="i18n" lang="en">{{ include.en }}</span><span class="i18n" lang="ko">{{ include.ko }}</span>{%- else -%}{{ include.en }}{%- endif -%}

@@ -1,0 +1,238 @@
+---
+title: Home
+body_class: page page--home
+css: [home]
+js: [home]
+---
+{%- assign lab = site.data.lab -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign intl_j = pubs | where: "region", "international" | where: "type", "journal" | size -%}
+{%- assign current_projects = site.data.projects | where: "status", "current" -%}
+{% include lab-names.html %}
+{%- assign hero_photo = "6f551c_e718b11db69547de82f0a301d44c07c8.webp" -%}
+
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--light">{% include t.html en="Yeungnam University · Department of Electronic Engineering" ko="영남대학교 전자공학과" %}</p>
+      <h1 class="hero__title">
+        <span class="hero__title-main">Advanced Visual<br>Intelligence Lab</span>
+        <span class="hero__title-ko" lang="ko">{{ lab.name_ko }} (AVIL)</span>
+      </h1>
+      <p class="hero__tagline">{{ lab.tagline }}</p>
+      <p class="hero__lead">{{ lab.purpose[0] }} {{ lab.purpose[1] }}</p>
+      <ul class="hero__modalities" aria-label="Sensing modalities">
+        {%- for m in lab.modalities %}<li>{{ m }}</li>{% endfor %}
+      </ul>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">{% include t.html en="Explore our research" ko="연구 분야 보기" %} <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn btn--light" href="{{ '/contact/' | relative_url }}">{% include t.html en="Join AVIL" ko="연구실 지원" %}</a>
+      </div>
+    </div>
+
+    <figure class="bandview" data-band="thermal">
+      <div class="bandview__stage" style="--split: 52%">
+        <img class="bandview__img" src="{{ '/assets/img/gallery/' | append: hero_photo | relative_url }}" alt="AVIL members on a spring walk under cherry blossoms, April 2026" width="1600" height="1200" fetchpriority="high">
+        <img class="bandview__img bandview__over" src="{{ '/assets/img/gallery/' | append: hero_photo | relative_url }}" alt="" aria-hidden="true">
+        <span class="bandview__line" aria-hidden="true"></span>
+        <span class="bandview__tag bandview__tag--left">Visible</span>
+        <span class="bandview__tag bandview__tag--right" id="band-label">Thermal</span>
+        <input class="bandview__range" type="range" min="0" max="100" value="52" aria-label="Drag to compare the visible photo with the simulated band view">
+      </div>
+      <figcaption class="bandview__bar">
+        <div class="bandview__bands" role="group" aria-label="Choose a simulated band">
+          <button type="button" data-band="thermal" aria-pressed="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-thermo"/></svg>Thermal</button>
+          <button type="button" data-band="nir" aria-pressed="false"><svg class="i i--sm" aria-hidden="true"><use href="#i-eye"/></svg>NIR</button>
+          <button type="button" data-band="hsi" aria-pressed="false"><svg class="i i--sm" aria-hidden="true"><use href="#i-layers"/></svg>HSI band</button>
+          <button type="button" data-band="edge" aria-pressed="false"><svg class="i i--sm" aria-hidden="true"><use href="#i-grid"/></svg>Edges</button>
+        </div>
+        <p class="bandview__note">{% include t.html en="Simulated band views computed in your browser from a visible photo (April 2026), for illustration only." ko="가시광 사진(2026년 4월)을 브라우저에서 변환한 모의 밴드 영상입니다." %}</p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <svg class="sr-only" aria-hidden="true" focusable="false">
+    <filter id="f-thermal" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values=".33 .5 .17 0 0  .33 .5 .17 0 0  .33 .5 .17 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0 .2 .55 .85 .98 1 1"/>
+        <feFuncG type="table" tableValues="0 0 .02 .2 .5 .82 1"/>
+        <feFuncB type="table" tableValues=".08 .4 .55 .25 .05 .2 .85"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="f-nir" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values=".15 1.05 -.1 0 0  .95 .1 0 0 0  .05 .75 .2 0 0  0 0 0 1 0"/>
+    </filter>
+    <filter id="f-hsi" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values=".1 .85 .05 0 0  .1 .85 .05 0 0  .1 .85 .05 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues=".267 .23 .128 .37 .993"/>
+        <feFuncG type="table" tableValues=".005 .322 .567 .789 .906"/>
+        <feFuncB type="table" tableValues=".329 .546 .551 .383 .144"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="f-edge" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values=".3 .59 .11 0 0  .3 .59 .11 0 0  .3 .59 .11 0 0  0 0 0 1 0"/>
+      <feConvolveMatrix order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" preserveAlpha="true"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1.2" intercept=".02"/>
+        <feFuncG type="linear" slope="4" intercept=".06"/>
+        <feFuncB type="linear" slope="5" intercept=".12"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+</section>
+
+<section class="stats-band" aria-label="Lab at a glance">
+  <div class="wrap stats">
+    <div class="stat"><span class="stat__num" data-count="{{ site.data.members | size }}">{{ site.data.members | size }}</span><span class="stat__label">{% include t.html en="Current members" ko="현재 구성원" %}</span></div>
+    <div class="stat"><span class="stat__num" data-count="{{ site.data.alumni | size }}">{{ site.data.alumni | size }}</span><span class="stat__label">{% include t.html en="Alumni" ko="졸업생" %}</span></div>
+    <div class="stat"><span class="stat__num" data-count="{{ pubs | size }}">{{ pubs | size }}</span><span class="stat__label">{% include t.html en="Publications" ko="논문" %}</span></div>
+    <div class="stat"><span class="stat__num" data-count="{{ intl_j }}">{{ intl_j }}</span><span class="stat__label">{% include t.html en="International journal papers" ko="국제 저널 논문" %}</span></div>
+    <div class="stat"><span class="stat__num" data-count="{{ site.data.projects | size }}">{{ site.data.projects | size }}</span><span class="stat__label">{% include t.html en="Research projects" ko="연구 과제" %}</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about">
+    <div class="about__text reveal">
+      <p class="eyebrow">{% include t.html en="About" ko="소개" %}</p>
+      <h2>{% include t.html en="Human-like visual intelligence from physical sensing" ko="물리 센싱 기반의 인간 수준 시각 지능" %}</h2>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="about__body">{% include t.html en=lab.about.en ko=lab.about.ko %}</p>
+      <div class="about__lists">
+        <div>
+          <h3>{% include t.html en="Research areas" ko="연구 분야" %}</h3>
+          <ul class="ticks">{% for a in lab.areas %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
+        </div>
+        <div>
+          <h3>{% include t.html en="Applications" ko="응용 분야" %}</h3>
+          <ul class="ticks">{% for a in lab.applications %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
+        </div>
+      </div>
+    </div>
+    <aside class="about__side reveal">
+      <figure class="purpose card">
+        <img src="{{ '/assets/img/brand/avil-logo.webp' | relative_url }}" alt="{{ lab.name }} logo" width="320" height="154" loading="lazy">
+        <blockquote>
+          <p>{{ lab.purpose[0] }}</p>
+          <p>{{ lab.purpose[1] }}</p>
+        </blockquote>
+        <figcaption>{% include t.html en="Our purpose" ko="연구 목표" %}</figcaption>
+      </figure>
+      <a class="rlrc-card card card--hover" href="{{ '/projects/#rlrc' | relative_url }}">
+        <span class="tag tag--rlrc">RLRC</span>
+        <strong>{% include t.html en=lab.rlrc.headline.en ko=lab.rlrc.headline.ko %}</strong>
+        <span>{% include t.html en=lab.rlrc.summary.en ko=lab.rlrc.summary.ko %}</span>
+        <span class="link-arrow">{% include t.html en="About RLRC" ko="자세히" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--alt" id="sensing">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">{% include t.html en="Sensing explorer" ko="센싱 탐색" %}</p>
+        <h2>{% include t.html en="One lab, many spectral bands" ko="다양한 스펙트럼 영역의 영상 센싱" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="section__sub">{% include t.html en="Pick a modality to see the lab's equipment, members, projects and papers that use it." ko="센서 종류를 선택하면 관련 장비, 구성원, 과제, 논문을 볼 수 있습니다." %}</p>
+      </div>
+    </div>
+    {% include sensing-explorer.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap home-split">
+    <div class="reveal">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">{% include t.html en="Latest news" ko="최근 소식" %}</p>
+          <h2>{% include t.html en="What we have been up to" ko="연구실 소식" %}</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <a class="link-arrow" href="{{ '/news/' | relative_url }}">{% include t.html en="All news" ko="전체 소식" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <ol class="newslist">
+        {%- for e in site.data.events limit: 6 %}
+        <li class="newslist__item">
+          <a class="newslist__thumb" href="{{ '/gallery/' | relative_url }}#{{ e.photo | remove: '.webp' }}" tabindex="-1" aria-hidden="true">
+            <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="" loading="lazy" width="640" height="427">
+          </a>
+          <div>
+            <p class="newslist__meta"><time class="mono" datetime="{{ e.date }}">{{ e.date | date: "%b %Y" }}</time> <span class="tag tag--{{ e.tag }}">{{ e.tag }}</span></p>
+            <p class="newslist__text">{% include t.html en=e.en ko=e.ko %}</p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+
+    <div class="reveal">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">{% include t.html en="Recent publications" ko="최근 논문" %}</p>
+          <h2>{% include t.html en="International papers" ko="국제 논문" %}</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <a class="link-arrow" href="{{ '/publications/' | relative_url }}">{% include t.html en="All publications" ko="전체 논문" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      {%- assign recent = pubs | where: "region", "international" -%}
+      <ol class="publist-mini">
+        {%- for x in recent limit: 6 %}
+        <li>
+          <p class="publist-mini__meta"><span class="mono">{{ x.year | default: "n.d." }}</span> <span class="tag tag--{% if x.type == 'journal' %}journal{% else %}conference{% endif %}">{{ x.type }}</span></p>
+          {%- if x.title %}
+          <p class="publist-mini__title">{{ x.title }}</p>
+          <p class="publist-mini__sub js-authors">{{ x.authors }}{% if x.venue %} · <em>{{ x.venue }}</em>{% endif %}</p>
+          {%- else %}
+          <p class="publist-mini__sub js-authors">{{ x.text }}</p>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">{% include t.html en="Current projects" ko="진행 과제" %}</p>
+        <h2>{% include t.html en="Funded research in progress" ko="수행 중인 연구 과제" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <a class="link-arrow" href="{{ '/projects/' | relative_url }}">{% include t.html en="All projects" ko="전체 과제" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="proj-rail">
+      {%- for pr in current_projects %}
+      <article class="proj-mini card reveal" data-start="{{ pr.start }}" data-end="{{ pr.end }}">
+        <p class="proj-mini__funder">{% include t.html en=pr.funder ko=pr.funder_ko %}</p>
+        <h3 class="proj-mini__title">{% include t.html en=pr.title ko=pr.title_ko %}</h3>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span></div>
+        <p class="proj-mini__period"><span class="mono">{{ pr.period }}</span> <span class="proj-mini__pct"></span></p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="join card reveal">
+      <div>
+        <p class="eyebrow">{% include t.html en="Join us" ko="연구실 지원" %}</p>
+        <h2>{% include t.html en="Students who enjoy a challenge are welcome" ko="도전적인 학생은 누구나 환영합니다" %}</h2>
+        <p>{% include t.html en=lab.join.en ko=lab.join.ko %}</p>
+      </div>
+      <div class="join__actions">
+        <a class="btn btn--primary" href="mailto:{{ lab.contact.email }}"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>{{ lab.contact.email }}</a>
+        <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>{% include t.html en="Contact & directions" ko="연락처 및 오시는 길" %}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{%- comment -%} Every spelling of a lab member's name, for bolding authors (core.js). {%- endcomment -%}
+{%- assign names = site.data.professor.aliases -%}
+{%- for m in site.data.members -%}
+  {%- assign names = names | push: m.name -%}
+  {%- if m.name_ko -%}{%- assign names = names | push: m.name_ko -%}{%- endif -%}
+  {%- for a in m.aliases -%}{%- assign names = names | push: a -%}{%- endfor -%}
+{%- endfor -%}
+{%- for m in site.data.alumni -%}
+  {%- if m.name -%}{%- assign names = names | push: m.name -%}{%- endif -%}
+  {%- if m.name_ko -%}{%- assign names = names | push: m.name_ko -%}{%- endif -%}
+  {%- for a in m.aliases -%}{%- assign names = names | push: a -%}{%- endfor -%}
+{%- endfor -%}
+<script type="application/json" id="lab-names">{{ names | uniq | jsonify }}</script>

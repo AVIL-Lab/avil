@@ -1,0 +1,50 @@
+# Sensing modalities named on the Wix site (EO/IR/HSI/Radar/LiDAR, plus SAR and
+# polarization from the About text). This file only configures how the home page
+# and research page group existing lab data: equipment by category, and members,
+# projects and publications by keyword.
+#   words     matched case-insensitively against titles / interests
+#   acronyms  matched case-sensitively (so "IR" does not hit "their")
+#   equipment equipment.yml categories shown for this modality
+
+- key: visible
+  en: EO / Visible
+  ko: EO / 가시광
+  icon: eye
+  equipment: [visible, aerial]
+  words: [rgb, visible, color, pedestrian, object detection, character detection, 가시광, 컬러]
+  acronyms: [EO, RGB, CCD]
+- key: thermal
+  en: IR / Thermal
+  ko: 적외선 / 열영상
+  icon: thermo
+  equipment: [thermal]
+  words: [infrared, thermal, temperature, emissivity, 적외선, 열영상, 열화상, 온도]
+  acronyms: [IR, LWIR, MWIR, FIR, FTIR, TES, IRST]
+- key: spectral
+  en: Hyperspectral
+  ko: 초분광
+  icon: layers
+  equipment: [spectral]
+  words: [hyperspectral, spectral, vnir, raman, 초분광, 분광]
+  acronyms: [HSI]
+- key: radar
+  en: SAR / Radar
+  ko: SAR / 레이더
+  icon: radar
+  equipment: []
+  words: [radar, fmcw, mmwave, w-band, 레이더]
+  acronyms: [SAR, SLM, RF]
+- key: lidar
+  en: LiDAR / 3D
+  ko: 라이다 / 3D
+  icon: cpu
+  equipment: [platform]
+  words: [lidar, point cloud, rgb-d, 6d pose, 3d, depth, stereo, 라이다]
+  acronyms: []
+- key: polarization
+  en: Polarization
+  ko: 편광
+  icon: sliders
+  equipment: []
+  words: [polariz, 편광]
+  acronyms: []
