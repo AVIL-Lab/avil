@@ -316,8 +316,109 @@
     });
   };
 
+  /* ---- Ambient dots ---------------------------------------------------------
+     Pastel dots drifting behind the page and stepping aside for the cursor,
+     ported from initAmbientBubbles() on s-elim.github.io (same palette, speeds
+     and repulsion). Off for reduced motion; paused while the tab is hidden. */
+  function initAmbientDots() {
+    var canvas = document.getElementById("ambient-dots");
+    if (!canvas || !canvas.getContext) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    var PALETTE = [
+      { r: 159, g: 191, b: 174 }, { r: 184, g: 222, b: 203 }, { r: 246, g: 207, b: 197 },
+      { r: 173, g: 197, b: 230 }, { r: 250, g: 216, b: 212 }, { r: 228, g: 169, b: 155 },
+      { r: 247, g: 222, b: 215 }
+    ];
+    var width = 0, height = 0, particles = [], animId = null;
+    var mouse = { x: -1000, y: -1000, active: false }, mouseTimer = null;
+
+    function resize() {
+      var dpr = window.devicePixelRatio || 1;
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function particle(initial) {
+      var radius = Math.random() < 0.65 ? 2.6 + Math.random() * 2.8 : 5.6 + Math.random() * 3.8;
+      var speed = 0.12 + Math.random() * 0.22, angle = Math.random() * Math.PI * 2;
+      return {
+        x: initial ? Math.random() * width : (Math.random() < 0.5 ? -radius : width + radius),
+        y: Math.random() * height,
+        vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, radius: radius,
+        color: PALETTE[Math.floor(Math.random() * PALETTE.length)],
+        alpha: 0.42 + Math.random() * 0.26, phase: Math.random() * Math.PI * 2,
+        wobble: 0.006 + Math.random() * 0.010
+      };
+    }
+    function populate() {
+      particles = [];
+      var n = Math.max(20, Math.min(45, Math.floor(width * height / 32000)));
+      for (var i = 0; i < n; i++) particles.push(particle(true));
+    }
+    function step() {
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.phase += p.wobble;
+        var vx = p.vx + Math.cos(p.phase) * 0.08, vy = p.vy + Math.sin(p.phase) * 0.08;
+        if (mouse.active) {
+          var dx = p.x - mouse.x, dy = p.y - mouse.y, dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 80 && dist > 1) {
+            var push = (1 - dist / 80) * 0.35;
+            vx += dx / dist * push;
+            vy += dy / dist * push;
+          }
+        }
+        p.x += vx; p.y += vy;
+        var pad = p.radius + 15;
+        if (p.x < -pad) p.x = width + pad; else if (p.x > width + pad) p.x = -pad;
+        if (p.y < -pad) p.y = height + pad; else if (p.y > height + pad) p.y = -pad;
+      }
+    }
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      var dark = isDark();
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i], c = p.color, a = dark ? Math.min(0.75, p.alpha * 1.15) : p.alpha;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(" + c.r + "," + c.g + "," + c.b + "," + a.toFixed(3) + ")";
+        ctx.fill();
+      }
+    }
+    function tick() { step(); draw(); animId = requestAnimationFrame(tick); }
+
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        var ow = width || 1, oh = height || 1;
+        resize();
+        particles.forEach(function (p) { p.x = p.x / ow * width; p.y = p.y / oh * height; });
+      }, 150);
+    }, { passive: true });
+    window.addEventListener("mousemove", function (e) {
+      mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true;
+      clearTimeout(mouseTimer);
+      mouseTimer = setTimeout(function () { mouse.active = false; }, 1200);
+    }, { passive: true });
+    window.addEventListener("mouseout", function (e) { if (!e.relatedTarget) mouse.active = false; });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { if (animId) { cancelAnimationFrame(animId); animId = null; } }
+      else if (!animId) animId = requestAnimationFrame(tick);
+    });
+
+    resize();
+    populate();
+    animId = requestAnimationFrame(tick);
+  }
+
   function safe(fn) { try { fn(); } catch (e) { if (window.console) console.error(e); } }
   onReady(function () {
-    [initTheme, initLang, initNav, initReveal, initPalette, initCopy, function () { AVIL.markAuthors(); }].forEach(safe);
+    [initTheme, initLang, initNav, initReveal, initPalette, initCopy, initAmbientDots, function () { AVIL.markAuthors(); }].forEach(safe);
   });
 })();

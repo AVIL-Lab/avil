@@ -17,6 +17,7 @@
   --mark-fg: #ffffff;
   --hero-bg: #0b1f33;
   --hero-text: #e9f1f9;
+  --hero-gray: linear-gradient(180deg, rgba(226, 231, 237, .72), rgba(236, 239, 243, .5));
   --focus: #2563eb;
   --shadow-sm: 0 1px 2px rgba(11, 31, 51, .06), 0 1px 3px rgba(11, 31, 51, .06);
   --shadow: 0 6px 24px -8px rgba(11, 31, 51, .18), 0 2px 6px rgba(11, 31, 51, .06);
@@ -41,7 +42,7 @@
     --bg: #08111b; --surface: #0f1b29; --surface-2: #142335; --surface-3: #1a2d43;
     --ink: #eef4fa; --text: #d5dfea; --muted: #93a6ba; --line: #213449; --line-strong: #2d4560;
     --brand: #7db8ea; --brand-strong: #a4cdf2; --brand-soft: #14304b;
-    --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea;
+    --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea; --hero-gray: linear-gradient(180deg, rgba(30, 33, 38, .72), rgba(22, 25, 30, .5));
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4); --shadow: 0 10px 30px -12px rgba(0, 0, 0, .7);
     --t-conference: #9dbcfb; --t-conference-bg: #172a4d;
     --t-award: #f5c46b; --t-award-bg: #3a2b0e;
@@ -55,7 +56,7 @@
   --bg: #08111b; --surface: #0f1b29; --surface-2: #142335; --surface-3: #1a2d43;
   --ink: #eef4fa; --text: #d5dfea; --muted: #93a6ba; --line: #213449; --line-strong: #2d4560;
   --brand: #7db8ea; --brand-strong: #a4cdf2; --brand-soft: #14304b;
-  --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea;
+  --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea; --hero-gray: linear-gradient(180deg, rgba(30, 33, 38, .72), rgba(22, 25, 30, .5));
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4); --shadow: 0 10px 30px -12px rgba(0, 0, 0, .7);
   --t-conference: #9dbcfb; --t-conference-bg: #172a4d;
   --t-award: #f5c46b; --t-award-bg: #3a2b0e;
@@ -90,6 +91,10 @@ kbd { white-space: nowrap; font: 600 .72rem/1 var(--mono); padding: .2em .45em; 
 .skip-link { position: absolute; left: 12px; top: -48px; z-index: 100; padding: 8px 14px; background: var(--ink); color: var(--bg); border-radius: 8px; }
 .skip-link:focus { top: 10px; }
 main:focus { outline: none; }
+main, .site-footer { position: relative; z-index: 1; }
+.ambient-dots { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0; }
+@media (prefers-reduced-motion: reduce) { .ambient-dots { display: none; } }
+@media print { .ambient-dots { display: none; } }
 
 /* Bilingual text: <span class="i18n" lang="en|ko"> pairs from _includes/t.html */
 html:not([data-lang="ko"]) .i18n[lang="ko"], html[data-lang="ko"] .i18n[lang="en"] { display: none !important; }

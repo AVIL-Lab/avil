@@ -5,6 +5,7 @@
 </head>
 <body class="{{ page.body_class | default: 'page' }}">
   {% include icons.html %}
+  <canvas class="ambient-dots" id="ambient-dots" aria-hidden="true"></canvas>
   <a class="skip-link" href="#main">Skip to content</a>
   {% include header.html %}
   <main id="main" tabindex="-1">
