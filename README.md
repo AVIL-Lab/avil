@@ -20,7 +20,7 @@ This guide is written for a new administrator who has never worked on the site. 
 4. Where everything lives · 파일 위치
 5. Step-by-step tasks · 작업별 안내
    - 5.1 Add a new member · 새 구성원 추가
-   - 5.2 Edit a member (email, LinkedIn, homepage, research areas) · 구성원 정보 수정
+   - 5.2 Edit a member (email, LinkedIn, homepage, research areas, About me) · 구성원 정보 수정
    - 5.3 Move a member to alumni · 졸업생으로 이동
    - 5.4 Remove a member · 구성원 삭제
    - 5.5 Update the professor page · 교수 페이지 수정
@@ -155,6 +155,13 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
   linkedin: ""                     # full URL, or "" if none · 전체 주소, 없으면 ""
   homepage: ""                     # full URL, or "" if none · 전체 주소, 없으면 ""
   aliases: ["Hong G", "Hong, Gildong"]   # other spellings used in papers (optional) · 논문에 쓰인 다른 표기 (선택)
+  about:                           # text in the "About me" pop-up (optional) · "소개" 팝업 글 (선택)
+    en: |
+      I am a Master's student working on **vision-language-action models**.
+
+      A blank line starts a new paragraph. Links look like [this](https://example.com).
+    ko: |
+      **비전-언어-행동 모델**을 연구하는 석사과정생입니다.
 ```
 
 The `role` values mean: `postdoc` = Post-Doc, `phd` = Ph.D. student, `ms` = Master's student, `undergrad` = undergraduate researcher. The `aliases` list makes the member's name appear in **bold** in author lists on the Publications page; add every spelling used in their papers (their English name, Korean name and `name_ko` are already included automatically).
@@ -165,11 +172,15 @@ The `role` values mean: `postdoc` = Post-Doc, `phd` = Ph.D. student, `ms` = Mast
 
 **3단계 (선택). 홈 화면 연구 분야에 넣기.** `_data/domains.yml`을 열어 국방 AI 또는 의료 AI의 `members:` 목록, 또는 피지컬 슈퍼 인텔리전스의 `core_team:` 목록에 정확한 `name`을 추가합니다 (5.11 참고).
 
-### 5.2 Edit a member (email, LinkedIn, homepage, research areas) · 구성원 정보 수정
+### 5.2 Edit a member (email, LinkedIn, homepage, research areas, About me) · 구성원 정보 수정
 
 Find the member's block in `_data/members.yml` and change the field. For LinkedIn, paste the profile address and delete everything from `?` onward (for example `?utm_source=share_via…`), so it looks like `https://www.linkedin.com/in/name-123`. If a field is unknown, leave it as `""`; the card keeps an empty space where the button would be. To change research areas, edit the `interests:` list.
 
 `_data/members.yml`에서 해당 구성원 블록을 찾아 값을 고칩니다. LinkedIn은 프로필 주소를 붙여 넣고 `?`부터 뒤를 모두 지워서 (예: `?utm_source=share_via…`) `https://www.linkedin.com/in/name-123` 형태로 만듭니다. 모르는 값은 `""`로 두면 카드에 버튼 자리만 비어 보입니다. 연구 분야는 `interests:` 목록을 고칩니다.
+
+Every card has an **About me** button that opens a pop-up with the member's photo, research areas, links and introduction. The introduction comes from the `about:` field (`en` and `ko`, see the example in 5.1). Write it in Markdown: `**bold**`, `[link text](https://...)`, and an empty line between paragraphs. Keep the text indented under `en: |` / `ko: |`. If `about` is missing, the pop-up says that no introduction has been added yet.
+
+모든 카드에는 **소개(About me)** 버튼이 있어 사진, 연구 분야, 링크, 소개 글이 담긴 팝업을 엽니다. 소개 글은 `about:` 항목(`en`, `ko`, 5.1의 예시 참고)에서 가져옵니다. 마크다운으로 쓰며 `**굵게**`, `[링크 글자](https://...)`, 문단 사이 빈 줄을 사용할 수 있습니다. 글은 `en: |` / `ko: |` 아래로 들여써야 합니다. `about`이 없으면 팝업에 아직 소개 글이 없다고 표시됩니다.
 
 To change a photo, upload the new image to `assets/img/members/`. Either give it the same file name as the old photo (it replaces it) or use a new name and update `photo:`.
 

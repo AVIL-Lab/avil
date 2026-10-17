@@ -8,6 +8,9 @@
 #   email       contact shown on the card (optional)
 #   linkedin    full LinkedIn profile URL; leave "" until known (the card keeps the slot empty)
 #   homepage    personal or project homepage URL; leave "" until known
+#   about       optional short bio shown in the card's "About me" pop-up, with
+#               `en` and `ko` texts. Markdown works: **bold**, [link](https://...),
+#               and a blank line between paragraphs.
 #   aliases     extra spellings used in author lists, so the publications page
 #               can mark lab members. The display name is always included.
 
@@ -78,6 +81,19 @@
   linkedin: https://www.linkedin.com/in/selimsarowar
   homepage: https://s-elim.github.io
   aliases: [Md Selim Sarowar]
+  about:
+    en: |
+      I am pursuing an **M.Sc. in Computer Vision & AI** at Yeungnam University (YU), where I am maintaining a perfect **CGPA of 4.5/4.5 (Ranked 1st / Top 1)**. I am a [Global Korea Scholarship (GKS)](https://www.studyinkorea.go.kr/) scholar funded by NIIED, with additional support from the **RLRC & RISE** industry-collaboration projects. I am a member of the Advanced Visual Intelligence Lab, supervised by [Prof. Sungho Kim](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en).
+
+      My research focuses on **3D computer vision & spatial intelligence, 6D pose estimation, vision-language-action (VLA) models, world models, and agentic robotics** for robot manipulation. I aim to build embodied agents capable of perceiving, reasoning, and acting within the physical world, working toward **physical super intelligence**. My contributions in these areas include first-author publications at **BMVC'26** and in **IEEE Access (SCIE-Q1)**.
+
+      Before joining YU, I completed a one-year Korean Language & Literature program at KLI under the GKS program, and spent a year as a full-time Research Assistant in the [WCSP Lab at National Tsing Hua University](https://nthu-en.site.nthu.edu.tw/), Taiwan. I earned my B.Tech (Electronics & Electrical Engineering) as an [SII Scholar](https://studyinindia.gov.in/) from the [Kalinga Institute of Industrial Technology (KIIT)](https://kiit.ac.in/), and interned at [IIT Roorkee](https://www.iitr.ac.in/) on image processing for biomedical signals.
+    ko: |
+      영남대학교(YU)에서 **컴퓨터 비전 및 AI 석사 과정**을 밟고 있으며, **평점 4.5/4.5 (1위)**를 유지하고 있습니다. 국립국제교육원(NIIED)이 지원하는 [정부초청장학생(GKS)](https://www.studyinkorea.go.kr/)이며, **RLRC 및 RISE** 산학협력 과제의 지원도 받고 있습니다. 지능형시각정보처리연구실(AVIL) 소속으로 [김성호 교수님](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en)의 지도를 받고 있습니다.
+
+      **3D 컴퓨터 비전 및 공간 지능, 6D 자세 추정, 비전-언어-행동(VLA) 모델, 월드 모델, 에이전틱 로보틱스**를 로봇 매니퓰레이션에 적용하는 연구를 합니다. 물리 세계에서 인지하고 추론하며 행동하는 체화 에이전트를 만들어 **피지컬 슈퍼 인텔리전스**에 다가가는 것이 목표입니다. 이 분야에서 **BMVC'26** 채택 논문과 **IEEE Access (SCIE-Q1)** 게재 논문을 제1저자로 발표했습니다.
+
+      영남대학교 입학 전에는 GKS 프로그램으로 KLI에서 1년간 한국어 과정을 마쳤고, 대만 [국립칭화대학교 WCSP 연구실](https://nthu-en.site.nthu.edu.tw/)에서 1년간 전임 연구원으로 일했습니다. 인도 [KIIT](https://kiit.ac.in/)에서 [SII 장학생](https://studyinindia.gov.in/)으로 전기전자공학 학사(B.Tech)를 받았고, [IIT Roorkee](https://www.iitr.ac.in/)에서 생체신호 영상처리 인턴십을 했습니다.
 
 - name: Haekang Song
   name_ko: 송해강

@@ -74,6 +74,25 @@
     apply();
   }
 
+  // "About me" pop-ups: native <dialog> gives focus handling and Esc for free.
+  function initAbout() {
+    document.addEventListener("click", function (e) {
+      var open = e.target.closest("[data-about-open]");
+      if (open) {
+        var d = document.getElementById(open.getAttribute("data-about-open"));
+        if (d && d.showModal) { d.showModal(); }
+        return;
+      }
+      if (e.target.closest("[data-about-close]")) {
+        var dlg = e.target.closest("dialog");
+        if (dlg) dlg.close();
+        return;
+      }
+      // A click on the backdrop lands on the <dialog> itself, outside its inner box.
+      if (e.target.tagName === "DIALOG" && e.target.classList.contains("about-dialog")) e.target.close();
+    });
+  }
+
   function ready(fn) { if (document.readyState !== "loading") fn(); else document.addEventListener("DOMContentLoaded", fn); }
-  ready(function () { [initCareer, initMembers].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.error(e); } }); });
+  ready(function () { [initCareer, initMembers, initAbout].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.error(e); } }); });
 })();

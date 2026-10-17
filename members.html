@@ -70,6 +70,9 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
             {%- if m.interests %}
             <ul class="member__interests">{% for i in m.interests %}<li>{{ i }}</li>{% endfor %}</ul>
             {%- endif %}
+            <button type="button" class="about-btn" data-about-open="about-{{ m.name | slugify }}" aria-haspopup="dialog">
+              <svg class="i i--sm" aria-hidden="true"><use href="#i-users"/></svg>{% include t.html en="About me" ko="소개" %}
+            </button>
             <div class="member__links">
               {%- if m.email %}
               <a href="mailto:{{ m.email }}" class="member__email"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg><span>{{ m.email }}</span></a>
@@ -85,6 +88,35 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
               {%- else %}<span class="social social--empty" aria-hidden="true"></span>{% endif %}
             </div>
           </div>
+          <dialog class="about-dialog" id="about-{{ m.name | slugify }}" aria-labelledby="about-{{ m.name | slugify }}-title">
+            <div class="about-dialog__inner">
+              <button type="button" class="about-dialog__close" data-about-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+              <header class="about-dialog__head">
+                <img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" width="96" height="128" loading="lazy">
+                <div>
+                  <p class="about-dialog__role">{% include role-label.html role=m.role %}</p>
+                  <h3 class="about-dialog__name" id="about-{{ m.name | slugify }}-title">{{ m.name }}{% if m.name_ko %} <span lang="ko">{{ m.name_ko }}</span>{% endif %}</h3>
+                  {%- if m.interests %}
+                  <ul class="member__interests">{% for i in m.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+                  {%- endif %}
+                </div>
+              </header>
+              <div class="about-dialog__body">
+                {%- if m.about %}
+                <div class="i18n" lang="en">{{ m.about.en | markdownify }}</div>
+                <div class="i18n" lang="ko">{{ m.about.ko | default: m.about.en | markdownify }}</div>
+                {%- else %}
+                <p class="muted">{% include t.html en="This member has not added an introduction yet." ko="아직 소개 글이 등록되지 않았습니다." %}</p>
+                {%- endif %}
+              </div>
+              <footer class="about-dialog__foot">
+                {%- if m.email %}<a class="social" href="mailto:{{ m.email }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>{% endif %}
+                {%- if m.linkedin and m.linkedin != "" %}<a class="social social--linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>{% endif %}
+                {%- if m.homepage and m.homepage != "" %}<a class="social" href="{{ m.homepage }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-home"/></svg>Homepage</a>{% endif %}
+                <a class="social" href="{{ '/publications/' | relative_url }}?q={{ m.name | url_encode }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-book"/></svg>{% include t.html en="Papers" ko="논문" %}</a>
+              </footer>
+            </div>
+          </dialog>
         </article>
         {%- endfor %}
       </div>

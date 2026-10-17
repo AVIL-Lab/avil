@@ -111,3 +111,28 @@
   .pi { grid-template-columns: 84px 1fr; }
   .pi img { width: 84px; height: 105px; }
 }
+
+/* ---- "About me" button (hover gradient as on s-elim.github.io chips) and pop-up ---- */
+.about-btn { display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; height: 34px; margin-top: auto; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font-size: .84rem; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, color .2s ease; }
+.about-btn:hover, .about-btn:focus-visible { transform: translateY(-2px) scale(1.03); color: #0b1f33; border-color: #3b82f6; background: linear-gradient(135deg, #ffffff 15%, #bfdbfe 75%, #60a5fa 100%); box-shadow: 0 4px 14px rgba(59, 130, 246, .30); }
+:root[data-theme="dark"] .about-btn:hover, :root[data-theme="dark"] .about-btn:focus-visible { color: #06121e; border-color: #8ccff7; background: linear-gradient(135deg, #8ccff7 15%, #56b6f2 75%, #2a8ecb 100%); box-shadow: 0 4px 14px rgba(86, 182, 242, .35); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .about-btn:hover, :root:not([data-theme="light"]) .about-btn:focus-visible { color: #06121e; border-color: #8ccff7; background: linear-gradient(135deg, #8ccff7 15%, #56b6f2 75%, #2a8ecb 100%); box-shadow: 0 4px 14px rgba(86, 182, 242, .35); } }
+.member__body .about-btn + .member__links { margin-top: 10px; }
+.about-dialog { width: min(680px, calc(100% - 24px)); max-height: min(86vh, 900px); padding: 0; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .45); overflow: hidden; }
+.about-dialog::backdrop { background: rgba(4, 12, 22, .55); backdrop-filter: blur(3px); }
+.about-dialog[open] { animation: about-in .18s ease; }
+@keyframes about-in { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+.about-dialog__inner { position: relative; display: flex; flex-direction: column; max-height: inherit; }
+.about-dialog__close { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--muted); }
+.about-dialog__close:hover { color: var(--ink); border-color: var(--line-strong); }
+.about-dialog__head { display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: center; padding: 22px 60px 18px 22px; background: linear-gradient(135deg, var(--surface) 40%, var(--brand-soft)); border-bottom: 1px solid var(--line); }
+.about-dialog__head img { width: 96px; height: 128px; object-fit: cover; object-position: 50% 25%; border-radius: 12px; }
+.about-dialog__role { margin: 0 0 4px; font: 650 .7rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+.about-dialog__name { margin: 0 0 8px; font-size: 1.35rem; }
+.about-dialog__name span { font-weight: 500; color: var(--muted); font-size: 1rem; }
+.about-dialog__body { padding: 18px 22px; overflow-y: auto; font-size: .95rem; line-height: 1.7; }
+.about-dialog__body p { margin: 0 0 12px; }
+.about-dialog__body strong { color: var(--ink); }
+.about-dialog__foot { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 22px 18px; border-top: 1px solid var(--line); }
+.about-dialog__foot .social { flex: 0 0 auto; padding: 0 12px; }
+@media (max-width: 520px) { .about-dialog__head { grid-template-columns: 72px 1fr; padding-right: 54px; } .about-dialog__head img { width: 72px; height: 96px; } }
