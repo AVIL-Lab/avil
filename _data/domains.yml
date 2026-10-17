@@ -17,6 +17,8 @@
 #   funders          substrings of projects.yml `funder` that mark a project as
 #                    belonging to the domain (projects also match by keyword)
 #   equipment        equipment.yml categories; equipment_names picks single items
+#   (sensor) members names listed for that sensor tab, replacing the automatic
+#                    list built from co-authors and research areas
 #   match_venue      also test the domain keywords against the venue (e.g. a paper
 #                    at the Korea Institute of Military Science and Technology
 #                    conference counts as defense work)
@@ -116,6 +118,7 @@
       en: Raman spectroscopy
       ko: 라만 분광
       icon: layers
+      members: [Tanvir Ahmmed]
       words: [raman, sers, spectroscopy, 라만]
       acronyms: [SERS]
     - key: depth

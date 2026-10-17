@@ -81,6 +81,9 @@
     {%- assign sproj = none -%}
     {%- for pr in dproj -%}{%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign sproj = sproj | push: pr -%}{%- endif -%}{%- endfor -%}
     {%- assign smem = none -%}
+    {%- if s.members -%}
+      {%- for n in s.members -%}{%- assign m = all_members | where: "name", n | first -%}{%- if m -%}{%- assign smem = smem | push: m -%}{%- endif -%}{%- endfor -%}
+    {%- else -%}
     {%- for m in all_members -%}
       {%- assign mhit = false -%}
       {%- assign al = m.aliases | default: none | push: m.name -%}
@@ -96,6 +99,7 @@
       {%- if mhit and d.core_team -%}{%- unless d.core_team contains m.name -%}{%- assign mhit = false -%}{%- endunless -%}{%- endif -%}
       {%- if mhit -%}{%- assign smem = smem | push: m -%}{%- endif -%}
     {%- endfor -%}
+    {%- endif -%}
     {%- assign seq = none -%}
     {%- for e in site.data.equipment -%}
       {%- if s.equipment contains e.category or s.equipment_names contains e.name -%}{%- assign seq = seq | push: e -%}{%- endif -%}
