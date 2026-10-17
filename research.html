@@ -36,6 +36,49 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
   </div>
 </section>
 
+{%- assign psi = site.data.domains | where: "key", "psi" | first -%}
+{%- assign none = "" | split: "" -%}
+{%- assign psi_pubs = none -%}
+{%- for x in site.data.publications -%}
+  {%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}
+  {%- include match.html text=_t mod=psi -%}
+  {%- if hit -%}{%- assign psi_pubs = psi_pubs | push: x -%}{%- endif -%}
+{%- endfor -%}
+<section class="section robotics" id="robotics">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">{% include t.html en="Robotics" ko="로보틱스" %}</p>
+        <h2>{% include t.html en="Toward Physical Super Intelligence" ko="피지컬 슈퍼 인텔리전스를 향하여" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="section__sub">{% include t.html en=psi.summary.en ko=psi.summary.ko %}</p>
+      </div>
+    </div>
+    <div class="robo-grid">
+      {%- for s in psi.sensors %}
+      {%- assign rp = none -%}
+      {%- for x in psi_pubs -%}{%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign rp = rp | push: x -%}{%- endif -%}{%- endfor -%}
+      {%- assign rj = none -%}
+      {%- for pr in site.data.projects -%}{%- if pr.status == "current" -%}{%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign rj = rj | push: pr -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+      <article class="robo card reveal" id="robotics-{{ s.key }}">
+        <span class="robo__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ s.icon }}"/></svg></span>
+        <h3 class="robo__title">{% include t.html en=s.en ko=s.ko %}</h3>
+        <p class="robo__desc">{% include t.html en=s.desc.en ko=s.desc.ko %}</p>
+        {%- if rj.size > 0 %}
+        <ul class="robo__list robo__list--proj">{% for pr in rj limit: 2 %}<li><span class="tag tag--rlrc">current</span> {% include t.html en=pr.title ko=pr.title_ko %}</li>{% endfor %}</ul>
+        {%- endif %}
+        {%- if rp.size > 0 %}
+        <ul class="robo__list">{% for x in rp limit: 2 %}<li><span class="mono muted">{{ x.year | default: "n.d." }}</span> {{ x.title | default: x.text | truncate: 100 }}</li>{% endfor %}</ul>
+        <a class="link-arrow robo__more" href="{{ '/publications/' | relative_url }}?topic=psi-{{ s.key }}">{{ rp.size }} {% include t.html en="papers" ko="편의 논문" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        {%- else %}
+        <p class="robo__more muted">{% include t.html en="A new direction for the lab; papers will appear here." ko="새로운 연구 방향으로, 논문이 곧 추가됩니다." %}</p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="section section--alt" id="themes">
   <div class="wrap">
     <div class="section__head">

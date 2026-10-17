@@ -25,6 +25,13 @@ js: [home]
       <ul class="hero__modalities" aria-label="Sensing modalities">
         {%- for m in lab.modalities %}<li>{{ m }}</li>{% endfor %}
       </ul>
+      {%- assign psi = site.data.domains | where: "key", "psi" | first %}
+      <div class="hero__robotics">
+        <span class="hero__robotics-label"><svg class="i i--sm" aria-hidden="true"><use href="#i-bot"/></svg>{% include t.html en="Robotics" ko="로보틱스" %}</span>
+        <ul>
+          {%- for s in psi.sensors %}<li><a href="{{ '/research/' | relative_url }}#robotics-{{ s.key }}">{% include t.html en=s.en ko=s.ko %}</a></li>{% endfor %}
+        </ul>
+      </div>
       <div class="hero__cta">
         <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">{% include t.html en="Explore our research" ko="연구 분야 보기" %} <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
         <a class="btn btn--light" href="{{ '/contact/' | relative_url }}">{% include t.html en="Join AVIL" ko="연구실 지원" %}</a>

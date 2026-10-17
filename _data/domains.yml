@@ -128,46 +128,83 @@
   color: "#8b3fe0"
   summary:
     en: >-
-      Physical and embodied AI: vision-language-action models, world models, 3D and 6D
-      pose perception, and robotic manipulation, including 3D VLM-based embodied AI for
-      mobile bimanual manipulation and LiDAR sensing for physical AI.
+      Robotics research toward Physical Super Intelligence: vision-language-action (VLA)
+      models, world models, agentic robotics, embodied intelligence and humanoid robot
+      intelligence, including 3D VLM-based embodied AI for mobile bimanual manipulation
+      and LiDAR sensing for physical AI.
     ko: >-
-      비전-언어-행동(VLA) 모델, 월드 모델, 3D/6D 자세 인식, 로봇 매니퓰레이션을 아우르는 피지컬 및
-      체화 AI 연구. 모바일 양팔 매니퓰레이션을 위한 3D VLM 기반 embodied AI와 피지컬 AI용 라이다
-      센싱을 포함.
+      피지컬 슈퍼 인텔리전스를 향한 로보틱스 연구: 비전-언어-행동(VLA) 모델, 월드 모델, 에이전틱
+      로보틱스, 체화 지능, 휴머노이드 로봇 지능. 모바일 양팔 매니퓰레이션을 위한 3D VLM 기반
+      embodied AI와 피지컬 AI용 라이다 센싱을 포함.
   core_team: [Selim Sarowar, Ihsan, Taeung, 화통걸]
   funders: [Korea Institute for Robot Industry Advancement]
-  words: [vision-language-action, world model, embodied, physical ai, manipulat, grasp, robot, 6d pose, 6dof, pose estimation, mobile manipulator, sim-to-real, agent, language model, llava, 3d object, lidar, 로봇, 파지, 매니퓰레이, 에이전트, 자세 추정, 피지컬, 양팔, 라이다]
+  words: [vision-language-action, world model, embodied, physical ai, manipulat, grasp, robot, humanoid, bimanual, agentic, 6d pose, 6dof, pose estimation, mobile manipulator, sim-to-real, agent, language model, llava, 3d object, lidar, 로봇, 파지, 매니퓰레이, 에이전트, 자세 추정, 피지컬, 양팔, 라이다, 휴머노이드]
   acronyms: [VLA, VLM, LLM, 6D]
+  # For this domain the sub-segments are research directions rather than sensors.
   sensors:
-    - key: rgbd
-      en: RGB-D / Pose
-      ko: RGB-D / 자세
-      icon: eye
-      equipment_names: [RGB-D camera, Stereo camera, Turn table]
-      words: [rgb-d, depth, 6d, 6dof, pose estimation, structured light, 구조광, 깊이, 자세 추정, 자세 인식]
-      acronyms: [RGB-D]
-    - key: lidar
-      en: LiDAR / 3D
-      ko: 라이다 / 3D
-      icon: cpu
-      words: [lidar, point cloud, 3d, gaussian, 라이다]
     - key: vla
-      en: Vision-Language-Action
-      ko: 비전-언어-행동
+      en: VLA Models
+      ko: VLA 모델
       icon: layers
-      words: [vision-language-action, vision language, language model, llava, clip, multimodal interface, 비전-언어, 언어 모델]
-      acronyms: [VLA, VLM, LLM]
-    - key: manipulation
-      en: Robot manipulation
-      ko: 로봇 매니퓰레이션
-      icon: briefcase
-      equipment_names: [Mobile robot]
-      words: [grasp, manipulat, robot, mycobot, 파지, 로봇, 매니퓰레이]
-    - key: worldmodel
-      en: World models & agents
-      ko: 월드 모델 및 에이전트
-      icon: globe
+      desc:
+        en: >-
+          Models that turn camera observations and natural-language instructions into robot
+          actions. Our work adds 3D geometry and depth-aware spatial reasoning to VLA policies.
+        ko: >-
+          카메라 관측과 자연어 지시를 로봇 행동으로 변환하는 모델. 3D 기하와 깊이 인식 공간 추론을
+          VLA 정책에 결합하는 연구.
       equipment_names: [Deep Learning Server]
-      words: [world model, sim-to-real, agent, reinforcement, proximal policy, 에이전트, 강화학습]
+      words: [vision-language-action, vision language, language model, llava, clip, 비전-언어, 언어 모델]
+      acronyms: [VLA, VLM, LLM]
+    - key: worldmodel
+      en: World Models
+      ko: 월드 모델
+      icon: globe
+      desc:
+        en: >-
+          Learned models that predict how a scene will change under the robot's actions, so a
+          robot can imagine outcomes and plan before it moves.
+        ko: >-
+          로봇의 행동에 따라 장면이 어떻게 변할지 예측하는 학습 모델로, 움직이기 전에 결과를 예측하고
+          계획할 수 있게 함.
+      equipment_names: [Deep Learning Server]
+      words: [world model, sim-to-real, latent dynamics, 월드 모델, 시뮬레이션]
+    - key: agentic
+      en: Agentic Robotics
+      ko: 에이전틱 로보틱스
+      icon: cpu
+      desc:
+        en: >-
+          Robots driven by AI agents that break long tasks into steps, choose skills and tools,
+          check their own progress and recover from failures.
+        ko: >-
+          긴 작업을 단계로 나누고, 기술과 도구를 선택하며, 스스로 진행을 점검하고 실패에서 복구하는 AI
+          에이전트 기반 로봇.
+      words: [agent, agentic, motion planning, reinforcement, proximal policy, 에이전트, 모션 플래닝, 강화학습]
       acronyms: [PPO]
+    - key: embodied
+      en: Embodied Intelligence
+      ko: 체화 지능
+      icon: briefcase
+      desc:
+        en: >-
+          Perception, reasoning and action learned through interaction with the physical world,
+          from 6D object pose estimation to grasping and mobile manipulation.
+        ko: >-
+          6D 물체 자세 추정부터 파지, 모바일 매니퓰레이션까지 물리 세계와의 상호작용을 통해 학습하는
+          인지, 추론, 행동.
+      equipment_names: [RGB-D camera, Stereo camera, Turn table, Mobile robot]
+      words: [embodied, physical ai, grasp, manipulat, 6d pose, 6dof, object pose, mobile manipulator, robot, 파지, 매니퓰레이, 로봇, 피지컬, 체화]
+      acronyms: [6D]
+    - key: humanoid
+      en: Humanoid Robot Intelligence
+      ko: 휴머노이드 로봇 지능
+      icon: humanoid
+      desc:
+        en: >-
+          Perception and decision-making for humanoid robots that share spaces with people,
+          building on human pose understanding and bimanual manipulation.
+        ko: >-
+          사람과 공간을 공유하는 휴머노이드 로봇을 위한 인지와 의사결정 연구로, 인간 자세 이해와 양팔
+          매니퓰레이션을 기반으로 함.
+      words: [humanoid, bimanual, human pose, human skeleton, 휴머노이드, 양팔, 휴먼 스켈레톤, 보행자 자세]

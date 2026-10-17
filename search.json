@@ -2,12 +2,12 @@
 layout: null
 permalink: /search.json
 ---
-{%- assign out = "" | split: "" -%}
 [
 {"t":"page","title":"Home","sub":"Advanced Visual Intelligence Lab","url":"/"},
 {"t":"page","title":"Professor","sub":"Prof. Sungho Kim","url":"/professor/"},
 {"t":"page","title":"Members","sub":"Current members and alumni","url":"/members/"},
-{"t":"page","title":"Research","sub":"Areas, sensing modalities, themes","url":"/research/"},
+{"t":"page","title":"Research","sub":"Areas, robotics, themes, sensing modalities","url":"/research/"},
+{"t":"page","title":"Robotics","sub":"VLA models, world models, agentic robotics, embodied intelligence, humanoid robot intelligence","url":"/research/#robotics"},
 {"t":"page","title":"Projects","sub":"Current and past projects, RLRC, equipment","url":"/projects/"},
 {"t":"page","title":"Publications","sub":"International and domestic journals and conferences","url":"/publications/"},
 {"t":"page","title":"News","sub":"Conferences, awards, lab events","url":"/news/"},
