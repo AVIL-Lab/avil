@@ -1,0 +1,16 @@
+/* Contact page (also loads people.css). */
+.contact { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; }
+.contact__cards { display: grid; gap: 16px; }
+.contact-card { position: relative; padding: 22px 22px 22px 80px; }
+.contact-card__icon { position: absolute; left: 22px; top: 22px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--brand-soft); color: var(--brand); }
+.contact-card h2 { margin: 0 0 6px; font-size: 1.1rem; }
+.contact-card p { margin: 0 0 6px; }
+.contact-card__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.join-panel { padding: 26px; position: sticky; top: calc(var(--header-h) + 20px); background: linear-gradient(160deg, var(--surface), var(--brand-soft)); }
+.join-panel h3 { margin-top: 18px; font-size: .95rem; }
+.join-panel__links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+.ticks { list-style: none; margin: 0; padding: 0; }
+.ticks li { position: relative; padding: 5px 0 5px 22px; border-bottom: 1px dashed var(--line); font-size: .94rem; }
+.ticks li::before { content: ""; position: absolute; left: 2px; top: 13px; width: 10px; height: 3px; border-radius: 2px; background: var(--spectral); }
+@media (max-width: 900px) { .contact { grid-template-columns: 1fr; } .join-panel { position: static; } }
+@media (max-width: 480px) { .contact-card { padding: 74px 18px 18px; } .contact-card__icon { left: 18px; top: 18px; } }

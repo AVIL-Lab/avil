@@ -1,0 +1,6 @@
+{%- case include.cat -%}
+{%- when "robotics" -%}{% include t.html en="Robotics" ko="로보틱스" %}
+{%- when "vision" -%}{% include t.html en="Vision" ko="비전" %}
+{%- when "aiml" -%}{% include t.html en="AI/ML" ko="AI/ML" %}
+{%- when "hci" -%}HCI
+{%- endcase -%}

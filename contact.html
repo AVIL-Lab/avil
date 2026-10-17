@@ -1,0 +1,59 @@
+---
+title: Contact
+permalink: /contact/
+css: [people, contact]
+description: "Contact the Advanced Visual Intelligence Lab at Yeungnam University: email, phone, address and how to join."
+---
+{%- assign lab = site.data.lab -%}
+{%- assign p = site.data.professor -%}
+{% include page-hero.html eyebrow_en="Contact" eyebrow_ko="연락처" title_en="Get in touch" title_ko="연락처 및 오시는 길" %}
+
+<section class="section">
+  <div class="wrap contact">
+    <div class="contact__cards">
+      <article class="card contact-card reveal">
+        <span class="contact-card__icon"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg></span>
+        <h2>{% include t.html en="Email" ko="이메일" %}</h2>
+        <p><a href="mailto:{{ lab.contact.email }}">{{ lab.contact.email }}</a></p>
+        <div class="contact-card__actions">
+          <a class="btn btn--primary btn--sm" href="mailto:{{ lab.contact.email }}?subject=%5BAVIL%5D%20">{% include t.html en="Write an email" ko="메일 보내기" %}</a>
+          <button type="button" class="btn btn--ghost btn--sm" data-copy="{{ lab.contact.email }}" data-copy-msg="Email copied"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg>{% include t.html en="Copy" ko="복사" %}</button>
+        </div>
+      </article>
+      <article class="card contact-card reveal">
+        <span class="contact-card__icon"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span>
+        <h2>{% include t.html en="Phone" ko="전화" %}</h2>
+        <p><a href="tel:{{ lab.contact.phone_intl }}">{{ lab.contact.phone }}</a> <span class="muted">({% include t.html en="lab" ko="연구실" %})</span></p>
+        <p><a href="tel:+82-{{ p.phone | remove_first: '0' }}">{{ p.phone }}</a> <span class="muted">({% include t.html en="Prof. Sungho Kim" ko="김성호 교수" %})</span></p>
+      </article>
+      <article class="card contact-card reveal">
+        <span class="contact-card__icon"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span>
+        <h2>{% include t.html en="Address" ko="주소" %}</h2>
+        <p><strong>{% include t.html en="Lab" ko="연구실" %}</strong>: {% include t.html en=lab.contact.address_en ko=lab.contact.address_ko %}</p>
+        <p><strong>{% include t.html en="Professor's office" ko="교수 연구실" %}</strong>: {% include t.html en=p.office_en ko=p.office_ko %}</p>
+        <div class="contact-card__actions">
+          <a class="btn btn--ghost btn--sm" href="https://map.kakao.com/?q={{ lab.contact.map_query | url_encode }}" target="_blank" rel="noopener">Kakao Map <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://map.naver.com/p/search/{{ lab.contact.map_query | url_encode }}" target="_blank" rel="noopener">Naver Map <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query={{ lab.contact.map_query | url_encode }}" target="_blank" rel="noopener">Google Maps <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <aside class="join-panel card reveal">
+      <p class="eyebrow">{% include t.html en="Joining AVIL" ko="연구실 지원" %}</p>
+      <h2>{% include t.html en="Prospective students" ko="지원 희망 학생" %}</h2>
+      <span class="rule" aria-hidden="true"></span>
+      <p>{% include t.html en=lab.join.en ko=lab.join.ko %}</p>
+      <h3>{% include t.html en="What we work on" ko="연구 분야" %}</h3>
+      <ul class="ticks">
+        {%- for a in lab.areas %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}
+        {%- for a in lab.applications %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}
+      </ul>
+      <div class="join-panel__links">
+        <a class="link-arrow" href="{{ '/research/' | relative_url }}">{% include t.html en="Research" ko="연구" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a class="link-arrow" href="{{ '/members/' | relative_url }}">{% include t.html en="Members" ko="구성원" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a class="link-arrow" href="{{ '/publications/' | relative_url }}">{% include t.html en="Publications" ko="논문" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </aside>
+  </div>
+</section>

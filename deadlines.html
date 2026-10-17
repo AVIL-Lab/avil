@@ -1,0 +1,104 @@
+---
+title: AI Conference Deadlines
+permalink: /deadlines/
+css: [tracker]
+js: [deadlines]
+description: "Live countdowns to submission deadlines for CORE A* and A conferences in AI, machine learning, computer vision, robotics and HCI."
+---
+{%- assign confs = site.data.conferences -%}
+{%- assign cats = "robotics,vision,aiml,hci" | split: "," -%}
+<section class="page-hero tracker-hero">
+  <div class="wrap tracker-hero__grid">
+    <div>
+      <p class="eyebrow">{% include t.html en="Resources" ko="자료" %}</p>
+      <h1 class="page-hero__title">{% include t.html en="AI Conference Deadlines" ko="AI 학회 마감일" %}</h1>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="page-hero__lead">{% include t.html en="Live countdowns for CORE A* and A venues in robotics, vision, AI/ML and HCI. Each card counts down to its next unpassed stage, in the deadline's own time zone." ko="로보틱스, 비전, AI/ML, HCI 분야 CORE A*/A 학회의 실시간 마감 카운트다운입니다." %}</p>
+    </div>
+    <div class="next-up card" id="next-up" aria-live="off">
+      <p class="next-up__label"><svg class="i i--sm" aria-hidden="true"><use href="#i-clock"/></svg> {% include t.html en="Next deadline" ko="다음 마감" %}</p>
+      <p class="next-up__name" id="next-name">&mdash;</p>
+      <p class="next-up__stage" id="next-stage"></p>
+      <div class="clock" id="next-clock">
+        <div><span class="mono" data-u="d">--</span><small>days</small></div>
+        <div><span class="mono" data-u="h">--</span><small>hrs</small></div>
+        <div><span class="mono" data-u="m">--</span><small>min</small></div>
+        <div><span class="mono" data-u="s">--</span><small>sec</small></div>
+      </div>
+      <ol class="next-up__after" id="next-after"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="toolbar" id="dl-tools">
+      <div class="toolbar__group" role="group" aria-label="Filter by field">
+        <button type="button" class="pill is-active" data-cat="all">{% include t.html en="All" ko="전체" %} <span class="pill__count" data-count="all"></span></button>
+        {%- for c in cats %}
+        <button type="button" class="pill cat--{{ c }}" data-cat="{{ c }}"><span class="cat-dot"></span>{% include dl-cat.html cat=c %} <span class="pill__count" data-count="{{ c }}"></span></button>
+        {%- endfor %}
+      </div>
+      <div class="segment" data-rank>
+        <button type="button" data-v="all" aria-pressed="true">All ranks</button>
+        <button type="button" data-v="A*" aria-pressed="false">A*</button>
+        <button type="button" data-v="A" aria-pressed="false">A</button>
+      </div>
+      <label class="field">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="dl-q" placeholder="Conference or city" aria-label="Search conferences">
+      </label>
+      <button type="button" class="pill" id="dl-dated" aria-pressed="false"><svg class="i i--sm" aria-hidden="true"><use href="#i-calendar"/></svg>{% include t.html en="Dated calls only" ko="일정 확정만" %}</button>
+      <span class="toolbar__spacer"></span>
+      <div class="segment" data-view>
+        <button type="button" data-v="cards" aria-pressed="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-grid"/></svg>Cards</button>
+        <button type="button" data-v="timeline" aria-pressed="false"><svg class="i i--sm" aria-hidden="true"><use href="#i-list"/></svg>Timeline</button>
+      </div>
+    </div>
+
+    <div class="dl-timeline card is-hidden" id="dl-timeline" aria-label="Upcoming deadlines over the next 12 months"></div>
+
+    <div class="dl-grid" id="dl-grid">
+      {%- for c in confs %}
+      {%- assign slug = c.name | slugify -%}
+      <article class="dl card cat--{{ c.category }}" id="conf-{{ slug }}" data-cat="{{ c.category }}" data-rank="{{ c.rank | default: 'unranked' }}" data-name="{{ c.name }}" data-search="{{ c.name | downcase }} {{ c.location | downcase }} {{ c.category }}">
+        <header class="dl__head">
+          <div>
+            <h2 class="dl__name">{{ c.name }} <span class="dl__ed mono">{{ c.edition }}</span></h2>
+            <p class="dl__where">{% if c.flag %}<span aria-hidden="true">{{ c.flag }}</span> {% endif %}{{ c.location }}</p>
+          </div>
+          <div class="dl__badges">
+            {%- if c.rank %}<span class="rank rank--{% if c.rank == 'A*' %}astar{% else %}a{% endif %}" title="CORE rank">{{ c.rank }}</span>{% endif %}
+            <span class="dl__cat">{% include dl-cat.html cat=c.category %}</span>
+          </div>
+        </header>
+        <div class="dl__count">
+          <p class="dl__stage">&mdash;</p>
+          <p class="dl__time mono">&mdash;</p>
+          <div class="dl__bar" aria-hidden="true"><span></span></div>
+        </div>
+        <ol class="dl__stages">
+          {%- for t in c.timeline %}
+          <li data-date="{{ t.date }}"{% if t.time %} data-time="{{ t.time }}"{% endif %}{% if t.tz %} data-tz="{{ t.tz }}"{% endif %}>
+            <span class="dl__dot" aria-hidden="true"></span>
+            <span class="dl__label">{{ t.label }}</span>
+            <span class="dl__date mono">{% if t.date == 'tba' %}TBA{% else %}{{ t.date | date: "%b %-d, %Y" }}{% if t.time %} {{ t.time }}{% endif %}{% if t.tz %} {{ t.tz }}{% endif %}{% endif %}</span>
+          </li>
+          {%- endfor %}
+        </ol>
+        <footer class="dl__foot">
+          {%- if c.dates %}<span class="dl__dates"><svg class="i i--sm" aria-hidden="true"><use href="#i-calendar"/></svg>{{ c.dates }}</span>{% endif %}
+          {%- if c.website %}<a class="dl__link" href="{{ c.website }}" target="_blank" rel="noopener">CFP <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>{% endif %}
+        </footer>
+        {%- if c.note %}<p class="dl__note">{{ c.note }}</p>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="empty is-hidden" id="dl-empty">{% include t.html en="No conference matches those filters." ko="조건에 맞는 학회가 없습니다." %}</p>
+    <p class="tracker-foot muted">
+      <svg class="i i--sm" aria-hidden="true"><use href="#i-file"/></svg>
+      {% include t.html en="Data comes from the deadline tracker on" ko="데이터 출처:" %} <a href="https://s-elim.github.io/deadlines/" target="_blank" rel="noopener">s-elim.github.io/deadlines</a>
+      {% include t.html en="and is synced into this site daily. A venue whose call has closed shows its next edition as TBA until new dates are published. Always confirm dates on the official conference site before submitting." ko="에서 매일 동기화됩니다. 제출 전에는 반드시 학회 공식 사이트에서 일정을 확인하세요." %}
+    </p>
+  </div>
+</section>

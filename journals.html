@@ -1,0 +1,113 @@
+---
+title: Top Q1 Journals
+permalink: /journals/
+css: [tracker]
+js: [journals]
+description: "SCIE-Q1 journals in robotics, computer vision and artificial intelligence with impact factor, category percentile, publisher and ISSN."
+---
+{%- assign js = site.data.journals -%}
+{%- assign cats = "robotics,vision,aiml" | split: "," -%}
+{%- assign sorted = js | sort: "jif" | reverse -%}
+{%- assign pubs = js | group_by: "publisher" | sort: "size" | reverse -%}
+{% include page-hero.html eyebrow_en="Resources" eyebrow_ko="자료" title_en="Top Q1 Journals" title_ko="Q1 저널" lead_en="SCIE-Q1 journals in robotics, computer vision and AI, with impact factor and category percentile. Filter, sort, or click a dot in the chart to jump to a journal." lead_ko="로보틱스, 컴퓨터 비전, AI 분야의 SCIE-Q1 저널 목록입니다." %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="jr-stats">
+      <div><span class="mono">{{ js | size }}</span>{% include t.html en="Q1 journals" ko="Q1 저널" %}</div>
+      {%- for c in cats %}
+      {%- assign n = js | where: "category", c | size -%}
+      <div class="cat--{{ c }}"><span class="mono">{{ n }}</span>{% include jr-cat.html cat=c %}</div>
+      {%- endfor %}
+      <div><span class="mono">{{ sorted.first.jif }}</span>{% include t.html en="Highest impact factor" ko="최고 IF" %}</div>
+    </div>
+
+    <figure class="jr-plot card" aria-label="Impact factor of every journal, by field">
+      <figcaption class="jr-plot__head">
+        <span class="toolbar__label">{% include t.html en="Impact factor by field" ko="분야별 IF" %}</span>
+        <span class="muted jr-plot__hint">{% include t.html en="Each dot is a journal. Hover for details, click to jump." ko="점 하나가 저널 하나입니다." %}</span>
+      </figcaption>
+      <div class="jr-plot__body" id="jr-plot">
+        {%- for c in cats %}
+        <div class="jr-plot__row cat--{{ c }}" data-cat="{{ c }}">
+          <span class="jr-plot__label">{% include jr-cat.html cat=c %}</span>
+          <div class="jr-plot__track"></div>
+        </div>
+        {%- endfor %}
+        <div class="jr-plot__axis"><span class="jr-plot__label"></span><div class="jr-plot__ticks" id="jr-ticks"></div></div>
+      </div>
+    </figure>
+
+    <div class="toolbar" id="jr-tools">
+      <div class="toolbar__group" role="group" aria-label="Filter by field">
+        <button type="button" class="pill is-active" data-cat="all">{% include t.html en="All" ko="전체" %}</button>
+        {%- for c in cats %}<button type="button" class="pill cat--{{ c }}" data-cat="{{ c }}"><span class="cat-dot"></span>{% include jr-cat.html cat=c %}</button>{% endfor %}
+      </div>
+      <label class="field">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="jr-q" placeholder="Journal, abbreviation, ISSN, publisher" aria-label="Search journals">
+      </label>
+      <label class="jr-range">
+        <span class="toolbar__label">Min IF</span>
+        <input type="range" id="jr-min" min="0" max="{{ sorted.first.jif | ceil }}" step="0.5" value="0" aria-label="Minimum impact factor">
+        <span class="mono" id="jr-min-v">0</span>
+      </label>
+      <select class="select" id="jr-pct" aria-label="Category percentile">
+        <option value="100">Any percentile</option>
+        <option value="1">Top 1%</option>
+        <option value="5">Top 5% or better</option>
+        <option value="10">Top 10% or better</option>
+      </select>
+      <select class="select" id="jr-pub" aria-label="Publisher">
+        <option value="all">All publishers</option>
+        {%- for p in pubs %}<option value="{{ p.name }}">{{ p.name }} ({{ p.size }})</option>{% endfor %}
+      </select>
+      <span class="toolbar__spacer"></span>
+      <div class="segment" data-sort>
+        <button type="button" data-v="jif" aria-pressed="true">Impact</button>
+        <button type="button" data-v="pct" aria-pressed="false">Percentile</button>
+        <button type="button" data-v="name" aria-pressed="false">A&ndash;Z</button>
+      </div>
+      <div class="segment" data-view>
+        <button type="button" data-v="cards" aria-pressed="true" aria-label="Card view"><svg class="i i--sm" aria-hidden="true"><use href="#i-grid"/></svg></button>
+        <button type="button" data-v="table" aria-pressed="false" aria-label="Table view"><svg class="i i--sm" aria-hidden="true"><use href="#i-list"/></svg></button>
+      </div>
+      <span class="count-note" id="jr-count"></span>
+    </div>
+
+    <div class="jr-grid" id="jr-grid">
+      {%- for j in js %}
+      {%- assign pct = j.percentile | remove: "Top " | remove: "%" | plus: 0 -%}
+      <article class="jr card cat--{{ j.category }}" id="journal-{{ j.name | slugify }}" data-cat="{{ j.category }}" data-jif="{{ j.jif }}" data-pct="{{ pct }}" data-pub="{{ j.publisher }}" data-name="{{ j.name | escape }}" data-abbr="{{ j.abbr | escape }}" data-search="{{ j.name | downcase | escape }} {{ j.abbr | downcase | escape }} {{ j.issn }} {{ j.publisher | downcase }}">
+        <div class="jr__top">
+          <span class="jr__abbr">{{ j.abbr | default: j.name }}</span>
+          <span class="jr__pct{% if pct <= 2 %} is-elite{% endif %}">{{ j.percentile }}</span>
+        </div>
+        <h2 class="jr__name">{{ j.name }}</h2>
+        <div class="jr__metrics">
+          <div><span class="jr__if mono">{{ j.jif }}</span><small>{% include t.html en="Impact factor" ko="영향력 지수" %}</small></div>
+          <div class="jr__meter" aria-hidden="true"><span style="width: {{ j.jif | times: 100 | divided_by: sorted.first.jif }}%"></span></div>
+        </div>
+        <dl class="jr__meta">
+          <div><dt>{% include t.html en="Field" ko="분야" %}</dt><dd>{% include jr-cat.html cat=j.category %}</dd></div>
+          <div><dt>{% include t.html en="Publisher" ko="출판사" %}</dt><dd>{{ j.publisher }}</dd></div>
+          <div><dt>ISSN</dt><dd class="mono">{{ j.issn }}</dd></div>
+          <div><dt>{% include t.html en="Quartile" ko="분위" %}</dt><dd>SCIE-{{ j.quartile }}</dd></div>
+        </dl>
+        <a class="jr__link" href="https://portal.issn.org/resource/ISSN/{{ j.issn }}" target="_blank" rel="noopener">ISSN record <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+      </article>
+      {%- endfor %}
+    </div>
+    <div class="jr-table-wrap card is-hidden" id="jr-table-wrap">
+      <table class="jr-table" id="jr-table">
+        <thead><tr><th scope="col">Journal</th><th scope="col">Field</th><th scope="col">Publisher</th><th scope="col" class="num">IF</th><th scope="col">Percentile</th><th scope="col">ISSN</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="empty is-hidden" id="jr-empty">{% include t.html en="No journal matches those filters." ko="조건에 맞는 저널이 없습니다." %}</p>
+    <p class="tracker-foot muted">
+      <svg class="i i--sm" aria-hidden="true"><use href="#i-file"/></svg>
+      {% include t.html en="Data comes from the Q1 journal list on" ko="데이터 출처:" %} <a href="https://s-elim.github.io/journals/" target="_blank" rel="noopener">s-elim.github.io/journals</a>{% include t.html en=". ISSN and publisher are checked against Crossref; impact factor and percentile follow Journal Citation Reports. Confirm current values in JCR before citing them formally." ko=". ISSN과 출판사는 Crossref 기준이며, IF와 백분위는 JCR 기준입니다. 공식 인용 전에 JCR에서 최신 값을 확인하세요." %}
+    </p>
+  </div>
+</section>

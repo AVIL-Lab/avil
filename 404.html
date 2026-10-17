@@ -1,0 +1,19 @@
+---
+title: Page not found
+permalink: /404.html
+sitemap: false
+---
+<section class="section">
+  <div class="wrap" style="max-width: 720px; text-align: center; padding-top: 40px; padding-bottom: 40px;">
+    <p class="eyebrow">404</p>
+    <h1>{% include t.html en="This page is outside our field of view" ko="페이지를 찾을 수 없습니다" %}</h1>
+    <span class="rule" style="margin: 14px auto 0;" aria-hidden="true"></span>
+    <p class="muted" style="margin-top: 18px;">{% include t.html en="The address may have changed when the lab moved from its old website. Try the search, or start from one of these pages." ko="이전 홈페이지에서 주소가 바뀌었을 수 있습니다. 검색하거나 아래 페이지에서 시작해 보세요." %}</p>
+    <p style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 22px;">
+      <button type="button" class="btn btn--primary js-open-palette"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg>{% include t.html en="Search the site" ko="사이트 검색" %}</button>
+      <a class="btn btn--ghost" href="{{ '/' | relative_url }}">{% include t.html en="Home" ko="홈" %}</a>
+      <a class="btn btn--ghost" href="{{ '/members/' | relative_url }}">{% include t.html en="Members" ko="구성원" %}</a>
+      <a class="btn btn--ghost" href="{{ '/publications/' | relative_url }}">{% include t.html en="Publications" ko="논문" %}</a>
+    </p>
+  </div>
+</section>
