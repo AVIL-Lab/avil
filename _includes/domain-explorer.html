@@ -44,8 +44,9 @@
     <div class="domx__intro">
       <div>
         <p class="domx__summary">{% include t.html en=d.summary.en ko=d.summary.ko %}</p>
-        <h3 class="domx__team-h">{% if d.core_team %}{% include t.html en="Core Team" ko="핵심 팀" %}{% else %}{% include t.html en="Members" ko="구성원" %}{% endif %}</h3>
-        <ul class="domx__team" aria-label="{% if d.core_team %}Core Team{% else %}Members{% endif %}">
+        {%- assign core_heading = false -%}{%- if d.core_team or d.team_heading == "core" -%}{%- assign core_heading = true -%}{%- endif %}
+        <h3 class="domx__team-h">{% if core_heading %}{% include t.html en="Core Team" ko="핵심 팀" %}{% else %}{% include t.html en="Members" ko="구성원" %}{% endif %}</h3>
+        <ul class="domx__team" aria-label="{% if core_heading %}Core Team{% else %}Members{% endif %}">
           {%- for n in team_names %}
           {%- assign m = all_members | where: "name", n | first -%}
           {%- if m %}

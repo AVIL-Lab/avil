@@ -12,6 +12,8 @@
 #                    members.yml get their photo and card link; any other name is
 #                    shown as a name-only chip. Sensor sub-segments then list only
 #                    core-team members.
+#   team_heading     "core" shows the heading "Core Team" for a `members` list
+#                    without restricting the sensor tabs (default heading: Members)
 #   funders          substrings of projects.yml `funder` that mark a project as
 #                    belonging to the domain (projects also match by keyword)
 #   equipment        equipment.yml categories; equipment_names picks single items
@@ -85,6 +87,7 @@
       라이프로그용 멀티모달 언택트센싱 선도연구센터(RLRC)를 중심으로, 생체정보를 비접촉으로 측정하는
       하드웨어와 소프트웨어를 개발하고 임상연구로 검증하는 의료 분야 연구.
   members: [Uday Debnath, Sreya Deb Srestha, Tanvir Ahmmed, Nur Nahar Queen, Anusha Ganesan, Alnaasan Manar]
+  team_heading: core
   funders: []
   match_venue: true
   words: [medicine, biomed, physiol, heart rate, respiratory, respiration, vital, physiological, photoplethysmography, patient, clinical, medical, health, hemodialysis, glucose, diabetes, raman, sers, parkinson, gait, body temperature, hypothermia, radiculopathy, pain syndrome, sclerosis, untact, lifelog, human-care, dry eye, 건성안, 안구, 심박, 호흡, 생체, 체온, 의료, 헬스케어, 혈당, 당뇨, 비접촉, 언택트, 라이프로그, 휴먼케어]
