@@ -32,7 +32,7 @@
   --t-field: #c2410c; --t-field-bg: #fde6d8;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", "Noto Sans CJK JP", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --wrap: 1200px;
+  --wrap: 1680px;
   --header-h: 64px;
 }
 
@@ -96,6 +96,7 @@ html[data-lang="ko"] body { word-break: keep-all; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
 @media (min-width: 720px) { .wrap { padding: 0 28px; } }
+@media (min-width: 1280px) { .wrap { padding: 0 40px; } }
 .i { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .i--sm { width: .95em; height: .95em; }
 .spectrum-line { height: 3px; background: var(--spectral); opacity: .9; }
@@ -104,7 +105,7 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .site-header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
 .site-header .spectrum-line { height: 2px; opacity: 0; transition: opacity .3s; }
 .site-header.is-scrolled .spectrum-line { opacity: .85; }
-.site-header__bar { display: flex; align-items: center; gap: 18px; height: var(--header-h); max-width: 1440px; }
+.site-header__bar { display: flex; align-items: center; gap: 18px; height: var(--header-h); max-width: var(--wrap); }
 .brand { display: flex; flex: none; align-items: center; gap: 10px; color: var(--ink); }
 .brand:hover { text-decoration: none; }
 .brand__mark svg { width: 38px; height: 38px; }
