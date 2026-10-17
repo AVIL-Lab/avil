@@ -24,8 +24,9 @@
           </button>
           <ul class="nav__menu">
             {%- for c in item.children %}
-            <li><a class="nav__menu-link{% if page.url == c.url %} is-active{% endif %}" href="{{ c.url | relative_url }}"{% if page.url == c.url %} aria-current="page"{% endif %}>
-              <svg class="i" aria-hidden="true"><use href="#i-{{ c.icon }}"/></svg>{% include t.html en=c.en ko=c.ko %}</a></li>
+            {%- assign external = false -%}{%- if c.url contains "://" -%}{%- assign external = true -%}{%- endif %}
+            <li><a class="nav__menu-link{% if page.url == c.url %} is-active{% endif %}" href="{% if external %}{{ c.url }}{% else %}{{ c.url | relative_url }}{% endif %}"{% if external %} target="_blank" rel="noopener"{% endif %}{% if page.url == c.url %} aria-current="page"{% endif %}>
+              <svg class="i" aria-hidden="true"><use href="#i-{{ c.icon }}"/></svg>{% include t.html en=c.en ko=c.ko %}{% if external %}<svg class="i i--sm nav__ext" aria-hidden="true"><use href="#i-external"/></svg>{% endif %}</a></li>
             {%- endfor %}
           </ul>
         </li>

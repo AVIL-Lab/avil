@@ -1,4 +1,5 @@
-# Header navigation. `children` renders as a dropdown.
+# Header navigation. `children` renders as a dropdown. A url starting with
+# https:// is treated as external and opens in a new tab.
 - { en: Home, ko: 홈, url: / }
 - { en: Professor, ko: 교수, url: /professor/ }
 - { en: Members, ko: 구성원, url: /members/ }
@@ -12,4 +13,5 @@
   children:
     - { en: AI Conference Deadlines, ko: AI 학회 마감일, url: /deadlines/, icon: clock }
     - { en: Top Q1 Journals, ko: Q1 저널, url: /journals/, icon: book }
+    - { en: MuJoCo Course, ko: MuJoCo 강좌, url: "https://s-elim.github.io/learn/mujoco/", icon: bot }
 - { en: Contact, ko: 연락처, url: /contact/ }

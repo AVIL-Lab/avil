@@ -14,6 +14,7 @@ permalink: /search.json
 {"t":"page","title":"Gallery","sub":"Photos from lab life","url":"/gallery/"},
 {"t":"page","title":"AI Conference Deadlines","sub":"Live countdowns for CORE A* and A venues","url":"/deadlines/"},
 {"t":"page","title":"Top Q1 Journals","sub":"SCIE-Q1 journals in robotics, vision and AI","url":"/journals/"},
+{"t":"page","title":"MuJoCo Course","sub":"Interactive MuJoCo course with simulations in the browser (s-elim.github.io)","url":"https://s-elim.github.io/learn/mujoco/"},
 {"t":"page","title":"Contact","sub":"Address, email, joining the lab","url":"/contact/"},
 {%- assign p = site.data.professor -%}
 {"t":"member","title":{{ p.name | append: " (" | append: p.name_ko | append: ")" | jsonify }},"sub":{{ p.title | append: ", Principal Investigator" | jsonify }},"url":"/professor/"},

@@ -128,6 +128,7 @@ html[data-lang="ko"] body { word-break: keep-all; }
 @media (hover: hover) { .nav__item--menu:hover .nav__menu { opacity: 1; visibility: visible; transform: none; } }
 .nav__menu-link { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; color: var(--text); font-size: .92rem; }
 .nav__menu-link:hover, .nav__menu-link.is-active { background: var(--surface-2); text-decoration: none; color: var(--brand); }
+.nav__ext { margin-left: auto; opacity: .55; }
 .tools { display: flex; align-items: center; gap: 6px; }
 .tool { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 9px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--muted); }
 .tool:hover { color: var(--ink); border-color: var(--line-strong); }

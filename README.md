@@ -352,9 +352,9 @@ The **AI Conference Deadlines** and **Top Q1 Journals** pages use `_data/confere
 
 ### 5.14 Change the menu or add a new page · 메뉴 변경 및 새 페이지 추가
 
-The top menu is `_data/navigation.yml`. Each line has `en`, `ko` and `url`; items with `children` become a drop-down.
+The top menu is `_data/navigation.yml`. Each line has `en`, `ko` and `url`; items with `children` become a drop-down. A `url` that starts with `https://` (for example the MuJoCo Course under Resources) opens the other site in a new tab.
 
-상단 메뉴는 `_data/navigation.yml`입니다. 각 줄에 `en`, `ko`, `url`이 있고, `children`이 있는 항목은 드롭다운 메뉴가 됩니다.
+상단 메뉴는 `_data/navigation.yml`입니다. 각 줄에 `en`, `ko`, `url`이 있고, `children`이 있는 항목은 드롭다운 메뉴가 됩니다. `url`이 `https://`로 시작하면 (예: 자료 메뉴의 MuJoCo 강좌) 다른 사이트를 새 탭으로 엽니다.
 
 To add a new page, create a file such as `seminars.html` in the repository root that starts with this header, write the page content below it in HTML, then add `{ en: Seminars, ko: 세미나, url: /seminars/ }` to `_data/navigation.yml`:
 
