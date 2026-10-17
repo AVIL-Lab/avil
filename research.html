@@ -1,0 +1,106 @@
+---
+title: Research
+permalink: /research/
+css: [home, research]
+js: [home]
+description: Research areas, themes and sensing modalities of the Advanced Visual Intelligence Lab, Yeungnam University.
+---
+{%- assign lab = site.data.lab -%}
+{% include lab-names.html %}
+{% include page-hero.html eyebrow_en="Research" eyebrow_ko="연구" title_en="Visual intelligence from physical sensing" title_ko="물리 센싱 기반 시각 지능" lead_en=lab.purpose[0] lead_ko=lab.purpose[0] %}
+
+<section class="section">
+  <div class="wrap research-intro">
+    <div class="reveal">
+      <p class="eyebrow">{% include t.html en="Purpose" ko="연구 목표" %}</p>
+      <h2>{% include t.html en="Scene interpretation with multimodal physical sensing" ko="멀티모달 물리 센싱 기반 장면 해석" %}</h2>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="research-intro__lead">{{ lab.purpose[1] }}</p>
+      <p>{% include t.html en=lab.about.en ko=lab.about.ko %}</p>
+      <div class="research-intro__grid">
+        <div class="card card--pad">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg> {% include t.html en="Research areas" ko="연구 분야" %}</h3>
+          <ul class="ticks">{% for a in lab.areas %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
+        </div>
+        <div class="card card--pad">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> {% include t.html en="Applications" ko="응용 분야" %}</h3>
+          <ul class="ticks">{% for a in lab.applications %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
+        </div>
+      </div>
+    </div>
+    <figure class="collage card reveal">
+      <img src="{{ '/assets/img/research/sensing-collage.webp' | relative_url }}" alt="Research figures: radiative transfer to a camera, LiDAR point cloud with a detected person, thermal images of pedestrians, and blackbody radiation curves" width="1800" height="1034" loading="lazy">
+      <figcaption>{% include t.html en="Figures from the lab's work on radiometry, thermal imaging and LiDAR perception." ko="복사 측정, 열영상, 라이다 인식 연구의 그림." %}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--alt" id="themes">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">{% include t.html en="Themes" ko="연구 주제" %}</p>
+        <h2>{% include t.html en="What the team works on now" ko="현재 연구 주제" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="section__sub">{% include t.html en="Grouped from the research areas members list, with the projects and papers that match each theme." ko="구성원의 연구 분야를 주제별로 묶고, 관련 과제와 논문을 함께 보여줍니다." %}</p>
+      </div>
+    </div>
+    <div class="themes">
+      {%- for th in site.data.themes %}
+      {%- assign mem = "" | split: "" -%}
+      {%- for m in site.data.members -%}
+        {%- capture _t -%}{{ m.interests | join: " " }}{%- endcapture -%}
+        {%- include match.html text=_t mod=th -%}
+        {%- if hit -%}{%- assign mem = mem | push: m -%}{%- endif -%}
+      {%- endfor -%}
+      {%- assign projs = "" | split: "" -%}
+      {%- for pr in site.data.projects -%}{%- if pr.status == "current" -%}
+        {%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}
+        {%- include match.html text=_t mod=th -%}
+        {%- if hit -%}{%- assign projs = projs | push: pr -%}{%- endif -%}
+      {%- endif -%}{%- endfor -%}
+      {%- assign n_pub = 0 -%}{%- assign recent = "" | split: "" -%}
+      {%- for x in site.data.publications -%}
+        {%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}
+        {%- include match.html text=_t mod=th -%}
+        {%- if hit -%}{%- assign n_pub = n_pub | plus: 1 -%}{%- if recent.size < 3 -%}{%- assign recent = recent | push: x -%}{%- endif -%}{%- endif -%}
+      {%- endfor -%}
+      <article class="theme card reveal">
+        <header class="theme__head">
+          <span class="theme__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ th.icon }}"/></svg></span>
+          <h3>{% include t.html en=th.en ko=th.ko %}</h3>
+        </header>
+        <div class="theme__stats"><span><b class="mono">{{ n_pub }}</b> {% include t.html en="papers" ko="논문" %}</span><span><b class="mono">{{ projs.size }}</b> {% include t.html en="current projects" ko="진행 과제" %}</span><span><b class="mono">{{ mem.size }}</b> {% include t.html en="members" ko="구성원" %}</span></div>
+        {%- if mem.size > 0 %}
+        <ul class="theme__people">
+          {%- for m in mem %}<li><a href="{{ '/members/' | relative_url }}#{{ m.name | slugify }}" title="{{ m.name }}"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="{{ m.name }}" width="40" height="40" loading="lazy"></a></li>{% endfor %}
+        </ul>
+        {%- endif %}
+        {%- if projs.size > 0 %}
+        <h4>{% include t.html en="Current projects" ko="진행 과제" %}</h4>
+        <ul class="theme__list">{% for pr in projs limit: 3 %}<li>{% include t.html en=pr.title ko=pr.title_ko %}</li>{% endfor %}</ul>
+        {%- endif %}
+        {%- if recent.size > 0 %}
+        <h4>{% include t.html en="Recent papers" ko="최근 논문" %}</h4>
+        <ul class="theme__list">{% for x in recent %}<li><span class="mono muted">{{ x.year | default: "n.d." }}</span> {{ x.title | default: x.text | truncate: 110 }}</li>{% endfor %}</ul>
+        {%- endif %}
+        <a class="link-arrow theme__more" href="{{ '/publications/' | relative_url }}?topic={{ th.key }}">{% include t.html en="All papers on this theme" ko="관련 논문 전체" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sensing">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">{% include t.html en="Sensing modalities" ko="센싱 모달리티" %}</p>
+        <h2>{% include t.html en="Explore by sensor" ko="센서별 탐색" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <a class="link-arrow" href="{{ '/projects/#equipment' | relative_url }}">{% include t.html en="Lab equipment" ko="보유 장비" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    {% include sensing-explorer.html %}
+  </div>
+</section>

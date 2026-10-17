@@ -1,0 +1,40 @@
+# Research themes on the Research page. Each theme gathers the members whose
+# listed research areas match it, plus matching projects and paper titles, by
+# keyword (same rules as modalities.yml). Labels group existing content only.
+
+- key: physical-ai
+  en: Physical AI & Embodied Intelligence
+  ko: 피지컬 AI 및 체화 지능
+  icon: cpu
+  words: [vision-language-action, world model, embodied, physical ai, 6d pose, vision language, manipulation, 매니퓰레이션]
+  acronyms: [VLA, VLM]
+- key: spectral-imaging
+  en: Hyperspectral & Spectral Imaging
+  ko: 초분광 및 분광 영상
+  icon: layers
+  words: [hyperspectral, multispectral, spectral, raman, 초분광, 분광]
+  acronyms: [HSI]
+- key: contactless-sensing
+  en: Contactless Physiological Sensing
+  ko: 비접촉 생체신호 측정
+  icon: thermo
+  words: [physiological, vital sign, heart rate, respiratory, photoplethysmography, remote sensing, untact, 심박, 호흡, 비접촉, 언택트]
+  acronyms: [rPPG]
+- key: radar-fusion
+  en: Radar & Multimodal Sensor Fusion
+  ko: 레이더 및 멀티모달 센서 융합
+  icon: radar
+  words: [radar, fmcw, sensor fusion, fusion, multimodal, multi-modal, 레이더, 융합]
+  acronyms: [SAR]
+- key: detection
+  en: Detection, Recognition & Restoration
+  ko: 탐지, 인식 및 영상 복원
+  icon: eye
+  words: [object detection, target detection, recognition, classification, segmentation, deblur, restoration, super-resolution, dehaz, explainable, diffusion, ensemble, 탐지, 인식, 복원]
+  acronyms: [XAI, YOLO]
+- key: human-pose
+  en: Human Pose & Action Understanding
+  ko: 인간 자세 및 행동 이해
+  icon: users
+  words: [pose estimation, human pose, skeleton, action, pedestrian, 보행자, 스켈레톤]
+  acronyms: [HPE]

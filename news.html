@@ -1,0 +1,64 @@
+---
+title: News
+permalink: /news/
+css: [media]
+js: [media]
+description: News from the Advanced Visual Intelligence Lab: conferences, awards, graduations, RLRC milestones and lab life.
+---
+{%- assign events = site.data.events -%}
+{%- assign tags = "conference,award,rlrc,graduation,lab,field" | split: "," -%}
+{%- assign by_year = events | group_by_exp: "e", "e.date | slice: 0, 4" -%}
+{% include page-hero.html eyebrow_en="News" eyebrow_ko="소식" title_en="Lab news" title_ko="연구실 소식" lead_en="Conferences, awards, graduations, RLRC milestones and lab life, newest first. Switch to 한국어 in the header for the original captions." lead_ko="학회 참석, 수상, 졸업, RLRC 행사와 연구실 생활 소식입니다." %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="toolbar" id="news-tools">
+      <label class="field">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="news-q" placeholder="Search news" aria-label="Search news">
+      </label>
+      <div class="toolbar__group" role="group" aria-label="Filter by type">
+        <button type="button" class="pill is-active" data-tag="all">{% include t.html en="All" ko="전체" %} <span class="pill__count">{{ events | size }}</span></button>
+        {%- for t in tags %}
+        {%- assign n = events | where: "tag", t | size -%}
+        {%- if n > 0 %}<button type="button" class="pill" data-tag="{{ t }}"><span class="dot dot--{{ t }}"></span>{% include tag-label.html tag=t %} <span class="pill__count">{{ n }}</span></button>{% endif %}
+        {%- endfor %}
+      </div>
+      <span class="toolbar__spacer"></span>
+      <select class="select" id="news-year" aria-label="Filter by year">
+        <option value="all">All years</option>
+        {%- for g in by_year %}<option value="{{ g.name }}">{{ g.name }} ({{ g.size }})</option>{% endfor %}
+      </select>
+    </div>
+
+    <div class="news" id="news-list">
+      {%- assign idx = 0 -%}
+      {%- for g in by_year %}
+      <section class="news-year" data-year="{{ g.name }}">
+        <h2 class="news-year__label mono">{{ g.name }}</h2>
+        <ol class="news-items">
+          {%- for e in g.items %}
+          {%- assign idx = idx | plus: 1 -%}
+          <li class="news-item" id="e-{{ e.date }}-{{ idx }}" data-tag="{{ e.tag }}" data-year="{{ g.name }}" data-search="{{ e.en | downcase | escape }} {{ e.ko | escape }} {{ e.when }}">
+            <time class="news-item__date mono" datetime="{{ e.date }}">{{ e.date | date: "%b %-d" }}</time>
+            <span class="news-item__rail" aria-hidden="true"><span class="dot dot--{{ e.tag }}"></span></span>
+            <div class="news-item__body card">
+              <a class="news-item__photo js-lightbox" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ idx | minus: 1 }}" aria-label="View photo">
+                <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
+              </a>
+              <div class="news-item__text">
+                <span class="tag tag--{{ e.tag }}">{% include tag-label.html tag=e.tag %}</span>
+                <p>{% include t.html en=e.en ko=e.ko %}</p>
+                <p class="news-item__when mono muted">{{ e.when }}</p>
+              </div>
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endfor %}
+    </div>
+    <p class="empty is-hidden" id="news-empty">{% include t.html en="No news matches those filters." ko="조건에 맞는 소식이 없습니다." %}</p>
+  </div>
+</section>
+{% include lightbox.html %}

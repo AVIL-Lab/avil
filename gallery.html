@@ -1,0 +1,45 @@
+---
+title: Gallery
+permalink: /gallery/
+css: [media]
+js: [media]
+description: Photos from conferences, workshops, graduations and everyday life at the Advanced Visual Intelligence Lab.
+---
+{%- assign events = site.data.events -%}
+{%- assign by_year = events | group_by_exp: "e", "e.date | slice: 0, 4" -%}
+{%- assign tags = "conference,award,rlrc,graduation,lab,field" | split: "," -%}
+{% include page-hero.html eyebrow_en="Gallery" eyebrow_ko="갤러리" title_en="Life at AVIL" title_ko="연구실 사진" lead_en="Conferences, workshops, cherry blossom walks and graduations since 2013. Click a photo to open the viewer; use the arrow keys to browse." lead_ko="2013년부터의 학회, 워크숍, 벚꽃 산책, 졸업식 사진입니다." %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="toolbar" id="gallery-tools">
+      <div class="toolbar__group" role="group" aria-label="Filter by year">
+        <button type="button" class="pill is-active" data-year="all">{% include t.html en="All" ko="전체" %} <span class="pill__count">{{ events | size }}</span></button>
+        {%- for g in by_year %}
+        {%- assign y = g.name | plus: 0 -%}
+        {%- if y >= 2022 %}<button type="button" class="pill" data-year="{{ g.name }}">{{ g.name }} <span class="pill__count">{{ g.size }}</span></button>{% endif %}
+        {%- endfor %}
+        <button type="button" class="pill" data-year="past">{% include t.html en="2021 and earlier" ko="~2021" %}</button>
+      </div>
+      <span class="toolbar__spacer"></span>
+      <select class="select" id="gallery-tag" aria-label="Filter by type">
+        <option value="all">All types</option>
+        {%- for t in tags %}<option value="{{ t }}">{{ t | capitalize }}</option>{% endfor %}
+      </select>
+    </div>
+
+    <div class="masonry" id="gallery-grid">
+      {%- for e in events %}
+      {%- assign y = e.date | slice: 0, 4 | plus: 0 -%}
+      <a class="shot js-lightbox" id="{{ e.photo | remove: '.webp' }}" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ forloop.index0 }}" data-year="{{ y }}" data-tag="{{ e.tag }}">
+        <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
+        <span class="shot__cap">
+          <span class="shot__when mono">{{ e.when }}</span>
+          <span class="shot__text">{% include t.html en=e.en ko=e.ko %}</span>
+        </span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{% include lightbox.html %}

@@ -1,0 +1,18 @@
+{%- comment -%} Shared photo viewer for News and Gallery; filled by media.js from #photo-data. {%- endcomment -%}
+<script type="application/json" id="photo-data">[
+{%- for e in site.data.events -%}
+{"id":{{ e.photo | remove: ".webp" | jsonify }},"src":{{ '/assets/img/gallery/' | append: e.photo | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]</script>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="lightbox__close" aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Previous photo"><svg class="i" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" alt="">
+    <figcaption class="lightbox__cap">
+      <span class="lightbox__meta"><span class="tag lightbox__tag"></span> <span class="mono lightbox__when"></span> <span class="mono lightbox__count"></span></span>
+      <span class="lightbox__text"></span>
+    </figcaption>
+  </figure>
+  <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next photo"><svg class="i" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+</div>

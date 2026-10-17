@@ -1,0 +1,164 @@
+---
+title: Projects
+permalink: /projects/
+css: [home, projects]
+js: [home, projects]
+description: Current and past research projects, the RLRC center and the equipment of the Advanced Visual Intelligence Lab.
+---
+{%- assign lab = site.data.lab -%}
+{%- assign all = site.data.projects -%}
+{%- assign current = all | where: "status", "current" -%}
+{%- assign past = all | where: "status", "past" -%}
+{%- assign funders = all | group_by: "funder" | sort: "size" | reverse -%}
+{%- assign axis_from = 2010 -%}{%- assign axis_to = 2031 -%}
+{%- assign span = axis_to | minus: axis_from | times: 12 -%}
+{% include page-hero.html eyebrow_en="Funding" eyebrow_ko="연구 과제" title_en="Projects" title_ko="연구 과제" lead_en="Research funded by government agencies, defense institutes, industry and the university since 2010." lead_ko="2010년부터 정부, 국방 연구기관, 산업체, 대학의 지원으로 수행한 연구 과제입니다." %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="proj-stats">
+      <div><span class="mono">{{ current | size }}</span>{% include t.html en="current projects" ko="진행 과제" %}</div>
+      <div><span class="mono">{{ past | size }}</span>{% include t.html en="completed projects" ko="완료 과제" %}</div>
+      <div><span class="mono">{{ funders | size }}</span>{% include t.html en="funding organizations" ko="지원 기관" %}</div>
+      <div><span class="mono">{{ site.data.equipment | size }}</span>{% include t.html en="instruments" ko="보유 장비" %}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" id="current">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <h2>{% include t.html en="Current projects" ko="진행 과제" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="proj-rail">
+      {%- for pr in current %}
+      <article class="proj-mini card reveal" data-start="{{ pr.start }}" data-end="{{ pr.end }}">
+        <p class="proj-mini__funder">{% include t.html en=pr.funder ko=pr.funder_ko %}</p>
+        <h3 class="proj-mini__title">{% include t.html en=pr.title ko=pr.title_ko %}</h3>
+        <div class="progress" aria-hidden="true"><span class="progress__fill"></span></div>
+        <p class="proj-mini__period"><span class="mono">{{ pr.period }}</span> <span class="proj-mini__pct"></span></p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="past">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <h2>{% include t.html en="Project timeline" ko="과제 연혁" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="section__sub">{% include t.html en="Every project from 2010 onward. Hover or focus a bar for details." ko="2010년 이후 모든 과제입니다." %}</p>
+      </div>
+    </div>
+    <div class="toolbar" id="gantt-tools">
+      <label class="field">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="gantt-q" placeholder="Search projects or funders" aria-label="Search projects">
+      </label>
+      <div class="segment" data-gantt-status>
+        <button type="button" data-v="all" aria-pressed="true">{% include t.html en="All" ko="전체" %}</button>
+        <button type="button" data-v="current" aria-pressed="false">{% include t.html en="Current" ko="진행" %}</button>
+        <button type="button" data-v="past" aria-pressed="false">{% include t.html en="Completed" ko="완료" %}</button>
+      </div>
+      <select class="select" id="gantt-funder" aria-label="Filter by funder">
+        <option value="all">All funders</option>
+        {%- for f in funders %}<option value="{{ f.name | escape }}">{{ f.name }} ({{ f.size }})</option>{% endfor %}
+      </select>
+      <span class="toolbar__spacer"></span>
+      <span class="count-note" id="gantt-count"></span>
+    </div>
+
+    <div class="gantt card" style="--from: {{ axis_from }}; --to: {{ axis_to }};">
+      <div class="gantt__axis" aria-hidden="true">
+        <span class="gantt__label-col"></span>
+        <div class="gantt__ticks">
+          {%- for y in (axis_from..axis_to) %}{% assign m = y | modulo: 2 %}<span style="left: {{ y | minus: axis_from | times: 1200 | divided_by: span }}%"{% if m == 1 %} class="is-minor"{% endif %}>{% if m == 0 %}{{ y }}{% endif %}</span>{% endfor %}
+          <i class="gantt__now" id="gantt-now"></i>
+        </div>
+      </div>
+      <ol class="gantt__rows" id="gantt-rows">
+        {%- assign sorted = all | sort: "start" -%}
+        {%- for pr in sorted %}
+        {%- assign sy = pr.start | slice: 0, 4 | plus: 0 -%}{%- assign sm = pr.start | slice: 5, 2 | plus: 0 -%}
+        {%- assign ey = pr.end | slice: 0, 4 | plus: 0 -%}{%- assign em = pr.end | slice: 5, 2 | plus: 0 -%}
+        {%- if sm == 0 %}{% assign sm = 1 %}{% endif -%}{%- if em == 0 %}{% assign em = 12 %}{% endif -%}
+        {%- assign s0 = sy | minus: axis_from | times: 12 | plus: sm | minus: 1 -%}
+        {%- assign e0 = ey | minus: axis_from | times: 12 | plus: em -%}
+        {%- assign left = s0 | times: 1000 | divided_by: span -%}
+        {%- assign width = e0 | minus: s0 | times: 1000 | divided_by: span -%}
+        {%- if width < 6 %}{% assign width = 6 %}{% endif -%}
+        <li class="gantt__row gantt__row--{{ pr.status }}" data-status="{{ pr.status }}" data-funder="{{ pr.funder | escape }}" data-search="{{ pr.title | downcase | escape }} {{ pr.title_ko | escape }} {{ pr.funder | downcase | escape }} {{ pr.funder_ko | escape }}">
+          <div class="gantt__label">
+            <span class="gantt__title">{% include t.html en=pr.title ko=pr.title_ko %}</span>
+            <span class="gantt__meta">{% include t.html en=pr.funder ko=pr.funder_ko %} · <span class="mono">{{ pr.period }}</span></span>
+          </div>
+          <div class="gantt__track">
+            <span class="gantt__bar" tabindex="0" style="left: {{ left | divided_by: 10.0 }}%; width: {{ width | divided_by: 10.0 }}%;" aria-label="{{ pr.title | escape }}, {{ pr.period }}">
+              <span class="gantt__tip"><strong>{{ pr.title }}</strong><br>{{ pr.funder }}<br><span class="mono">{{ pr.period }}</span></span>
+            </span>
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+      <p class="empty is-hidden" id="gantt-empty">{% include t.html en="No project matches those filters." ko="조건에 맞는 과제가 없습니다." %}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="rlrc">
+  <div class="wrap rlrc">
+    <div class="reveal">
+      <p class="eyebrow">RLRC</p>
+      <h2>{% include t.html en="Multimodal Untact Sensing Leading Research Center for Lifelogs" ko="라이프로그용 멀티모달 언택트센싱 선도연구센터" %}</h2>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="rlrc__headline">{% include t.html en=lab.rlrc.headline.en ko=lab.rlrc.headline.ko %}</p>
+      <div class="rlrc__blocks">
+        <div class="card card--pad"><h3>{% include t.html en="The program" ko="사업 개요" %}</h3><p>{% include t.html en=lab.rlrc.program.en ko=lab.rlrc.program.ko %}</p></div>
+        <div class="card card--pad"><h3>{% include t.html en="The center" ko="센터" %}</h3><p>{% include t.html en=lab.rlrc.center.en ko=lab.rlrc.center.ko %}</p><p>{% include t.html en=lab.rlrc.summary.en ko=lab.rlrc.summary.ko %}</p></div>
+        <div class="card card--pad"><h3>{% include t.html en="Research groups" ko="연구 그룹" %}</h3><p>{% include t.html en=lab.rlrc.groups.en ko=lab.rlrc.groups.ko %}</p></div>
+      </div>
+      <p class="rlrc__links">
+        <a class="btn btn--ghost btn--sm" href="{{ lab.rlrc.official }}" target="_blank" rel="noopener">{% include t.html en="RLRC website" ko="RLRC 홈페이지" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+        <a class="btn btn--ghost btn--sm" href="{{ lab.rlrc.source }}" target="_blank" rel="noopener">{% include t.html en="News article (2023-07-04)" ko="관련 기사 (2023.07.04)" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+      </p>
+    </div>
+    <figure class="rlrc__fig card reveal">
+      <img src="{{ '/assets/img/research/rlrc-consortium.webp' | relative_url }}" alt="RLRC consortium chart showing the three research groups, their lead researchers and member institutions" width="1700" height="941" loading="lazy">
+      <figcaption>{% include t.html en="RLRC research groups" ko="RLRC 연구 그룹 구성" %}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--alt" id="equipment">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <h2>{% include t.html en="Equipment" ko="보유 장비" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+    </div>
+    {%- assign cats = "thermal,spectral,visible,aerial,platform,compute" | split: "," -%}
+    <div class="toolbar__group equip-filter" role="group" aria-label="Filter equipment" id="equip-filter">
+      <button type="button" class="pill is-active" data-cat="all">{% include t.html en="All" ko="전체" %} <span class="pill__count">{{ site.data.equipment | size }}</span></button>
+      {%- for c in cats %}
+      {%- assign n = site.data.equipment | where: "category", c | size -%}
+      <button type="button" class="pill" data-cat="{{ c }}">{% include equip-cat.html cat=c %} <span class="pill__count">{{ n }}</span></button>
+      {%- endfor %}
+    </div>
+    <div class="equip">
+      {%- for e in site.data.equipment %}
+      <article class="equip__item card equip--{{ e.category }}" data-cat="{{ e.category }}">
+        <p class="equip__cat">{% include equip-cat.html cat=e.category %}</p>
+        <h3>{{ e.name }}{% if e.name_ko %} <span class="muted" lang="ko">{{ e.name_ko }}</span>{% endif %}</h3>
+        {%- if e.spec %}<p class="equip__spec">{% include t.html en=e.spec ko=e.spec_ko %}</p>{% endif %}
+        <p class="equip__use">{% include t.html en=e.use ko=e.use_ko %}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

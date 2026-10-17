@@ -1,0 +1,30 @@
+/* Research page (also loads home.css for the sensing explorer). */
+
+.research-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+.research-intro__lead { font-size: 1.1rem; color: var(--ink); font-weight: 550; }
+.research-intro__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.research-intro__grid h3 { display: flex; align-items: center; gap: 8px; font-size: .98rem; }
+.research-intro__grid .i { color: var(--brand); }
+.collage { margin: 0; padding: 12px; background: #fff; }
+.collage img { border-radius: 10px; }
+.collage figcaption { padding: 10px 4px 2px; font-size: .84rem; color: #4b5b6d; }
+
+.themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; }
+.theme { display: flex; flex-direction: column; padding: 22px; }
+.theme__head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.theme__head h3 { margin: 0; font-size: 1.1rem; }
+.theme__icon { display: grid; place-items: center; width: 42px; height: 42px; flex: none; border-radius: 12px; background: var(--brand-soft); color: var(--brand); }
+.theme__icon .i { width: 22px; height: 22px; }
+.theme__stats { display: flex; flex-wrap: wrap; gap: 14px; padding: 10px 0; margin-bottom: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: .84rem; color: var(--muted); }
+.theme__stats b { color: var(--ink); font-size: 1.05rem; margin-right: 2px; }
+.theme__people { display: flex; flex-wrap: wrap; list-style: none; margin: 0 0 12px; padding: 0; }
+.theme__people li { margin-right: -8px; }
+.theme__people img { width: 40px; height: 40px; object-fit: cover; object-position: 50% 25%; border-radius: 50%; border: 2px solid var(--surface); transition: transform .15s; }
+.theme__people a:hover img { transform: translateY(-3px); }
+.theme h4 { margin: 10px 0 6px; font: 650 .7rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.theme__list { list-style: none; margin: 0; padding: 0; }
+.theme__list li { padding: 6px 0; border-bottom: 1px dashed var(--line); font-size: .88rem; }
+.theme__more { margin-top: auto; padding-top: 14px; font-size: .9rem; }
+
+@media (max-width: 1000px) { .research-intro { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .research-intro__grid { grid-template-columns: 1fr; } .themes { grid-template-columns: 1fr; } }

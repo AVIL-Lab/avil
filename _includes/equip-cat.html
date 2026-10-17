@@ -1,0 +1,8 @@
+{%- case include.cat -%}
+{%- when "thermal" -%}{% include t.html en="IR / Thermal" ko="적외선 / 열영상" %}
+{%- when "spectral" -%}{% include t.html en="Hyperspectral" ko="초분광" %}
+{%- when "visible" -%}{% include t.html en="Visible / EO" ko="가시광 / EO" %}
+{%- when "aerial" -%}{% include t.html en="Aerial" ko="항공" %}
+{%- when "platform" -%}{% include t.html en="Platforms & optics" ko="플랫폼 및 광학" %}
+{%- when "compute" -%}{% include t.html en="Computing" ko="컴퓨팅" %}
+{%- endcase -%}
