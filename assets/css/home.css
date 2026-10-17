@@ -50,7 +50,6 @@
 .bandview__bands button { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: .84rem; font-weight: 600; }
 .bandview__bands button:hover { border-color: var(--line-strong); color: var(--ink); }
 .bandview__bands button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.bandview__note { margin: 0; font-size: .78rem; color: var(--muted); }
 
 /* ---- Stats --------------------------------------------------------------- */
 .stats-band { background: var(--surface); border-bottom: 1px solid var(--line); }
