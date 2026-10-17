@@ -39,6 +39,7 @@ applications:
   - { en: AR/VR, ko: AR/VR }
   - { en: Automatic Target Detection & Recognition, ko: 자동표적탐지/인식 }
   - { en: Healthcare, ko: 헬스케어 }
+  - { en: "Physical AI: Autonomous Robots, Drones, Humanoids, Mobile Robots", ko: "피지컬 AI: 자율 로봇, 드론, 휴머노이드, 이동 로봇" }
 modalities: [EO, IR, HSI, SAR, Polarization, Radar, LiDAR]
 
 rlrc:
