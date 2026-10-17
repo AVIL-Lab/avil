@@ -172,6 +172,9 @@
 .domx__team a { display: inline-flex; align-items: center; gap: 8px; padding: 3px 12px 3px 3px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: .82rem; font-weight: 600; }
 .domx__team a:hover { border-color: var(--d); color: var(--d); text-decoration: none; }
 .domx__team img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; object-position: 50% 25%; }
+.domx__team-h { margin: 0 0 8px; font: 650 .72rem/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--d); }
+.domx__chip { display: inline-flex; align-items: center; gap: 8px; padding: 3px 12px 3px 3px; border-radius: 999px; border: 1px dashed color-mix(in srgb, var(--d) 45%, var(--line)); background: var(--surface); font-size: .82rem; font-weight: 600; color: var(--text); }
+.domx__initial { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: color-mix(in srgb, var(--d) 16%, var(--surface)); color: var(--d); font-weight: 800; font-size: .85rem; }
 .domx__current { padding: 14px 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); }
 .domx__current h3, .domx__col h3 { margin: 0 0 8px; font: 650 .72rem/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .domx__current ul { list-style: none; margin: 0; padding: 0; }

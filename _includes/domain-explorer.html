@@ -29,8 +29,7 @@
     {%- if phit -%}{%- assign dproj = dproj | push: pr -%}{%- if pr.status == "current" -%}{%- assign dcur = dcur | push: pr -%}{%- endif -%}{%- endif -%}
   {%- endfor -%}
   {%- comment -%} Domain members, in the order listed in domains.yml {%- endcomment -%}
-  {%- assign dmem = none -%}
-  {%- for n in d.members -%}{%- assign m = all_members | where: "name", n | first -%}{%- if m -%}{%- assign dmem = dmem | push: m -%}{%- endif -%}{%- endfor -%}
+  {%- assign team_names = d.core_team | default: d.members -%}
 
   {%- capture tab -%}
   <button type="button" role="tab" class="domx__domain" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
@@ -45,9 +44,15 @@
     <div class="domx__intro">
       <div>
         <p class="domx__summary">{% include t.html en=d.summary.en ko=d.summary.ko %}</p>
-        <ul class="domx__team" aria-label="Members">
-          {%- for m in dmem %}
+        <h3 class="domx__team-h">{% if d.core_team %}{% include t.html en="Core Team" ko="핵심 팀" %}{% else %}{% include t.html en="Members" ko="구성원" %}{% endif %}</h3>
+        <ul class="domx__team" aria-label="{% if d.core_team %}Core Team{% else %}Members{% endif %}">
+          {%- for n in team_names %}
+          {%- assign m = all_members | where: "name", n | first -%}
+          {%- if m %}
           <li><a href="{{ '/members/' | relative_url }}#{{ m.name | slugify }}"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" width="44" height="44" loading="lazy"><span>{{ m.name }}</span></a></li>
+          {%- else %}
+          <li><span class="domx__chip"><span class="domx__initial" aria-hidden="true">{{ n | slice: 0 }}</span><span>{{ n }}</span></span></li>
+          {%- endif %}
           {%- endfor %}
         </ul>
       </div>
@@ -84,9 +89,10 @@
         {%- for a in al -%}{%- if au contains a -%}{%- assign mhit = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
         {%- if mhit -%}{%- break -%}{%- endif -%}
       {%- endfor -%}
-      {%- unless mhit -%}{%- if d.members contains m.name -%}
+      {%- unless mhit -%}{%- if team_names contains m.name -%}
         {%- capture _t -%}{{ m.interests | join: " " }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- assign mhit = hit -%}
       {%- endif -%}{%- endunless -%}
+      {%- if mhit and d.core_team -%}{%- unless d.core_team contains m.name -%}{%- assign mhit = false -%}{%- endunless -%}{%- endif -%}
       {%- if mhit -%}{%- assign smem = smem | push: m -%}{%- endif -%}
     {%- endfor -%}
     {%- assign seq = none -%}

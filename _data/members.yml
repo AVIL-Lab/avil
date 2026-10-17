@@ -127,15 +127,6 @@
   homepage: ""
   aliases: [Sin I]
 
-- name: Yuseong Cheon
-  name_ko: 천우성
-  role: ms
-  photo: yuseong-cheon.webp
-  interests: [Vision-Language-Action (VLA), World Model, Vision Language Model (VLM)]
-  email: cjsdntjd1234@gmail.com
-  linkedin: ""
-  homepage: ""
-
 - name: Wonjong Lee
   name_ko: 이원종
   role: ms

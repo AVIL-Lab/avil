@@ -8,6 +8,10 @@
 # whose listed research areas match the sub-segment.
 #
 #   members          names exactly as in members.yml
+#   core_team        replaces `members` with a named core team. Names found in
+#                    members.yml get their photo and card link; any other name is
+#                    shown as a name-only chip. Sensor sub-segments then list only
+#                    core-team members.
 #   funders          substrings of projects.yml `funder` that mark a project as
 #                    belonging to the domain (projects also match by keyword)
 #   equipment        equipment.yml categories; equipment_names picks single items
@@ -131,7 +135,7 @@
       비전-언어-행동(VLA) 모델, 월드 모델, 3D/6D 자세 인식, 로봇 매니퓰레이션을 아우르는 피지컬 및
       체화 AI 연구. 모바일 양팔 매니퓰레이션을 위한 3D VLM 기반 embodied AI와 피지컬 AI용 라이다
       센싱을 포함.
-  members: [Selim Sarowar, Yuseong Cheon, Ilhan Sin, Huanheng Zhang, Alnaasan Manar, Eunyeob Kim, Joseph Park]
+  core_team: [Selim Sarowar, Ihsan, Taeung, 화통걸]
   funders: [Korea Institute for Robot Industry Advancement]
   words: [vision-language-action, world model, embodied, physical ai, manipulat, grasp, robot, 6d pose, 6dof, pose estimation, mobile manipulator, sim-to-real, agent, language model, llava, 3d object, lidar, 로봇, 파지, 매니퓰레이, 에이전트, 자세 추정, 피지컬, 양팔, 라이다]
   acronyms: [VLA, VLM, LLM, 6D]
