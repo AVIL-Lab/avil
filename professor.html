@@ -26,6 +26,8 @@ description: "Prof. Sungho Kim, Principal Investigator of the Advanced Visual In
         <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span>{% include t.html en=p.office_en ko=p.office_ko %}</span></li>
       </ul>
       <div class="prof__links">
+        {%- if p.linkedin and p.linkedin != "" %}<a class="btn btn--ghost btn--sm" href="{{ p.linkedin }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>{% endif %}
+        {%- if p.homepage and p.homepage != "" %}<a class="btn btn--ghost btn--sm" href="{{ p.homepage }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-home"/></svg>Homepage</a>{% endif %}
         {%- for l in p.links %}
         <a class="btn btn--ghost btn--sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
         {%- endfor %}

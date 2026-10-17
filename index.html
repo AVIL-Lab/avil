@@ -131,17 +131,18 @@ js: [home]
   </div>
 </section>
 
-<section class="section section--alt" id="sensing">
+<section class="section section--alt" id="domains">
   <div class="wrap">
     <div class="section__head">
       <div>
-        <p class="eyebrow">{% include t.html en="Sensing explorer" ko="센싱 탐색" %}</p>
+        <p class="eyebrow">{% include t.html en="Research domains" ko="연구 분야" %}</p>
         <h2>{% include t.html en="One lab, many spectral bands" ko="다양한 스펙트럼 영역의 영상 센싱" %}</h2>
         <span class="rule" aria-hidden="true"></span>
-        <p class="section__sub">{% include t.html en="Pick a modality to see the lab's equipment, members, projects and papers that use it." ko="센서 종류를 선택하면 관련 장비, 구성원, 과제, 논문을 볼 수 있습니다." %}</p>
+        <p class="section__sub">{% include t.html en="Three domains, each built on its own set of sensors. Pick a domain, then a sensor, to see the papers, projects, equipment and members behind it." ko="세 가지 연구 분야와 각 분야의 센서를 선택하면 관련 논문, 과제, 장비, 구성원을 볼 수 있습니다." %}</p>
       </div>
+      <a class="link-arrow" href="{{ '/research/' | relative_url }}">{% include t.html en="Research themes" ko="연구 주제" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
     </div>
-    {% include sensing-explorer.html %}
+    {% include domain-explorer.html %}
   </div>
 </section>
 

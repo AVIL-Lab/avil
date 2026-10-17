@@ -1,0 +1,140 @@
+{%- comment -%}
+  Domain explorer: three research domains (_data/domains.yml), each split into
+  sensor sub-segments with matched papers, projects, equipment and members.
+  Matching rules are documented at the top of _data/domains.yml.
+{%- endcomment -%}
+{%- assign none = "" | split: "" -%}
+{%- assign all_members = site.data.members -%}
+{%- assign tabs_html = "" -%}{%- assign panels_html = "" -%}
+
+{%- for d in site.data.domains -%}
+  {%- assign dfirst = forloop.first -%}
+  {%- comment -%} Papers in this domain {%- endcomment -%}
+  {%- assign dpubs = none -%}
+  {%- for x in site.data.publications -%}
+    {%- capture _t -%}{{ x.title | default: x.text }}{% if d.match_venue %} {{ x.venue }}{% endif %}{%- endcapture -%}
+    {%- include match.html text=_t mod=d -%}
+    {%- if hit -%}{%- assign dpubs = dpubs | push: x -%}{%- endif -%}
+  {%- endfor -%}
+  {%- comment -%} Projects: by funder or by keyword {%- endcomment -%}
+  {%- assign dproj = none -%}{%- assign dcur = none -%}
+  {%- for pr in site.data.projects -%}
+    {%- assign phit = false -%}
+    {%- for f in d.funders -%}{%- if pr.funder contains f -%}{%- assign phit = true -%}{%- endif -%}{%- endfor -%}
+    {%- unless phit -%}
+      {%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}
+      {%- include match.html text=_t mod=d -%}
+      {%- assign phit = hit -%}
+    {%- endunless -%}
+    {%- if phit -%}{%- assign dproj = dproj | push: pr -%}{%- if pr.status == "current" -%}{%- assign dcur = dcur | push: pr -%}{%- endif -%}{%- endif -%}
+  {%- endfor -%}
+  {%- comment -%} Domain members, in the order listed in domains.yml {%- endcomment -%}
+  {%- assign dmem = none -%}
+  {%- for n in d.members -%}{%- assign m = all_members | where: "name", n | first -%}{%- if m -%}{%- assign dmem = dmem | push: m -%}{%- endif -%}{%- endfor -%}
+
+  {%- capture tab -%}
+  <button type="button" role="tab" class="domx__domain" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
+    <span class="domx__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ d.icon }}"/></svg></span>
+    <span class="domx__name">{% include t.html en=d.en ko=d.ko %}</span>
+    <span class="domx__tagline">{% include t.html en=d.tagline.en ko=d.tagline.ko %}</span>
+    <span class="domx__counts"><span><b class="mono">{{ dmem.size }}</b> {% include t.html en="members" ko="구성원" %}</span><span><b class="mono">{{ dpubs.size }}</b> {% include t.html en="papers" ko="논문" %}</span><span><b class="mono">{{ dproj.size }}</b> {% include t.html en="projects" ko="과제" %}</span></span>
+  </button>
+  {%- endcapture -%}
+  {%- assign tabs_html = tabs_html | append: tab -%}
+
+  {%- capture panel -%}
+  <div class="domx__panel" role="tabpanel" id="dpanel-{{ d.key }}" aria-labelledby="dtab-{{ d.key }}" style="--d: {{ d.color }}"{% unless dfirst %} hidden{% endunless %}>
+    <div class="domx__intro">
+      <div>
+        <p class="domx__summary">{% include t.html en=d.summary.en ko=d.summary.ko %}</p>
+        <ul class="domx__team" aria-label="Members">
+          {%- for m in dmem %}
+          <li><a href="{{ '/members/' | relative_url }}#{{ m.name | slugify }}"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" width="44" height="44" loading="lazy"><span>{{ m.name }}</span></a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- if dcur.size > 0 %}
+      <div class="domx__current">
+        <h3>{% include t.html en="Current projects" ko="진행 과제" %}</h3>
+        <ul>{% for pr in dcur %}<li><span class="domx__funder">{% include t.html en=pr.funder ko=pr.funder_ko %}</span>{% include t.html en=pr.title ko=pr.title_ko %}</li>{% endfor %}</ul>
+      </div>
+      {%- endif %}
+    </div>
+
+    <div class="domx__sensors" role="tablist" aria-label="Sensors in {{ d.en }}" data-tabgroup>
+      {%- for s in d.sensors %}
+      {%- assign n = 0 -%}
+      {%- for x in dpubs -%}{%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      <button type="button" role="tab" class="domx__sensor" id="stab-{{ d.key }}-{{ s.key }}" aria-controls="spanel-{{ d.key }}-{{ s.key }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% unless forloop.first %} tabindex="-1"{% endunless %}>
+        <svg class="i i--sm" aria-hidden="true"><use href="#i-{{ s.icon }}"/></svg>{% include t.html en=s.en ko=s.ko %}<span class="domx__n mono">{{ n }}</span>
+      </button>
+      {%- endfor %}
+    </div>
+
+    {%- for s in d.sensors %}
+    {%- assign spubs = none -%}
+    {%- for x in dpubs -%}{%- capture _t -%}{{ x.title | default: x.text }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign spubs = spubs | push: x -%}{%- endif -%}{%- endfor -%}
+    {%- assign sproj = none -%}
+    {%- for pr in dproj -%}{%- capture _t -%}{{ pr.title }} {{ pr.title_ko }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- if hit -%}{%- assign sproj = sproj | push: pr -%}{%- endif -%}{%- endfor -%}
+    {%- assign smem = none -%}
+    {%- for m in all_members -%}
+      {%- assign mhit = false -%}
+      {%- assign al = m.aliases | default: none | push: m.name -%}
+      {%- if m.name_ko -%}{%- assign al = al | push: m.name_ko -%}{%- endif -%}
+      {%- for x in spubs -%}
+        {%- assign au = x.authors | default: x.text -%}
+        {%- for a in al -%}{%- if au contains a -%}{%- assign mhit = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
+        {%- if mhit -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- unless mhit -%}{%- if d.members contains m.name -%}
+        {%- capture _t -%}{{ m.interests | join: " " }}{%- endcapture -%}{%- include match.html text=_t mod=s -%}{%- assign mhit = hit -%}
+      {%- endif -%}{%- endunless -%}
+      {%- if mhit -%}{%- assign smem = smem | push: m -%}{%- endif -%}
+    {%- endfor -%}
+    {%- assign seq = none -%}
+    {%- for e in site.data.equipment -%}
+      {%- if s.equipment contains e.category or s.equipment_names contains e.name -%}{%- assign seq = seq | push: e -%}{%- endif -%}
+    {%- endfor -%}
+    <div class="domx__sub" role="tabpanel" id="spanel-{{ d.key }}-{{ s.key }}" aria-labelledby="stab-{{ d.key }}-{{ s.key }}"{% unless forloop.first %} hidden{% endunless %}>
+      <div class="domx__col domx__col--papers">
+        <h3>{% include t.html en="Papers" ko="논문" %} <span class="mono muted">{{ spubs.size }}</span></h3>
+        {%- if spubs.size > 0 %}
+        <ul class="domx__papers">
+          {%- for x in spubs limit: 4 %}<li><span class="mono muted">{{ x.year | default: "n.d." }}</span> {{ x.title | default: x.text | truncate: 130 }}</li>{% endfor %}
+        </ul>
+        <a class="link-arrow" href="{{ '/publications/' | relative_url }}?topic={{ d.key }}-{{ s.key }}">{% include t.html en="All matching papers" ko="관련 논문 전체" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        {%- else %}<p class="muted">{% include t.html en="No papers on this combination yet." ko="아직 해당 논문이 없습니다." %}</p>{% endif %}
+        {%- if sproj.size > 0 %}
+        <h3 class="domx__h-gap">{% include t.html en="Projects" ko="과제" %} <span class="mono muted">{{ sproj.size }}</span></h3>
+        <ul class="domx__projects">
+          {%- for pr in sproj limit: 3 %}<li><span class="tag tag--{% if pr.status == 'current' %}rlrc{% else %}lab{% endif %}">{{ pr.status }}</span> {% include t.html en=pr.title ko=pr.title_ko %}</li>{% endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+      <div class="domx__col">
+        <h3>{% include t.html en="Members" ko="구성원" %} <span class="mono muted">{{ smem.size }}</span></h3>
+        {%- if smem.size > 0 %}
+        <ul class="domx__people">
+          {%- for m in smem %}
+          <li><a href="{{ '/members/' | relative_url }}#{{ m.name | slugify }}"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" width="36" height="48" loading="lazy"><span><strong>{{ m.name }}</strong>{% include role-label.html role=m.role %}</span></a></li>
+          {%- endfor %}
+        </ul>
+        {%- else %}<p class="muted">{% include t.html en="No current member listed yet." ko="해당 구성원이 없습니다." %}</p>{% endif %}
+        {%- if seq.size > 0 %}
+        <h3 class="domx__h-gap">{% include t.html en="Equipment" ko="보유 장비" %}</h3>
+        <ul class="chips">{% for e in seq %}<li class="chip" title="{{ e.spec | escape }}">{{ e.name }}</li>{% endfor %}</ul>
+        {%- endif %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- endcapture -%}
+  {%- assign panels_html = panels_html | append: panel -%}
+{%- endfor -%}
+
+<div class="domx" data-domx>
+  <div class="domx__domains" role="tablist" aria-label="Research domain" data-tabgroup>
+    {{ tabs_html }}
+  </div>
+  {{ panels_html }}
+</div>

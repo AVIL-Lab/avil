@@ -20,19 +20,31 @@
     var empty = document.getElementById("pub-empty");
     var topics = [];
     try { topics = JSON.parse(document.getElementById("topics").textContent); } catch (e) { topics = []; }
+    try { topics = topics.concat(JSON.parse(document.getElementById("topics-domains").textContent)); } catch (e) { /* optional */ }
+    var topicByKey = {};
+    topics.forEach(function (t) { topicByKey[t.key] = t; });
+
+    // Same rules as the Liquid include match.html; domain topics may also test the
+    // venue, and a sub-segment ("defense-ir") must match its domain as well.
+    function hitTopic(t, title, venue) {
+      if (!t) return false;
+      var text = t.match_venue ? title + " " + venue : title;
+      var low = text.toLowerCase();
+      var ok = (t.words || []).some(function (w) { return low.indexOf(w) !== -1; }) ||
+               (t.acronyms || []).some(function (a) { return text.indexOf(a) !== -1; });
+      return ok && (!t.requires || hitTopic(topicByKey[t.requires], title, venue));
+    }
 
     var models = items.map(function (el) {
       var text = el.querySelector(".pub__body").textContent.replace(/\s+/g, " ").trim();
       var title = (el.querySelector(".pub__title") || el.querySelector(".pub__text")).textContent;
+      var venueEl = el.querySelector(".pub__venue");
+      var venue = venueEl ? venueEl.textContent : "";
       var y = parseInt(el.getAttribute("data-year"), 10);
       return {
         el: el, region: el.getAttribute("data-region"), type: el.getAttribute("data-type"),
         year: isNaN(y) ? null : y, hay: text.toLowerCase(), title: title, cite: el.querySelector(".pub__copy").getAttribute("data-copy"),
-        topics: topics.filter(function (t) {
-          var low = title.toLowerCase();
-          return (t.words || []).some(function (w) { return low.indexOf(w) !== -1; }) ||
-                 (t.acronyms || []).some(function (a) { return title.indexOf(a) !== -1; });
-        }).map(function (t) { return t.key; })
+        topics: topics.filter(function (t) { return hitTopic(t, title, venue); }).map(function (t) { return t.key; })
       };
     });
 

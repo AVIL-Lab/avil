@@ -89,6 +89,33 @@
     });
   }
 
+  // Any [role=tablist][data-tabgroup]: each tab shows its aria-controls panel and
+  // hides the panels of its sibling tabs. Groups nest (domains > sensors).
+  function initTabGroups() {
+    document.querySelectorAll("[role=tablist][data-tabgroup]").forEach(function (list) {
+      var tabs = Array.prototype.slice.call(list.querySelectorAll(":scope > [role=tab]"));
+      function select(tab, focus) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute("aria-selected", String(on));
+          t.tabIndex = on ? 0 : -1;
+          var panel = document.getElementById(t.getAttribute("aria-controls"));
+          if (panel) panel.hidden = !on;
+        });
+        if (focus) tab.focus();
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener("click", function () { select(t); });
+        t.addEventListener("keydown", function (e) {
+          var j = e.key === "ArrowRight" || e.key === "ArrowDown" ? i + 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? i - 1 : null;
+          if (j === null) return;
+          e.preventDefault();
+          select(tabs[(j + tabs.length) % tabs.length], true);
+        });
+      });
+    });
+  }
+
   // "2024-03" -> Date at the start (or end) of that month.
   function monthDate(s, end) {
     var p = String(s || "").split("-");
@@ -117,7 +144,7 @@
 
   function ready(fn) { if (document.readyState !== "loading") fn(); else document.addEventListener("DOMContentLoaded", fn); }
   ready(function () {
-    [initBandView, initCounters, initExplorer, initProgress].forEach(function (fn) {
+    [initBandView, initCounters, initExplorer, initTabGroups, initProgress].forEach(function (fn) {
       try { fn(); } catch (e) { if (window.console) console.error(e); }
     });
   });

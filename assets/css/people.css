@@ -71,6 +71,13 @@
 .member__links { display: flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 8px; border-top: 1px solid var(--line); }
 .member__email { display: inline-flex; align-items: center; gap: 6px; min-width: 0; flex: 1; font-size: .8rem; }
 .member__email span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.member__social { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; min-height: 30px; }
+.social { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 30px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: .78rem; font-weight: 650; }
+.social:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
+.social--linkedin .i { color: #0a66c2; }
+:root[data-theme="dark"] .social--linkedin .i { color: #70b5f9; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .social--linkedin .i { color: #70b5f9; } }
+.social--empty { visibility: hidden; }
 
 .alumni-chart { display: grid; gap: 8px; margin-bottom: 28px; }
 .alumni-chart__row { display: grid; grid-template-columns: minmax(150px, 260px) 1fr 32px; gap: 12px; align-items: center; font-size: .88rem; }

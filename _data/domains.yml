@@ -1,0 +1,178 @@
+# Research domains on the home page explorer ("One lab, many spectral bands").
+# Each domain lists its members explicitly and splits into sensor sub-segments.
+#
+# Papers are matched by keyword: a paper belongs to a sub-segment when its title
+# matches the domain's words/acronyms AND the sub-segment's words/acronyms
+# (words: case-insensitive; acronyms: case-sensitive). A sub-segment's members
+# are the current members who co-authored those papers, plus domain members
+# whose listed research areas match the sub-segment.
+#
+#   members          names exactly as in members.yml
+#   funders          substrings of projects.yml `funder` that mark a project as
+#                    belonging to the domain (projects also match by keyword)
+#   equipment        equipment.yml categories; equipment_names picks single items
+#   match_venue      also test the domain keywords against the venue (e.g. a paper
+#                    at the Korea Institute of Military Science and Technology
+#                    conference counts as defense work)
+
+- key: defense
+  en: Defense AI
+  ko: 국방 AI
+  icon: shield
+  color: "#2f6fdf"
+  tagline:
+    en: Intelligent surveillance and automatic target detection and recognition
+    ko: 지능형 감시 및 자동표적탐지/인식
+  summary:
+    en: >-
+      Defense applications of the lab's computer vision and sensor fusion: intelligent
+      surveillance and automatic target detection and recognition with EO, IR,
+      hyperspectral, polarization, SAR and radar sensing.
+    ko: >-
+      EO, IR, 초분광, 편광, SAR, 레이더 센싱과 컴퓨터 비전을 융합한 국방 분야의 지능형 감시 및
+      자동표적탐지/인식 연구.
+  members: [Haekang Song, Jungeun Park, Eunyeob Kim, Joseph Park, Ilhan Sin, Wonjong Lee, Bomin Kim, Dongik Lee, Hyeonji Choi]
+  funders: [Agency for Defense Development, ADD Civil, ADD Maritime, Defense Acquisition, Hanwha, LIG Nex1, Samsung Thales, space security]
+  match_venue: true
+  words: [군사, defense, defence, 감시정찰, target, surveillance, maritime, ship, sea-based, coastal, naval, decoy, flare, military, camouflag, concealed, drone, uav, aerial, satellite, small object, man-made, pedestrian, night, fog, haze, low-light, 표적, 해상 표적, 해상 환경, 해상용, 해상 선박, 해상선박, 해상 소형, 선박, 수상감시, 해무, 함정, 기만, 감시, 은폐, 위장, 드론, 무인, 국방, 위성, 항공, 보행자, 안개, 저조도, 저시정]
+  acronyms: [SAR, ATR, IRST, USV, UAV, KIMST]
+  sensors:
+    - key: eo
+      en: EO / Visible
+      ko: EO / 가시광
+      icon: eye
+      equipment: [visible, aerial]
+      words: [visible, rgb, color, dehaz, haze, fog, low-light, aerial image, satellite, 가시광, 컬러, 안개, 디헤이징, 저조도, 위성]
+      acronyms: [EO, CCD, RGB]
+    - key: ir
+      en: IR / Thermal
+      ko: 적외선 / 열영상
+      icon: thermo
+      equipment: [thermal]
+      words: [infrared, thermal, 적외선, 열영상, 열화상]
+      acronyms: [IR, LWIR, MWIR, FIR, FTIR, IRST]
+    - key: hsi
+      en: Hyperspectral
+      ko: 초분광
+      icon: layers
+      equipment: [spectral]
+      words: [hyperspectral, multispectral, spectral, vnir, 초분광, 분광, 다파장]
+      acronyms: [HSI]
+    - key: polarization
+      en: Polarization
+      ko: 편광
+      icon: sliders
+      words: [polari, 편광]
+    - key: radar
+      en: SAR / Radar
+      ko: SAR / 레이더
+      icon: radar
+      words: [radar, fmcw, mmwave, w-band, synthetic aperture, 레이더]
+      acronyms: [SAR, RF]
+
+- key: medical
+  en: Medical AI
+  ko: 의료 AI
+  icon: activity
+  color: "#e0365f"
+  tagline:
+    en: Contactless sensing of vital signs and biometric information
+    ko: 생체정보의 비접촉 센싱
+  summary:
+    en: >-
+      Healthcare applications led by the RLRC Multimodal Untact Sensing Leading Research
+      Center for Lifelogs: contactless hardware and software for sensing biometric
+      signals, validated in clinical studies.
+    ko: >-
+      라이프로그용 멀티모달 언택트센싱 선도연구센터(RLRC)를 중심으로, 생체정보를 비접촉으로 측정하는
+      하드웨어와 소프트웨어를 개발하고 임상연구로 검증하는 의료 분야 연구.
+  members: [Uday Debnath, Sreya Deb Srestha, Tanvir Ahmmed, Nur Nahar Queen, Anusha Ganesan, Alnaasan Manar]
+  funders: []
+  match_venue: true
+  words: [medicine, biomed, physiol, heart rate, respiratory, respiration, vital, physiological, photoplethysmography, patient, clinical, medical, health, hemodialysis, glucose, diabetes, raman, sers, parkinson, gait, body temperature, hypothermia, radiculopathy, pain syndrome, sclerosis, untact, lifelog, human-care, dry eye, 건성안, 안구, 심박, 호흡, 생체, 체온, 의료, 헬스케어, 혈당, 당뇨, 비접촉, 언택트, 라이프로그, 휴먼케어]
+  acronyms: [rPPG, PPG]
+  sensors:
+    - key: rgb
+      en: RGB camera
+      ko: RGB 카메라
+      icon: eye
+      equipment: [visible]
+      words: [rgb camera, visible imaging, visible, camera, video, face, 카메라, 얼굴 영상]
+      acronyms: [rPPG]
+    - key: thermal
+      en: IR / Thermal
+      ko: 적외선 / 열영상
+      icon: thermo
+      equipment_names: [LWIR camera, FLIR T620 infrared camera, FLIT T560, Black body]
+      words: [infrared, thermal, thermography, temperature, 적외선, 열영상, 체온]
+      acronyms: [LWIR, IR, FLIR]
+    - key: radar
+      en: FMCW radar
+      ko: FMCW 레이더
+      icon: radar
+      words: [radar, fmcw, mmwave, 레이더]
+    - key: spectroscopy
+      en: Raman spectroscopy
+      ko: 라만 분광
+      icon: layers
+      words: [raman, sers, spectroscopy, 라만]
+      acronyms: [SERS]
+    - key: depth
+      en: RGB-D / Pose
+      ko: RGB-D / 자세
+      icon: users
+      words: [rgb-d, depth, gait, pose, skeleton, 자세, 보행]
+
+- key: psi
+  en: Physical Super Intelligence
+  ko: 피지컬 슈퍼 인텔리전스
+  icon: bot
+  color: "#8b3fe0"
+  tagline:
+    en: Embodied AI that perceives, reasons and acts in 3D
+    ko: 3D 환경에서 인지, 추론, 행동하는 체화 AI
+  summary:
+    en: >-
+      Physical and embodied AI: vision-language-action models, world models, 3D and 6D
+      pose perception, and robotic manipulation, including 3D VLM-based embodied AI for
+      mobile bimanual manipulation and LiDAR sensing for physical AI.
+    ko: >-
+      비전-언어-행동(VLA) 모델, 월드 모델, 3D/6D 자세 인식, 로봇 매니퓰레이션을 아우르는 피지컬 및
+      체화 AI 연구. 모바일 양팔 매니퓰레이션을 위한 3D VLM 기반 embodied AI와 피지컬 AI용 라이다
+      센싱을 포함.
+  members: [Selim Sarowar, Yuseong Cheon, Ilhan Sin, Huanheng Zhang, Alnaasan Manar, Eunyeob Kim, Joseph Park]
+  funders: [Korea Institute for Robot Industry Advancement]
+  words: [vision-language-action, world model, embodied, physical ai, manipulat, grasp, robot, 6d pose, 6dof, pose estimation, mobile manipulator, sim-to-real, agent, language model, llava, 3d object, lidar, 로봇, 파지, 매니퓰레이, 에이전트, 자세 추정, 피지컬, 양팔, 라이다]
+  acronyms: [VLA, VLM, LLM, 6D]
+  sensors:
+    - key: rgbd
+      en: RGB-D / Pose
+      ko: RGB-D / 자세
+      icon: eye
+      equipment_names: [RGB-D camera, Stereo camera, Turn table]
+      words: [rgb-d, depth, 6d, 6dof, pose estimation, structured light, 구조광, 깊이, 자세 추정, 자세 인식]
+      acronyms: [RGB-D]
+    - key: lidar
+      en: LiDAR / 3D
+      ko: 라이다 / 3D
+      icon: cpu
+      words: [lidar, point cloud, 3d, gaussian, 라이다]
+    - key: vla
+      en: Vision-Language-Action
+      ko: 비전-언어-행동
+      icon: layers
+      words: [vision-language-action, vision language, language model, llava, clip, multimodal interface, 비전-언어, 언어 모델]
+      acronyms: [VLA, VLM, LLM]
+    - key: manipulation
+      en: Robot manipulation
+      ko: 로봇 매니퓰레이션
+      icon: briefcase
+      equipment_names: [Mobile robot]
+      words: [grasp, manipulat, robot, mycobot, 파지, 로봇, 매니퓰레이]
+    - key: worldmodel
+      en: World models & agents
+      ko: 월드 모델 및 에이전트
+      icon: globe
+      equipment_names: [Deep Learning Server]
+      words: [world model, sim-to-real, agent, reinforcement, proximal policy, 에이전트, 강화학습]
+      acronyms: [PPO]

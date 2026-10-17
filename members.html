@@ -74,10 +74,15 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
               {%- if m.email %}
               <a href="mailto:{{ m.email }}" class="member__email"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg><span>{{ m.email }}</span></a>
               <button type="button" class="icon-btn" data-copy="{{ m.email }}" data-copy-msg="Email copied" aria-label="Copy email of {{ m.name }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
-              {%- endif %}
-              {%- if m.web %}
-              <a href="{{ m.web }}" target="_blank" rel="noopener" class="member__email"><svg class="i i--sm" aria-hidden="true"><use href="#i-globe"/></svg><span>{{ m.web | remove: "https://" }}</span></a>
-              {%- endif %}
+              {%- else %}<span class="member__email"></span>{% endif %}
+            </div>
+            <div class="member__social">
+              {%- if m.linkedin and m.linkedin != "" %}
+              <a class="social social--linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn profile of {{ m.name }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+              {%- else %}<span class="social social--empty" aria-hidden="true"></span>{% endif %}
+              {%- if m.homepage and m.homepage != "" %}
+              <a class="social" href="{{ m.homepage }}" target="_blank" rel="noopener" aria-label="Homepage of {{ m.name }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-home"/></svg>Homepage</a>
+              {%- else %}<span class="social social--empty" aria-hidden="true"></span>{% endif %}
             </div>
           </div>
         </article>

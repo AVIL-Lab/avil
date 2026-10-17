@@ -13,6 +13,14 @@ description: "International and domestic journal and conference publications of 
 {% include lab-names.html %}
 {%- assign topics = site.data.modalities | concat: site.data.themes -%}
 <script type="application/json" id="topics">{{ topics | jsonify }}</script>
+<script type="application/json" id="topics-domains">[
+{%- for d in site.data.domains -%}
+{"key":{{ d.key | jsonify }},"en":{{ d.en | jsonify }},"words":{{ d.words | jsonify }},"acronyms":{{ d.acronyms | jsonify }},"match_venue":{% if d.match_venue %}true{% else %}false{% endif %}},
+{%- for s in d.sensors -%}
+{"key":"{{ d.key }}-{{ s.key }}","en":{{ d.en | append: " · " | append: s.en | jsonify }},"words":{{ s.words | jsonify }},"acronyms":{{ s.acronyms | jsonify }},"requires":{{ d.key | jsonify }}}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]</script>
 
 {% include page-hero.html eyebrow_en="Research output" eyebrow_ko="연구 성과" title_en="Publications" title_ko="논문" lead_en="Every paper the lab has listed, from 2001 to today. Lab members are shown in bold." lead_ko="연구실의 국제 및 국내 논문 목록입니다. 굵은 글씨는 연구실 구성원입니다." %}
 
@@ -52,6 +60,9 @@ description: "International and domestic journal and conference publications of 
           <option value="all">All topics</option>
           <optgroup label="Sensing">{% for m in site.data.modalities %}<option value="{{ m.key }}">{{ m.en }}</option>{% endfor %}</optgroup>
           <optgroup label="Themes">{% for m in site.data.themes %}<option value="{{ m.key }}">{{ m.en }}</option>{% endfor %}</optgroup>
+          {%- for d in site.data.domains %}
+          <optgroup label="{{ d.en }}"><option value="{{ d.key }}">{{ d.en }} (all)</option>{% for s in d.sensors %}<option value="{{ d.key }}-{{ s.key }}">{{ d.en }} · {{ s.en }}</option>{% endfor %}</optgroup>
+          {%- endfor %}
         </select>
       </div>
       <div class="toolbar__group">
