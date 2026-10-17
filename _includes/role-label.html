@@ -1,0 +1,6 @@
+{%- case include.role -%}
+{%- when "postdoc" -%}{% if include.plural %}{% include t.html en="Post-docs" ko="박사후연구원" %}{% else %}{% include t.html en="Post-Doc" ko="박사후연구원" %}{% endif %}
+{%- when "phd" -%}{% if include.plural %}{% include t.html en="Ph.D. students" ko="박사과정" %}{% else %}{% include t.html en="Ph.D." ko="박사과정" %}{% endif %}
+{%- when "ms" -%}{% if include.plural %}{% include t.html en="Master's students" ko="석사과정" %}{% else %}{% include t.html en="M.S." ko="석사과정" %}{% endif %}
+{%- when "undergrad" -%}{% if include.plural %}{% include t.html en="Undergraduate researchers" ko="학부연구생" %}{% else %}{% include t.html en="Undergraduate" ko="학부연구생" %}{% endif %}
+{%- endcase -%}

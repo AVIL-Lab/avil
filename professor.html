@@ -1,0 +1,98 @@
+---
+title: Professor
+permalink: /professor/
+css: [people]
+js: [people]
+description: Prof. Sungho Kim, Principal Investigator of the Advanced Visual Intelligence Lab, Yeungnam University.
+---
+{%- assign p = site.data.professor -%}
+{%- assign lab = site.data.lab -%}
+{% include page-hero.html eyebrow_en="Principal Investigator" eyebrow_ko="지도교수" title_en="Professor" title_ko="지도교수" %}
+
+<section class="section">
+  <div class="wrap prof">
+    <aside class="prof__card card reveal">
+      <img class="prof__photo" src="{{ '/assets/img/members/' | append: p.photo | relative_url }}" alt="Portrait of Prof. {{ p.name }}" width="400" height="500">
+      <div class="prof__id">
+        <h2 class="prof__name">{{ p.name }}</h2>
+        <p class="prof__name-ko" lang="ko">{{ p.name_ko }} · {{ p.name_hanja }}</p>
+        <p class="prof__title">{% include t.html en=p.title ko=p.title_ko %}</p>
+        <p class="prof__dept">{% include t.html en=lab.department ko=lab.department_ko %}, {{ lab.university }}</p>
+      </div>
+      <ul class="contact-list">
+        <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:{{ p.email }}">{{ p.email }}</a>
+          <button type="button" class="icon-btn" data-copy="{{ p.email }}" data-copy-msg="Email copied" aria-label="Copy email"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+82-{{ p.phone | remove_first: '0' }}">{{ p.phone }}</a></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span>{% include t.html en=p.office_en ko=p.office_ko %}</span></li>
+      </ul>
+      <div class="prof__links">
+        {%- for l in p.links %}
+        <a class="btn btn--ghost btn--sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+        {%- endfor %}
+      </div>
+    </aside>
+
+    <div class="prof__main">
+      {%- assign current = "" | split: "" -%}
+      {%- for c in p.career -%}{%- unless c.end -%}{%- assign current = current | push: c -%}{%- endunless -%}{%- endfor -%}
+      <div class="reveal">
+        <h2>{% include t.html en="Current roles" ko="현재 직책" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <ul class="roles">
+          {%- for c in current %}
+          <li class="roles__item roles__item--{{ c.kind }}">
+            <span class="roles__since mono">{% include t.html en="since" ko="부터" %} {{ c.start }}</span>
+            <span class="roles__text">{% include t.html en=c.en ko=c.ko %}</span>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      {%- assign awards = "" | split: "" -%}
+      {%- for e in site.data.events -%}{%- if e.tag == "award" -%}{%- if e.ko contains "교수" -%}{%- assign awards = awards | push: e -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+      {%- if awards.size > 0 %}
+      <div class="reveal">
+        <h2>{% include t.html en="Recognition" ko="수상" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <ul class="awards">
+          {%- for e in awards %}
+          <li class="card awards__item">
+            <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="" width="640" height="427" loading="lazy">
+            <div>
+              <time class="mono muted" datetime="{{ e.date }}">{{ e.when }}</time>
+              <p>{% include t.html en=e.en ko=e.ko %}</p>
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endif %}
+
+      <div class="reveal">
+        <div class="section__head">
+          <div>
+            <h2>{% include t.html en="Career" ko="경력" %}</h2>
+            <span class="rule" aria-hidden="true"></span>
+          </div>
+          <div class="segment" role="group" aria-label="Filter career entries" data-career-filter>
+            <button type="button" data-kind="all" aria-pressed="true">{% include t.html en="All" ko="전체" %}</button>
+            <button type="button" data-kind="position" aria-pressed="false">{% include t.html en="Faculty" ko="교원" %}</button>
+            <button type="button" data-kind="research" aria-pressed="false">{% include t.html en="Research" ko="연구" %}</button>
+            <button type="button" data-kind="service" aria-pressed="false">{% include t.html en="Service" ko="보직" %}</button>
+            <button type="button" data-kind="education" aria-pressed="false">{% include t.html en="Education" ko="학력" %}</button>
+          </div>
+        </div>
+        <ol class="timeline" data-career>
+          {%- for c in p.career %}
+          <li class="timeline__item timeline__item--{{ c.kind }}" data-kind="{{ c.kind }}">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__when mono">{{ c.start }} &ndash; {% if c.end %}{{ c.end }}{% else %}<span class="present">{% include t.html en="present" ko="현재" %}</span>{% endif %}</span>
+            <span class="timeline__what">{% include t.html en=c.en ko=c.ko %}</span>
+            <span class="timeline__kind">{{ c.kind }}</span>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>

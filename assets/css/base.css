@@ -30,7 +30,7 @@
   --t-graduation: #6d28d9; --t-graduation-bg: #ede5fd;
   --t-lab: #3f6212; --t-lab-bg: #e8f3d6;
   --t-field: #c2410c; --t-field-bg: #fde6d8;
-  --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", "Noto Sans CJK JP", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --wrap: 1200px;
   --header-h: 64px;

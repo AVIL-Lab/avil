@@ -1,0 +1,139 @@
+---
+title: Members
+permalink: /members/
+css: [people]
+js: [people]
+description: Current members and alumni of the Advanced Visual Intelligence Lab, Yeungnam University.
+---
+{%- assign p = site.data.professor -%}
+{%- assign members = site.data.members -%}
+{%- assign alumni = site.data.alumni -%}
+{% include page-hero.html eyebrow_en="People" eyebrow_ko="구성원" title_en="Members" title_ko="구성원" lead_en="Post-docs, graduate and undergraduate researchers working with Prof. Sungho Kim, and the alumni who came before them." lead_ko="김성호 교수님과 함께 연구하는 박사후연구원, 대학원생, 학부연구생과 졸업생을 소개합니다." %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <a class="pi card card--hover reveal" href="{{ '/professor/' | relative_url }}">
+      <img src="{{ '/assets/img/members/' | append: p.photo | relative_url }}" alt="" width="400" height="500">
+      <div>
+        <p class="eyebrow">{% include t.html en="Principal Investigator" ko="지도교수" %}</p>
+        <h2>{{ p.name }} <span class="muted" lang="ko">{{ p.name_ko }}</span></h2>
+        <p class="muted">{% include t.html en=p.title ko=p.title_ko %}, {% include t.html en=site.data.lab.department ko=site.data.lab.department_ko %}</p>
+        <span class="link-arrow">{% include t.html en="Profile and career" ko="프로필 및 경력" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+{%- assign interests = "" | split: "" -%}
+{%- for m in members -%}{%- for i in m.interests -%}{%- assign interests = interests | push: i -%}{%- endfor -%}{%- endfor -%}
+{%- assign interests = interests | uniq | sort_natural -%}
+
+<section class="section section--tight" id="current">
+  <div class="wrap">
+    <div class="toolbar" data-member-tools>
+      <label class="field">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="member-search" placeholder="Search name or research area" aria-label="Search members">
+      </label>
+      <div class="toolbar__group" role="group" aria-label="Filter by role">
+        <button type="button" class="pill is-active" data-role="all">{% include t.html en="All" ko="전체" %} <span class="pill__count">{{ members | size }}</span></button>
+        {%- assign roles = "postdoc,phd,ms,undergrad" | split: "," -%}
+        {%- for r in roles %}
+        {%- assign n = members | where: "role", r | size -%}
+        {%- if n > 0 %}
+        <button type="button" class="pill" data-role="{{ r }}">{% include role-label.html role=r %} <span class="pill__count">{{ n }}</span></button>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      <details class="interest-picker">
+        <summary class="pill"><svg class="i i--sm" aria-hidden="true"><use href="#i-sliders"/></svg>{% include t.html en="Research areas" ko="연구 분야" %} <span class="pill__count" id="interest-count"></span></summary>
+        <div class="interest-picker__list">
+          {%- for i in interests %}<button type="button" class="chip chip--btn" data-interest="{{ i | downcase }}">{{ i }}</button>{% endfor %}
+        </div>
+      </details>
+      <span class="toolbar__spacer"></span>
+      <span class="count-note" id="member-count" aria-live="polite"></span>
+    </div>
+
+    {%- for r in roles %}
+    {%- assign group = members | where: "role", r -%}
+    {%- if group.size > 0 %}
+    <div class="member-group" data-group="{{ r }}">
+      <h2 class="member-group__title">{% include role-label.html role=r plural=true %} <span class="muted mono">{{ group.size }}</span></h2>
+      <div class="member-grid">
+        {%- for m in group %}
+        <article class="member card card--hover reveal" id="{{ m.name | slugify }}" data-role="{{ m.role }}" data-search="{{ m.name | downcase }} {{ m.name_ko }} {{ m.interests | join: ' ' | downcase }}" data-interests="{{ m.interests | join: '|' | downcase }}">
+          <div class="member__photo"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="Photo of {{ m.name }}" width="360" height="480" loading="lazy"></div>
+          <div class="member__body">
+            <p class="member__role">{% include role-label.html role=m.role %}</p>
+            <h3 class="member__name">{{ m.name }}{% if m.name_ko %} <span lang="ko">{{ m.name_ko }}</span>{% endif %}</h3>
+            {%- if m.interests %}
+            <ul class="member__interests">{% for i in m.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+            {%- endif %}
+            <div class="member__links">
+              {%- if m.email %}
+              <a href="mailto:{{ m.email }}" class="member__email"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg><span>{{ m.email }}</span></a>
+              <button type="button" class="icon-btn" data-copy="{{ m.email }}" data-copy-msg="Email copied" aria-label="Copy email of {{ m.name }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
+              {%- endif %}
+              {%- if m.web %}
+              <a href="{{ m.web }}" target="_blank" rel="noopener" class="member__email"><svg class="i i--sm" aria-hidden="true"><use href="#i-globe"/></svg><span>{{ m.web | remove: "https://" }}</span></a>
+              {%- endif %}
+            </div>
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+    {%- endfor %}
+    <p class="empty is-hidden" id="member-empty">{% include t.html en="No member matches those filters." ko="조건에 맞는 구성원이 없습니다." %}</p>
+  </div>
+</section>
+
+<section class="section section--alt" id="alumni">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">{% include t.html en="Alumni" ko="졸업생" %}</p>
+        <h2>{% include t.html en="Where our alumni went" ko="졸업생 진로" %}</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="section__sub">{{ alumni | size }} {% include t.html en="M.S. graduates since 2012, as listed by the lab." ko="명의 석사 졸업생 (2012년 이후)" %}</p>
+      </div>
+    </div>
+
+    {%- assign dests = "" | split: "" -%}
+    {%- for a in alumni -%}{%- if a.next -%}{%- assign d = a.next | split: " (formerly" | first -%}{%- assign dests = dests | push: d -%}{%- endif -%}{%- endfor -%}
+    {%- assign dest_groups = dests | group_by_exp: "x", "x" | sort: "size" | reverse -%}
+    {%- assign top = dest_groups.first.size -%}
+    <div class="alumni-chart card card--pad reveal" role="img" aria-label="Alumni destinations by count">
+      {%- for g in dest_groups %}
+      <div class="alumni-chart__row">
+        <span class="alumni-chart__label">{{ g.name }}</span>
+        <span class="alumni-chart__bar"><span style="width: {{ g.size | times: 100 | divided_by: top }}%"></span></span>
+        <span class="alumni-chart__n mono">{{ g.size }}</span>
+      </div>
+      {%- endfor %}
+    </div>
+
+    {%- assign by_year = alumni | group_by_exp: "a", "a.graduated | slice: 0, 4" -%}
+    <div class="alumni-years">
+      {%- for y in by_year %}
+      <div class="alumni-year reveal">
+        <h3 class="alumni-year__label mono">{{ y.name }}</h3>
+        <ul class="alumni-list">
+          {%- for a in y.items %}
+          <li class="alum">
+            <img src="{{ '/assets/img/members/' | append: a.photo | relative_url }}" alt="" width="360" height="480" loading="lazy">
+            <div>
+              <p class="alum__name">{% if a.name %}{{ a.name }}{% if a.name_ko %} <span lang="ko">{{ a.name_ko }}</span>{% endif %}{% else %}<span lang="ko">{{ a.name_ko }}</span>{% endif %}</p>
+              <p class="alum__meta"><span class="mono">{{ a.degree }} · {{ a.graduated | replace: "-", "." }}</span></p>
+              {%- if a.next %}<p class="alum__next"><svg class="i i--sm" aria-hidden="true"><use href="#i-briefcase"/></svg>{% include t.html en=a.next ko=a.next_ko %}</p>{% endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

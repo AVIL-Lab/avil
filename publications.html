@@ -1,0 +1,110 @@
+---
+title: Publications
+permalink: /publications/
+css: [pubs]
+js: [pubs]
+description: International and domestic journal and conference publications of the Advanced Visual Intelligence Lab, Yeungnam University.
+---
+{%- assign pubs = site.data.publications -%}
+{%- assign n_ij = pubs | where: "region", "international" | where: "type", "journal" | size -%}
+{%- assign n_ic = pubs | where: "region", "international" | where: "type", "conference" | size -%}
+{%- assign n_dj = pubs | where: "region", "domestic" | where: "type", "journal" | size -%}
+{%- assign n_dc = pubs | where: "region", "domestic" | where: "type", "conference" | size -%}
+{% include lab-names.html %}
+<script type="application/json" id="topics">{{ site.data.modalities | jsonify }}</script>
+
+{% include page-hero.html eyebrow_en="Research output" eyebrow_ko="연구 성과" title_en="Publications" title_ko="논문" lead_en="Every paper the lab has listed, from 2001 to today. Lab members are shown in bold." lead_ko="연구실의 국제 및 국내 논문 목록입니다. 굵은 글씨는 연구실 구성원입니다." %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="pub-stats">
+      <button type="button" class="pub-stat" data-preset="international,journal"><span class="pub-stat__n mono">{{ n_ij }}</span><span>{% include t.html en="International journals" ko="국제 저널" %}</span></button>
+      <button type="button" class="pub-stat" data-preset="international,conference"><span class="pub-stat__n mono">{{ n_ic }}</span><span>{% include t.html en="International conferences" ko="국제 학술대회" %}</span></button>
+      <button type="button" class="pub-stat" data-preset="domestic,journal"><span class="pub-stat__n mono">{{ n_dj }}</span><span>{% include t.html en="Domestic journals" ko="국내 저널" %}</span></button>
+      <button type="button" class="pub-stat" data-preset="domestic,conference"><span class="pub-stat__n mono">{{ n_dc }}</span><span>{% include t.html en="Domestic conferences" ko="국내 학술대회" %}</span></button>
+    </div>
+
+    <div class="toolbar pub-tools" id="pub-tools">
+      <label class="field pub-tools__search">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="pub-q" placeholder="Title, author, venue, year" aria-label="Search publications">
+      </label>
+      <div class="toolbar__group">
+        <span class="toolbar__label">{% include t.html en="Region" ko="구분" %}</span>
+        <div class="segment" data-filter="region">
+          <button type="button" data-v="all" aria-pressed="true">{% include t.html en="All" ko="전체" %}</button>
+          <button type="button" data-v="international" aria-pressed="false">{% include t.html en="International" ko="국제" %}</button>
+          <button type="button" data-v="domestic" aria-pressed="false">{% include t.html en="Domestic" ko="국내" %}</button>
+        </div>
+      </div>
+      <div class="toolbar__group">
+        <span class="toolbar__label">{% include t.html en="Type" ko="유형" %}</span>
+        <div class="segment" data-filter="type">
+          <button type="button" data-v="all" aria-pressed="true">{% include t.html en="All" ko="전체" %}</button>
+          <button type="button" data-v="journal" aria-pressed="false">{% include t.html en="Journal" ko="저널" %}</button>
+          <button type="button" data-v="conference" aria-pressed="false">{% include t.html en="Conference" ko="학술대회" %}</button>
+        </div>
+      </div>
+      <div class="toolbar__group">
+        <span class="toolbar__label">{% include t.html en="Topic" ko="주제" %}</span>
+        <select class="select" id="pub-topic" aria-label="Filter by sensing topic">
+          <option value="all">All topics</option>
+          {%- for m in site.data.modalities %}<option value="{{ m.key }}">{{ m.en }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="toolbar__group">
+        <span class="toolbar__label">{% include t.html en="Years" ko="연도" %}</span>
+        <select class="select" id="pub-from" aria-label="From year"></select>
+        <span class="muted">&ndash;</span>
+        <select class="select" id="pub-to" aria-label="To year"></select>
+      </div>
+      <span class="toolbar__spacer"></span>
+      <div class="toolbar__group">
+        <button type="button" class="btn btn--ghost btn--sm" id="pub-sort" aria-label="Toggle sort order"><svg class="i i--sm" aria-hidden="true"><use href="#i-calendar"/></svg><span>Newest first</span></button>
+        <button type="button" class="btn btn--ghost btn--sm" id="pub-export"><svg class="i i--sm" aria-hidden="true"><use href="#i-download"/></svg>Export</button>
+        <button type="button" class="btn btn--ghost btn--sm" id="pub-reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="histo card" aria-label="Publications per year">
+      <div class="histo__head">
+        <span class="toolbar__label">{% include t.html en="Papers per year" ko="연도별 논문 수" %}</span>
+        <span class="histo__legend"><i class="sw sw--intl"></i>{% include t.html en="International" ko="국제" %} <i class="sw sw--dom"></i>{% include t.html en="Domestic" ko="국내" %}</span>
+        <span class="count-note" id="pub-count" aria-live="polite"></span>
+      </div>
+      <div class="histo__bars" id="pub-histo"></div>
+    </div>
+
+    <div id="pub-list">
+      {%- assign groups = pubs | group_by: "year" -%}
+      {%- for g in groups %}
+      <section class="pub-year" data-year-group="{{ g.name | default: 'nd' }}">
+        <h2 class="pub-year__label"><span class="mono">{% if g.name == "" or g.name == nil %}n.d.{% else %}{{ g.name }}{% endif %}</span> <span class="pub-year__n muted"></span></h2>
+        <ol class="pubs">
+          {%- for x in g.items %}
+          {%- capture cite -%}{% if x.title %}{{ x.authors }}, "{{ x.title }}"{% if x.venue %}, {{ x.venue }}{% endif %}.{% else %}{{ x.text }}{% endif %}{%- endcapture -%}
+          <li class="pub" data-region="{{ x.region }}" data-type="{{ x.type }}" data-year="{{ x.year }}">
+            <div class="pub__tags">
+              <span class="tag tag--{% if x.region == 'international' %}intl{% else %}domestic{% endif %}">{% if x.region == 'international' %}Intl{% else %}Domestic{% endif %}</span>
+              <span class="tag tag--{% if x.type == 'journal' %}journal{% else %}conference{% endif %}">{{ x.type }}</span>
+            </div>
+            <div class="pub__body">
+              {%- if x.title %}
+              <p class="pub__title">{{ x.title }}</p>
+              <p class="pub__authors js-authors">{{ x.authors }}</p>
+              {%- if x.venue %}<p class="pub__venue">{{ x.venue }}</p>{% endif %}
+              {%- else %}
+              <p class="pub__text js-authors">{{ x.text }}</p>
+              {%- endif %}
+            </div>
+            <button type="button" class="icon-btn pub__copy" data-copy="{{ cite | escape }}" data-copy-msg="Citation copied" aria-label="Copy citation"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
+          </li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endfor %}
+    </div>
+    <p class="empty is-hidden" id="pub-empty">{% include t.html en="No publication matches those filters." ko="조건에 맞는 논문이 없습니다." %}</p>
+    <p class="pub-note muted">{% include t.html en="Citations are reproduced as the lab recorded them on its previous website." ko="논문 정보는 이전 연구실 홈페이지에 기록된 그대로 옮겼습니다." %}</p>
+  </div>
+</section>

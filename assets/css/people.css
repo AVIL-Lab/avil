@@ -1,0 +1,106 @@
+/* Professor and members pages. */
+
+.icon-btn { display: inline-grid; place-items: center; width: 28px; height: 28px; flex: none; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--muted); }
+.icon-btn:hover { color: var(--brand); border-color: var(--brand); }
+.contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.contact-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .93rem; }
+.contact-list li > .i { margin-top: 4px; color: var(--brand); }
+.contact-list a { word-break: break-all; }
+
+/* ---- Professor --------------------------------------------------------- */
+.prof { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: start; }
+.prof__card { position: sticky; top: calc(var(--header-h) + 20px); padding: 22px; display: grid; gap: 18px; }
+.prof__photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; }
+.prof__name { margin: 0; font-size: 1.6rem; }
+.prof__name-ko { margin: 2px 0 8px; color: var(--muted); }
+.prof__title { margin: 0; font-weight: 700; color: var(--brand); }
+.prof__dept { margin: 2px 0 0; font-size: .9rem; color: var(--muted); }
+.prof__links { display: flex; flex-wrap: wrap; gap: 8px; }
+.prof__main { display: grid; gap: 44px; min-width: 0; }
+.roles { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.roles__item { display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); box-shadow: inset 4px 0 var(--k, var(--brand)); }
+.roles__since { font-size: .74rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.roles__text { font-weight: 650; color: var(--ink); }
+.roles__item--position, .timeline__item--position { --k: #2563eb; }
+.roles__item--research, .timeline__item--research { --k: #0d9488; }
+.roles__item--service, .timeline__item--service { --k: #d97706; }
+.roles__item--education, .timeline__item--education { --k: #7c3aed; }
+.awards { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
+.awards__item { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; padding: 12px; }
+.awards__item img { width: 120px; height: 80px; object-fit: cover; border-radius: 9px; }
+.awards__item p { margin: 4px 0 0; font-weight: 600; color: var(--ink); }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 10px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+.timeline__item { position: relative; display: grid; grid-template-columns: 170px 1fr auto; gap: 14px; align-items: baseline; padding: 11px 0 11px 34px; border-bottom: 1px dashed var(--line); }
+.timeline__dot { position: absolute; left: 3px; top: 16px; width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--k, var(--brand)); }
+.timeline__when { font-size: .84rem; color: var(--muted); }
+.timeline__what { color: var(--ink); font-weight: 550; }
+.timeline__kind { font: 600 .68rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k); }
+.present { color: #16a34a; font-weight: 700; }
+.timeline__item.is-dim { display: none; }
+
+/* ---- Members ------------------------------------------------------------- */
+.pi { display: grid; grid-template-columns: 120px 1fr; gap: 22px; align-items: center; padding: 18px; color: var(--text); }
+.pi:hover { text-decoration: none; }
+.pi img { width: 120px; height: 150px; object-fit: cover; border-radius: 12px; }
+.pi h2 { margin: 0 0 4px; font-size: 1.5rem; }
+.pi p { margin: 0 0 8px; }
+.interest-picker { position: relative; }
+.interest-picker summary { list-style: none; cursor: pointer; }
+.interest-picker summary::-webkit-details-marker { display: none; }
+.interest-picker__list { position: absolute; z-index: 20; top: calc(100% + 8px); left: 0; width: min(560px, 86vw); max-height: 320px; overflow-y: auto; display: flex; flex-wrap: wrap; gap: 6px; padding: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
+.chip--btn { cursor: pointer; border-color: var(--line); background: var(--surface); }
+.chip--btn:hover { border-color: var(--brand); color: var(--brand); }
+.chip--btn[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: #fff; }
+.member-group { margin-bottom: 36px; }
+.member-group__title { display: flex; align-items: baseline; gap: 10px; font-size: 1.25rem; padding-bottom: 10px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+.member-group__title .mono { font-size: .9rem; }
+.member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.member { display: flex; flex-direction: column; overflow: hidden; scroll-margin-top: calc(var(--header-h) + 20px); }
+.member:target { box-shadow: 0 0 0 3px var(--brand), var(--shadow); }
+.member__photo { aspect-ratio: 3 / 4; background: var(--surface-2); overflow: hidden; max-height: 300px; }
+.member__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform .4s ease; }
+.member:hover .member__photo img { transform: scale(1.04); }
+.member__body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; flex: 1; }
+.member__role { margin: 0; font: 650 .7rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+.member__name { margin: 0; font-size: 1.08rem; }
+.member__name span { font-weight: 500; color: var(--muted); font-size: .92rem; }
+.member__interests { list-style: none; display: flex; flex-wrap: wrap; gap: 5px; margin: 4px 0 6px; padding: 0; }
+.member__interests li { padding: 2px 8px; border-radius: 6px; background: var(--surface-2); font-size: .74rem; color: var(--text); }
+.member__interests li.is-match { background: var(--brand); color: #fff; }
+.member__links { display: flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 8px; border-top: 1px solid var(--line); }
+.member__email { display: inline-flex; align-items: center; gap: 6px; min-width: 0; flex: 1; font-size: .8rem; }
+.member__email span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.alumni-chart { display: grid; gap: 8px; margin-bottom: 28px; }
+.alumni-chart__row { display: grid; grid-template-columns: minmax(150px, 260px) 1fr 32px; gap: 12px; align-items: center; font-size: .88rem; }
+.alumni-chart__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.alumni-chart__bar { height: 12px; border-radius: 6px; background: var(--surface-2); overflow: hidden; }
+.alumni-chart__bar span { display: block; height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--brand), #0891b2); }
+.alumni-chart__n { text-align: right; color: var(--muted); }
+.alumni-years { display: grid; gap: 22px; }
+.alumni-year { display: grid; grid-template-columns: 80px 1fr; gap: 18px; }
+.alumni-year__label { margin: 6px 0 0; font-size: 1.1rem; color: var(--brand); }
+.alumni-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.alum { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: center; padding: 10px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+.alum img { width: 48px; height: 64px; object-fit: cover; border-radius: 8px; }
+.alum p { margin: 0; }
+.alum__name { font-weight: 700; color: var(--ink); font-size: .95rem; }
+.alum__name span { font-weight: 500; color: var(--muted); }
+.alum__meta { font-size: .76rem; color: var(--muted); }
+.alum__next { display: flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--text); }
+
+@media (max-width: 900px) {
+  .prof { grid-template-columns: 1fr; }
+  .prof__card { position: static; grid-template-columns: 160px 1fr; }
+  .prof__card .contact-list, .prof__card .prof__links { grid-column: 1 / -1; }
+  .timeline__item { grid-template-columns: 1fr; gap: 2px; }
+  .timeline__kind { display: none; }
+}
+@media (max-width: 560px) {
+  .prof__card { grid-template-columns: 1fr; }
+  .alumni-year { grid-template-columns: 1fr; gap: 6px; }
+  .alumni-chart__row { grid-template-columns: 120px 1fr 28px; }
+  .pi { grid-template-columns: 84px 1fr; }
+  .pi img { width: 84px; height: 105px; }
+}
