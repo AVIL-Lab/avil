@@ -3,6 +3,9 @@
 .cat--robotics { --c: #0d9488; } .cat--vision { --c: #2563eb; } .cat--aiml { --c: #9333ea; } .cat--hci { --c: #d97706; }
 .cat-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
 .pill.is-active .cat-dot { background: var(--bg); }
+.tracker-updated { display: inline-flex; align-items: center; gap: 6px; margin: 12px 0 0; padding: 4px 10px; border-radius: 999px; background: var(--t-lab-bg); color: var(--t-lab); font-size: .8rem; font-weight: 600; }
+.dl__verified { display: flex; align-items: center; gap: 6px; margin: 8px 0 0; font-size: .74rem; font-weight: 600; color: var(--t-lab); }
+.dl__verified .mono { font-weight: 500; opacity: .8; }
 .tracker-foot { display: flex; gap: 8px; align-items: baseline; margin-top: 24px; font-size: .84rem; }
 .tracker-foot .i { flex: none; transform: translateY(2px); }
 .is-linked { animation: linked 1.6s ease; }

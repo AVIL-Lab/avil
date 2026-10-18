@@ -14,6 +14,10 @@ description: "Live countdowns to submission deadlines for CORE A* and A conferen
       <h1 class="page-hero__title">{% include t.html en="AI Conference Deadlines" ko="AI 학회 마감일" %}</h1>
       <span class="rule" aria-hidden="true"></span>
       <p class="page-hero__lead">{% include t.html en="Live countdowns for CORE A* and A venues in robotics, vision, AI/ML and HCI. Each card counts down to its next unpassed stage, in the deadline's own time zone." ko="로보틱스, 비전, AI/ML, HCI 분야 CORE A*/A 학회의 실시간 마감 카운트다운입니다." %}</p>
+      {%- assign meta = site.data.deadlines_meta %}
+      {%- if meta.updated %}
+      <p class="tracker-updated"><svg class="i i--sm" aria-hidden="true"><use href="#i-check"/></svg>{% include t.html en="Updated automatically every week" ko="매주 자동 업데이트" %} · {% include t.html en="last update" ko="최근 업데이트" %} <time class="mono" datetime="{{ meta.updated }}">{{ meta.updated | date: "%b %-d, %Y" }}</time></p>
+      {%- endif %}
     </div>
     <div class="next-up card" id="next-up" aria-live="off">
       <p class="next-up__label"><svg class="i i--sm" aria-hidden="true"><use href="#i-clock"/></svg> {% include t.html en="Next deadline" ko="다음 마감" %}</p>
@@ -90,6 +94,9 @@ description: "Live countdowns to submission deadlines for CORE A* and A conferen
           {%- if c.dates %}<span class="dl__dates"><svg class="i i--sm" aria-hidden="true"><use href="#i-calendar"/></svg>{{ c.dates }}</span>{% endif %}
           {%- if c.website %}<a class="dl__link" href="{{ c.website }}" target="_blank" rel="noopener">CFP <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>{% endif %}
         </footer>
+        {%- if c.site_check.found %}
+        <p class="dl__verified" title="The paper deadline ({{ c.site_check.date }}) was found on the official website on {{ c.site_check.on }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-check"/></svg>{% include t.html en="Deadline confirmed on official site" ko="공식 사이트에서 마감일 확인" %} <span class="mono">{{ c.site_check.on | date: "%b %-d" }}</span></p>
+        {%- endif %}
         {%- if c.note %}<p class="dl__note">{{ c.note }}</p>{% endif %}
       </article>
       {%- endfor %}
@@ -97,8 +104,7 @@ description: "Live countdowns to submission deadlines for CORE A* and A conferen
     <p class="empty is-hidden" id="dl-empty">{% include t.html en="No conference matches those filters." ko="조건에 맞는 학회가 없습니다." %}</p>
     <p class="tracker-foot muted">
       <svg class="i i--sm" aria-hidden="true"><use href="#i-file"/></svg>
-      {% include t.html en="Data comes from the deadline tracker on" ko="데이터 출처:" %} <a href="https://s-elim.github.io/deadlines/" target="_blank" rel="noopener">s-elim.github.io/deadlines</a>
-      {% include t.html en="and is synced into this site daily. A venue whose call has closed shows its next edition as TBA until new dates are published. Always confirm dates on the official conference site before submitting." ko="에서 매일 동기화됩니다. 제출 전에는 반드시 학회 공식 사이트에서 일정을 확인하세요." %}
+      <span>{% include t.html en="Updated automatically every Monday by a GitHub Actions job: the curated list on" ko="매주 월요일 GitHub Actions 작업이 자동으로 업데이트합니다: 기본 목록" %} <a href="https://s-elim.github.io/deadlines/" target="_blank" rel="noopener">s-elim.github.io/deadlines</a>{% include t.html en=", dates for unannounced editions from the" ko=", 미발표 학회 일정은" %} <a href="https://github.com/ccfddl/ccf-deadlines" target="_blank" rel="noopener">ccf-deadlines</a> {% include t.html en="dataset, and a check of each conference's official website. Always confirm dates on the official site before submitting." ko="데이터셋, 그리고 각 학회 공식 사이트 확인. 제출 전에는 반드시 공식 사이트에서 일정을 확인하세요." %}</span>
     </p>
   </div>
 </section>

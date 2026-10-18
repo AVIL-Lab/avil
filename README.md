@@ -121,14 +121,15 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
 | `_data/themes.yml` | Research page themes · 연구 페이지 연구 주제 |
 | `_data/modalities.yml` | Sensor types used by the sensing explorer and paper filter · 센서 종류 (센싱 탐색 및 논문 필터) |
 | `_data/navigation.yml` | Top menu · 상단 메뉴 |
-| `_data/conferences.yml`, `_data/journals.yml` | Copied automatically every day, do not edit here (see 5.13) · 매일 자동 복사됨, 여기서 수정 금지 (5.13 참고) |
+| `_data/conferences.yml`, `_data/journals.yml`, `_data/deadlines_meta.yml` | Generated automatically every week, do not edit here (see 5.13) · 매주 자동 생성됨, 여기서 수정 금지 (5.13 참고) |
 | `assets/img/members/` | Member, alumni and professor photos · 구성원, 졸업생, 교수 사진 |
 | `assets/img/gallery/` and `assets/img/gallery/thumbs/` | News photos and their thumbnails · 소식 사진과 썸네일 |
 | `assets/img/partners/`, `assets/img/research/`, `assets/img/brand/` | Partner logos, research figures, logo and icons · 협력 기관 로고, 연구 그림, 로고와 아이콘 |
 | `index.html`, `members.html`, `publications.html`, … | Page templates (layout only, rarely edited) · 페이지 틀 (레이아웃, 거의 수정하지 않음) |
 | `_includes/`, `_layouts/` | Shared page parts (header, footer, explorers) · 공통 부품 (머리말, 꼬리말, 탐색 화면) |
 | `assets/css/`, `assets/js/` | Styles and interactive behaviour · 디자인과 동작 |
-| `.github/workflows/` | Automatic daily sync job · 매일 자동 동기화 작업 |
+| `.github/workflows/` | Automatic weekly deadline update · 매주 자동 마감일 업데이트 |
+| `scripts/update_deadlines.py` | The weekly deadline updater (see 5.13) · 매주 마감일 업데이트 스크립트 (5.13 참고) |
 | `_config.yml` | Site settings (title, address) · 사이트 설정 (제목, 주소) |
 
 ---
@@ -346,9 +347,13 @@ The **themes** further down the Research page come from `_data/themes.yml`. Memb
 
 ### 5.13 Conference deadlines and Q1 journals · 학회 마감일과 Q1 저널
 
-The **AI Conference Deadlines** and **Top Q1 Journals** pages use `_data/conferences.yml` and `_data/journals.yml`, which are copied every day at 04:30 KST from <https://github.com/s-elim/s-elim.github.io> by the workflow in `.github/workflows/sync-homepage-data.yml`. **Do not edit these two files here**, because the next sync overwrites them. Update them in the source repository instead. To copy immediately, open the **Actions** tab on GitHub, choose "Sync deadlines and journals from s-elim.github.io" and click **Run workflow**.
+The **AI Conference Deadlines** and **Top Q1 Journals** pages update themselves. Every Monday at 03:00 KST, the GitHub Actions workflow `.github/workflows/update-deadlines.yml` runs `scripts/update_deadlines.py`, which: (1) reads the curated conference list on <https://github.com/s-elim/s-elim.github.io> (`_data/conferences.yml`), which decides which venues appear and keeps every date it already has; (2) fills in editions whose dates are still TBA, or whose call has closed, from the [ccf-deadlines](https://github.com/ccfddl/ccf-deadlines) dataset; (3) opens each conference's official website and checks whether the paper deadline appears there, shown on the card as "Deadline confirmed on official site"; (4) copies the Q1 journal list from the same homepage repository; and (5) commits the new `_data/conferences.yml`, `_data/journals.yml` and `_data/deadlines_meta.yml` only when something changed. Nobody needs to update these pages by hand.
 
-**AI 학회 마감일**과 **Q1 저널** 페이지는 `_data/conferences.yml`과 `_data/journals.yml`을 사용합니다. 이 두 파일은 `.github/workflows/sync-homepage-data.yml` 작업이 매일 오전 4시 30분(KST)에 <https://github.com/s-elim/s-elim.github.io>에서 복사해 옵니다. **여기서 두 파일을 고치지 마세요.** 다음 동기화 때 덮어써집니다. 원본 저장소에서 고쳐야 합니다. 바로 복사하려면 GitHub의 **Actions** 탭에서 "Sync deadlines and journals from s-elim.github.io"를 고르고 **Run workflow**를 누릅니다.
+**AI 학회 마감일**과 **Q1 저널** 페이지는 스스로 업데이트됩니다. 매주 월요일 오전 3시(KST)에 GitHub Actions 작업 `.github/workflows/update-deadlines.yml`이 `scripts/update_deadlines.py`를 실행합니다. 이 스크립트는 (1) <https://github.com/s-elim/s-elim.github.io>의 기본 학회 목록(`_data/conferences.yml`)을 읽어 어떤 학회를 보여 줄지 정하고 이미 있는 날짜는 그대로 두며, (2) 날짜가 아직 TBA이거나 접수가 끝난 학회는 [ccf-deadlines](https://github.com/ccfddl/ccf-deadlines) 데이터셋에서 다음 회차 일정을 채우고, (3) 각 학회 공식 사이트를 열어 논문 마감일이 실제로 적혀 있는지 확인해 카드에 "공식 사이트에서 마감일 확인"으로 표시하고, (4) 같은 저장소에서 Q1 저널 목록을 복사하며, (5) 바뀐 내용이 있을 때만 `_data/conferences.yml`, `_data/journals.yml`, `_data/deadlines_meta.yml`을 커밋합니다. 사람이 직접 고칠 필요가 없습니다.
+
+**Do not edit those three files in this repository**; the next run overwrites them. To add or remove a conference, or to correct a date, change `_data/conferences.yml` in the s-elim.github.io repository. To update right away, open the **Actions** tab, choose **Update conference deadlines** and click **Run workflow**. Each run writes a summary (changes, website checks, and any date where the curated list and ccf-deadlines disagree) on its run page.
+
+**이 저장소의 세 파일은 직접 고치지 마세요.** 다음 실행 때 덮어써집니다. 학회를 추가하거나 빼고 날짜를 고치려면 s-elim.github.io 저장소의 `_data/conferences.yml`을 수정합니다. 바로 업데이트하려면 **Actions** 탭에서 **Update conference deadlines**를 고르고 **Run workflow**를 누릅니다. 실행할 때마다 결과 페이지에 요약(변경 사항, 공식 사이트 확인 결과, 기본 목록과 ccf-deadlines의 날짜가 다른 경우)이 남습니다.
 
 ### 5.14 Change the menu or add a new page · 메뉴 변경 및 새 페이지 추가
 

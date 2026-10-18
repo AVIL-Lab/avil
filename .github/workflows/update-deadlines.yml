@@ -1,0 +1,52 @@
+name: Update conference deadlines
+
+# Every Monday 03:00 KST (Sunday 18:00 UTC), and on demand from the Actions tab
+# ("Run workflow"). scripts/update_deadlines.py merges the curated list on
+# s-elim.github.io with the ccf-deadlines dataset, checks each conference's
+# official website for its paper deadline, copies the Q1 journal list, and
+# commits _data/ only when something changed. GitHub Pages then rebuilds.
+
+on:
+  schedule:
+    - cron: "0 18 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-deadlines
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: python -m pip install --quiet pyyaml==6.0.2
+
+      - name: Download the ccf-deadlines dataset
+        run: git clone --depth 1 https://github.com/ccfddl/ccf-deadlines.git /tmp/ccfddl
+
+      - name: Update deadlines, website checks and journals
+        run: python scripts/update_deadlines.py --ccfddl /tmp/ccfddl --out _data
+
+      - name: Commit if changed
+        run: |
+          # deadlines_meta.yml always carries the run date; commit only when real data changed.
+          if git diff --quiet -- _data/conferences.yml _data/journals.yml; then
+            echo "No deadline or journal changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/conferences.yml _data/journals.yml _data/deadlines_meta.yml
+          git commit -m "chore(data): weekly deadline update $(date -u +%F)"
+          git push
