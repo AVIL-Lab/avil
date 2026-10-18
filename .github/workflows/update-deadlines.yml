@@ -1,7 +1,7 @@
 name: Update conference deadlines
 
-# Every Monday 03:00 KST (Sunday 18:00 UTC), and on demand from the Actions tab
-# ("Run workflow"). scripts/update_deadlines.py merges the curated list on
+# Every Monday 03:00 KST (Sunday 18:00 UTC), on demand from the Actions tab
+# ("Run workflow"), and once whenever the updater itself is changed. scripts/update_deadlines.py merges the curated list on
 # s-elim.github.io with the ccf-deadlines dataset, checks each conference's
 # official website for its paper deadline, copies the Q1 journal list, and
 # commits _data/ only when something changed. GitHub Pages then rebuilds.
@@ -10,6 +10,11 @@ on:
   schedule:
     - cron: "0 18 * * 0"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_deadlines.py
+      - .github/workflows/update-deadlines.yml
 
 permissions:
   contents: write
