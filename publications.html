@@ -89,31 +89,59 @@ description: "International and domestic journal and conference publications of 
     </div>
 
     <div id="pub-list">
-      {%- assign groups = pubs | group_by: "year" -%}
-      {%- for g in groups %}
-      <section class="pub-year" data-year-group="{{ g.name | default: 'nd' }}">
-        <h2 class="pub-year__label"><span class="mono">{% if g.name == "" or g.name == nil %}n.d.{% else %}{{ g.name }}{% endif %}</span> <span class="pub-year__n muted"></span></h2>
-        <ol class="pubs">
-          {%- for x in g.items %}
-          {%- capture cite -%}{% if x.title %}{{ x.authors }}, "{{ x.title }}"{% if x.venue %}, {{ x.venue }}{% endif %}.{% else %}{{ x.text }}{% endif %}{%- endcapture -%}
-          <li class="pub" data-region="{{ x.region }}" data-type="{{ x.type }}" data-year="{{ x.year }}">
-            <div class="pub__tags">
-              <span class="tag tag--{% if x.region == 'international' %}intl{% else %}domestic{% endif %}">{% if x.region == 'international' %}Intl{% else %}Domestic{% endif %}</span>
-              <span class="tag tag--{% if x.type == 'journal' %}journal{% else %}conference{% endif %}">{{ x.type }}</span>
+      {%- assign regions = "international,domestic" | split: "," -%}
+      {%- assign types = "journal,conference" | split: "," -%}
+      {%- for r in regions %}
+      <section class="pub-region" data-region-sec="{{ r }}">
+        <header class="pub-region__head">
+          <h2>{% if r == "international" %}{% include t.html en="International Publications" ko="국제 논문" %}{% else %}{% include t.html en="Domestic Publications" ko="국내 논문" %}{% endif %}</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+        <div class="pub-cols">
+          {%- for tp in types %}
+          {%- assign cell_pubs = pubs | where: "region", r | where: "type", tp -%}
+          {%- assign groups = cell_pubs | group_by: "year" -%}
+          <div class="pub-col card" data-pub-col="{{ r }},{{ tp }}">
+            <header class="pub-col__head">
+              <div class="pub-col__title">
+                <span class="tag tag--{% if r == 'international' %}intl{% else %}domestic{% endif %}">{% if r == 'international' %}INTL{% else %}DOM{% endif %}</span>
+                <span class="tag tag--{% if tp == 'journal' %}journal{% else %}conference{% endif %}">{{ tp }}</span>
+                <h3>
+                  {%- if r == "international" and tp == "journal" %}{% include t.html en="International Journals" ko="국제 저널" %}
+                  {%- elsif r == "international" and tp == "conference" %}{% include t.html en="International Conferences" ko="국제 학술대회" %}
+                  {%- elsif r == "domestic" and tp == "journal" %}{% include t.html en="Domestic Journals" ko="국내 저널" %}
+                  {%- else %}{% include t.html en="Domestic Conferences" ko="국내 학술대회" %}{% endif -%}
+                </h3>
+              </div>
+              <span class="pub-col__count mono" data-col-count>{{ cell_pubs.size }}</span>
+            </header>
+            <div class="pub-col__body">
+              {%- for g in groups %}
+              <section class="pub-year" data-year-group="{{ g.name | default: 'nd' }}">
+                <h4 class="pub-year__label"><span class="mono">{% if g.name == "" or g.name == nil %}n.d.{% else %}{{ g.name }}{% endif %}</span> <span class="pub-year__n muted"></span></h4>
+                <ol class="pubs">
+                  {%- for x in g.items %}
+                  {%- capture cite -%}{% if x.title %}{{ x.authors }}, "{{ x.title }}"{% if x.venue %}, {{ x.venue }}{% endif %}.{% else %}{{ x.text }}{% endif %}{%- endcapture -%}
+                  <li class="pub" data-region="{{ x.region }}" data-type="{{ x.type }}" data-year="{{ x.year }}">
+                    <div class="pub__body">
+                      {%- if x.title %}
+                      <p class="pub__title">{{ x.title }}</p>
+                      <p class="pub__authors js-authors">{{ x.authors }}</p>
+                      {%- if x.venue %}<p class="pub__venue">{{ x.venue }}</p>{% endif %}
+                      {%- else %}
+                      <p class="pub__text js-authors">{{ x.text }}</p>
+                      {%- endif %}
+                    </div>
+                    <button type="button" class="icon-btn pub__copy" data-copy="{{ cite | escape }}" data-copy-msg="Citation copied" aria-label="Copy citation"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
+                  </li>
+                  {%- endfor %}
+                </ol>
+              </section>
+              {%- endfor %}
             </div>
-            <div class="pub__body">
-              {%- if x.title %}
-              <p class="pub__title">{{ x.title }}</p>
-              <p class="pub__authors js-authors">{{ x.authors }}</p>
-              {%- if x.venue %}<p class="pub__venue">{{ x.venue }}</p>{% endif %}
-              {%- else %}
-              <p class="pub__text js-authors">{{ x.text }}</p>
-              {%- endif %}
-            </div>
-            <button type="button" class="icon-btn pub__copy" data-copy="{{ cite | escape }}" data-copy-msg="Citation copied" aria-label="Copy citation"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
-          </li>
+          </div>
           {%- endfor %}
-        </ol>
+        </div>
       </section>
       {%- endfor %}
     </div>
