@@ -9,27 +9,28 @@
 
 /* ---- Professor --------------------------------------------------------- */
 .prof { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: start; }
-.prof__card { position: sticky; top: calc(var(--header-h) + 20px); padding: 22px; display: grid; gap: 18px; }
+.prof__card { position: sticky; top: calc(var(--header-h) + 20px); padding: 22px; display: grid; gap: 18px; min-width: 0; }
 .prof__photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; }
 .prof__name { margin: 0; font-size: 1.6rem; }
 .prof__name-ko { margin: 2px 0 8px; color: var(--muted); }
 .prof__title { margin: 0; font-weight: 700; color: var(--brand); }
 .prof__dept { margin: 2px 0 0; font-size: .9rem; color: var(--muted); }
-.prof__links { display: flex; flex-wrap: wrap; gap: 8px; }
-.scholar-card { padding: 13px 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); display: grid; gap: 10px; }
-.scholar-card__head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.scholar-card__title { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 750; color: var(--ink); }
+.prof__links { display: flex; flex-wrap: wrap; gap: 6px; }
+.prof__links .btn { flex: 1 1 auto; }
+.scholar-card { padding: 12px 13px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); display: grid; gap: 10px; min-width: 0; }
+.scholar-card__head { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; }
+.scholar-card__title { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 750; color: var(--ink); white-space: nowrap; }
 .scholar-card__title .i { color: var(--brand); }
-.scholar-card__badge { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font: 600 .68rem/1.3 var(--mono); color: var(--muted); }
+.scholar-card__badge { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font: 600 .68rem/1.3 var(--mono); color: var(--muted); white-space: nowrap; }
 .scholar-card__badge:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
-.scholar-card__dot { width: 6px; height: 6px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 2px rgba(22, 163, 74, .22); }
-.scholar-card__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.scholar-stat { padding: 8px 9px; border-radius: 9px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
-.scholar-stat__label { font: 650 .66rem/1.1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
-.scholar-stat__val { font-size: 1.18rem; font-weight: 800; color: var(--ink); line-height: 1.15; }
-.scholar-stat__sub { font-size: .66rem; color: var(--muted); white-space: nowrap; }
+.scholar-card__dot { width: 6px; height: 6px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 2px rgba(22, 163, 74, .22); flex: none; }
+.scholar-card__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.scholar-stat { padding: 7px 6px; border-radius: 9px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; min-width: 0; }
+.scholar-stat__label { font: 650 .62rem/1.1 var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); white-space: nowrap; }
+.scholar-stat__val { font-size: 1.08rem; font-weight: 800; color: var(--ink); line-height: 1.15; }
+.scholar-stat__sub { font-size: .64rem; color: var(--muted); white-space: nowrap; }
 .scholar-stat__sub b { color: var(--text); font-weight: 700; }
-.scholar-bars { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; align-items: end; height: 48px; padding-top: 6px; border-top: 1px dashed var(--line); }
+.scholar-bars { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; align-items: end; height: 44px; padding-top: 6px; border-top: 1px dashed var(--line); }
 .scholar-bar { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 3px; }
 .scholar-bar__fill { width: 100%; max-width: 18px; min-height: 3px; border-radius: 3px 3px 1px 1px; background: linear-gradient(180deg, var(--brand), #0891b2); opacity: .85; transition: opacity .15s; }
 .scholar-bar:hover .scholar-bar__fill { opacity: 1; }
