@@ -97,27 +97,15 @@
 - region: domestic
   type: conference
   year: 2026
-  authors: Nur Nahar Queen, Sungho Kim
-  title: Experimental Analysis of Breathing-Pattern-Dependent Phase Responses Using 77 GHz FMCW Radar
-  venue: 2026년 한국전자파학회 하계종합학술대회 논문집 Vol. 14, No. 1 2026. 8. 19~22 (KIEES 2026)
-- region: domestic
-  type: conference
-  year: 2026
-  authors: Nur Nahar Queen, Sungho Kim
-  title: Robust FMCW Radar-Based Non-Contact Respiration Monitoring Using Adaptive Phase-Sensitive Target Selection
-  venue: 2026 제41회 제어로봇시스템학회 학술대회 (ICROS 2026)
-- region: domestic
-  type: conference
-  year: 2026
-  authors: Nur Nahar Queen, Sungho Kim
-  title: Reliability-Guided Phase-Magnitude Selection for 77 GHz FMCW Radar-Based Respiration Monitoring
-  venue: 2026년 대한전자공학회 하계학술대회 논문집 (IEIE 2026)
-- region: domestic
-  type: conference
-  year: 2026
   authors: Sin I, Kim S, Jeong N
   title: Domain-Specific Image Classification for USV Identification in Maritime Surveillance
   venue: 한국과학기술학회 학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Nur Nahar Queen, Sungho Kim
+  title: Experimental Analysis of Breathing-Pattern-Dependent Phase Responses Using 77 GHz FMCW Radar
+  venue: 2026년 한국전자파학회 하계종합학술대회 논문집 Vol. 14, No. 1 2026. 8. 19~22 (KIEES 2026)
 - region: domestic
   type: conference
   year: 2026
@@ -130,6 +118,12 @@
   authors: Tanvir Ahmmed*, Sungho Kim*, Haekang Song**, Lee Dongik***
   title: Hybrid Preprocessing and PCA-PLS-DA Classification of Synthetic SERS Spectra for Type II Diabetes Analysis
   venue: Korean Institute of Electromagnetic Engineering and Science (KIEES) 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Nur Nahar Queen, Sungho Kim
+  title: Robust FMCW Radar-Based Non-Contact Respiration Monitoring Using Adaptive Phase-Sensitive Target Selection
+  venue: 2026 제41회 제어로봇시스템학회 학술대회 (ICROS 2026)
 - region: domestic
   type: conference
   year: 2026
@@ -160,6 +154,12 @@
   authors: 최현지, 김보민, 박정은, 김성호
   title: 'CLIP 에서 LLaVA까지: 비전-언어 모델 아키텍처 및 학습 전략에 관한 기술 동향 분석'
   venue: 제41회 제어·로봇·시스템학회 학술대회, 2026
+- region: domestic
+  type: conference
+  year: 2026
+  authors: Nur Nahar Queen, Sungho Kim
+  title: Reliability-Guided Phase-Magnitude Selection for 77 GHz FMCW Radar-Based Respiration Monitoring
+  venue: 2026년 대한전자공학회 하계학술대회 논문집 (IEIE 2026)
 - region: domestic
   type: conference
   year: 2026
