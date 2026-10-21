@@ -16,6 +16,7 @@ linkedin: ""
 homepage: ""
 links:
   - { label: ResearchGate, url: "https://www.researchgate.net/profile/Sungho_Kim2" }
+  - { label: Google Scholar, url: "https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en&oi=ao" }
   - { label: Yeungnam University faculty page, url: "https://www.yu.ac.kr/main/faculty/faculty-window.do?p_no=20773" }
 
 # kind: position | service | research | education
