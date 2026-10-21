@@ -26,13 +26,13 @@ about:
 
 purpose:
   - Our purpose is developing Human-like visual intelligence capability with computer vision.
-  - It aims to develop Scene Interpretation. Especially, agentic AI-based remote object perception using multi-modal physical sensing (EO/IR/HSI/Radar/LiDAR).
+  - It aims to develop Scene Interpretation. Especially, agentic AI-based remote object perception using multi-modal physical sensing (EO/IR/HSI/Radar/LiDAR/Raman/RGB-D).
 
 # Research areas: the first two are from the Wix "About" text; robotics was added
 # by Selim Sarowar on 2026-10-17.
 areas:
   - { key: vision, en: Computer Vision & Deep Learning, ko: 컴퓨터 비전 및 딥러닝 }
-  - { key: fusion, en: "Sensor Fusion: EO, IR, SAR, Hyperspectral, Polarization", ko: "센서 융합: EO, IR, SAR, 초분광, 편광" }
+  - { key: fusion, en: "Sensor Fusion: EO, IR, SAR, Hyperspectral, Raman, RGB-D", ko: "센서 융합: EO, IR, SAR, 초분광, 라만, RGB-D" }
   - { key: robotics, en: "Robotics: VLA Models, World Models, Agentic Robotics, Embodied Intelligence, Humanoid Robot Intelligence", ko: "로보틱스: VLA 모델, 월드 모델, 에이전틱 로보틱스, 체화 지능, 휴머노이드 로봇 지능" }
 applications:
   - { en: Intelligent Surveillance, ko: 지능형 감시 }
@@ -40,7 +40,7 @@ applications:
   - { en: Automatic Target Detection & Recognition, ko: 자동표적탐지/인식 }
   - { en: Healthcare, ko: 헬스케어 }
   - { en: "Physical AI: Autonomous Robots, Drones, Humanoids, Mobile Robots", ko: "피지컬 AI: 자율 로봇, 드론, 휴머노이드, 이동 로봇" }
-modalities: [EO, IR, HSI, SAR, Polarization, Radar, LiDAR, Raman]
+modalities: [EO, IR, HSI, SAR, Polarization, Radar, LiDAR, Raman, RGB-D]
 
 rlrc:
   headline:

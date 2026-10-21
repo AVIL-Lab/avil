@@ -21,6 +21,7 @@
 .hero__modalities li:nth-child(6) { box-shadow: inset 0 -2px #14b8a6; }
 .hero__modalities li:nth-child(7) { box-shadow: inset 0 -2px #ef4444; }
 .hero__modalities li:nth-child(8) { box-shadow: inset 0 -2px #ec4899; }
+.hero__modalities li:nth-child(9) { box-shadow: inset 0 -2px #06b6d4; }
 .hero__robotics { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -12px 0 26px; }
 .hero__robotics-label { display: inline-flex; align-items: center; gap: 6px; font: 650 .74rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--t-graduation); }
 .hero__robotics ul { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
