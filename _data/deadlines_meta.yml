@@ -1,10 +1,11 @@
 # Written by scripts/update_deadlines.py. Do not edit.
-updated: '2026-10-18'
+updated: '2026-10-21'
 conferences: 60
-from_ccfddl: 2
-site_checked: 15
+from_ccfddl: 3
+site_checked: 16
 site_found: 12
 changes:
+- 'ICME: 2027 -> 2027, next stage Paper Submission on 2026-12-30'
 - 'ICDM: 2027 -> 2027, next stage Paper Submission (Full papers; dates are tentative and subject to change) on 2027-06-06'
 - 'KR: 2027 -> 2027, next stage Abstract Deadline on 2027-04-23'
 disagreements: []
