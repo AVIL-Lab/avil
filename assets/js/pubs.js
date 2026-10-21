@@ -11,7 +11,7 @@
     var items = Array.prototype.slice.call(list.querySelectorAll(".pub"));
     var groups = Array.prototype.slice.call(list.querySelectorAll(".pub-year"));
     var cols = Array.prototype.slice.call(list.querySelectorAll(".pub-col"));
-    var regions = Array.prototype.slice.call(list.querySelectorAll(".pub-region"));
+    var rows = Array.prototype.slice.call(list.querySelectorAll(".pub-cols"));
     var q = document.getElementById("pub-q");
     var topicSel = document.getElementById("pub-topic");
     var fromSel = document.getElementById("pub-from");
@@ -143,32 +143,29 @@
         m.el.classList.toggle("is-hidden", !ok);
         if (ok) { shown++; highlight(m); }
       });
-      groups.forEach(function (g) {
-        var n = g.querySelectorAll(".pub:not(.is-hidden)").length;
-        g.classList.toggle("is-hidden", n === 0);
-        g.querySelector(".pub-year__n").textContent = n + (n === 1 ? " paper" : " papers");
-      });
       cols.forEach(function (col) {
-        var body = col.querySelector(".pub-col__body");
-        var colGroups = Array.prototype.slice.call(col.querySelectorAll(".pub-year"));
-        colGroups.sort(function (a, b) {
-          var ya = parseInt(a.getAttribute("data-year-group"), 10) || 0, yb = parseInt(b.getAttribute("data-year-group"), 10) || 0;
-          if (!ya) return 1;
-          if (!yb) return -1;
-          return state.newest ? yb - ya : ya - yb;
-        });
-        colGroups.forEach(function (g) { body.appendChild(g); });
         var n = col.querySelectorAll(".pub:not(.is-hidden)").length;
         var badge = col.querySelector("[data-col-count]");
         if (badge) badge.textContent = String(n);
         col.classList.toggle("is-hidden", n === 0);
       });
-      regions.forEach(function (sec) {
-        var vis = sec.querySelectorAll(".pub-col:not(.is-hidden)").length;
-        sec.classList.toggle("is-hidden", vis === 0);
-        var grid = sec.querySelector(".pub-cols");
-        if (grid) grid.classList.toggle("is-single", vis === 1);
+      rows.forEach(function (row) {
+        var vis = row.querySelectorAll(".pub-col:not(.is-hidden)").length;
+        row.classList.toggle("is-hidden", vis === 0);
+        row.classList.toggle("is-single", vis === 1);
       });
+      groups.forEach(function (g) {
+        var n = g.querySelectorAll(".pub:not(.is-hidden)").length;
+        g.classList.toggle("is-hidden", n === 0);
+        g.querySelector(".pub-year__n").textContent = n + (n === 1 ? " paper" : " papers");
+      });
+      var ordered = groups.slice().sort(function (a, b) {
+        var ya = parseInt(a.getAttribute("data-year-group"), 10) || 0, yb = parseInt(b.getAttribute("data-year-group"), 10) || 0;
+        if (!ya) return 1;
+        if (!yb) return -1;
+        return state.newest ? yb - ya : ya - yb;
+      });
+      ordered.forEach(function (g) { list.appendChild(g); });
       countEl.textContent = shown === models.length ? models.length + " papers" : shown + " of " + models.length + " papers";
       empty.classList.toggle("is-hidden", shown > 0);
       drawHisto();
