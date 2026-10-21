@@ -1,7 +1,7 @@
 {%- comment -%}
-  Page heading band. Params: eyebrow_en/ko, title_en/ko, lead_en/ko, compact (all optional except title_en).
+  Page heading band. Params: eyebrow_en/ko, title_en/ko, lead_en/ko (all optional except title_en).
 {%- endcomment -%}
-<section class="page-hero{% if include.compact %} page-hero--compact{% endif %}">
+<section class="page-hero">
   <div class="wrap">
     {%- if include.eyebrow_en %}
     <p class="eyebrow">{% include t.html en=include.eyebrow_en ko=include.eyebrow_ko %}</p>
