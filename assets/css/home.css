@@ -91,11 +91,11 @@
 .mod--visible { --c: #2563eb; } .mod--thermal { --c: #ea580c; } .mod--spectral { --c: #16a34a; }
 .mod--radar { --c: #9333ea; } .mod--lidar { --c: #ca8a04; } .mod--polarization { --c: #0d9488; }
 .explorer__panel { padding: 22px; }
-.explorer__counts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+.explorer__counts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
 .explorer__counts > div { padding: 12px 14px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); box-shadow: inset 4px 0 var(--c); }
 .explorer__num { display: block; font: 700 1.6rem/1.1 var(--mono); color: var(--ink); }
 .explorer__counts span:not(.explorer__num) { font-size: .8rem; color: var(--muted); }
-.explorer__cols { display: grid; grid-template-columns: 1.4fr 1.2fr 1fr; gap: 24px; }
+.explorer__cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; }
 .explorer__cols h3 { font-size: .8rem; font-family: var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
 .explorer__cols h3:not(:first-child) { margin-top: 18px; }
 .explorer__list { list-style: none; margin: 0 0 12px; padding: 0; }

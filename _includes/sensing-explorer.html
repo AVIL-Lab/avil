@@ -1,6 +1,6 @@
 {%- comment -%}
   Tabbed explorer: one panel per modality in _data/modalities.yml, listing the
-  equipment, members, projects and publications whose text matches it.
+  equipment, projects and publications whose text matches it.
 {%- endcomment -%}
 <div class="explorer" data-explorer>
   <div class="explorer__tabs" role="tablist" aria-label="Sensing modality">
@@ -25,12 +25,6 @@
     {%- include match.html text=_t mod=mod -%}
     {%- if hit -%}{%- assign n_proj = n_proj | plus: 1 -%}{%- if proj_list.size < 3 -%}{%- assign proj_list = proj_list | push: pr -%}{%- endif -%}{%- endif -%}
   {%- endfor -%}
-  {%- assign mem_list = "" | split: "" -%}
-  {%- for m in site.data.members -%}
-    {%- capture _t -%}{{ m.interests | join: " " }}{%- endcapture -%}
-    {%- include match.html text=_t mod=mod -%}
-    {%- if hit -%}{%- assign mem_list = mem_list | push: m -%}{%- endif -%}
-  {%- endfor -%}
   {%- assign eq_list = "" | split: "" -%}
   {%- for e in site.data.equipment -%}{%- if mod.equipment contains e.category -%}{%- assign eq_list = eq_list | push: e -%}{%- endif -%}{%- endfor -%}
 
@@ -38,7 +32,6 @@
     <div class="explorer__counts">
       <div><span class="explorer__num">{{ n_pub }}</span><span>{% include t.html en="papers" ko="논문" %}</span></div>
       <div><span class="explorer__num">{{ n_proj }}</span><span>{% include t.html en="projects" ko="과제" %}</span></div>
-      <div><span class="explorer__num">{{ mem_list.size }}</span><span>{% include t.html en="members" ko="구성원" %}</span></div>
       <div><span class="explorer__num">{{ eq_list.size }}</span><span>{% include t.html en="instruments" ko="장비" %}</span></div>
     </div>
     <div class="explorer__cols">
@@ -62,16 +55,6 @@
         <h3>{% include t.html en="Equipment" ko="보유 장비" %}</h3>
         <ul class="chips">{% for e in eq_list %}<li class="chip" title="{{ e.spec }}">{{ e.name }}</li>{% endfor %}</ul>
         {%- endif %}
-      </div>
-      <div>
-        <h3>{% include t.html en="Members" ko="구성원" %}</h3>
-        {%- if mem_list.size > 0 %}
-        <ul class="explorer__people">
-          {%- for m in mem_list %}
-          <li><a href="{{ '/members/' | relative_url }}#{{ m.name | slugify }}"><img src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" alt="" width="36" height="48" loading="lazy"><span>{{ m.name }}</span></a></li>
-          {%- endfor %}
-        </ul>
-        {%- else %}<p class="muted">{% include t.html en="Matched through papers and projects." ko="논문과 과제로 연결됩니다." %}</p>{% endif %}
       </div>
     </div>
   </div>
