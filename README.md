@@ -51,9 +51,9 @@ Every page reads from these data files. For example, the Members page, the home 
 
 모든 페이지는 이 데이터 파일을 읽습니다. 예를 들어 구성원 페이지, 홈 화면 숫자, 검색창, 연구 분야 탐색 화면은 모두 `_data/members.yml`을 읽습니다. 이 파일에서 한 번만 고치면 모든 페이지가 함께 바뀝니다.
 
-Most text exists in English and Korean. In the data files these come as pairs such as `en:` and `ko:` (or `name` and `name_ko`). The `EN / 한국어` switch at the top of the site chooses which one visitors see. If a Korean version is missing, the English text is shown in both modes.
+Most text exists in English and Korean. In the data files these come as pairs such as `en:` and `ko:` (or `name` and `name_ko`). The `EN / 한국어` switch at the top of the site chooses which one visitors see. If a Korean version is missing, the English text is shown in both modes. The site opens in **light mode** by default, and visitors can switch between light and dark mode using the moon/sun button in the top bar (saved in the browser).
 
-대부분의 글은 영어와 한국어 두 가지로 있습니다. 데이터 파일에서는 `en:`, `ko:` (또는 `name`, `name_ko`) 처럼 짝으로 적습니다. 사이트 상단의 `EN / 한국어` 버튼이 방문자에게 보일 언어를 고릅니다. 한국어가 비어 있으면 두 모드 모두 영어가 보입니다.
+대부분의 글은 영어와 한국어 두 가지로 있습니다. 데이터 파일에서는 `en:`, `ko:` (또는 `name`, `name_ko`) 처럼 짝으로 적습니다. 사이트 상단의 `EN / 한국어` 버튼이 방문자에게 보일 언어를 고릅니다. 한국어가 비어 있으면 두 모드 모두 영어가 보입니다. 사이트는 기본적으로 **라이트 모드(밝은 화면)**로 열리며, 상단의 달/해 버튼으로 다크 모드를 켜고 끌 수 있습니다 (브라우저에 저장됨).
 
 ---
 
@@ -209,9 +209,9 @@ Delete the member's whole block in `_data/members.yml` (from `- name:` down to t
 
 ### 5.5 Update the professor page · 교수 페이지 수정
 
-Edit `_data/professor.yml`. Contact details are at the top (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`). External links such as ResearchGate are in `links:`. The career timeline is the `career:` list, newest first:
+Edit `_data/professor.yml`. Contact details are at the top (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`). External links such as ResearchGate, Google Scholar and the university faculty page are in `links:`. The career timeline is the `career:` list, newest first:
 
-`_data/professor.yml`을 수정합니다. 연락처는 위쪽에 있고 (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`), ResearchGate 같은 외부 링크는 `links:`에 있습니다. 경력은 `career:` 목록이며 최신순입니다.
+`_data/professor.yml`을 수정합니다. 연락처는 위쪽에 있고 (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`), ResearchGate, Google Scholar, 학교 교수 소개 페이지 같은 외부 링크는 `links:`에 있습니다. 경력은 `career:` 목록이며 최신순입니다.
 
 ```yaml
   - { start: 2027.03, kind: service, en: "Dean, College of Engineering", ko: 공과대학장 }
@@ -223,9 +223,9 @@ Edit `_data/professor.yml`. Contact details are at the top (`phone`, `office_en`
 
 ### 5.6 Add a publication · 논문 추가
 
-Open `_data/publications.yml` and add the paper at the **top of its year** (the list is newest first). Use the split form when you can, so the title is shown in bold and the search works best:
+Open `_data/publications.yml` and add the paper at the **top of its year** (the list is newest first; within the same year and region/type, keep papers from the same conference grouped together, for example KIEES, ICROS, IEIE). Check that the paper is not already in the file before adding it. Use the split form when you can, so the title is shown in bold and the search works best:
 
-`_data/publications.yml`을 열어 **해당 연도의 맨 위**에 논문을 추가합니다 (최신순). 가능하면 아래처럼 나누어 적어야 제목이 굵게 보이고 검색도 잘 됩니다.
+`_data/publications.yml`을 열어 **해당 연도의 맨 위**에 논문을 추가합니다 (최신순이며, 같은 연도와 구분 안에서는 KIEES, ICROS, IEIE처럼 같은 학술대회 논문끼리 묶어 둡니다). 추가하기 전에 이미 등록된 논문인지 먼저 확인하세요. 가능하면 아래처럼 나누어 적어야 제목이 굵게 보이고 검색도 잘 됩니다.
 
 ```yaml
 - region: international          # international | domestic · 국제 | 국내
@@ -307,9 +307,9 @@ Edit `_data/equipment.yml`. Each item has `name` (and optional `name_ko`), `spec
 
 ### 5.10 Edit the lab introduction, contact and partners · 연구실 소개, 연락처, 협력 기관 수정
 
-Edit `_data/lab.yml`. It holds the lab name, tagline, the About text (`about.en` / `about.ko`), the purpose sentences, the research `areas` and `applications`, the RLRC texts, the joining message (`join`), the `contact` block (email, phone, address, map search text) and the `partners` logos shown in the footer. To add a partner, upload its logo to `assets/img/partners/` and add `{ name: ..., logo: file.webp, w: width, h: height }` with the image's pixel size.
+Edit `_data/lab.yml`. It holds the lab name, tagline, the About text (`about.en` / `about.ko`), the purpose sentences, the research `areas`, `applications` and hero sensing `modalities` (`EO`, `IR`, `HSI`, `SAR`, `Polarization`, `Radar`, `LiDAR`, `Raman`, `RGB-D`; each pill's bottom accent color is set in `assets/css/home.css` under `.hero__modalities li:nth-child(...)`), the RLRC texts, the joining message (`join`), the `contact` block (email, phone, address, map search text) and the `partners` logos shown in the footer. To add a partner, upload its logo to `assets/img/partners/` and add `{ name: ..., logo: file.webp, w: width, h: height }` with the image's pixel size.
 
-`_data/lab.yml`을 수정합니다. 연구실 이름, 한 줄 소개, 소개 글(`about.en` / `about.ko`), 연구 목표 문장, 연구 분야(`areas`)와 응용 분야(`applications`), RLRC 설명, 지원 안내(`join`), 연락처(`contact`: 이메일, 전화, 주소, 지도 검색어), 꼬리말의 협력 기관 로고(`partners`)가 들어 있습니다. 협력 기관을 추가하려면 로고를 `assets/img/partners/`에 올리고 이미지 픽셀 크기와 함께 `{ name: ..., logo: file.webp, w: 가로, h: 세로 }`를 추가합니다.
+`_data/lab.yml`을 수정합니다. 연구실 이름, 한 줄 소개, 소개 글(`about.en` / `about.ko`), 연구 목표 문장, 연구 분야(`areas`), 응용 분야(`applications`), 상단 센싱 모달리티 배지(`modalities`: `EO`, `IR`, `HSI`, `SAR`, `Polarization`, `Radar`, `LiDAR`, `Raman`, `RGB-D`; 각 배지 아래 색 줄은 `assets/css/home.css`의 `.hero__modalities li:nth-child(...)`에서 지정), RLRC 설명, 지원 안내(`join`), 연락처(`contact`: 이메일, 전화, 주소, 지도 검색어), 꼬리말의 협력 기관 로고(`partners`)가 들어 있습니다. 협력 기관을 추가하려면 로고를 `assets/img/partners/`에 올리고 이미지 픽셀 크기와 함께 `{ name: ..., logo: file.webp, w: 가로, h: 세로 }`를 추가합니다.
 
 ### 5.11 Edit the home page research domains · 홈 화면 연구 분야 수정
 
