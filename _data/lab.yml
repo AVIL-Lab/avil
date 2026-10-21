@@ -79,12 +79,16 @@ rlrc:
 
 join:
   en: >-
-    We work mainly on physical image sensing across many spectral bands and on AI
-    programming. Any motivated student interested in these areas is welcome. Students
-    interested in the lab, please contact us.
+    Our research spans computer vision, deep learning, multimodal physical sensing and
+    sensor fusion (EO, IR, HSI, SAR, Radar, LiDAR, Raman, RGB-D), and Physical AI
+    including vision-language-action (VLA) models, world models, and agentic robotics
+    for defense, healthcare, and autonomous systems. Motivated students interested in
+    these areas are welcome to contact us.
   ko: >-
-    다양한 스펙트럼 영역의 물리 영상 센싱 및 인공지능 프로그래밍을 주로 하며, 이러한 분야에 관심
-    있고 도전적인 학생은 누구나 환영합니다. 연구실에 관심 있는 학생은 아래로 연락 바랍니다.
+    컴퓨터 비전과 딥러닝, 다중 스펙트럼 물리 센싱 및 센서 융합(EO, IR, HSI, SAR, 레이더,
+    라이다, 라만, RGB-D), 그리고 국방·헬스케어·자율 시스템을 위한 비전-언어-행동(VLA) 모델,
+    월드 모델, 에이전틱 로보틱스 등 피지컬 AI를 연구합니다. 이 분야에 관심 있고 열정적인
+    학생은 언제든 아래로 연락 바랍니다.
 
 contact:
   email: sunghokim@yu.ac.kr
