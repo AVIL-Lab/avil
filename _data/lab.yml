@@ -16,12 +16,12 @@ about:
     The Advanced Visual Intelligence Lab (AVIL) is a research lab in the Department of
     Electronic Engineering at Yeungnam University working on computer vision and deep
     learning. Our research covers computer vision, deep learning and sensor fusion (EO,
-    IR, SAR, hyperspectral, polarization and more), applied to intelligent surveillance,
+    IR, SAR, hyperspectral, Raman, RGB-D and more), applied to intelligent surveillance,
     AR/VR, automatic target detection and recognition, and healthcare in the defense and
     medical domains.
   ko: >-
     지능형시각정보처리연구실(AVIL)은 컴퓨터비전 및 딥러닝 분야를 연구하는 영남대학교 전자공학과
-    연구실이다. 연구 분야는 컴퓨터 비전 및 딥러닝과 센서 융합(EO, IR, SAR, 초분광, 편광 등)이며
+    연구실이다. 연구 분야는 컴퓨터 비전 및 딥러닝과 센서 융합(EO, IR, SAR, 초분광, 라만, RGB-D 등)이며
     이는 국방 및 의료 분야에서 지능형 감시, AR/VR, 자동표적탐지/인식, 헬스케어 등에 응용하고 있다.
 
 purpose:
