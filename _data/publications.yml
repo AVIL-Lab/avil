@@ -5,6 +5,12 @@
 - region: international
   type: journal
   year: 2026
+  authors: Manar Alnaasan, Md Selim Sarowar & Sungho Kim*
+  title: 'Fusion VLM-Gait: RGB-D fusion in vision-language models for explainable multi-task Parkinsonian gait analysis'
+  venue: 'Scientific Reports, 2026. DOI: 10.1038/s41598-026-67440-x'
+- region: international
+  type: journal
+  year: 2026
   authors: Huanheng Zhang, Soon Kwon, Sungho Kim
   title: Mitigating Token Role Drift under Occlusion with No Inference Overhead for Compositional-Token Pose Estimation
   venue: Neurocomputing, 693, 133857, 2026
@@ -2750,12 +2756,6 @@
   authors: 윤국진, 장기정, 김성호, 권인소
   title: 이동 로봇을 위한 컬러 표식 기반 자기 위치 추정 기법
   venue: Journal of Automation and System Engineering, Vol. 7, No. 9, September, 2001
-- region: international
-  type: journal
-  year: null
-  authors: Manar Alnaasan, Selim Sarowar, and Sungho Kim
-  title: Explainable Parkinsons Disease Gait Recognition Using Multimodal RGB-D Fusion and Large Language Models
-  venue: arXiv.2512.04425
 - region: international
   type: journal
   year: null
