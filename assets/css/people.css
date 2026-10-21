@@ -107,13 +107,17 @@
 .alumni-year { display: grid; grid-template-columns: 80px 1fr; gap: 18px; }
 .alumni-year__label { margin: 6px 0 0; font-size: 1.1rem; color: var(--brand); }
 .alumni-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
-.alum { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: center; padding: 10px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
-.alum img { width: 48px; height: 64px; object-fit: cover; border-radius: 8px; }
+.alum { display: grid; grid-template-columns: 54px 1fr; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+.alum img { width: 54px; height: 72px; object-fit: cover; border-radius: 8px; }
+.alum__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .alum p { margin: 0; }
 .alum__name { font-weight: 700; color: var(--ink); font-size: .95rem; }
 .alum__name span { font-weight: 500; color: var(--muted); }
 .alum__meta { font-size: .76rem; color: var(--muted); }
 .alum__next { display: flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--text); }
+.alum__social { display: flex; margin-top: 5px; }
+.alum__social .social { width: 100%; height: 26px; font-size: .74rem; }
+.social--placeholder { opacity: .45; border-style: dashed; color: var(--muted); pointer-events: none; user-select: none; }
 
 @media (max-width: 900px) {
   .prof { grid-template-columns: 1fr; }

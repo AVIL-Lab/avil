@@ -194,12 +194,12 @@ When a member graduates: (1) delete their block from `_data/members.yml`; (2) ad
 구성원이 졸업하면 (1) `_data/members.yml`에서 해당 블록을 지우고, (2) `_data/alumni.yml` **맨 위**에 항목을 추가하고 (최신순), (3) 사진 파일은 그대로 둡니다. `_data/domains.yml`에 이름이 있으면 거기서도 지웁니다.
 
 ```yaml
-- { name_ko: 홍길동, name: Gildong Hong, degree: M.S., graduated: 2027-02, next: Samsung Electronics, next_ko: 삼성전자, photo: gildong-hong.webp }
+- { name_ko: 홍길동, name: Gildong Hong, degree: M.S., graduated: 2027-02, next: Samsung Electronics, next_ko: 삼성전자, photo: gildong-hong.webp, linkedin: "" }
 ```
 
-`graduated` is the graduation month as `YYYY-MM`. `next` / `next_ko` is where they went (company, institute or school); leave both out if unknown. Alumni are grouped by graduation year, and the "Where our alumni went" chart counts the `next` values automatically.
+`graduated` is the graduation month as `YYYY-MM`. `next` / `next_ko` is where they went (company, institute or school); leave both out if unknown. `linkedin` is the full LinkedIn profile URL (paste the URL without `?utm_source=…` parameters, or leave `""` if unknown so the card keeps a placeholder button). To add a LinkedIn link for an existing alumnus later, replace `linkedin: ""` on their line in `_data/alumni.yml` with the profile URL. Alumni are grouped by graduation year, and the "Where our alumni went" chart counts the `next` values automatically.
 
-`graduated`는 졸업 연월(`YYYY-MM`)입니다. `next` / `next_ko`는 졸업 후 진로(회사, 연구소, 학교)이며 모르면 둘 다 빼면 됩니다. 졸업생은 졸업 연도별로 묶이고, "졸업생 진로" 그래프는 `next` 값을 자동으로 셉니다.
+`graduated`는 졸업 연월(`YYYY-MM`)입니다. `next` / `next_ko`는 졸업 후 진로(회사, 연구소, 학교)이며 모르면 둘 다 빼면 됩니다. `linkedin`은 LinkedIn 프로필 전체 주소입니다 (`?utm_source=…` 뒷부분은 지우고 넣으며, 모르면 `""`로 두어 카드에 자리 표시 버튼이 보이게 합니다). 기존 졸업생의 LinkedIn 주소를 나중에 추가하려면 `_data/alumni.yml`의 해당 줄에서 `linkedin: ""`에 주소를 채워 넣으면 됩니다. 졸업생은 졸업 연도별로 묶이고 "졸업생 진로" 그래프는 `next` 값을 자동으로 셉니다.
 
 ### 5.4 Remove a member · 구성원 삭제
 
@@ -209,9 +209,9 @@ Delete the member's whole block in `_data/members.yml` (from `- name:` down to t
 
 ### 5.5 Update the professor page · 교수 페이지 수정
 
-Edit `_data/professor.yml`. Contact details are at the top (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`). External links such as ResearchGate, Google Scholar and the university faculty page are in `links:`. The career timeline is the `career:` list, newest first:
+Edit `_data/professor.yml`. Contact details are at the top (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`). External links such as ResearchGate, Google Scholar and the university faculty page are in `links:`. The `scholar:` block holds the Google Scholar citation metrics (`citations_all`, `h_index_all`, `i10_index_all`, `per_year`, and `updated`) displayed in the citation card on the Professor page; this block is also refreshed automatically by the weekly updater (`scripts/update_deadlines.py`). The career timeline is the `career:` list, newest first:
 
-`_data/professor.yml`을 수정합니다. 연락처는 위쪽에 있고 (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`), ResearchGate, Google Scholar, 학교 교수 소개 페이지 같은 외부 링크는 `links:`에 있습니다. 경력은 `career:` 목록이며 최신순입니다.
+`_data/professor.yml`을 수정합니다. 연락처는 위쪽에 있고 (`phone`, `office_en`, `office_ko`, `email`, `linkedin`, `homepage`), ResearchGate, Google Scholar, 학교 교수 소개 페이지 같은 외부 링크는 `links:`에 있습니다. `scholar:` 블록에는 교수 페이지의 Google Scholar 인용 카드에 표시되는 지표(`citations_all`, `h_index_all`, `i10_index_all`, `per_year`, `updated`)가 들어 있으며 매주 자동 업데이트 스크립트(`scripts/update_deadlines.py`)가 최신 값으로 갱신합니다. 경력은 `career:` 목록이며 최신순입니다.
 
 ```yaml
   - { start: 2027.03, kind: service, en: "Dean, College of Engineering", ko: 공과대학장 }
