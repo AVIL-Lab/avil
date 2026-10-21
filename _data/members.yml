@@ -5,8 +5,8 @@
 #   role        postdoc | phd | ms | undergrad  (drives the group headings)
 #   photo       file in assets/img/members/
 #   interests   research areas as listed by the member
-#   email       contact shown on the card (optional)
-#   linkedin    full LinkedIn profile URL; leave "" until known (the card keeps the slot empty)
+#   email       contact shown on the card as a linked Email button (optional)
+#   linkedin    full LinkedIn profile URL; leave "" until known (shows a placeholder on the card)
 #   homepage    personal or project homepage URL; leave "" until known
 #   about       optional short bio shown in the card's "About me" pop-up, with
 #               `en` and `ko` texts. Markdown works: **bold**, [link](https://...),

@@ -15,7 +15,7 @@ This guide is written for a new administrator who has never worked on the site. 
 ## Contents · 목차
 
 1. How the site works · 사이트 작동 방식
-2. Two ways to edit · 수정하는 두 가지 방법
+2. Three ways to edit · 수정하는 세 가지 방법
 3. Writing YAML without errors · YAML 작성 규칙
 4. Where everything lives · 파일 위치
 5. Step-by-step tasks · 작업별 안내
@@ -38,6 +38,7 @@ This guide is written for a new administrator who has never worked on the site. 
 8. Troubleshooting · 문제 해결
 9. Access and accounts · 권한과 계정
 10. Preview on your own computer · 내 컴퓨터에서 미리 보기
+11. Updating with an AI Assistant or Agent (ChatGPT, Claude, Cursor) · AI(ChatGPT, Claude 등)에게 프롬프트로 수정 맡기기
 
 ---
 
@@ -57,7 +58,7 @@ Most text exists in English and Korean. In the data files these come as pairs su
 
 ---
 
-## 2. Two ways to edit · 수정하는 두 가지 방법
+## 2. Three ways to edit · 수정하는 세 가지 방법
 
 **Option A: edit on the GitHub website (recommended, nothing to install).** Open <https://github.com/AVIL-Lab/avil>, click into the file you want (for example `_data/members.yml`), click the pencil icon ✏️ ("Edit this file"), make the change, then click **Commit changes…**, write a short message such as `Add new member Hong Gildong`, keep "Commit directly to the main branch" selected, and confirm. To upload a photo, open the target folder (for example `assets/img/members/`), click **Add file → Upload files**, drop the image in, and commit.
 
@@ -75,6 +76,10 @@ git add -A
 git commit -m "Add new member Hong Gildong"
 git push origin main
 ```
+
+**Option C: ask an AI assistant or coding agent (ChatGPT, Claude, Claude Code, Cursor, Antigravity, Copilot).** Even if you do not know HTML, CSS or YAML, you can ask an AI agent to update the repository for you. Always tell the AI to read `README.md` first and copy the ready-made prompt in **Section 11** so it preserves the site's layout, subpages, and data structure.
+
+**방법 C: AI 어시스턴트나 코딩 에이전트(ChatGPT, Claude, Claude Code, Cursor 등)에게 맡기기.** HTML, CSS, YAML을 전혀 몰라도 AI에게 프롬프트로 수정을 맡길 수 있습니다. AI가 사이트의 전체 레이아웃과 서브페이지 구조, 데이터 형식을 깨뜨리지 않도록 반드시 `README.md`를 먼저 읽게 하거나 **11장**의 프롬프트를 복사해서 전달하세요.
 
 Whichever option you use, make one logical change per commit with a clear message. If something breaks, it is then easy to see which change caused it and undo it.
 
@@ -175,9 +180,9 @@ The `role` values mean: `postdoc` = Post-Doc, `phd` = Ph.D. student, `ms` = Mast
 
 ### 5.2 Edit a member (email, LinkedIn, homepage, research areas, About me) · 구성원 정보 수정
 
-Find the member's block in `_data/members.yml` and change the field. For LinkedIn, paste the profile address and delete everything from `?` onward (for example `?utm_source=share_via…`), so it looks like `https://www.linkedin.com/in/name-123`. If a field is unknown, leave it as `""`; the card keeps an empty space where the button would be. To change research areas, edit the `interests:` list.
+Find the member's block in `_data/members.yml` and change the field. On the card, `email` appears as a linked **Email** button (`mailto:`), and `linkedin` appears as a **LinkedIn** button. For LinkedIn, paste the profile address and delete everything from `?` onward (for example `?utm_source=share_via…`), so it looks like `https://www.linkedin.com/in/name-123`. If `linkedin` is unknown, leave it as `""` and the card displays a muted placeholder button until filled in. To change research areas, edit the `interests:` list.
 
-`_data/members.yml`에서 해당 구성원 블록을 찾아 값을 고칩니다. LinkedIn은 프로필 주소를 붙여 넣고 `?`부터 뒤를 모두 지워서 (예: `?utm_source=share_via…`) `https://www.linkedin.com/in/name-123` 형태로 만듭니다. 모르는 값은 `""`로 두면 카드에 버튼 자리만 비어 보입니다. 연구 분야는 `interests:` 목록을 고칩니다.
+`_data/members.yml`에서 해당 구성원 블록을 찾아 값을 고칩니다. 카드에서 `email`은 연결된 **Email** 버튼(`mailto:`)으로, `linkedin`은 **LinkedIn** 버튼으로 표시됩니다. LinkedIn은 프로필 주소를 붙여 넣고 `?`부터 뒤를 모두 지워서 (예: `?utm_source=share_via…`) `https://www.linkedin.com/in/name-123` 형태로 만듭니다. `linkedin` 값을 모르면 `""`로 두면 카드에 자리 표시 버튼이 나타납니다. 연구 분야는 `interests:` 목록을 고칩니다.
 
 Every card has an **About me** button that opens a pop-up with the member's photo, research areas, links and introduction. The introduction comes from the `about:` field (`en` and `ko`, see the example in 5.1). Write it in Markdown: `**bold**`, `[link text](https://...)`, and an empty line between paragraphs. Keep the text indented under `en: |` / `ko: |`. If `about` is missing, the pop-up says that no introduction has been added yet.
 
@@ -451,6 +456,44 @@ bundle exec jekyll serve       # then open http://localhost:4000/avil/
 The preview uses the same Jekyll version as GitHub Pages (`github-pages` gem in the `Gemfile`), so if it builds on your computer it will build on GitHub. Stop the preview with **Ctrl + C**.
 
 미리 보기는 GitHub Pages와 같은 Jekyll 버전(`Gemfile`의 `github-pages`)을 사용하므로, 내 컴퓨터에서 빌드되면 GitHub에서도 빌드됩니다. 미리 보기는 **Ctrl + C**로 끝냅니다.
+
+---
+
+## 11. Updating with an AI Assistant or Agent (ChatGPT, Claude, Cursor) · AI(ChatGPT, Claude 등)에게 프롬프트로 수정 맡기기
+
+If you do not know how this repository works and want to update it using **ChatGPT**, **Claude**, **Claude Code**, **Cursor**, **Antigravity**, or **GitHub Copilot**, copy the prompt box below and paste it to the AI before (or together with) your request. If you are using a web chat (ChatGPT / Claude web), also attach `README.md` and the file you want to edit (for example `_data/members.yml` or `_data/publications.yml`).
+
+이 저장소 구조를 전혀 모르는 상태에서 **ChatGPT**, **Claude**, **Claude Code**, **Cursor**, **Antigravity**, **GitHub Copilot** 같은 AI에게 프롬프트로 수정을 시키고 싶다면, 아래 프롬프트 상자를 복사해 수정 요청과 함께 AI에게 전달하세요. 웹 채팅(ChatGPT / Claude 웹 버전)을 쓸 때는 `README.md`와 수정할 파일(예: `_data/members.yml`, `_data/publications.yml`)을 함께 첨부하면 됩니다.
+
+```text
+You are updating the AVIL Lab website repository (https://github.com/AVIL-Lab/avil, live at https://avil-lab.github.io/avil/).
+Before making any changes, read README.md completely and strictly follow the existing architecture, webpage/subpage layout, styling, and data conventions:
+
+1. Data-Driven Jekyll Architecture:
+   - Never hardcode content inside HTML page templates (index.html, professor.html, members.html, research.html, projects.html, publications.html, news.html, gallery.html, contact.html, deadlines.html, journals.html) when it belongs in `_data/*.yml`.
+   - All content updates go into `_data/`:
+     * `_data/members.yml` (current members: `name`, optional `name_ko`, `role` in `postdoc|phd|ms|undergrad`, `photo`, `interests`, `email`, `linkedin`, `homepage`, optional `aliases`, optional `about.en` / `about.ko`). Leave unknown `linkedin` or `homepage` as `""`.
+     * `_data/alumni.yml` (alumni newest first: `name_ko`, `name`, `degree`, `graduated` as `YYYY-MM`, optional `next`/`next_ko`, `photo`, `linkedin` URL or `""`).
+     * `_data/professor.yml` (PI profile, contact, `links`, `scholar` citation metrics, `career` timeline).
+     * `_data/publications.yml` (papers newest year first; within the same year, region, and type, group consecutive papers from the same conference together, e.g., KIEES, ICROS, IEIE).
+     * `_data/events.yml` (news/gallery items newest first, with matching full photo in `assets/img/gallery/` and 640x427 thumbnail in `assets/img/gallery/thumbs/`).
+     * `_data/projects.yml`, `_data/equipment.yml`, `_data/lab.yml`, `_data/domains.yml`, `_data/themes.yml`, `_data/modalities.yml`, `_data/navigation.yml`.
+   - Do NOT manually edit `_data/conferences.yml`, `_data/journals.yml`, or `_data/deadlines_meta.yml`; these are auto-generated weekly by `scripts/update_deadlines.py`.
+
+2. Webpage, Subpage & Layout Rules:
+   - Preserve the existing layout (`_layouts/default.html`), shared includes (`_includes/header.html`, `_includes/footer.html`, `_includes/page-hero.html`, `_includes/sensing-explorer.html`, `_includes/t.html`), and compact `.page-hero` dimensions in `assets/css/base.css`.
+   - Keep full bilingual (English + Korean) support on every page and data entry (`en`/`ko` pairs and `{% include t.html en=... ko=... %}`).
+   - Preserve the default light theme (`data-theme="light"`) and dark mode toggle (`data-theme="dark"`), using the existing CSS variables (`--bg`, `--surface`, `--surface-2`, `--ink`, `--text`, `--muted`, `--line`, `--brand`, etc.) in `assets/css/base.css` and page stylesheets (`home.css`, `people.css`, `research.css`, `publications.css`, `content.css`, `tracker.css`).
+   - On `members.html`: current member cards render `email` as a linked `Email` button (`mailto:`), `linkedin` as an active button or `.social--placeholder` when `""`, `homepage` when non-empty, and `about` inside the native `<dialog class="about-dialog">` pop-up. Alumni cards render `linkedin` as an active button or `.social--placeholder` when `""`.
+   - In `_data/lab.yml` and `assets/css/home.css`: hero sensing modalities (`EO`, `IR`, `HSI`, `SAR`, `Polarization`, `Radar`, `LiDAR`, `Raman`, `RGB-D`) have matching `.hero__modalities li:nth-child(...)` accent colors in `assets/css/home.css`.
+
+3. Verification Before Finishing:
+   - Quote any YAML string containing `: ` (colon + space) or special characters, and indent with 2 spaces (never tabs).
+   - Validate all modified `.yml` files with `python3 -c "import yaml, glob; [yaml.safe_load(open(f)) for f in glob.glob('_data/*.yml')]"` to ensure the GitHub Pages Jekyll build will not fail.
+
+Task to perform:
+[DESCRIBE YOUR UPDATE HERE: e.g., "Add a new MS student ...", "Add this 2026 conference paper ...", or "Update the LinkedIn link for ..."]
+```
 
 ---
 
