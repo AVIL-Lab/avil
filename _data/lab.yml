@@ -25,8 +25,17 @@ about:
     이는 국방 및 의료 분야에서 지능형 감시, AR/VR, 자동표적탐지/인식, 헬스케어 등에 응용하고 있다.
 
 purpose:
-  - Our purpose is developing Human-like visual intelligence capability with computer vision.
-  - It aims to develop Scene Interpretation. Especially, agentic AI-based remote object perception using multi-modal physical sensing (EO/IR/HSI/Radar/LiDAR/Raman/RGB-D).
+  en: >-
+    We advance human-level visual and physical intelligence through computer vision,
+    deep learning, and multimodal sensor fusion across EO, IR, HSI, SAR, Polarization,
+    Radar, LiDAR, Raman, and RGB-D, developing physics-grounded scene interpretation,
+    remote perception, vision-language-action (VLA) models, world models, and agentic
+    robotics for defense, healthcare, and autonomous physical agents.
+  ko: >-
+    컴퓨터 비전, 딥러닝, 그리고 다중모달 물리 센싱 융합(EO, IR, HSI, SAR, 편광, 레이더,
+    라이다, 라만, RGB-D)을 통해 인간 수준의 시각 및 피지컬 지능을 구현하며, 물리 기반 장면
+    해석과 원격 객체 인지부터 비전-언어-행동(VLA) 모델, 월드 모델, 에이전틱 로보틱스에
+    이르기까지 국방, 헬스케어, 자율 물리 에이전트를 위한 지능형 시스템을 연구합니다.
 
 # Research areas: the first two are from the Wix "About" text; robotics was added
 # by Selim Sarowar on 2026-10-17.

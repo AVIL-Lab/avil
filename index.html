@@ -21,7 +21,7 @@ js: [home]
         <span class="hero__title-ko" lang="ko">{{ lab.name_ko }} (AVIL)</span>
       </h1>
       <p class="hero__tagline">{{ lab.tagline }}</p>
-      <p class="hero__lead">{{ lab.purpose[0] }} {{ lab.purpose[1] }}</p>
+      <p class="hero__lead">{% include t.html en=lab.purpose.en ko=lab.purpose.ko %}</p>
       <ul class="hero__modalities" aria-label="Sensing modalities">
         {%- for m in lab.modalities %}<li>{{ m }}</li>{% endfor %}
       </ul>
@@ -122,8 +122,7 @@ js: [home]
       <figure class="purpose card">
         <img src="{{ '/assets/img/brand/avil-logo.webp' | relative_url }}" alt="{{ lab.name }} logo" width="320" height="154" loading="lazy">
         <blockquote>
-          <p>{{ lab.purpose[0] }}</p>
-          <p>{{ lab.purpose[1] }}</p>
+          <p>{% include t.html en=lab.purpose.en ko=lab.purpose.ko %}</p>
         </blockquote>
         <figcaption>{% include t.html en="Our purpose" ko="연구 목표" %}</figcaption>
       </figure>

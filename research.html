@@ -6,9 +6,8 @@ js: [home]
 description: "Research areas, themes and sensing modalities of the Advanced Visual Intelligence Lab, Yeungnam University."
 ---
 {%- assign lab = site.data.lab -%}
-{%- assign purpose0 = lab.purpose | first -%}
 {% include lab-names.html %}
-{% include page-hero.html eyebrow_en="Research" eyebrow_ko="연구" title_en="Visual intelligence from physical sensing" title_ko="물리 센싱 기반 시각 지능" lead_en=purpose0 %}
+{% include page-hero.html eyebrow_en="Research" eyebrow_ko="연구" title_en="Visual intelligence from physical sensing" title_ko="물리 센싱 기반 시각 지능" %}
 
 <section class="section">
   <div class="wrap research-intro">
@@ -16,7 +15,7 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
       <p class="eyebrow">{% include t.html en="Purpose" ko="연구 목표" %}</p>
       <h2>{% include t.html en="Scene interpretation with multimodal physical sensing" ko="멀티모달 물리 센싱 기반 장면 해석" %}</h2>
       <span class="rule" aria-hidden="true"></span>
-      <p class="research-intro__lead">{{ lab.purpose[1] }}</p>
+      <p class="research-intro__lead">{% include t.html en=lab.purpose.en ko=lab.purpose.ko %}</p>
       <p>{% include t.html en=lab.about.en ko=lab.about.ko %}</p>
       <div class="research-intro__grid">
         <div class="card card--pad">
