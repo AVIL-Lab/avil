@@ -19,6 +19,27 @@ links:
   - { label: Google Scholar, url: "https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en&oi=ao" }
   - { label: Yeungnam University faculty page, url: "https://www.yu.ac.kr/main/faculty/faculty-window.do?p_no=20773" }
 
+scholar:
+  user: 3TptC38AAAAJ
+  url: "https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en&oi=ao"
+  updated: "2026-10-21"
+  since_year: 2021
+  citations_all: 2822
+  citations_since: 1581
+  h_index_all: 27
+  h_index_since: 20
+  i10_index_all: 66
+  i10_index_since: 36
+  by_year:
+    - { year: 2019, citations: 150 }
+    - { year: 2020, citations: 128 }
+    - { year: 2021, citations: 211 }
+    - { year: 2022, citations: 189 }
+    - { year: 2023, citations: 256 }
+    - { year: 2024, citations: 273 }
+    - { year: 2025, citations: 401 }
+    - { year: 2026, citations: 250 }
+
 # kind: position | service | research | education
 # end: blank for "present"
 career:

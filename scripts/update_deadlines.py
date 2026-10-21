@@ -341,6 +341,41 @@ def main() -> None:
         f.write("# Written by scripts/update_deadlines.py. Do not edit.\n")
         f.write(yaml.safe_dump(meta, allow_unicode=True, sort_keys=False, width=1000))
 
+    # Professor Google Scholar metrics: keep _data/professor.yml synced weekly.
+    prof_path = os.path.join(args.out, "professor.yml")
+    if not args.no_web and os.path.exists(prof_path):
+        try:
+            with open(prof_path, encoding="utf-8") as f:
+                prof = yaml.safe_load(f) or {}
+            sc = prof.get("scholar") or {}
+            uid = sc.get("user")
+            if uid:
+                surl = f"https://scholar.google.com/citations?user={uid}&hl=en&oi=ao"
+                req = urllib.request.Request(surl, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"})
+                with urllib.request.urlopen(req, timeout=15) as r:
+                    shtml = r.read(1_000_000).decode("utf-8", errors="ignore")
+                vals = [int(v) for v in re.findall(r'class="gsc_rsb_std">(\d+)<', shtml)]
+                hdrs = re.findall(r'class="gsc_rsb_sth"[^>]*>([^<]+)<', shtml)
+                years = [int(y) for y in re.findall(r'class="gsc_g_t"[^>]*>(\d{4})<', shtml)]
+                counts = [int(c) for c in re.findall(r'class="gsc_g_al">(\d+)<', shtml)]
+                if len(vals) >= 6:
+                    sc["updated"] = today
+                    if len(hdrs) >= 2:
+                        m_yr = re.search(r"(\d{4})", hdrs[1])
+                        if m_yr:
+                            sc["since_year"] = int(m_yr.group(1))
+                    sc["citations_all"], sc["citations_since"] = vals[0], vals[1]
+                    sc["h_index_all"], sc["h_index_since"] = vals[2], vals[3]
+                    sc["i10_index_all"], sc["i10_index_since"] = vals[4], vals[5]
+                    if years and len(years) == len(counts):
+                        sc["by_year"] = [{"year": y, "citations": c} for y, c in list(zip(years, counts))[-8:]]
+                    prof["scholar"] = sc
+                    with open(prof_path, "w", encoding="utf-8") as f:
+                        f.write(yaml.safe_dump(prof, allow_unicode=True, sort_keys=False, width=1000))
+                    log.append(f"Google Scholar ({uid}): {vals[0]} citations, h-index {vals[2]}, i10-index {vals[4]}")
+        except Exception as exc:
+            log.append(f"Google Scholar update skipped: {type(exc).__name__}")
+
     summary = [f"## Deadline update {today}", *[f"- {line}" for line in log],
                f"- Website checks: deadline found on {found} of {checked} official sites",
                "", "### Changes", *(f"- {c}" for c in changes or ["none"]),

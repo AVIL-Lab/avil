@@ -46,12 +46,12 @@ jobs:
       - name: Commit if changed
         run: |
           # deadlines_meta.yml always carries the run date; commit only when real data changed.
-          if git diff --quiet -- _data/conferences.yml _data/journals.yml; then
-            echo "No deadline or journal changes."
+          if git diff --quiet -- _data/conferences.yml _data/journals.yml _data/professor.yml; then
+            echo "No deadline, journal or scholar changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add _data/conferences.yml _data/journals.yml _data/deadlines_meta.yml
-          git commit -m "chore(data): weekly deadline update $(date -u +%F)"
+          git add _data/conferences.yml _data/journals.yml _data/deadlines_meta.yml _data/professor.yml
+          git commit -m "chore(data): weekly deadline and scholar update $(date -u +%F)"
           git push

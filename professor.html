@@ -7,7 +7,7 @@ description: "Prof. Sungho Kim, Principal Investigator of the Advanced Visual In
 ---
 {%- assign p = site.data.professor -%}
 {%- assign lab = site.data.lab -%}
-{% include page-hero.html eyebrow_en="Principal Investigator" eyebrow_ko="지도교수" title_en="Professor" title_ko="지도교수" %}
+{% include page-hero.html eyebrow_en="Principal Investigator" eyebrow_ko="지도교수" title_en="Professor" title_ko="지도교수" compact=true %}
 
 <section class="section">
   <div class="wrap prof">
@@ -32,6 +32,52 @@ description: "Prof. Sungho Kim, Principal Investigator of the Advanced Visual In
         <a class="btn btn--ghost btn--sm" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
         {%- endfor %}
       </div>
+      {%- if p.scholar %}
+      {%- assign sc = p.scholar -%}
+      {%- assign max_c = 1 -%}
+      {%- for y in sc.by_year -%}{%- if y.citations > max_c -%}{%- assign max_c = y.citations -%}{%- endif -%}{%- endfor -%}
+      <div class="scholar-card" data-scholar-user="{{ sc.user }}">
+        <div class="scholar-card__head">
+          <span class="scholar-card__title">
+            <svg class="i i--sm" aria-hidden="true"><use href="#i-cap"/></svg>
+            <span>Google Scholar</span>
+          </span>
+          <a class="scholar-card__badge" href="{{ sc.url }}" target="_blank" rel="noopener" title="Verified on Google Scholar ({{ sc.updated }})">
+            <span class="scholar-card__dot" aria-hidden="true"></span>
+            <span data-scholar-status>{% include t.html en="Live metrics" ko="인용 지표" %}</span>
+            <svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg>
+          </a>
+        </div>
+        <div class="scholar-card__grid">
+          <div class="scholar-stat">
+            <span class="scholar-stat__label">{% include t.html en="Citations" ko="피인용" %}</span>
+            <span class="scholar-stat__val mono" data-scholar="citations_all">{{ sc.citations_all }}</span>
+            <span class="scholar-stat__sub mono">{% include t.html en="Since" ko="이후" %} <span data-scholar="since_year">{{ sc.since_year }}</span>: <b data-scholar="citations_since">{{ sc.citations_since }}</b></span>
+          </div>
+          <div class="scholar-stat">
+            <span class="scholar-stat__label">h-index</span>
+            <span class="scholar-stat__val mono" data-scholar="h_index_all">{{ sc.h_index_all }}</span>
+            <span class="scholar-stat__sub mono">{% include t.html en="Since" ko="이후" %} {{ sc.since_year }}: <b data-scholar="h_index_since">{{ sc.h_index_since }}</b></span>
+          </div>
+          <div class="scholar-stat">
+            <span class="scholar-stat__label">i10-index</span>
+            <span class="scholar-stat__val mono" data-scholar="i10_index_all">{{ sc.i10_index_all }}</span>
+            <span class="scholar-stat__sub mono">{% include t.html en="Since" ko="이후" %} {{ sc.since_year }}: <b data-scholar="i10_index_since">{{ sc.i10_index_since }}</b></span>
+          </div>
+        </div>
+        {%- if sc.by_year and sc.by_year.size > 0 %}
+        <div class="scholar-bars" data-scholar-bars aria-label="Citations per year">
+          {%- for y in sc.by_year %}
+          {%- assign pct = y.citations | times: 100 | divided_by: max_c -%}
+          <div class="scholar-bar" title="{{ y.year }}: {{ y.citations }} citations">
+            <span class="scholar-bar__fill" style="height: {{ pct }}%"></span>
+            <span class="scholar-bar__yr mono">{{ y.year | slice: 2, 2 }}</span>
+          </div>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </div>
+      {%- endif %}
     </aside>
 
     <div class="prof__main">

@@ -93,6 +93,18 @@
     });
   }
 
+  function initScholar() {
+    var card = document.querySelector("[data-scholar-user]");
+    if (!card) return;
+    // Format numbers with commas on initial render
+    card.querySelectorAll("[data-scholar]").forEach(function (el) {
+      var k = el.getAttribute("data-scholar");
+      if (k === "since_year") return;
+      var n = parseInt(el.textContent.replace(/,/g, ""), 10);
+      if (!isNaN(n)) el.textContent = n.toLocaleString();
+    });
+  }
+
   function ready(fn) { if (document.readyState !== "loading") fn(); else document.addEventListener("DOMContentLoaded", fn); }
-  ready(function () { [initCareer, initMembers, initAbout].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.error(e); } }); });
+  ready(function () { [initCareer, initMembers, initAbout, initScholar].forEach(function (f) { try { f(); } catch (e) { if (window.console) console.error(e); } }); });
 })();

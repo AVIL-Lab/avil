@@ -16,6 +16,24 @@
 .prof__title { margin: 0; font-weight: 700; color: var(--brand); }
 .prof__dept { margin: 2px 0 0; font-size: .9rem; color: var(--muted); }
 .prof__links { display: flex; flex-wrap: wrap; gap: 8px; }
+.scholar-card { padding: 13px 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); display: grid; gap: 10px; }
+.scholar-card__head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.scholar-card__title { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 750; color: var(--ink); }
+.scholar-card__title .i { color: var(--brand); }
+.scholar-card__badge { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font: 600 .68rem/1.3 var(--mono); color: var(--muted); }
+.scholar-card__badge:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
+.scholar-card__dot { width: 6px; height: 6px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 2px rgba(22, 163, 74, .22); }
+.scholar-card__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.scholar-stat { padding: 8px 9px; border-radius: 9px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.scholar-stat__label { font: 650 .66rem/1.1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.scholar-stat__val { font-size: 1.18rem; font-weight: 800; color: var(--ink); line-height: 1.15; }
+.scholar-stat__sub { font-size: .66rem; color: var(--muted); white-space: nowrap; }
+.scholar-stat__sub b { color: var(--text); font-weight: 700; }
+.scholar-bars { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; align-items: end; height: 48px; padding-top: 6px; border-top: 1px dashed var(--line); }
+.scholar-bar { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 3px; }
+.scholar-bar__fill { width: 100%; max-width: 18px; min-height: 3px; border-radius: 3px 3px 1px 1px; background: linear-gradient(180deg, var(--brand), #0891b2); opacity: .85; transition: opacity .15s; }
+.scholar-bar:hover .scholar-bar__fill { opacity: 1; }
+.scholar-bar__yr { font-size: .62rem; color: var(--muted); line-height: 1; }
 .prof__main { display: grid; gap: 44px; min-width: 0; }
 .roles { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .roles__item { display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); box-shadow: inset 4px 0 var(--k, var(--brand)); }
@@ -99,7 +117,7 @@
 @media (max-width: 900px) {
   .prof { grid-template-columns: 1fr; }
   .prof__card { position: static; grid-template-columns: 160px 1fr; }
-  .prof__card .contact-list, .prof__card .prof__links { grid-column: 1 / -1; }
+  .prof__card .contact-list, .prof__card .prof__links, .prof__card .scholar-card { grid-column: 1 / -1; }
   .timeline__item { grid-template-columns: 1fr; gap: 2px; }
   .timeline__kind { display: none; }
 }
