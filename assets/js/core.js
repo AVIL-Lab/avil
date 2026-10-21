@@ -55,9 +55,7 @@
 
   /* ---- Theme ------------------------------------------------------------- */
   function isDark() {
-    var t = d.getAttribute("data-theme");
-    if (t) return t === "dark";
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return d.getAttribute("data-theme") === "dark";
   }
   function initTheme() {
     document.querySelectorAll(".js-theme").forEach(function (btn) {

@@ -10,7 +10,7 @@
   (function () {
     var d = document.documentElement, s = null, l = null;
     try { s = localStorage.getItem("avil-theme"); l = localStorage.getItem("avil-lang"); } catch (e) {}
-    if (s === "dark" || s === "light") d.setAttribute("data-theme", s);
+    d.setAttribute("data-theme", s === "dark" ? "dark" : "light");
     if (l === "ko" || l === "en") { d.setAttribute("data-lang", l); d.setAttribute("lang", l); }
   })();
 </script>

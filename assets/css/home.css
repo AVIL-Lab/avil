@@ -71,7 +71,6 @@
 .purpose { margin: 0; padding: 22px; }
 .purpose img { width: 210px; margin-bottom: 12px; }
 :root[data-theme="dark"] .purpose img { filter: brightness(1.8); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .purpose img { filter: brightness(1.8); } }
 .purpose blockquote { margin: 0; padding-left: 14px; border-left: 3px solid var(--brand); color: var(--ink); font-size: .98rem; }
 .purpose blockquote p { margin: 0 0 8px; }
 .purpose figcaption { margin-top: 8px; font: 600 .72rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }

@@ -123,8 +123,7 @@
       var btn = stage.querySelector("[data-demo-launch]");
       if (!btn) return;
       btn.addEventListener("click", function () {
-        var dark = document.documentElement.getAttribute("data-theme") === "dark" ||
-          (!document.documentElement.getAttribute("data-theme") && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        var dark = document.documentElement.getAttribute("data-theme") === "dark";
         var f = document.createElement("iframe");
         f.className = "demo__frame";
         f.src = stage.getAttribute("data-src") + "&theme=" + (dark ? "dark" : "light");

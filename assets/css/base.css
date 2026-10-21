@@ -36,21 +36,6 @@
   --header-h: 64px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #08111b; --surface: #0f1b29; --surface-2: #142335; --surface-3: #1a2d43;
-    --ink: #eef4fa; --text: #d5dfea; --muted: #93a6ba; --line: #213449; --line-strong: #2d4560;
-    --brand: #7db8ea; --brand-strong: #a4cdf2; --brand-soft: #14304b;
-    --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4); --shadow: 0 10px 30px -12px rgba(0, 0, 0, .7);
-    --t-conference: #9dbcfb; --t-conference-bg: #172a4d;
-    --t-award: #f5c46b; --t-award-bg: #3a2b0e;
-    --t-rlrc: #6ee0d2; --t-rlrc-bg: #0e3532;
-    --t-graduation: #c4a8fb; --t-graduation-bg: #2b1d4d;
-    --t-lab: #b6dc7c; --t-lab-bg: #233113;
-    --t-field: #fbab80; --t-field-bg: #3f2213;
-  }
-}
 :root[data-theme="dark"] {
   --bg: #08111b; --surface: #0f1b29; --surface-2: #142335; --surface-3: #1a2d43;
   --ink: #eef4fa; --text: #d5dfea; --muted: #93a6ba; --line: #213449; --line-strong: #2d4560;
@@ -140,10 +125,6 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .theme-icon--sun { display: none; }
 :root[data-theme="dark"] .theme-icon--sun { display: block; }
 :root[data-theme="dark"] .theme-icon--moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-icon--sun { display: block; }
-  :root:not([data-theme="light"]) .theme-icon--moon { display: none; }
-}
 
 @media (max-width: 1500px) { .brand__long { display: none; } .tool__kbd { display: none; } }
 @media (max-width: 1300px) { .tool__label { display: none; } }
@@ -187,7 +168,6 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .btn:hover { text-decoration: none; }
 .btn--primary { background: var(--brand); color: #fff; }
 :root[data-theme="dark"] .btn--primary { color: #06121e; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--primary { color: #06121e; } }
 .btn--primary:hover { background: var(--brand-strong); }
 .btn--ghost { border-color: var(--line-strong); color: var(--ink); background: var(--surface); }
 .btn--ghost:hover { border-color: var(--brand); color: var(--brand); }
