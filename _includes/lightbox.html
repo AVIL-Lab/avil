@@ -1,6 +1,7 @@
 {%- comment -%} Shared photo viewer for News and Gallery; filled by media.js from #photo-data. {%- endcomment -%}
 <script type="application/json" id="photo-data">[
-{%- for e in site.data.events -%}
+{%- assign lb_events = events | default: site.data.events -%}
+{%- for e in lb_events -%}
 {"id":{{ e.photo | remove: ".webp" | jsonify }},"src":{{ '/assets/img/gallery/' | append: e.photo | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}{% unless forloop.last %},{% endunless %}
 {%- endfor -%}
 ]</script>

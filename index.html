@@ -243,7 +243,8 @@ js: [home]
         <a class="link-arrow" href="{{ '/news/' | relative_url }}">{% include t.html en="All news" ko="전체 소식" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
       <ol class="newslist">
-        {%- for e in site.data.events limit: 6 %}
+        {%- assign home_events = site.data.events | where_exp: "e", "e.news_only != true" -%}
+        {%- for e in home_events limit: 6 %}
         <li class="newslist__item">
           <a class="newslist__thumb" href="{{ '/gallery/' | relative_url }}#{{ e.photo | remove: '.webp' }}" tabindex="-1" aria-hidden="true">
             <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="" loading="lazy" width="640" height="427">
