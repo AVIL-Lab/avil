@@ -122,7 +122,7 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
 | `_data/projects.yml` | Current and past projects · 진행 및 완료 과제 |
 | `_data/equipment.yml` | Lab equipment · 보유 장비 |
 | `_data/lab.yml` | Lab name, introduction, purpose, RLRC text, contact, partners · 연구실 이름, 소개, 목표, RLRC, 연락처, 협력 기관 |
-| `_data/domains.yml` | Home page research domains (Defense AI, Physical Super Intelligence, Medical AI) · 홈 화면 연구 분야 |
+| `_data/domains.yml` | Home page research domains (Defense AI, Physical AI (Super Intelligence), Medical AI) · 홈 화면 연구 분야 |
 | `_data/themes.yml` | Research page themes · 연구 페이지 연구 주제 |
 | `_data/modalities.yml` | Sensor types used by the sensing explorer and paper filter · 센서 종류 (센싱 탐색 및 논문 필터) |
 | `_data/navigation.yml` | Top menu · 상단 메뉴 |
@@ -318,9 +318,9 @@ Edit `_data/lab.yml`. It holds the lab name, tagline, the About text (`about.en`
 
 ### 5.11 Edit the home page research domains · 홈 화면 연구 분야 수정
 
-The three tabs on the home page (Defense AI, Physical Super Intelligence, Medical AI) come from `_data/domains.yml`. For each domain you can change:
+The three tabs on the home page (Defense AI, Physical AI (Super Intelligence), Medical AI) come from `_data/domains.yml`. For each domain you can change:
 
-홈 화면의 세 탭(국방 AI, 피지컬 슈퍼 인텔리전스, 의료 AI)은 `_data/domains.yml`에서 나옵니다. 분야마다 다음을 바꿀 수 있습니다.
+홈 화면의 세 탭(국방 AI, 피지컬 AI (슈퍼 인텔리전스), 의료 AI)은 `_data/domains.yml`에서 나옵니다. 분야마다 다음을 바꿀 수 있습니다.
 
 - `summary` (en/ko): the paragraph at the top of the panel. · 패널 위쪽 설명 문단.
 - `members`: list of member names (must match `name` in `members.yml` exactly). · 구성원 이름 목록 (`members.yml`의 `name`과 정확히 같아야 함).

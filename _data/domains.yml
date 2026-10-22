@@ -76,8 +76,8 @@
       acronyms: [SAR, RF]
 
 - key: psi
-  en: Physical Super Intelligence
-  ko: 피지컬 슈퍼 인텔리전스
+  en: Physical AI (Super Intelligence)
+  ko: 피지컬 AI (슈퍼 인텔리전스)
   icon: bot
   color: "#8b3fe0"
   summary:

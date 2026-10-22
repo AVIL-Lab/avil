@@ -26,9 +26,12 @@ js: [home]
         {%- for m in lab.modalities %}<li>{{ m }}</li>{% endfor %}
       </ul>
       {%- assign psi = site.data.domains | where: "key", "psi" | first %}
-      <div class="hero__robotics">
-        <span class="hero__robotics-label"><svg class="i i--sm" aria-hidden="true"><use href="#i-bot"/></svg>{% include t.html en="Robotics" ko="로보틱스" %}</span>
-        <ul>
+      <div class="hero__robotics" role="region" aria-label="Robotics and Physical AI Focus">
+        <div class="hero__robotics-bar">
+          <span class="hero__robotics-badge"><svg class="i i--sm" aria-hidden="true"><use href="#i-bot"/></svg>{% include t.html en="Robotics & Physical AI" ko="로보틱스 & 피지컬 AI" %}</span>
+          <a class="hero__robotics-link" href="{{ '/research/' | relative_url }}#robotics">{% include t.html en="Toward Physical AI (Super Intelligence)" ko="피지컬 AI (슈퍼 인텔리전스)" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <ul class="hero__robotics-pills">
           {%- for s in psi.sensors %}<li><a href="{{ '/research/' | relative_url }}#robotics-{{ s.key }}">{% include t.html en=s.en ko=s.ko %}</a></li>{% endfor %}
         </ul>
       </div>
@@ -126,6 +129,15 @@ js: [home]
         </blockquote>
         <figcaption>{% include t.html en="Our purpose" ko="연구 목표" %}</figcaption>
       </figure>
+      <a class="psi-card card card--hover" href="{{ '/research/' | relative_url }}#robotics">
+        <div class="psi-card__top">
+          <span class="tag tag--psi">{% include t.html en="Robotics · Physical AI" ko="로보틱스 · 피지컬 AI" %}</span>
+          <span class="psi-card__badge mono">{% include t.html en="Live Demo" ko="라이브 데모" %}</span>
+        </div>
+        <strong>{% include t.html en="Physical AI (Super Intelligence) & Agentic Robotics" ko="피지컬 AI (슈퍼 인텔리전스) 및 에이전틱 로보틱스" %}</strong>
+        <span>{% include t.html en="Pioneering vision-language-action (VLA) models, action-conditioned world models, and agentic robotics for mobile bimanual manipulation and humanoid intelligence." ko="모바일 양팔 매니퓰레이션 및 휴머노이드 지능을 위한 비전-언어-행동(VLA) 모델, 행동 조건부 월드 모델, 에이전틱 로보틱스 연구." %}</span>
+        <span class="link-arrow">{% include t.html en="Explore Robotics & Live Demo" ko="로보틱스 및 라이브 데모 보기" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
       <a class="rlrc-card card card--hover" href="{{ '/projects/#rlrc' | relative_url }}">
         <span class="tag tag--rlrc">RLRC</span>
         <strong>{% include t.html en=lab.rlrc.headline.en ko=lab.rlrc.headline.ko %}</strong>

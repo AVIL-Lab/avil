@@ -5,7 +5,7 @@
 name: Advanced Visual Intelligence Lab
 name_ko: 지능형시각정보처리연구실
 short: AVIL
-tagline: Deep Learning & Sensing
+tagline: Vision for Physical AI (Interactive)
 department: Department of Electronic Engineering
 department_ko: 영남대학교 전자공학과
 university: Yeungnam University
@@ -14,15 +14,15 @@ university_url: https://www.yu.ac.kr
 about:
   en: >-
     The Advanced Visual Intelligence Lab (AVIL) is a research lab in the Department of
-    Electronic Engineering at Yeungnam University working on computer vision and deep
-    learning. Our research covers computer vision, deep learning and sensor fusion (EO,
-    IR, SAR, Radar, HSI, Raman, RGB-D and more), applied to intelligent surveillance,
-    AR/VR, automatic target detection and recognition, and healthcare in the defense and
-    medical domains.
+    Electronic Engineering at Yeungnam University working on computer vision, deep
+    learning, and robotics. Our research covers computer vision, sensor fusion (EO,
+    IR, SAR, Radar, HSI, Raman, LiDAR, RGB-D), and Physical Super Intelligence (VLA models,
+    world models, agentic robotics), applied to defense, healthcare, and physical AI.
   ko: >-
-    지능형시각정보처리연구실(AVIL)은 컴퓨터비전 및 딥러닝 분야를 연구하는 영남대학교 전자공학과
-    연구실이다. 연구 분야는 컴퓨터 비전 및 딥러닝과 센서 융합(EO, IR, SAR, 레이더, HSI, 라만, RGB-D 등)이며
-    이는 국방 및 의료 분야에서 지능형 감시, AR/VR, 자동표적탐지/인식, 헬스케어 등에 응용하고 있다.
+    지능형시각정보처리연구실(AVIL)은 컴퓨터비전, 딥러닝, 로보틱스 분야를 연구하는 영남대학교
+    전자공학과 연구실이다. 연구 분야는 컴퓨터 비전, 센서 융합(EO, IR, SAR, 레이더, HSI, 라만,
+    라이다, RGB-D), 피지컬 슈퍼 인텔리전스(VLA 모델, 월드 모델, 에이전틱 로보틱스)이며
+    국방, 헬스케어, 피지컬 AI 분야에 응용하고 있다.
 
 purpose:
   en: >-

@@ -9,32 +9,6 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
 {% include lab-names.html %}
 {% include page-hero.html eyebrow_en="Research" eyebrow_ko="연구" title_en="Visual intelligence from physical sensing" title_ko="물리 센싱 기반 시각 지능" %}
 
-<section class="section">
-  <div class="wrap research-intro">
-    <div class="reveal">
-      <p class="eyebrow">{% include t.html en="Purpose" ko="연구 목표" %}</p>
-      <h2>{% include t.html en="Scene interpretation with multimodal physical sensing" ko="멀티모달 물리 센싱 기반 장면 해석" %}</h2>
-      <span class="rule" aria-hidden="true"></span>
-      <p class="research-intro__lead">{% include t.html en=lab.purpose.en ko=lab.purpose.ko %}</p>
-      <p>{% include t.html en=lab.about.en ko=lab.about.ko %}</p>
-      <div class="research-intro__grid">
-        <div class="card card--pad">
-          <h3><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg> {% include t.html en="Research areas" ko="연구 분야" %}</h3>
-          <ul class="ticks">{% for a in lab.areas %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
-        </div>
-        <div class="card card--pad">
-          <h3><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> {% include t.html en="Applications" ko="응용 분야" %}</h3>
-          <ul class="ticks">{% for a in lab.applications %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
-        </div>
-      </div>
-    </div>
-    <figure class="collage card reveal">
-      <img src="{{ '/assets/img/research/sensing-collage.webp' | relative_url }}" alt="Research figures: radiative transfer to a camera, LiDAR point cloud with a detected person, thermal images of pedestrians, and blackbody radiation curves" width="1800" height="1034" loading="lazy">
-      <figcaption>{% include t.html en="Figures from the lab's work on radiometry, thermal imaging and LiDAR perception." ko="복사 측정, 열영상, 라이다 인식 연구의 그림." %}</figcaption>
-    </figure>
-  </div>
-</section>
-
 {%- assign psi = site.data.domains | where: "key", "psi" | first -%}
 {%- assign none = "" | split: "" -%}
 {%- assign psi_pubs = none -%}
@@ -47,7 +21,7 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
   <div class="wrap">
     <div class="section__head">
       <div>
-        <p class="eyebrow">{% include t.html en="Robotics" ko="로보틱스" %}</p>
+        <p class="eyebrow">{% include t.html en="Robotics & Physical AI" ko="로보틱스 & 피지컬 AI" %}</p>
         <h2>{% include t.html en="Toward Physical Super Intelligence" ko="피지컬 슈퍼 인텔리전스를 향하여" %}</h2>
         <span class="rule" aria-hidden="true"></span>
         <p class="section__sub">{% include t.html en=psi.summary.en ko=psi.summary.ko %}</p>
@@ -89,7 +63,33 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
   </div>
 </section>
 
-<section class="section section--alt" id="themes">
+<section class="section section--alt" id="overview">
+  <div class="wrap research-intro">
+    <div class="reveal">
+      <p class="eyebrow">{% include t.html en="Purpose" ko="연구 목표" %}</p>
+      <h2>{% include t.html en="Scene interpretation with multimodal physical sensing" ko="멀티모달 물리 센싱 기반 장면 해석" %}</h2>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="research-intro__lead">{% include t.html en=lab.purpose.en ko=lab.purpose.ko %}</p>
+      <p>{% include t.html en=lab.about.en ko=lab.about.ko %}</p>
+      <div class="research-intro__grid">
+        <div class="card card--pad">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg> {% include t.html en="Research areas" ko="연구 분야" %}</h3>
+          <ul class="ticks">{% for a in lab.areas %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
+        </div>
+        <div class="card card--pad">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> {% include t.html en="Applications" ko="응용 분야" %}</h3>
+          <ul class="ticks">{% for a in lab.applications %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
+        </div>
+      </div>
+    </div>
+    <figure class="collage card reveal">
+      <img src="{{ '/assets/img/research/sensing-collage.webp' | relative_url }}" alt="Research figures: radiative transfer to a camera, LiDAR point cloud with a detected person, thermal images of pedestrians, and blackbody radiation curves" width="1800" height="1034" loading="lazy">
+      <figcaption>{% include t.html en="Figures from the lab's work on radiometry, thermal imaging and LiDAR perception." ko="복사 측정, 열영상, 라이다 인식 연구의 그림." %}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="themes">
   <div class="wrap">
     <div class="section__head">
       <div>
@@ -136,7 +136,7 @@ description: "Research areas, themes and sensing modalities of the Advanced Visu
   </div>
 </section>
 
-<section class="section" id="sensing">
+<section class="section section--alt" id="sensing">
   <div class="wrap">
     <div class="section__head">
       <div>

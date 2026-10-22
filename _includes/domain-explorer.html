@@ -32,9 +32,12 @@
   {%- assign team_names = d.core_team | default: d.members -%}
 
   {%- capture tab -%}
-  <button type="button" role="tab" class="domx__domain" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
+  <button type="button" role="tab" class="domx__domain{% if d.key == 'psi' %} domx__domain--psi{% endif %}" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
     <span class="domx__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ d.icon }}"/></svg></span>
-    <span class="domx__name">{% include t.html en=d.en ko=d.ko %}</span>
+    <span class="domx__name">
+      {% include t.html en=d.en ko=d.ko %}
+      {% if d.key == 'psi' %}<span class="domx__badge">{% include t.html en="Robotics" ko="로보틱스" %}</span>{% endif %}
+    </span>
   </button>
   {%- endcapture -%}
   {%- assign tabs_html = tabs_html | append: tab -%}
