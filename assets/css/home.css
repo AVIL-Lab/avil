@@ -99,15 +99,20 @@
 .purpose blockquote { margin: 0; padding-left: 14px; border-left: 3px solid var(--brand); color: var(--ink); font-size: .98rem; }
 .purpose blockquote p { margin: 0 0 8px; }
 .purpose figcaption { margin-top: 8px; font: 600 .72rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.rlrc-card { display: flex; flex-direction: column; gap: 8px; padding: 20px; color: var(--text); background: linear-gradient(135deg, var(--surface), var(--t-rlrc-bg)); }
+.about__duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
+.rlrc-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; height: 100%; color: var(--text); background: linear-gradient(135deg, var(--surface), var(--t-rlrc-bg)); }
 .rlrc-card:hover { text-decoration: none; }
-.rlrc-card strong { color: var(--ink); font-size: 1.04rem; }
+.rlrc-card strong { color: var(--ink); font-size: .98rem; line-height: 1.35; }
+.rlrc-card span:not(.tag):not(.link-arrow) { font-size: .84rem; line-height: 1.45; }
 .rlrc-card .tag { align-self: flex-start; }
-.psi-card { display: flex; flex-direction: column; gap: 8px; padding: 20px; color: var(--text); background: linear-gradient(135deg, var(--surface) 60%, rgba(37, 99, 235, .08)); border-color: color-mix(in srgb, #2563eb 32%, var(--line)); }
+.rlrc-card .link-arrow { margin-top: auto; padding-top: 6px; }
+.psi-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; height: 100%; color: var(--text); background: linear-gradient(135deg, var(--surface) 60%, rgba(37, 99, 235, .08)); border-color: color-mix(in srgb, #2563eb 32%, var(--line)); }
 :root[data-theme="dark"] .psi-card { background: linear-gradient(135deg, var(--surface) 55%, rgba(59, 130, 246, .12)); border-color: rgba(96, 165, 250, .35); }
 .psi-card:hover { text-decoration: none; border-color: #2563eb; box-shadow: 0 8px 24px -6px rgba(37, 99, 235, .22); }
 .psi-card__top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.psi-card strong { color: var(--ink); font-size: 1.04rem; line-height: 1.35; }
+.psi-card strong { color: var(--ink); font-size: .98rem; line-height: 1.35; }
+.psi-card > span:not(.link-arrow) { font-size: .84rem; line-height: 1.45; }
+.psi-card .link-arrow { margin-top: auto; padding-top: 6px; }
 .psi-card__badge { font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; background: rgba(37, 99, 235, .12); color: #1d4ed8; border: 1px solid rgba(37, 99, 235, .28); }
 :root[data-theme="dark"] .psi-card__badge { background: rgba(96, 165, 250, .18); color: #bfdbfe; border-color: rgba(96, 165, 250, .4); }
 
@@ -182,6 +187,7 @@
   .explorer__counts { grid-template-columns: repeat(2, 1fr); }
   .explorer__cols { grid-template-columns: 1fr; }
   .about__lists { grid-template-columns: 1fr; }
+  .about__duo { grid-template-columns: 1fr; }
   .join { padding: 22px; }
 }
 
