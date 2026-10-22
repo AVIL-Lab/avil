@@ -118,7 +118,7 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
 | `_data/alumni.yml` | Alumni · 졸업생 |
 | `_data/professor.yml` | Professor profile and career · 교수 프로필과 경력 |
 | `_data/publications.yml` | All publications · 전체 논문 |
-| `_data/events.yml` | News items, one per photo (News, Gallery, home news) · 소식 (사진 1장당 1개, 소식/갤러리/홈 화면) |
+| `_data/events.yml` | News items, one per photo (News and Gallery) · 소식 (사진 1장당 1개, 소식 및 갤러리) |
 | `_data/projects.yml` | Current and past projects · 진행 및 완료 과제 |
 | `_data/equipment.yml` | Lab equipment · 보유 장비 |
 | `_data/lab.yml` | Lab name, introduction, purpose, RLRC text, contact, partners · 연구실 이름, 소개, 목표, RLRC, 연락처, 협력 기관 |
@@ -258,9 +258,9 @@ The counters, year chart, filters, search and the research explorers all update 
 
 ### 5.7 Add news and a photo · 소식과 사진 추가
 
-Each news item is one photo with a caption. It appears on the News page, in the Gallery and, if recent, on the home page.
+Each news item is one photo with a caption. It appears on the News page and in the Gallery.
 
-소식 하나는 사진 한 장과 설명 한 줄입니다. 소식 페이지, 갤러리, (최근 소식이면) 홈 화면에 표시됩니다.
+소식 하나는 사진 한 장과 설명 한 줄입니다. 소식 페이지와 갤러리에 표시됩니다.
 
 **Step 1.** Prepare two versions of the photo with the same file name, for example `2027-03-cvpr.webp`: a large one (longest side about 1600 px, under 500 KB) uploaded to `assets/img/gallery/`, and a thumbnail cropped to 640 × 427 px uploaded to `assets/img/gallery/thumbs/`.
 
@@ -273,15 +273,15 @@ Each news item is one photo with a caption. It appears on the News page, in the 
 ```yaml
 - date: '2027-03-15'              # first day of the event · 행사 시작일
   when: 2027/03/15~03/18          # date as you want it shown · 화면에 보일 날짜 표기
-  tag: conference                 # conference | award | rlrc | graduation | lab | field
+  tag: conference                 # conference | expo | award | rlrc | graduation | lab | field
   ko: CVPR 2027 학회 참여 및 논문 발표
   en: Attended CVPR 2027 and presented a paper
   photo: 2027-03-cvpr.webp
 ```
 
-`tag` controls the colored label and the filters: `conference` (conferences, seminars), `award`, `rlrc` (RLRC events), `graduation`, `lab` (lab life) and `field` (field work, data collection).
+`tag` controls the colored label and the filters: `conference` (conferences, seminars), `expo` (exhibitions, industry expos), `award`, `rlrc` (RLRC events), `graduation`, `lab` (lab life) and `field` (field work, data collection).
 
-`tag`는 색 라벨과 필터를 정합니다: `conference`(학회, 세미나), `award`(수상), `rlrc`(RLRC 행사), `graduation`(졸업), `lab`(연구실 생활), `field`(실험, 촬영).
+`tag`는 색 라벨과 필터를 정합니다: `conference`(학회, 세미나), `expo`(전시/박람회), `award`(수상), `rlrc`(RLRC 행사), `graduation`(졸업), `lab`(연구실 생활), `field`(실험, 촬영).
 
 ### 5.8 Add or update a project · 과제 추가 및 수정
 
