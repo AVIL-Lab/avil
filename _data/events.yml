@@ -1,12 +1,12 @@
 # Lab events, one per photo, migrated from the Wix "Pictures" page (2026-10-17).
 # Drives the News page, the home page news list and the Gallery.
 #   date  YYYY-MM-DD (first day of the event)   when  date text as written on Wix
-#   tag   conference | award | rlrc | graduation | lab | field
+#   tag   conference | expo | award | rlrc | graduation | lab | field
 #   ko    original caption   en  English translation
 #   photo file in assets/img/gallery/ (thumbnail: same name in gallery/thumbs/)
 - date: '2026-10-22'
   when: 2026/10/22
-  tag: conference
+  tag: expo
   news_only: true
   ko: FIX 2026 (대한민국 미래혁신기술박람회) 및 DIFA 참여
   en: Attended DIFA and FIX (Future Innovation tech eXpo) 2026

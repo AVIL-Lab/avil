@@ -1,7 +1,7 @@
 /* News timeline, gallery grid, lightbox. */
 
 .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
-.dot--conference { color: var(--t-conference); } .dot--award { color: var(--t-award); } .dot--rlrc { color: var(--t-rlrc); }
+.dot--conference { color: var(--t-conference); } .dot--expo { color: var(--t-expo); } .dot--award { color: var(--t-award); } .dot--rlrc { color: var(--t-rlrc); }
 .dot--graduation { color: var(--t-graduation); } .dot--lab { color: var(--t-lab); } .dot--field { color: var(--t-field); }
 .pill.is-active .dot { color: var(--bg); }
 

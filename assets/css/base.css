@@ -25,6 +25,7 @@
   --spectral: linear-gradient(90deg, #7c3aed, #2563eb 22%, #0891b2 38%, #16a34a 54%, #eab308 70%, #ea580c 84%, #b91c1c);
   /* Tag hues: text / soft background pairs, AA on both themes. */
   --t-conference: #1d4ed8; --t-conference-bg: #e0e9fd;
+  --t-expo: #0284c7; --t-expo-bg: #e0f2fe;
   --t-award: #a15c00; --t-award-bg: #fdf0d5;
   --t-rlrc: #0f766e; --t-rlrc-bg: #d7f3ef;
   --t-graduation: #6d28d9; --t-graduation-bg: #ede5fd;
@@ -43,6 +44,7 @@
   --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4); --shadow: 0 10px 30px -12px rgba(0, 0, 0, .7);
   --t-conference: #9dbcfb; --t-conference-bg: #172a4d;
+  --t-expo: #7dd3fc; --t-expo-bg: #0c2b42;
   --t-award: #f5c46b; --t-award-bg: #3a2b0e;
   --t-rlrc: #6ee0d2; --t-rlrc-bg: #0e3532;
   --t-graduation: #c4a8fb; --t-graduation-bg: #2b1d4d;
@@ -178,6 +180,7 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: .78rem; font-weight: 600; background: var(--surface-2); color: var(--muted); border: 1px solid transparent; white-space: nowrap; }
 .tag { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 6px; font-size: .72rem; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; }
 .tag--conference { color: var(--t-conference); background: var(--t-conference-bg); }
+.tag--expo { color: var(--t-expo); background: var(--t-expo-bg); }
 .tag--award { color: var(--t-award); background: var(--t-award-bg); }
 .tag--rlrc { color: var(--t-rlrc); background: var(--t-rlrc-bg); }
 .tag--psi { color: #1d4ed8; background: #e0e9fd; }

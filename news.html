@@ -6,7 +6,7 @@ js: [media]
 description: "News from the Advanced Visual Intelligence Lab: conferences, awards, graduations, RLRC milestones and lab life."
 ---
 {%- assign events = site.data.events -%}
-{%- assign tags = "conference,award,rlrc,graduation,lab,field" | split: "," -%}
+{%- assign tags = "conference,expo,award,rlrc,graduation,lab,field" | split: "," -%}
 {%- assign by_year = events | group_by_exp: "e", "e.date | slice: 0, 4" -%}
 {% include page-hero.html eyebrow_en="News" eyebrow_ko="소식" title_en="Lab news" title_ko="연구실 소식" lead_en="Conferences, awards, graduations, RLRC milestones and lab life, newest first. Switch to 한국어 in the header for the original captions." lead_ko="학회 참석, 수상, 졸업, RLRC 행사와 연구실 생활 소식입니다." %}
 
