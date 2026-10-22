@@ -89,6 +89,7 @@ html[data-lang="ko"] body { word-break: keep-all; }
 @media (min-width: 1280px) { .wrap { padding: 0 40px; } }
 .i { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .i--sm { width: .95em; height: .95em; }
+.i--xs { width: .75em; height: .75em; }
 .spectrum-line { height: 3px; background: var(--spectral); opacity: .9; }
 
 /* ---- Header -------------------------------------------------------------- */

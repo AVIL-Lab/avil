@@ -20,7 +20,11 @@ js: [home]
         <span class="hero__title-main">Advanced Visual Intelligence Lab</span>
         <span class="hero__title-ko" lang="ko">{{ lab.name_ko }} (AVIL)</span>
       </h1>
-      <p class="hero__tagline">{{ lab.tagline }}</p>
+      <a class="hero__tagline" href="{{ '/research/' | relative_url }}#robotics" title="Explore interactive Physical AI demo and research">
+        <span class="hero__tagline-dot" aria-hidden="true"></span>
+        <span>{{ lab.tagline }}</span>
+        <svg class="i i--xs hero__tagline-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
       <p class="hero__lead">{% include t.html en=lab.purpose.en ko=lab.purpose.ko %}</p>
       <ul class="hero__modalities" aria-label="Sensing modalities">
         {%- for m in lab.modalities %}<li>{{ m }}</li>{% endfor %}
