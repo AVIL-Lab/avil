@@ -114,15 +114,85 @@ js: [home]
       <h2>{% include t.html en="Human-like visual intelligence from physical sensing" ko="물리 센싱 기반의 인간 수준 시각 지능" %}</h2>
       <span class="rule" aria-hidden="true"></span>
       <p class="about__body">{% include t.html en=lab.about.en ko=lab.about.ko %}</p>
-      <div class="about__lists">
-        <div>
-          <h3>{% include t.html en="Research areas" ko="연구 분야" %}</h3>
-          <ul class="ticks">{% for a in lab.areas %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
-        </div>
-        <div>
-          <h3>{% include t.html en="Applications" ko="응용 분야" %}</h3>
-          <ul class="ticks">{% for a in lab.applications %}<li>{% include t.html en=a.en ko=a.ko %}</li>{% endfor %}</ul>
-        </div>
+      <div class="about__cards">
+        <a class="about-card about-card--research card card--hover" href="{{ '/research/' | relative_url }}">
+          <div class="about-card__head">
+            <div class="about-card__title-wrap">
+              <span class="about-card__icon"><svg class="i i--sm" aria-hidden="true"><use href="#i-flask"/></svg></span>
+              <h3 class="about-card__title">{% include t.html en="Research Areas" ko="연구 분야" %}</h3>
+            </div>
+            <span class="tag tag--lab">{% include t.html en="Core Pillars" ko="핵심 분야" %}</span>
+          </div>
+          <div class="about-card__body">
+            <div class="about-card__group">
+              <span class="about-card__group-label"><span class="about-card__dot"></span>{% include t.html en="Computer Vision & Deep Learning" ko="컴퓨터 비전 및 딥러닝" %}</span>
+              <div class="about-card__chips">
+                <span class="about-card__chip">{% include t.html en="Visual Perception" ko="시각 인지" %}</span>
+                <span class="about-card__chip">{% include t.html en="Neural Representations" ko="신경망 표현" %}</span>
+                <span class="about-card__chip">{% include t.html en="Scene Understanding" ko="장면 이해" %}</span>
+              </div>
+            </div>
+            <div class="about-card__group">
+              <span class="about-card__group-label"><span class="about-card__dot"></span>{% include t.html en="Sensor Fusion" ko="센서 융합" %}</span>
+              <div class="about-card__chips">
+                <span class="about-card__chip mono">EO</span>
+                <span class="about-card__chip mono">IR</span>
+                <span class="about-card__chip mono">SAR</span>
+                <span class="about-card__chip mono">Radar</span>
+                <span class="about-card__chip mono">HSI</span>
+                <span class="about-card__chip mono">Raman</span>
+                <span class="about-card__chip mono">RGB-D</span>
+              </div>
+            </div>
+            <div class="about-card__group">
+              <span class="about-card__group-label"><span class="about-card__dot"></span>{% include t.html en="Robotics & Physical AI" ko="로보틱스 및 피지컬 AI" %}</span>
+              <div class="about-card__chips">
+                <span class="about-card__chip">VLA Models</span>
+                <span class="about-card__chip">World Models</span>
+                <span class="about-card__chip">Agentic Robotics</span>
+                <span class="about-card__chip">{% include t.html en="Embodied AI" ko="체화 지능" %}</span>
+                <span class="about-card__chip">{% include t.html en="Humanoids" ko="휴머노이드" %}</span>
+              </div>
+            </div>
+          </div>
+          <span class="link-arrow">{% include t.html en="Explore Research Areas" ko="연구 분야 살펴보기" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
+        <a class="about-card about-card--apps card card--hover" href="{{ '/projects/' | relative_url }}">
+          <div class="about-card__head">
+            <div class="about-card__title-wrap">
+              <span class="about-card__icon"><svg class="i i--sm" aria-hidden="true"><use href="#i-grid"/></svg></span>
+              <h3 class="about-card__title">{% include t.html en="Applications" ko="응용 분야" %}</h3>
+            </div>
+            <span class="tag tag--conference">{% include t.html en="Real-World Impact" ko="실세계 응용" %}</span>
+          </div>
+          <div class="about-card__body">
+            <div class="about-card__group">
+              <span class="about-card__group-label"><span class="about-card__dot"></span>{% include t.html en="Physical AI & Robotics" ko="피지컬 AI 및 로보틱스" %}</span>
+              <div class="about-card__chips">
+                <span class="about-card__chip">{% include t.html en="Autonomous Robots" ko="자율 로봇" %}</span>
+                <span class="about-card__chip">{% include t.html en="Drones" ko="드론" %}</span>
+                <span class="about-card__chip">{% include t.html en="Humanoids" ko="휴머노이드" %}</span>
+                <span class="about-card__chip">{% include t.html en="Mobile Robots" ko="이동 로봇" %}</span>
+              </div>
+            </div>
+            <div class="about-card__group">
+              <span class="about-card__group-label"><span class="about-card__dot"></span>{% include t.html en="Defense AI & Surveillance" ko="국방 AI 및 감시" %}</span>
+              <div class="about-card__chips">
+                <span class="about-card__chip">{% include t.html en="Intelligent Surveillance" ko="지능형 감시" %}</span>
+                <span class="about-card__chip">{% include t.html en="Target Recognition (ATR)" ko="자동표적탐지/인식" %}</span>
+              </div>
+            </div>
+            <div class="about-card__group">
+              <span class="about-card__group-label"><span class="about-card__dot"></span>{% include t.html en="Healthcare & Immersive" ko="헬스케어 및 몰입형 기술" %}</span>
+              <div class="about-card__chips">
+                <span class="about-card__chip">{% include t.html en="Healthcare Sensing" ko="헬스케어 센싱" %}</span>
+                <span class="about-card__chip">AR/VR</span>
+                <span class="about-card__chip">{% include t.html en="Untact Biometrics" ko="비접촉 생체 센싱" %}</span>
+              </div>
+            </div>
+          </div>
+          <span class="link-arrow">{% include t.html en="Explore Applications & Projects" ko="응용 과제 살펴보기" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
       </div>
     </div>
     <aside class="about__side reveal">
