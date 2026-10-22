@@ -180,8 +180,8 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .tag--conference { color: var(--t-conference); background: var(--t-conference-bg); }
 .tag--award { color: var(--t-award); background: var(--t-award-bg); }
 .tag--rlrc { color: var(--t-rlrc); background: var(--t-rlrc-bg); }
-.tag--psi { color: #7c3aed; background: #ede5fd; }
-:root[data-theme="dark"] .tag--psi { color: #d8b4fe; background: #2e1065; }
+.tag--psi { color: #1d4ed8; background: #e0e9fd; }
+:root[data-theme="dark"] .tag--psi { color: #93c5fd; background: #172a4d; }
 .tag--graduation { color: var(--t-graduation); background: var(--t-graduation-bg); }
 .tag--lab { color: var(--t-lab); background: var(--t-lab-bg); }
 .tag--field { color: var(--t-field); background: var(--t-field-bg); }
