@@ -75,58 +75,6 @@
       words: [radar, fmcw, mmwave, w-band, synthetic aperture, 레이더]
       acronyms: [SAR, RF]
 
-- key: medical
-  en: Medical AI
-  ko: 의료 AI
-  icon: activity
-  color: "#e0365f"
-  summary:
-    en: >-
-      Healthcare applications led by the RLRC Multimodal Untact Sensing Leading Research
-      Center for Lifelogs: contactless hardware and software for sensing biometric
-      signals, validated in clinical studies.
-    ko: >-
-      라이프로그용 멀티모달 언택트센싱 선도연구센터(RLRC)를 중심으로, 생체정보를 비접촉으로 측정하는
-      하드웨어와 소프트웨어를 개발하고 임상연구로 검증하는 의료 분야 연구.
-  members: [Uday Debnath, Sreya Deb Srestha, Tanvir Ahmmed, Nur Nahar Queen, Anusha Ganesan, Alnaasan Manar]
-  team_heading: core
-  funders: []
-  match_venue: true
-  words: [medicine, biomed, physiol, heart rate, respiratory, respiration, vital, physiological, photoplethysmography, patient, clinical, medical, health, hemodialysis, glucose, diabetes, raman, sers, parkinson, gait, body temperature, hypothermia, radiculopathy, pain syndrome, sclerosis, untact, lifelog, human-care, dry eye, 건성안, 안구, 심박, 호흡, 생체, 체온, 의료, 헬스케어, 혈당, 당뇨, 비접촉, 언택트, 라이프로그, 휴먼케어]
-  acronyms: [rPPG, PPG]
-  sensors:
-    - key: rgb
-      en: RGB camera
-      ko: RGB 카메라
-      icon: eye
-      equipment: [visible]
-      words: [rgb camera, visible imaging, visible, camera, video, face, 카메라, 얼굴 영상]
-      acronyms: [rPPG]
-    - key: thermal
-      en: IR / Thermal
-      ko: 적외선 / 열영상
-      icon: thermo
-      equipment_names: [LWIR camera, FLIR T620 infrared camera, FLIT T560, Black body]
-      words: [infrared, thermal, thermography, temperature, 적외선, 열영상, 체온]
-      acronyms: [LWIR, IR, FLIR]
-    - key: radar
-      en: FMCW radar
-      ko: FMCW 레이더
-      icon: radar
-      words: [radar, fmcw, mmwave, 레이더]
-    - key: spectroscopy
-      en: Raman spectroscopy
-      ko: 라만 분광
-      icon: layers
-      members: [Tanvir Ahmmed]
-      words: [raman, sers, spectroscopy, 라만]
-      acronyms: [SERS]
-    - key: depth
-      en: RGB-D / Pose
-      ko: RGB-D / 자세
-      icon: users
-      words: [rgb-d, depth, gait, pose, skeleton, 자세, 보행]
-
 - key: psi
   en: Physical Super Intelligence
   ko: 피지컬 슈퍼 인텔리전스
@@ -214,3 +162,56 @@
           사람과 공간을 공유하는 휴머노이드 로봇을 위한 인지와 의사결정 연구로, 인간 자세 이해와 양팔
           매니퓰레이션을 기반으로 함.
       words: [humanoid, bimanual, human pose, human skeleton, 휴머노이드, 양팔, 휴먼 스켈레톤, 보행자 자세]
+
+- key: medical
+  en: Medical AI
+  ko: 의료 AI
+  icon: activity
+  color: "#e0365f"
+  summary:
+    en: >-
+      Healthcare applications led by the RLRC Multimodal Untact Sensing Leading Research
+      Center for Lifelogs: contactless hardware and software for sensing biometric
+      signals, validated in clinical studies.
+    ko: >-
+      라이프로그용 멀티모달 언택트센싱 선도연구센터(RLRC)를 중심으로, 생체정보를 비접촉으로 측정하는
+      하드웨어와 소프트웨어를 개발하고 임상연구로 검증하는 의료 분야 연구.
+  members: [Uday Debnath, Sreya Deb Srestha, Tanvir Ahmmed, Nur Nahar Queen, Anusha Ganesan, Alnaasan Manar]
+  team_heading: core
+  funders: []
+  match_venue: true
+  words: [medicine, biomed, physiol, heart rate, respiratory, respiration, vital, physiological, photoplethysmography, patient, clinical, medical, health, hemodialysis, glucose, diabetes, raman, sers, parkinson, gait, body temperature, hypothermia, radiculopathy, pain syndrome, sclerosis, untact, lifelog, human-care, dry eye, 건성안, 안구, 심박, 호흡, 생체, 체온, 의료, 헬스케어, 혈당, 당뇨, 비접촉, 언택트, 라이프로그, 휴먼케어]
+  acronyms: [rPPG, PPG]
+  sensors:
+    - key: rgb
+      en: RGB camera
+      ko: RGB 카메라
+      icon: eye
+      equipment: [visible]
+      words: [rgb camera, visible imaging, visible, camera, video, face, 카메라, 얼굴 영상]
+      acronyms: [rPPG]
+    - key: thermal
+      en: IR / Thermal
+      ko: 적외선 / 열영상
+      icon: thermo
+      equipment_names: [LWIR camera, FLIR T620 infrared camera, FLIT T560, Black body]
+      words: [infrared, thermal, thermography, temperature, 적외선, 열영상, 체온]
+      acronyms: [LWIR, IR, FLIR]
+    - key: radar
+      en: FMCW radar
+      ko: FMCW 레이더
+      icon: radar
+      words: [radar, fmcw, mmwave, 레이더]
+    - key: spectroscopy
+      en: Raman spectroscopy
+      ko: 라만 분광
+      icon: layers
+      members: [Tanvir Ahmmed]
+      words: [raman, sers, spectroscopy, 라만]
+      acronyms: [SERS]
+    - key: depth
+      en: RGB-D / Pose
+      ko: RGB-D / 자세
+      icon: users
+      words: [rgb-d, depth, gait, pose, skeleton, 자세, 보행]
+
