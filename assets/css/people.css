@@ -64,6 +64,21 @@
 .pi img { width: 120px; height: 150px; object-fit: cover; border-radius: 12px; }
 .pi h2 { margin: 0 0 4px; font-size: 1.5rem; }
 .pi p { margin: 0 0 8px; }
+
+/* ---- Cohort Banner ------------------------------------------------------- */
+.cohort-banner { margin-top: 18px; padding: 18px 22px; display: flex; flex-direction: column; gap: 14px; background: linear-gradient(135deg, var(--surface) 60%, rgba(37, 99, 235, .04)); border: 1px solid var(--line); border-radius: var(--radius); }
+:root[data-theme="dark"] .cohort-banner { background: linear-gradient(135deg, var(--surface) 55%, rgba(59, 130, 246, .08)); border-color: rgba(96, 165, 250, .24); }
+.cohort-banner__head { display: flex; align-items: flex-start; gap: 14px; }
+.cohort-banner__icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(37, 99, 235, .1); color: #1d4ed8; flex-shrink: 0; margin-top: 2px; }
+:root[data-theme="dark"] .cohort-banner__icon { background: rgba(96, 165, 250, .18); color: #93c5fd; }
+.cohort-banner__titles { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+.cohort-banner__title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.cohort-banner__title { margin: 0; font-size: 1.08rem; font-weight: 750; color: var(--ink); line-height: 1.25; }
+.cohort-banner__desc { margin: 0; font-size: .88rem; color: var(--muted); line-height: 1.45; }
+.cohort-banner__chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-top: 10px; border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.cohort-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); font-size: .8rem; font-weight: 600; color: var(--ink); }
+.cohort-chip__code { display: inline-grid; place-items: center; width: 22px; height: 18px; border-radius: 999px; background: rgba(37, 99, 235, .12); color: #1d4ed8; font: 750 .65rem/1 var(--mono); letter-spacing: .02em; }
+:root[data-theme="dark"] .cohort-chip__code { background: rgba(96, 165, 250, .2); color: #93c5fd; }
 .interest-picker { position: relative; }
 .interest-picker summary { list-style: none; cursor: pointer; }
 .interest-picker summary::-webkit-details-marker { display: none; }
@@ -132,6 +147,11 @@
   .alumni-chart__row { grid-template-columns: 120px 1fr 28px; }
   .pi { grid-template-columns: 84px 1fr; }
   .pi img { width: 84px; height: 105px; }
+  .cohort-banner { padding: 14px 16px; gap: 12px; }
+  .cohort-banner__head { gap: 10px; }
+  .cohort-banner__icon { width: 32px; height: 32px; }
+  .cohort-banner__title { font-size: 1rem; }
+  .cohort-chip { font-size: .76rem; padding: 3px 8px 3px 5px; }
 }
 
 /* ---- "About me" button (hover gradient as on s-elim.github.io chips) and pop-up ---- */
