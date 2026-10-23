@@ -54,9 +54,14 @@
 .pub:hover { background: var(--surface-2); }
 .pub__body { min-width: 0; }
 .pub__title { margin: 0 0 3px; font-weight: 650; color: var(--ink); line-height: 1.45; }
+.pub__title a, .pub__text a { color: var(--ink); text-decoration: none; }
+.pub__title a:hover, .pub__text a:hover { color: var(--brand); text-decoration: underline; }
 .pub__authors { margin: 0 0 2px; font-size: .9rem; color: var(--text); }
 .pub__venue { margin: 0; font-size: .86rem; color: var(--muted); font-style: italic; }
 .pub__text { margin: 0; font-size: .92rem; }
+.pub__actions { display: inline-flex; align-items: center; gap: 6px; }
+.pub__actions .icon-btn { opacity: .5; }
+.pub:hover .pub__actions .icon-btn, .pub__actions .icon-btn:focus-visible { opacity: 1; }
 .pub__copy { opacity: .5; }
 .pub:hover .pub__copy, .pub__copy:focus-visible { opacity: 1; }
 .lab-author { color: var(--ink); font-weight: 700; }

@@ -239,6 +239,7 @@ Open `_data/publications.yml` and add the paper at the **top of its year** (the 
   authors: Gildong Hong, Sungho Kim*
   title: "A Title With: Colons Must Be Quoted"
   venue: IEEE International Conference on Robotics and Automation (ICRA), 2027
+  url: "https://doi.org/..."     # optional paper link · 선택 사항
 ```
 
 If you only have a full citation string, use `text:` instead of `authors`, `title` and `venue`:
@@ -475,7 +476,7 @@ Before making any changes, read README.md completely and strictly follow the exi
      * `_data/members.yml` (current members: `name`, optional `name_ko`, `role` in `postdoc|phd|ms|undergrad`, `photo`, `interests`, `email`, `linkedin`, `homepage`, optional `aliases`, optional `about.en` / `about.ko`). Leave unknown `linkedin` or `homepage` as `""`.
      * `_data/alumni.yml` (alumni newest first: `name_ko`, `name`, `degree`, `graduated` as `YYYY-MM`, optional `next`/`next_ko`, optional `email`, `photo`, `linkedin` URL or `""`).
      * `_data/professor.yml` (PI profile, contact, `links`, `scholar` citation metrics, `career` timeline).
-     * `_data/publications.yml` (papers newest year first; within the same year, region, and type, group consecutive papers from the same conference together, e.g., KIEES, ICROS, IEIE).
+     * `_data/publications.yml` (papers newest year first; within the same year, region, and type, group consecutive papers from the same conference together, e.g., KIEES, ICROS, IEIE; optional `url`).
      * `_data/events.yml` (news/gallery items newest first, with matching full photo in `assets/img/gallery/` and 640x427 thumbnail in `assets/img/gallery/thumbs/`).
      * `_data/projects.yml`, `_data/equipment.yml`, `_data/lab.yml`, `_data/domains.yml`, `_data/themes.yml`, `_data/modalities.yml`, `_data/navigation.yml`.
    - Do NOT manually edit `_data/conferences.yml`, `_data/journals.yml`, or `_data/deadlines_meta.yml`; these are auto-generated weekly by `scripts/update_deadlines.py`.

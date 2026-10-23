@@ -1,6 +1,6 @@
 # Publications migrated from the lab's Wix site (International and Domestic pages),
 # 2026-10-17. Fields: region (international|domestic), type (journal|conference),
-# year, and either authors/title/venue or the verbatim citation in `text`.
+# year, and either authors/title/venue (with optional url) or the verbatim citation in `text`.
 # Add new papers at the top of the matching year.
 - region: international
   type: journal
@@ -8,30 +8,35 @@
   authors: Manar Alnaasan, Md Selim Sarowar & Sungho Kim*
   title: 'Fusion VLM-Gait: RGB-D fusion in vision-language models for explainable multi-task Parkinsonian gait analysis'
   venue: 'Scientific Reports, 2026. DOI: 10.1038/s41598-026-67440-x'
+  url: 'https://www.nature.com/articles/s41598-026-67440-x'
 - region: international
   type: journal
   year: 2026
   authors: Huanheng Zhang, Soon Kwon, Sungho Kim
   title: Mitigating Token Role Drift under Occlusion with No Inference Overhead for Compositional-Token Pose Estimation
   venue: Neurocomputing, 693, 133857, 2026
+  url: 'https://www.sciencedirect.com/science/article/abs/pii/S0925231226012543'
 - region: international
   type: journal
   year: 2026
   authors: Debnath U, Srestha SD, Kim S
   title: 'Feasibility of Heart Rate Monitoring in Hemodialysis Patients Using Visible Imaging: A Pilot Study'
   venue: Frontiers in Physiology, 17, 1909505, 2026
+  url: 'https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2026.1909505/full'
 - region: international
   type: journal
   year: 2026
   authors: Kim J, Kim S, Sreshta SD, Debnath U, Choo YJ, Chang MC
   title: 'Long-wave Infrared Imaging for Respiratory Rate Measurement in a Patient with Amyotrophic Lateral Sclerosis: A Case Report'
   venue: Journal of International Medical Research, 54(3), 03000605261429206, 2026
+  url: 'https://journals.sagepub.com/doi/10.1177/03000605261429206'
 - region: international
   type: journal
   year: 2026
   authors: Md Selim Sarowar, Manar Alnaasan, and Sungho Kim*
   title: 'C3G-VM6D: Data-Efficient C3G Vision Model Aided 6D Pose Estimation Based on RGB-D Data'
   venue: 'IEEE Access, 14, 34223-34238, 2026. DOI: 10.1109/ACCESS.2026.3666439'
+  url: 'https://ieeexplore.ieee.org/document/11400555'
 - region: international
   type: journal
   year: 2026

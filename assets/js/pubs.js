@@ -132,7 +132,8 @@
       var terms = state.q.split(/\s+/).filter(function (t) { return t.length > 1; });
       if (!terms.length) return;
       var re = new RegExp("(" + terms.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")", "ig");
-      var title = m.el.querySelector(".pub__title");
+      var titleLink = m.el.querySelector(".pub__title a, .pub__text a");
+      var title = titleLink || m.el.querySelector(".pub__title") || m.el.querySelector(".pub__text");
       if (title) title.innerHTML = AVIL.escape(title.textContent).replace(re, "<mark>$1</mark>");
     }
 

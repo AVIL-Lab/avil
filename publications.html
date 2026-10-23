@@ -125,14 +125,19 @@ description: "International and domestic journal and conference publications of 
                   <li class="pub" data-region="{{ x.region }}" data-type="{{ x.type }}" data-year="{{ x.year }}">
                     <div class="pub__body">
                       {%- if x.title %}
-                      <p class="pub__title">{{ x.title }}</p>
+                      <p class="pub__title">{% if x.url %}<a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.title }}</a>{% else %}{{ x.title }}{% endif %}</p>
                       <p class="pub__authors js-authors">{{ x.authors }}</p>
                       {%- if x.venue %}<p class="pub__venue">{{ x.venue }}</p>{% endif %}
                       {%- else %}
-                      <p class="pub__text js-authors">{{ x.text }}</p>
+                      <p class="pub__text js-authors">{% if x.url %}<a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.text }}</a>{% else %}{{ x.text }}{% endif %}</p>
                       {%- endif %}
                     </div>
-                    <button type="button" class="icon-btn pub__copy" data-copy="{{ cite | escape }}" data-copy-msg="Citation copied" aria-label="Copy citation"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
+                    <div class="pub__actions">
+                      {%- if x.url %}
+                      <a class="icon-btn pub__link" href="{{ x.url }}" target="_blank" rel="noopener" aria-label="Open publication" title="Open publication"><svg class="i i--sm" aria-hidden="true"><use href="#i-external"/></svg></a>
+                      {%- endif %}
+                      <button type="button" class="icon-btn pub__copy" data-copy="{{ cite | escape }}" data-copy-msg="Citation copied" aria-label="Copy citation" title="Copy citation"><svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg></button>
+                    </div>
                   </li>
                   {%- endfor %}
                 </ol>
