@@ -65,6 +65,15 @@
   email: tanvir.ahmmed.turzo131@gmail.com
   linkedin: https://www.linkedin.com/in/tanvir-ahmmed-12b19a3b7
   homepage: ""
+  about:
+    en: |
+      I am pursuing an **Integrated MS-PhD degree in Electronic Engineering** at Yeungnam University, South Korea, where I serve as a Research Assistant at the Advanced Visual Intelligence Laboratory (AVIL) under the supervision of [Professor Sungho Kim](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en).
+
+      My research focuses on integrating **Raman Spectroscopy and Artificial Intelligence (AI)** for biomedical sensing and intelligent material classification, alongside **Multimodal Sensing and Sensor Fusion for Physical AI systems**. My long-term goal is to advance robust, AI-driven sensing and perception technologies that contribute to biomedical innovation, material characterization, and intelligent autonomous systems.
+    ko: |
+      영남대학교 전자공학과에서 **석박사통합과정**을 밟고 있으며, 지능형시각정보처리연구실(AVIL)에서 [김성호 교수님](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en)의 지도 아래 연구원(RA)으로 연구를 수행하고 있습니다.
+
+      **라만 분광학(Raman Spectroscopy)과 인공지능(AI)**을 결합하여 바이오메디컬 센싱 및 지능형 물질 분류를 연구하고 있으며, **피지컬 AI 시스템을 위한 멀티모달 센싱과 센서 융합** 연구를 병행하고 있습니다. 바이오메디컬 혁신, 물질 특성 분석, 지능형 자율 시스템에 기여할 수 있는 AI 기반 센싱 및 인지 기술 발전을 장기적인 연구 목표로 삼고 있습니다.
 
 - name: Nur Nahar Queen
   role: ms
