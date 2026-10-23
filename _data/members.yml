@@ -103,7 +103,6 @@
       **3D 컴퓨터 비전 및 공간 지능, 6D 자세 추정, 비전-언어-행동(VLA) 모델, 월드 모델, 에이전틱 로보틱스**를 로봇 매니퓰레이션에 적용하는 연구를 합니다. 물리 세계에서 인지하고 추론하며 행동하는 체화 에이전트를 만들어 **피지컬 슈퍼 인텔리전스**에 다가가는 것이 목표입니다. 이 분야에서 **BMVC'26** 채택 논문과 **IEEE Access (SCIE-Q1)** 게재 논문을 제1저자로 발표했습니다.
 
       영남대학교 입학 전에는 GKS 프로그램으로 KLI에서 1년간 한국어 과정을 마쳤고, 대만 [국립칭화대학교 WCSP 연구실](https://nthu-en.site.nthu.edu.tw/)에서 1년간 전임 연구원으로 일했습니다. 인도 [KIIT](https://kiit.ac.in/)에서 [SII 장학생](https://studyinindia.gov.in/)으로 전기전자공학 학사(B.Tech)를 받았고, [IIT Roorkee](https://www.iitr.ac.in/)에서 생체신호 영상처리 인턴십을 했습니다.
-
 - name: Haekang Song
   name_ko: 송해강
   role: ms
@@ -160,6 +159,24 @@
   email: jk07059@naver.com
   linkedin: https://www.linkedin.com/in/%EC%9B%90%EC%A2%85-%EC%9D%B4-9a783940b
   homepage: ""
+
+- name: Muhammad Ihsan
+  role: ms
+  photo: muhammad-ihsan.webp
+  interests: [Computer Vision, 6D Object Pose Estimation, Robotic Grasping, Vision-Language-Action (VLA) Models]
+  email: ""
+  linkedin: https://www.linkedin.com/in/muhammad-ihsan-50187827a
+  homepage: ""
+  aliases: [Ihsan, "Ihsan, M.", "Ihsan, Muhammad"]
+  about:
+    en: |
+      I am pursuing an **M.Sc. in Electronic Engineering** at Yeungnam University, South Korea, supported by the [Global Korea Scholarship (GKS)](https://www.studyinkorea.go.kr/). My research interests include **computer vision, 6D object pose estimation, robotic grasping, and vision-language-action (VLA) models**. I am a member of the Advanced Visual Intelligence Lab (AVIL), supervised by [Prof. Sungho Kim](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en).
+
+      Before joining Yeungnam University, I earned my bachelor's degree in Electrical Engineering from [Muhammadiyah University of Yogyakarta](https://www.umy.ac.id/), Indonesia, graduating with honors. I also participated in a double-degree program in Computer Science and Information Engineering at [Asia University](https://www.asia.edu.tw/), Taiwan. During my undergraduate studies, I participated in several research projects related to robotics, computer vision, and AI, and received awards in robotics competitions and research presentations.
+    ko: |
+      대한민국 정부초청장학생(GKS)으로 영남대학교 전자공학과에서 **석사 과정**을 밟고 있습니다. 연구 분야는 **컴퓨터 비전, 6D 물체 자세 추정, 로봇 파지, 비전-언어-행동(VLA) 모델**입니다. 지능형시각정보처리연구실(AVIL) 소속으로 [김성호 교수님](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en)의 지도를 받고 있습니다.
+
+      영남대학교 입학 전에는 인도네시아 무함마디야 욕야카르타 대학교(UMY)에서 전기공학 학사 학위를 우등으로 취득하였으며, 대만 아시아 대학교(Asia University)와의 컴퓨터과학 및 정보공학 복수학위 프로그램을 이수했습니다. 학부 재학 중 로보틱스, 컴퓨터 비전, 인공지능 관련 다수의 연구 프로젝트에 참여하였으며, 로봇 경진대회 및 학술 발표에서 다수의 상을 수상했습니다.
 
 - name: Bomin Kim
   name_ko: 김보민
