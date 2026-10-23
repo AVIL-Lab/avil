@@ -76,6 +76,8 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
             <div class="member__social">
               {%- if m.email and m.email != "" %}
               <button type="button" class="social" data-copy="{{ m.email }}" data-copy-msg="Email copied" aria-label="Copy email of {{ m.name }}" title="Copy {{ m.email }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</button>
+              {%- else %}
+              <span class="social social--placeholder" aria-disabled="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</span>
               {%- endif %}
               {%- if m.linkedin and m.linkedin != "" %}
               <a class="social social--linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn profile of {{ m.name }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
@@ -109,8 +111,10 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
                 {%- endif %}
               </div>
               <footer class="about-dialog__foot">
-                {%- if m.email %}<button type="button" class="social" data-copy="{{ m.email }}" data-copy-msg="Email copied" aria-label="Copy email of {{ m.name }}" title="Copy {{ m.email }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</button>{% endif %}
-                {%- if m.linkedin and m.linkedin != "" %}<a class="social social--linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>{% endif %}
+                {%- if m.email and m.email != "" %}<button type="button" class="social" data-copy="{{ m.email }}" data-copy-msg="Email copied" aria-label="Copy email of {{ m.name }}" title="Copy {{ m.email }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</button>
+                {%- else %}<span class="social social--placeholder" aria-disabled="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</span>{% endif %}
+                {%- if m.linkedin and m.linkedin != "" %}<a class="social social--linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+                {%- else %}<span class="social social--linkedin social--placeholder" aria-disabled="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</span>{% endif %}
                 {%- if m.homepage and m.homepage != "" %}<a class="social" href="{{ m.homepage }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-home"/></svg>Homepage</a>{% endif %}
                 <a class="social" href="{{ '/publications/' | relative_url }}?q={{ m.name | url_encode }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-book"/></svg>{% include t.html en="Papers" ko="논문" %}</a>
               </footer>

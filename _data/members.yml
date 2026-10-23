@@ -5,7 +5,7 @@
 #   role        postdoc | phd | ms | undergrad  (drives the group headings)
 #   photo       file in assets/img/members/
 #   interests   research areas as listed by the member
-#   email       contact shown on the card as a linked Email button (optional)
+#   email       contact shown on the card (click to copy); leave "" until known (shows a placeholder on the card)
 #   linkedin    full LinkedIn profile URL; leave "" until known (shows a placeholder on the card)
 #   homepage    personal or project homepage URL; leave "" until known
 #   about       optional short bio shown in the card's "About me" pop-up, with
@@ -164,7 +164,7 @@
   role: ms
   photo: muhammad-ihsan.webp
   interests: [Computer Vision, 6D Object Pose Estimation, Robotic Grasping, Vision-Language-Action (VLA) Models]
-  email: ""
+  email: mhmmdihsan54@gmail.com
   linkedin: https://www.linkedin.com/in/muhammad-ihsan-50187827a
   homepage: ""
   aliases: [Ihsan, "Ihsan, M.", "Ihsan, Muhammad"]
