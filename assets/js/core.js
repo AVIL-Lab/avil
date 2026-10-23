@@ -28,21 +28,41 @@
       toastEl.setAttribute("role", "status");
       document.body.appendChild(toastEl);
     }
+    var activeDialog = document.querySelector("dialog[open]");
+    if (activeDialog) {
+      if (toastEl.parentNode !== activeDialog) activeDialog.appendChild(toastEl);
+    } else if (toastEl.parentNode !== document.body) {
+      document.body.appendChild(toastEl);
+    }
     toastEl.textContent = msg;
     toastEl.classList.add("is-on");
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toastEl.classList.remove("is-on"); }, 1800);
+    toastTimer = setTimeout(function () {
+      toastEl.classList.remove("is-on");
+      if (toastEl.parentNode !== document.body) {
+        document.body.appendChild(toastEl);
+      }
+    }, 1800);
   };
   AVIL.copy = function (text, msg) {
-    function done() { AVIL.toast(msg || "Copied"); }
+    function done() {
+      var display = msg || "Copied";
+      if (AVIL.lang() === "ko") {
+        if (msg === "Email copied") display = "이메일이 복사되었습니다";
+        else if (msg === "Citation copied") display = "인용 정보가 복사되었습니다";
+        else if (msg === "Copied" || !msg) display = "복사되었습니다";
+      }
+      AVIL.toast(display);
+    }
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(text).then(done, fallback);
     } else fallback();
     function fallback() {
+      var parent = document.querySelector("dialog[open]") || document.body;
       var ta = document.createElement("textarea");
       ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
-      document.body.appendChild(ta); ta.select();
-      try { document.execCommand("copy"); done(); } catch (e) { AVIL.toast("Copy failed"); }
+      parent.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { AVIL.toast(AVIL.lang() === "ko" ? "복사 실패" : "Copy failed"); }
       ta.remove();
     }
   };
@@ -278,8 +298,54 @@
       var b = e.target.closest("[data-copy]");
       if (!b) return;
       e.preventDefault();
-      AVIL.copy(b.getAttribute("data-copy"), b.getAttribute("data-copy-msg") || "Copied");
+      var text = b.getAttribute("data-copy");
+      var msg = b.getAttribute("data-copy-msg") || "Copied";
+      AVIL.copy(text, msg);
+
+      if (!b.classList.contains("is-copied")) {
+        b.classList.add("is-copied");
+        var iconUse = b.querySelector("svg use");
+        var origHref = iconUse ? iconUse.getAttribute("href") : null;
+        if (iconUse) iconUse.setAttribute("href", "#i-check");
+
+        var textNode = null;
+        for (var i = 0; i < b.childNodes.length; i++) {
+          var n = b.childNodes[i];
+          if (n.nodeType === 3 && n.nodeValue.trim().length > 0) {
+            textNode = n;
+            break;
+          } else if (n.nodeType === 1 && n.tagName !== "svg" && !n.classList.contains("sr-only")) {
+            textNode = n;
+            break;
+          }
+        }
+        var origText = textNode ? (textNode.nodeType === 3 ? textNode.nodeValue : textNode.textContent) : null;
+        if (textNode) {
+          var isEmail = msg === "Email copied";
+          var label = (b.offsetWidth >= 115 && isEmail) ? "Email copied" : "Copied!";
+          if (AVIL.lang() === "ko") {
+            label = (b.offsetWidth >= 115 && isEmail) ? "이메일 복사됨" : "복사됨";
+          }
+          if (textNode.nodeType === 3) textNode.nodeValue = " " + label;
+          else textNode.textContent = label;
+        }
+
+        setTimeout(function () {
+          b.classList.remove("is-copied");
+          if (iconUse && origHref) iconUse.setAttribute("href", origHref);
+          if (textNode && origText !== null) {
+            if (textNode.nodeType === 3) textNode.nodeValue = origText;
+            else textNode.textContent = origText;
+          }
+        }, 1800);
+      }
     });
+
+    document.addEventListener("close", function () {
+      if (toastEl && toastEl.parentNode !== document.body) {
+        document.body.appendChild(toastEl);
+      }
+    }, true);
   }
 
   /* ---- Lab-member names in author lists ----------------------------------- */

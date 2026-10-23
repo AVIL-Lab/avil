@@ -217,9 +217,11 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
 .js .reveal.is-in { opacity: 1; transform: none; }
 
-/* Toast */
-.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); z-index: 90; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--bg); font-size: .9rem; font-weight: 600; opacity: 0; pointer-events: none; transition: .2s; }
+/* Toast & copy feedback */
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); z-index: 90; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--bg); font-size: .9rem; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; }
 .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+.icon-btn.is-copied { color: #059669; border-color: #10b981; }
+:root[data-theme="dark"] .icon-btn.is-copied { color: #34d399; border-color: #34d399; }
 
 /* ---- Search palette ---------------------------------------------------------- */
 .palette { position: fixed; inset: 0; z-index: 80; }
