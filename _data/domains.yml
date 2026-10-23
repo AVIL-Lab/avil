@@ -90,7 +90,7 @@
       피지컬 슈퍼 인텔리전스를 향한 로보틱스 연구: 비전-언어-행동(VLA) 모델, 월드 모델, 에이전틱
       로보틱스, 체화 지능, 휴머노이드 로봇 지능. 모바일 양팔 매니퓰레이션을 위한 3D VLM 기반
       embodied AI와 피지컬 AI용 라이다 센싱을 포함.
-  core_team: [Selim Sarowar, Ihsan, Taeung, 화통걸]
+  core_team: [Selim Sarowar, Muhammad Ihsan, Taeung Kang, 화통걸]
   funders: [Korea Institute for Robot Industry Advancement]
   words: [vision-language-action, world model, embodied, physical ai, manipulat, grasp, robot, humanoid, bimanual, agentic, 6d pose, 6dof, pose estimation, mobile manipulator, sim-to-real, agent, language model, llava, 3d object, lidar, 로봇, 파지, 매니퓰레이, 에이전트, 자세 추정, 피지컬, 양팔, 라이다, 휴머노이드]
   acronyms: [VLA, VLM, LLM, 6D]
