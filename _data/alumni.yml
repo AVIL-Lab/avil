@@ -6,6 +6,7 @@
 #   degree      M.S. for everyone listed so far.
 #   graduated   YYYY-MM
 #   next / next_ko  where they went after AVIL, as given on Wix.
+#   email       email address; leave "" until known.
 #   linkedin    full LinkedIn profile URL; leave "" until known.
 
 - { name_ko: 장예원, name: Yewon Jang, degree: M.S., graduated: 2026-02, next: AICU, next_ko: 에이아이씨유, photo: yewon-jang.webp, linkedin: "" }

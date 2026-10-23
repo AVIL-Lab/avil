@@ -202,9 +202,9 @@ When a member graduates: (1) delete their block from `_data/members.yml`; (2) ad
 - { name_ko: 홍길동, name: Gildong Hong, degree: M.S., graduated: 2027-02, next: Samsung Electronics, next_ko: 삼성전자, photo: gildong-hong.webp, linkedin: "" }
 ```
 
-`graduated` is the graduation month as `YYYY-MM`. `next` / `next_ko` is where they went (company, institute or school); leave both out if unknown. `linkedin` is the full LinkedIn profile URL (paste the URL without `?utm_source=…` parameters, or leave `""` if unknown so the card keeps a placeholder button). To add a LinkedIn link for an existing alumnus later, replace `linkedin: ""` on their line in `_data/alumni.yml` with the profile URL. Alumni are grouped by graduation year, and the "Where our alumni went" chart counts the `next` values automatically.
+`graduated` is the graduation month as `YYYY-MM`. `next` / `next_ko` is where they went (company, institute or school); leave both out if unknown. `email` is the email address; leave `""` or omit if unknown so the card keeps a placeholder button. `linkedin` is the full LinkedIn profile URL (paste the URL without `?utm_source=…` parameters, or leave `""` if unknown so the card keeps a placeholder button). To add an email or LinkedIn link for an existing alumnus later, set `email: "..."` or replace `linkedin: ""` on their line in `_data/alumni.yml` with the profile URL. Alumni are grouped by graduation year, and the "Where our alumni went" chart counts the `next` values automatically.
 
-`graduated`는 졸업 연월(`YYYY-MM`)입니다. `next` / `next_ko`는 졸업 후 진로(회사, 연구소, 학교)이며 모르면 둘 다 빼면 됩니다. `linkedin`은 LinkedIn 프로필 전체 주소입니다 (`?utm_source=…` 뒷부분은 지우고 넣으며, 모르면 `""`로 두어 카드에 자리 표시 버튼이 보이게 합니다). 기존 졸업생의 LinkedIn 주소를 나중에 추가하려면 `_data/alumni.yml`의 해당 줄에서 `linkedin: ""`에 주소를 채워 넣으면 됩니다. 졸업생은 졸업 연도별로 묶이고 "졸업생 진로" 그래프는 `next` 값을 자동으로 셉니다.
+`graduated`는 졸업 연월(`YYYY-MM`)입니다. `next` / `next_ko`는 졸업 후 진로(회사, 연구소, 학교)이며 모르면 둘 다 빼면 됩니다. `email`은 이메일 주소이며 모르면 `""`로 두거나 생략하여 카드에 자리 표시 버튼이 보이게 합니다. `linkedin`은 LinkedIn 프로필 전체 주소입니다 (`?utm_source=…` 뒷부분은 지우고 넣으며, 모르면 `""`로 두어 카드에 자리 표시 버튼이 보이게 합니다). 기존 졸업생의 이메일이나 LinkedIn 주소를 나중에 추가하려면 `_data/alumni.yml`의 해당 줄에 `email:`을 추가하거나 `linkedin: ""`에 주소를 채워 넣으면 됩니다. 졸업생은 졸업 연도별로 묶이고 "졸업생 진로" 그래프는 `next` 값을 자동으로 셉니다.
 
 ### 5.4 Remove a member · 구성원 삭제
 
@@ -473,7 +473,7 @@ Before making any changes, read README.md completely and strictly follow the exi
    - Never hardcode content inside HTML page templates (index.html, professor.html, members.html, research.html, projects.html, publications.html, news.html, gallery.html, contact.html, deadlines.html, journals.html) when it belongs in `_data/*.yml`.
    - All content updates go into `_data/`:
      * `_data/members.yml` (current members: `name`, optional `name_ko`, `role` in `postdoc|phd|ms|undergrad`, `photo`, `interests`, `email`, `linkedin`, `homepage`, optional `aliases`, optional `about.en` / `about.ko`). Leave unknown `linkedin` or `homepage` as `""`.
-     * `_data/alumni.yml` (alumni newest first: `name_ko`, `name`, `degree`, `graduated` as `YYYY-MM`, optional `next`/`next_ko`, `photo`, `linkedin` URL or `""`).
+     * `_data/alumni.yml` (alumni newest first: `name_ko`, `name`, `degree`, `graduated` as `YYYY-MM`, optional `next`/`next_ko`, optional `email`, `photo`, `linkedin` URL or `""`).
      * `_data/professor.yml` (PI profile, contact, `links`, `scholar` citation metrics, `career` timeline).
      * `_data/publications.yml` (papers newest year first; within the same year, region, and type, group consecutive papers from the same conference together, e.g., KIEES, ICROS, IEIE).
      * `_data/events.yml` (news/gallery items newest first, with matching full photo in `assets/img/gallery/` and 640x427 thumbnail in `assets/img/gallery/thumbs/`).

@@ -169,6 +169,11 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
               <p class="alum__meta"><span class="mono">{{ a.degree }} · {{ a.graduated | replace: "-", "." }}</span></p>
               {%- if a.next %}<p class="alum__next"><svg class="i i--sm" aria-hidden="true"><use href="#i-briefcase"/></svg>{% include t.html en=a.next ko=a.next_ko %}</p>{% endif %}
               <div class="alum__social">
+                {%- if a.email and a.email != "" %}
+                <button type="button" class="social" data-copy="{{ a.email }}" data-copy-msg="Email copied" aria-label="Copy email of {{ a.name | default: a.name_ko }}" title="Copy {{ a.email }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</button>
+                {%- else %}
+                <span class="social social--placeholder" aria-disabled="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-mail"/></svg>Email</span>
+                {%- endif %}
                 {%- if a.linkedin and a.linkedin != "" %}
                 <a class="social social--linkedin" href="{{ a.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn profile of {{ a.name | default: a.name_ko }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
                 {%- else %}
