@@ -78,7 +78,7 @@
 
 /* ---- Stats --------------------------------------------------------------- */
 .stats-band { background: var(--surface); border-bottom: 1px solid var(--line); }
-.stats { display: grid; grid-template-columns: repeat(6, 1fr); }
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); }
 .stat { padding: 22px 12px; text-align: center; border-right: 1px solid var(--line); }
 .stat:last-child { border-right: 0; }
 .stat__num { display: block; font: 700 clamp(1.7rem, 1.2rem + 1.6vw, 2.4rem)/1.1 var(--mono); color: var(--ink); }
@@ -199,7 +199,7 @@
 @media (max-width: 1000px) {
   .explorer__cols { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: repeat(3, 1fr); }
-  .stat:nth-child(3n) { border-right: 0; }
+  .stat:nth-child(3) { border-right: 0; }
   .stat:nth-child(n+4) { border-top: 1px solid var(--line); }
 }
 @media (max-width: 640px) {
@@ -209,6 +209,7 @@
   .stat { border-right: 0 !important; border-top: 1px solid var(--line); }
   .stat:nth-child(-n+2) { border-top: 0; }
   .stat:nth-child(odd) { border-right: 1px solid var(--line) !important; }
+  .stat:last-child { grid-column: 1 / -1; border-right: 0 !important; }
   .explorer__counts { grid-template-columns: repeat(2, 1fr); }
   .explorer__cols { grid-template-columns: 1fr; }
   .about__lists { grid-template-columns: 1fr; }
