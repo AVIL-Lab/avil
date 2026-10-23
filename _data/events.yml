@@ -11,6 +11,13 @@
   ko: FIX 2026 (대한민국 미래혁신기술박람회) 및 DIFA 참여
   en: Attended DIFA and FIX (Future Innovation tech eXpo) 2026
   photo: 2026-10-22-fix-difa.webp
+- date: '2026-08-20'
+  when: 2026/08/20
+  tag: conference
+  news_only: true
+  ko: 평창 KIEES 2026 학회 참여
+  en: Attended KIEES 2026 in Pyeongchang
+  photo: 2026-08-20-kiees.webp
 - date: '2026-07-29'
   when: 2026/07/29
   tag: conference
