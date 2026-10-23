@@ -33,7 +33,7 @@
   --t-field: #c2410c; --t-field-bg: #fde6d8;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", "Noto Sans CJK JP", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --wrap: 1680px;
+  --wrap: min(95vw, 1840px);
   --header-h: 64px;
 }
 
@@ -87,8 +87,8 @@ html:not([data-lang="ko"]) .i18n[lang="ko"], html[data-lang="ko"] .i18n[lang="en
 html[data-lang="ko"] body { word-break: keep-all; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
-@media (min-width: 720px) { .wrap { padding: 0 28px; } }
-@media (min-width: 1280px) { .wrap { padding: 0 40px; } }
+@media (min-width: 720px) { .wrap { padding: 0 clamp(20px, 2.4vw, 32px); } }
+@media (min-width: 1280px) { .wrap { padding: 0 clamp(28px, 2.8vw, 48px); } }
 .i { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .i--sm { width: .95em; height: .95em; }
 .i--xs { width: .75em; height: .75em; }
