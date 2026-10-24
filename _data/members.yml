@@ -179,6 +179,25 @@
 
       영남대학교 입학 전에는 인도네시아 무함마디야 욕야카르타 대학교(UMY)에서 전기공학 학사 학위를 우등으로 취득하였으며, 대만 아시아 대학교(Asia University)와의 컴퓨터과학 및 정보공학 복수학위 프로그램을 이수했습니다. 학부 재학 중 로보틱스, 컴퓨터 비전, 인공지능 관련 다수의 연구 프로젝트에 참여하였으며, 로봇 경진대회 및 학술 발표에서 다수의 상을 수상했습니다.
 
+- name: Tongjie Huo
+  name_ko: 화통걸
+  role: ms
+  photo: tongjie-huo.webp
+  interests: [Vision-Language-Action (VLA) Models, Physical AI, Robot Manipulation]
+  email: huotongjie@yu.ac.kr
+  linkedin: ""
+  homepage: ""
+  aliases: [Tongjie Huo, Huo Tongjie, "Huo, Tongjie", "Huo, T.", 화통걸]
+  about:
+    en: |
+      I am pursuing an **M.Sc. in Robotics and AI Convergence** at Yeungnam University, South Korea. My research interests include **vision-language-action (VLA) models, Physical AI, and robot manipulation**. I am a member of the Advanced Visual Intelligence Lab (AVIL), supervised by [Prof. Sungho Kim](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en).
+
+      Before joining the master's program, I earned my bachelor's degree in Computer Science and Engineering from [Yeungnam University](https://www.yu.ac.kr/).
+    ko: |
+      영남대학교 로봇·AI융합전공에서 **석사 과정**을 밟고 있습니다. 연구 분야는 **비전-언어-행동(VLA) 모델, 피지컬 AI, 로봇 조작(Robot Manipulation)**입니다. 지능형시각정보처리연구실(AVIL) 소속으로 [김성호 교수님](https://scholar.google.com/citations?user=3TptC38AAAAJ&hl=en)의 지도를 받고 있습니다.
+
+      석사 과정 진학 전에는 [영남대학교](https://www.yu.ac.kr/) 컴퓨터공학과에서 학사 학위를 취득했습니다.
+
 - name: Bomin Kim
   name_ko: 김보민
   role: undergrad
