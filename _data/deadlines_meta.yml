@@ -1,9 +1,9 @@
 # Written by scripts/update_deadlines.py. Do not edit.
-updated: '2026-10-21'
+updated: '2026-10-25'
 conferences: 60
 from_ccfddl: 3
 site_checked: 16
-site_found: 12
+site_found: 13
 changes:
 - 'ICME: 2027 -> 2027, next stage Paper Submission on 2026-12-30'
 - 'ICDM: 2027 -> 2027, next stage Paper Submission (Full papers; dates are tentative and subject to change) on 2027-06-06'

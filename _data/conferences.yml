@@ -34,7 +34,7 @@
   - label: Author Registration
     date: '2027-03-05'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-02-06'
     found: false
     status: 200
@@ -75,7 +75,7 @@
     time: '23:59'
     tz: PT
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-03-01'
     found: false
     status: 200
@@ -123,7 +123,7 @@
     date: '2027-05-14'
     tz: AoE
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-04-16'
     found: true
     status: 200
@@ -172,7 +172,7 @@
   - label: Final Decisions
     date: '2027-02-25'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2026-11-16'
     found: false
     status: 200
@@ -311,10 +311,10 @@
     date: '2027-06-05'
     tz: AoE
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-02-20'
-    found: false
-    error: URLError
+    found: true
+    status: 200
 - name: ICME
   edition: 2027
   category: vision
@@ -322,16 +322,24 @@
   location: Xiamen, China
   flag: 🇨🇳
   dates: July 13-17, 2027
-  website: https://ieee-cas.org/event/conference/2027-ieee-international-conference-multimedia-expo-icme
-  note: Dates filled automatically from the ccf-deadlines dataset on 2026-10-21. Confirm on the official site before submitting.
+  website: https://2027.ieeeicme.org/
+  note: Dates filled automatically from the ccf-deadlines dataset on 2026-10-25. Confirm on the official site before submitting.
   timeline:
   - label: Paper Submission
     date: '2026-12-30'
     time: '23:59'
-    tz: UTC-12
+    tz: AoE
+  - label: Rebuttal Deadline
+    date: '2027-03-04'
+    time: '23:59'
+    tz: AoE
+  - label: Notification
+    date: '2027-03-24'
+    time: '23:59'
+    tz: AoE
   source: ccf-deadlines
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2026-12-30'
     found: true
     status: 200
@@ -388,7 +396,7 @@
     date: '2026-11-16'
     tz: AoE
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2026-10-25'
     found: true
     status: 200
@@ -421,7 +429,7 @@
     date: '2027-04-21'
     tz: AoE
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-01-11'
     found: true
     status: 200
@@ -469,7 +477,7 @@
     date: '2027-01-04'
     tz: AoE
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-01-04'
     found: true
     status: 200
@@ -520,7 +528,7 @@
   - label: Acceptance Notification
     date: '2027-06-02'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-02-09'
     found: true
     status: 200
@@ -604,7 +612,7 @@
   - label: Author Notification
     date: '2027-02-26'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2026-12-14'
     found: true
     status: 200
@@ -614,7 +622,7 @@
   rank: A*
   location: Brisbane, Australia
   website: https://icdm2027-website.onrender.com/
-  note: Dates filled automatically from the ccf-deadlines dataset on 2026-10-21. Confirm on the official site before submitting.
+  note: Dates filled automatically from the ccf-deadlines dataset on 2026-10-25. Confirm on the official site before submitting.
   timeline:
   - label: Paper Submission (Full papers; dates are tentative and subject to change)
     date: '2027-06-06'
@@ -628,7 +636,7 @@
   dates: November 15-18, 2027
   source: ccf-deadlines
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-06-06'
     found: true
     status: 200
@@ -638,7 +646,7 @@
   rank: A*
   location: Buenos Aires, Argentina
   website: https://kr.org/KR2027/
-  note: Dates filled automatically from the ccf-deadlines dataset on 2026-10-21. Confirm on the official site before submitting.
+  note: Dates filled automatically from the ccf-deadlines dataset on 2026-10-25. Confirm on the official site before submitting.
   timeline:
   - label: Abstract Deadline
     date: '2027-04-23'
@@ -678,7 +686,7 @@
   - label: Notification
     date: '2027-04-05'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-01-21'
     found: true
     status: 200
@@ -739,7 +747,7 @@
   - label: Author Notification
     date: '2027-07-15'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-04-14'
     found: true
     status: 200
@@ -832,7 +840,7 @@
   - label: Short Paper Notification
     date: '2026-12-18'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2026-11-17'
     found: true
     status: 200
@@ -905,7 +913,7 @@
   - label: Acceptance Notification
     date: '2027-03-19'
   site_check:
-    'on': '2026-10-21'
+    'on': '2026-10-25'
     date: '2027-01-18'
     found: true
     status: 200
