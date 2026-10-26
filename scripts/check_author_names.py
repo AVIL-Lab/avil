@@ -32,7 +32,7 @@ import sys
 import yaml
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-LATIN = "A-Za-zÀ-ɏ"
+LATIN = "A-Za-z\u00C0-\u024F"
 
 
 def load(name: str):
@@ -87,18 +87,18 @@ def main() -> int:
         return not any(s <= start and end <= e for s, e in covered[i])
 
     def initial_nearby(text: str, start: int, end: int, initials: str) -> bool:
-        """True when the name part next to the surname starts with one of the
-        person's given-name initials: "Shin, Yeonha", "Jo, S.", "M. S. Son",
-        "Bhattacharyya Chaitali", "Indah Monisa firdiantika"."""
+        """True when the given-name part of the same author entry starts with one
+        of the person's given-name initials. Given names written before the
+        surname ("M. S. Son", "Indah Monisa firdiantika") are read back to the
+        last separator; otherwise the surname opens the entry and the given name
+        follows ("Shin, Yeonha", "Jo, S.", "Bhattacharyya Chaitali")."""
         tok = lambda s: [t.strip(".()") for t in re.findall(r"[^\s,;&]+", s)]
-        before, after = tok(text[:start]), tok(text[end:])
         starts = lambda t: t[:1].casefold() in initials.casefold()
-        if after and starts(after[0]):
-            return True
-        if before and starts(before[-1]):
-            return True
-        # "M. S. Son": a run of initials ending just before the surname
-        return len(before) >= 2 and len(before[-1]) == 1 and len(before[-2]) == 1 and starts(before[-2])
+        before = tok(re.split(r"[,;&]| and ", text[:start])[-1])
+        if before:
+            return any(starts(t) for t in before)
+        after = tok(text[end:])
+        return bool(after) and starts(after[0])
 
     surnames = collections.Counter()
     for label, sp in spell:
