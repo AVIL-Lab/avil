@@ -1,13 +1,23 @@
-{%- comment -%} Every spelling of a lab member's name, for bolding authors (core.js). {%- endcomment -%}
+{%- comment -%}
+  Every spelling of a lab member's name, for bolding authors (core.js).
+  With people=true it also writes #lab-people: {slug: {name, names}} per member
+  and alumnus, for the publications page's ?author=<slug> filter (pubs.js).
+  The slug is `name | default: name_ko | slugify`, as in members.html.
+{%- endcomment -%}
 {%- assign names = site.data.professor.aliases -%}
-{%- for m in site.data.members -%}
-  {%- assign names = names | push: m.name -%}
-  {%- if m.name_ko -%}{%- assign names = names | push: m.name_ko -%}{%- endif -%}
-  {%- for a in m.aliases -%}{%- assign names = names | push: a -%}{%- endfor -%}
+{%- assign everyone = site.data.members | concat: site.data.alumni -%}
+{%- capture people -%}{
+{%- for m in everyone -%}
+  {%- assign own = "" | split: "" -%}
+  {%- if m.name -%}{%- assign own = own | push: m.name -%}{%- endif -%}
+  {%- if m.name_ko -%}{%- assign own = own | push: m.name_ko -%}{%- endif -%}
+  {%- for a in m.aliases -%}{%- assign own = own | push: a -%}{%- endfor -%}
+  {%- assign names = names | concat: own -%}
+  {%- assign label = m.name | default: m.name_ko -%}
+  {{ label | slugify | jsonify }}:{"name":{{ label | jsonify }},"names":{{ own | uniq | jsonify }}}{% unless forloop.last %},{% endunless %}
 {%- endfor -%}
-{%- for m in site.data.alumni -%}
-  {%- if m.name -%}{%- assign names = names | push: m.name -%}{%- endif -%}
-  {%- if m.name_ko -%}{%- assign names = names | push: m.name_ko -%}{%- endif -%}
-  {%- for a in m.aliases -%}{%- assign names = names | push: a -%}{%- endfor -%}
-{%- endfor -%}
+}{%- endcapture -%}
 <script type="application/json" id="lab-names">{{ names | uniq | jsonify }}</script>
+{%- if include.people %}
+<script type="application/json" id="lab-people">{{ people }}</script>
+{%- endif %}

@@ -10,7 +10,7 @@ description: "International and domestic journal and conference publications of 
 {%- assign n_ic = pubs | where: "region", "international" | where: "type", "conference" | size -%}
 {%- assign n_dj = pubs | where: "region", "domestic" | where: "type", "journal" | size -%}
 {%- assign n_dc = pubs | where: "region", "domestic" | where: "type", "conference" | size -%}
-{% include lab-names.html %}
+{% include lab-names.html people=true %}
 {%- assign topics = site.data.modalities | concat: site.data.themes -%}
 <script type="application/json" id="topics">{{ topics | jsonify }}</script>
 <script type="application/json" id="topics-domains">[
@@ -38,6 +38,7 @@ description: "International and domestic journal and conference publications of 
         <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
         <input type="search" id="pub-q" placeholder="Title, author, venue, year" aria-label="Search publications">
       </label>
+      <button type="button" class="chip pub-author" id="pub-author" hidden aria-label="Remove the author filter">{% include t.html en="Papers by" ko="저자:" %} <b></b><svg class="i i--sm" aria-hidden="true"><use href="#i-x"/></svg></button>
       <div class="toolbar__group">
         <span class="toolbar__label">{% include t.html en="Region" ko="구분" %}</span>
         <div class="segment" data-filter="region">

@@ -170,9 +170,9 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
       **비전-언어-행동 모델**을 연구하는 석사과정생입니다.
 ```
 
-The `role` values mean: `postdoc` = Post-Doc, `phd` = Ph.D. student, `ms` = Master's student, `undergrad` = undergraduate researcher. The `aliases` list makes the member's name appear in **bold** in author lists on the Publications page; add every spelling used in their papers (their English name, Korean name and `name_ko` are already included automatically).
+The `role` values mean: `postdoc` = Post-Doc, `phd` = Ph.D. student, `ms` = Master's student, `undergrad` = undergraduate researcher. The `aliases` list makes the member's name appear in **bold** in author lists on the Publications page, and the **Papers** button on member and alumni cards (`/publications/?author=<name>`) lists every paper that contains any of these spellings. Add every spelling used in their papers, written exactly as in the paper (capital letters count): short forms such as `Debnath U` or `Debnath, U.` and reordered forms such as `Shin, Yeonha`. The English `name` and `name_ko` are already included automatically. Do not add a short form that fits two lab people (for example `Kim J` for both Jaeho Kim and Jongchan Kim) without checking the paper first; it would count the paper for both.
 
-`role` 값의 뜻: `postdoc` = 박사후연구원, `phd` = 박사과정, `ms` = 석사과정, `undergrad` = 학부연구생. `aliases`에 적은 이름은 논문 페이지 저자 목록에서 **굵게** 표시됩니다. 논문에 쓰인 모든 표기를 적어 주세요 (영어 이름과 `name_ko`는 자동으로 포함됩니다).
+`role` 값의 뜻: `postdoc` = 박사후연구원, `phd` = 박사과정, `ms` = 석사과정, `undergrad` = 학부연구생. `aliases`에 적은 이름은 논문 페이지 저자 목록에서 **굵게** 표시되며, 구성원과 졸업생 카드의 **논문** 버튼(`/publications/?author=<이름>`)은 이 표기 중 하나라도 들어 있는 논문을 모두 보여 줍니다. 논문에 쓰인 모든 표기를 논문 그대로 적어 주세요 (대소문자 구분): `Debnath U`, `Debnath, U.` 같은 약식 표기와 `Shin, Yeonha` 같은 순서가 바뀐 표기도 포함합니다. 영어 이름(`name`)과 `name_ko`는 자동으로 포함됩니다. 두 사람에게 해당할 수 있는 약식 표기(예: 김재호와 김종찬 모두에 해당하는 `Kim J`)는 논문을 확인하기 전에는 추가하지 마세요. 두 사람 모두의 논문으로 집계됩니다.
 
 **Step 3 (optional). Place the member in a home page research domain.** Open `_data/domains.yml` and add the exact `name` to the `members:` list of Defense AI or Medical AI, or to `core_team:` of Physical Super Intelligence (see 5.11).
 
@@ -253,9 +253,9 @@ If you only have a full citation string, use `text:` instead of `authors`, `titl
   text: "홍길동, 김성호, \"논문 제목\", 제어로봇시스템학회 논문지, 33(1), 1-8, 2027."
 ```
 
-The counters, year chart, filters, search and the research explorers all update automatically. Spell lab members' names consistently (or add the spelling to their `aliases`) so they appear in bold. List only papers that are published or accepted unless the lab decides otherwise, and say "under review" or "preprint" in `venue` when that is the status.
+The counters, year chart, filters, search and the research explorers all update automatically. Spell lab members' names consistently (or add the spelling to their `aliases`) so they appear in bold and under their **Papers** button. Then run `python scripts/check_author_names.py` (needs `pip install pyyaml`): it lists spellings in the publication list that look like a member's or alumnus's name but are not in their `aliases`, and stops with an error if two people share a spelling or a link name. Copy the spellings that are right into `aliases`. List only papers that are published or accepted unless the lab decides otherwise, and say "under review" or "preprint" in `venue` when that is the status.
 
-숫자, 연도별 그래프, 필터, 검색, 연구 분야 탐색 화면이 모두 자동으로 바뀝니다. 구성원 이름은 일관되게 쓰거나 (또는 해당 표기를 `aliases`에 추가하면) 굵게 표시됩니다. 연구실에서 따로 정하지 않았다면 게재되었거나 채택된 논문만 올리고, 심사 중이거나 프리프린트라면 `venue`에 "under review" 또는 "preprint"라고 적습니다.
+숫자, 연도별 그래프, 필터, 검색, 연구 분야 탐색 화면이 모두 자동으로 바뀝니다. 구성원 이름은 일관되게 쓰거나 (또는 해당 표기를 `aliases`에 추가하면) 굵게 표시되고 **논문** 버튼에도 나타납니다. 그다음 `python scripts/check_author_names.py`를 실행합니다 (`pip install pyyaml` 필요). 논문 목록에서 구성원이나 졸업생 이름처럼 보이지만 `aliases`에 없는 표기를 보여 주며, 두 사람이 같은 표기나 같은 링크 이름을 쓰면 오류로 멈춥니다. 맞는 표기를 `aliases`에 복사합니다. 연구실에서 따로 정하지 않았다면 게재되었거나 채택된 논문만 올리고, 심사 중이거나 프리프린트라면 `venue`에 "under review" 또는 "preprint"라고 적습니다.
 
 ### 5.7 Add news and a photo · 소식과 사진 추가
 
@@ -424,7 +424,7 @@ Then open the live page. If it still looks old, wait a minute and refresh once w
 | Build failed (red ❌) · 빌드 실패 | YAML mistake: a tab instead of spaces, wrong indentation, or an unquoted `: `. Read the error line in Actions (section 7). · YAML 실수: 탭 사용, 들여쓰기 오류, 따옴표 없는 `: `. Actions의 오류 줄을 확인 (7장). |
 | Change not visible · 변경이 안 보임 | Build still running or browser cache. Check Actions, then hard refresh (Ctrl/Cmd + Shift + R). · 빌드 진행 중이거나 브라우저 캐시. Actions 확인 후 강력 새로 고침. |
 | Photo not showing · 사진이 안 보임 | File name in YAML differs from the uploaded file (spelling, upper/lower case, extension), or the file is in the wrong folder. · YAML의 파일 이름과 실제 파일 이름이 다름 (철자, 대소문자, 확장자) 또는 폴더가 다름. |
-| Member's name not bold in papers · 논문에서 이름이 굵게 안 보임 | Add the exact spelling used in the paper to the member's `aliases`. · 논문에 쓰인 표기를 그 구성원의 `aliases`에 추가. |
+| Member's name not bold in papers, or a paper missing under their **Papers** button · 논문에서 이름이 굵게 안 보이거나 **논문** 버튼에 논문이 빠짐 | Add the exact spelling used in the paper to the member's or alumnus's `aliases`; `python scripts/check_author_names.py` finds most of these. · 논문에 쓰인 표기를 그 구성원 또는 졸업생의 `aliases`에 추가. `python scripts/check_author_names.py`로 대부분 찾을 수 있습니다. |
 | Paper in the wrong research tab · 논문이 다른 연구 탭에 있음 | Adjust the keywords in `_data/domains.yml` or `_data/themes.yml` (5.11, 5.12). · `_data/domains.yml` 또는 `_data/themes.yml`의 키워드 조정 (5.11, 5.12). |
 | A whole page lost its styling · 페이지 디자인이 깨짐 | Its `description:` (or another header value) has an unquoted colon. Put the value in quotes. · 페이지 머리말의 `description:` 등에 따옴표 없는 콜론이 있음. 따옴표로 감쌈. |
 | Need to undo a change · 변경을 되돌리고 싶음 | On GitHub open the file, click **History**, find the previous version and copy it back, or ask someone with Git to run `git revert <commit>`. · GitHub에서 파일의 **History**를 열어 이전 내용을 복사해 되돌리거나, Git 사용자에게 `git revert <commit>` 실행을 요청. |

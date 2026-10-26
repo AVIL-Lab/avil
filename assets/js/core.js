@@ -352,15 +352,19 @@
   // Wraps every spelling listed in #lab-names in <b class="lab-author"> inside
   // .js-authors elements. Longest names first, and a match may not touch another
   // Latin letter, so "Kim S" never fires inside "Kim SD".
+  // Also used by the publications page to filter by one person's spellings.
+  AVIL.nameRegex = function (names) {
+    names = (names || []).filter(Boolean).sort(function (a, b) { return b.length - a.length; })
+      .map(function (n) { return n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); });
+    return names.length ? new RegExp("(^|[^A-Za-z\\u00C0-\\u024F])(" + names.join("|") + ")(?![A-Za-z\\u00C0-\\u024F])", "g") : false;
+  };
   var nameRe = null;
   AVIL.markAuthors = function (root) {
     if (nameRe === null) {
       var src = document.getElementById("lab-names");
       var names = [];
       try { names = src ? JSON.parse(src.textContent) : []; } catch (e) { names = []; }
-      names = names.filter(Boolean).sort(function (a, b) { return b.length - a.length; })
-        .map(function (n) { return n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); });
-      nameRe = names.length ? new RegExp("(^|[^A-Za-z\\u00C0-\\u024F])(" + names.join("|") + ")(?![A-Za-z\\u00C0-\\u024F])", "g") : false;
+      nameRe = AVIL.nameRegex(names);
     }
     if (!nameRe) return;
     (root || document).querySelectorAll(".js-authors:not([data-marked])").forEach(function (el) {

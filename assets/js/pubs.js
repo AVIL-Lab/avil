@@ -1,4 +1,4 @@
-/* Publications: search, region/type/topic/year filters, histogram, sort, export, URL state. */
+/* Publications: search, author/region/type/topic/year filters, histogram, sort, export, URL state. */
 (function () {
   "use strict";
   var AVIL = window.AVIL || {};
@@ -18,6 +18,11 @@
     var toSel = document.getElementById("pub-to");
     var sortBtn = document.getElementById("pub-sort");
     var histo = document.getElementById("pub-histo");
+    var authorChip = document.getElementById("pub-author");
+    // ?author=<slug> keeps papers listing any spelling of that member or alumnus
+    // (name, Korean name, aliases), matched like the bold lab names in core.js.
+    var people = {};
+    try { people = JSON.parse(document.getElementById("lab-people").textContent); } catch (e) { people = {}; }
     var countEl = document.getElementById("pub-count");
     var empty = document.getElementById("pub-empty");
     var topics = [];
@@ -46,7 +51,7 @@
       var y = parseInt(el.getAttribute("data-year"), 10);
       return {
         el: el, region: el.getAttribute("data-region"), type: el.getAttribute("data-type"),
-        year: isNaN(y) ? null : y, hay: text.toLowerCase(), title: title, cite: el.querySelector(".pub__copy").getAttribute("data-copy"),
+        year: isNaN(y) ? null : y, hay: text.toLowerCase(), title: title, authors: (el.querySelector(".js-authors") || {}).textContent || "", cite: el.querySelector(".pub__copy").getAttribute("data-copy"),
         topics: topics.filter(function (t) { return hitTopic(t, title, venue); }).map(function (t) { return t.key; })
       };
     });
@@ -60,11 +65,13 @@
     fromSel.value = String(minY);
     toSel.value = String(maxY);
 
-    var state = { q: "", region: "all", type: "all", topic: "all", from: minY, to: maxY, newest: true };
+    var state = { q: "", author: "", region: "all", type: "all", topic: "all", from: minY, to: maxY, newest: true };
+    var authorRe = false;
 
     function readURL() {
       var p = new URLSearchParams(location.search);
       if (p.get("q")) state.q = p.get("q");
+      if (p.get("author") && people[p.get("author")]) state.author = p.get("author");
       ["region", "type", "topic"].forEach(function (k) { if (p.get(k)) state[k] = p.get(k); });
       if (p.get("from")) state.from = +p.get("from");
       if (p.get("to")) state.to = +p.get("to");
@@ -73,6 +80,7 @@
     function writeURL() {
       var p = new URLSearchParams();
       if (state.q) p.set("q", state.q);
+      if (state.author) p.set("author", state.author);
       ["region", "type", "topic"].forEach(function (k) { if (state[k] !== "all") p.set(k, state[k]); });
       if (state.from !== minY) p.set("from", state.from);
       if (state.to !== maxY) p.set("to", state.to);
@@ -82,6 +90,8 @@
     }
     function syncControls() {
       q.value = state.q;
+      authorChip.hidden = !state.author;
+      authorChip.querySelector("b").textContent = state.author ? people[state.author].name : "";
       topicSel.value = state.topic;
       fromSel.value = String(state.from);
       toSel.value = String(state.to);
@@ -100,6 +110,7 @@
       if (state.region !== "all" && m.region !== state.region) return false;
       if (state.type !== "all" && m.type !== state.type) return false;
       if (state.topic !== "all" && m.topics.indexOf(state.topic) === -1) return false;
+      if (authorRe) { authorRe.lastIndex = 0; if (!authorRe.test(m.authors)) return false; }
       if (!ignoreYear && m.year && (m.year < state.from || m.year > state.to)) return false;
       if (!ignoreYear && !m.year && (state.from !== minY || state.to !== maxY)) return false;
       if (state.q) {
@@ -139,6 +150,7 @@
     }
 
     function apply() {
+      authorRe = state.author ? AVIL.nameRegex(people[state.author].names) : false;
       var shown = 0;
       models.forEach(function (m) {
         var ok = passes(m, false);
@@ -201,6 +213,7 @@
       });
     });
     topicSel.addEventListener("change", function () { state.topic = topicSel.value; apply(); });
+    authorChip.addEventListener("click", function () { state.author = ""; apply(); });
     fromSel.addEventListener("change", function () { state.from = +fromSel.value; if (state.from > state.to) state.to = state.from; apply(); });
     toSel.addEventListener("change", function () { state.to = +toSel.value; if (state.to < state.from) state.from = state.to; apply(); });
     sortBtn.addEventListener("click", function () { state.newest = !state.newest; apply(); });
@@ -213,7 +226,7 @@
       apply();
     });
     document.getElementById("pub-reset").addEventListener("click", function () {
-      state = { q: "", region: "all", type: "all", topic: "all", from: minY, to: maxY, newest: true };
+      state = { q: "", author: "", region: "all", type: "all", topic: "all", from: minY, to: maxY, newest: true };
       apply();
     });
     document.getElementById("pub-export").addEventListener("click", function () {

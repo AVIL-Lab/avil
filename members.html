@@ -116,7 +116,7 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
                 {%- if m.linkedin and m.linkedin != "" %}<a class="social social--linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
                 {%- else %}<span class="social social--linkedin social--placeholder" aria-disabled="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</span>{% endif %}
                 {%- if m.homepage and m.homepage != "" %}<a class="social" href="{{ m.homepage }}" target="_blank" rel="noopener"><svg class="i i--sm" aria-hidden="true"><use href="#i-home"/></svg>Homepage</a>{% endif %}
-                <a class="social" href="{{ '/publications/' | relative_url }}?q={{ m.name | url_encode }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-book"/></svg>{% include t.html en="Papers" ko="논문" %}</a>
+                <a class="social" href="{{ '/publications/' | relative_url }}?author={{ m.name | default: m.name_ko | slugify | url_encode }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-book"/></svg>{% include t.html en="Papers" ko="논문" %}</a>
               </footer>
             </div>
           </dialog>
@@ -179,6 +179,7 @@ description: "Current members and alumni of the Advanced Visual Intelligence Lab
                 {%- else %}
                 <span class="social social--linkedin social--placeholder" aria-disabled="true"><svg class="i i--sm" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</span>
                 {%- endif %}
+                <a class="social" href="{{ '/publications/' | relative_url }}?author={{ a.name | default: a.name_ko | slugify | url_encode }}" aria-label="Papers by {{ a.name | default: a.name_ko }}"><svg class="i i--sm" aria-hidden="true"><use href="#i-book"/></svg>{% include t.html en="Papers" ko="논문" %}</a>
               </div>
             </div>
           </li>

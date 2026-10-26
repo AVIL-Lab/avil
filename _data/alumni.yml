@@ -8,23 +8,25 @@
 #   next / next_ko  where they went after AVIL, as given on Wix.
 #   email       email address; leave "" until known.
 #   linkedin    full LinkedIn profile URL; leave "" until known.
+#   aliases     other spellings used in papers, exactly as written there; they
+#               bold the name and feed the Papers button (scripts/check_author_names.py).
 
 - { name_ko: 장예원, name: Yewon Jang, degree: M.S., graduated: 2026-02, next: AICU, next_ko: 에이아이씨유, photo: yewon-jang.webp, linkedin: "" }
 - { name_ko: 김재호, name: Jaeho Kim, degree: M.S., graduated: 2026-02, next: AICU, next_ko: 에이아이씨유, photo: jaeho-kim.webp, linkedin: "" }
 - { name_ko: 이성령, name: Seongryeong Lee, degree: M.S., graduated: 2026-02, next: DGIST, next_ko: DGIST, photo: seongryeong-lee.webp, linkedin: https://www.linkedin.com/in/srlee-480910292/ }
-- { name_ko: 도새별, name: Saebyeol Do, degree: M.S., graduated: 2026-02, photo: saebyeol-do.webp, linkedin: "" }
+- { name_ko: 도새별, name: Saebyeol Do, degree: M.S., graduated: 2026-02, photo: saebyeol-do.webp, linkedin: "", aliases: ["Do, Saebyeol"] }
 - { name_ko: 이승언, name: Seungeon Lee, degree: M.S., graduated: 2025-02, next: Samsung Electronics, next_ko: 삼성전자, photo: seungeon-lee.webp, linkedin: "" }
 - { name_ko: 김민준, name: Minjun Kim, degree: M.S., graduated: 2025-02, next: ADD (Agency for Defense Development), next_ko: ADD (국방과학연구소), photo: minjun-kim.webp, linkedin: "" }
 - { name_ko: 김도녕, name: Donyung Kim, degree: M.S., graduated: 2025-02, next: Navifra, next_ko: 나비프라(Navifra), photo: donyung-kim.webp, linkedin: "" }
-- { name_ko: 신연하, name: Yeonha Shin, degree: M.S., graduated: 2024-08, next: FutureDrive, next_ko: 퓨처드라이브(FutureDrive), photo: yeonha-shin.webp, linkedin: "" }
-- { name: Indah Monisa Firdiantika, degree: M.S., graduated: 2024-08, photo: indah-monisa-firdiantika.webp, linkedin: "", aliases: ["Firdiantika, Indah Monisa"] }
-- { name: Chaitali Bhattacharyya, degree: M.S., graduated: 2024-08, next: DGIST, next_ko: DGIST, photo: chaitali-bhattacharyya.webp, linkedin: https://www.linkedin.com/in/chaitaliynu/, aliases: ["Bhattacharyya, Chaitali", "Bhattacharyya, C."] }
-- { name_ko: 조상호, name: Sangho Jo, degree: M.S., graduated: 2023-08, photo: sangho-jo.webp, linkedin: "" }
+- { name_ko: 신연하, name: Yeonha Shin, degree: M.S., graduated: 2024-08, next: FutureDrive, next_ko: 퓨처드라이브(FutureDrive), photo: yeonha-shin.webp, linkedin: "", aliases: ["Shin, Yeonha"] }
+- { name: Indah Monisa Firdiantika, degree: M.S., graduated: 2024-08, photo: indah-monisa-firdiantika.webp, linkedin: "", aliases: ["Indah Monisa firdiantika", "Firdiantika, Indah Monisa"] }
+- { name: Chaitali Bhattacharyya, degree: M.S., graduated: 2024-08, next: DGIST, next_ko: DGIST, photo: chaitali-bhattacharyya.webp, linkedin: https://www.linkedin.com/in/chaitaliynu/, aliases: ["Bhattacharyya Chaitali", "Bhattacharyya, Chaitali", "Bhattacharyya, C."] }
+- { name_ko: 조상호, name: Sangho Jo, degree: M.S., graduated: 2023-08, photo: sangho-jo.webp, linkedin: "", aliases: ["Sangho jo"] }
 - { name_ko: 송익환, name: Ikhwan Song, degree: M.S., graduated: 2022-02, next: ADD (Agency for Defense Development), next_ko: ADD (국방과학연구소), photo: ikhwan-song.webp, linkedin: "" }
 - { name_ko: 김종찬, name: Jongchan Kim, degree: M.S., graduated: 2022-02, next: THYROSCOPE, next_ko: THYROSCOPE, photo: jongchan-kim.webp, linkedin: "" }
 - { name_ko: 김문형, name: Munhyeong Kim, degree: M.S., graduated: 2022-02, next: Hanwha Systems, next_ko: 한화시스템, photo: munhyeong-kim.webp, linkedin: "" }
 - { name_ko: 박인호, name: Inho Park, degree: M.S., graduated: 2022-02, next: Hanwha Systems, next_ko: 한화시스템, photo: inho-park.webp, linkedin: "", aliases: [INHO PARK] }
-- { name_ko: 강병진, name: Byungjin Kang, degree: M.S., graduated: 2022-02, next: LIG Nex1, next_ko: LIG Nex1, photo: byungjin-kang.webp, linkedin: "" }
+- { name_ko: 강병진, name: Byungjin Kang, degree: M.S., graduated: 2022-02, next: LIG Nex1, next_ko: LIG Nex1, photo: byungjin-kang.webp, linkedin: "", aliases: ["Kang, Byungjin"] }
 - { name_ko: 류준환, name: Junhwan Ryu, degree: M.S., graduated: 2020-02, next: Hanwha Systems (formerly DGIST), next_ko: 한화시스템 ((前) DGIST), photo: junhwan-ryu.webp, linkedin: "", aliases: [류 준 환] }
 - { name_ko: 윤성민, name: Sungmin Yun, degree: M.S., graduated: 2020-02, next: DGB Daegu Bank, next_ko: DGB (대구은행), photo: sungmin-yun.webp, linkedin: "" }
 - { name_ko: 김덕규, name: Deokkyu Kim, degree: M.S., graduated: 2020-02, photo: deokkyu-kim.webp, linkedin: "" }
