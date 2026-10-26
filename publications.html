@@ -15,7 +15,7 @@ description: "International and domestic journal and conference publications of 
 <script type="application/json" id="topics">{{ topics | jsonify }}</script>
 <script type="application/json" id="topics-domains">[
 {%- for d in site.data.domains -%}
-{"key":{{ d.key | jsonify }},"en":{{ d.en | jsonify }},"words":{{ d.words | jsonify }},"acronyms":{{ d.acronyms | jsonify }},"match_venue":{% if d.match_venue %}true{% else %}false{% endif %}},
+{"key":{{ d.key | jsonify }},"en":{{ d.en | jsonify }},"words":{{ d.words | jsonify }},"acronyms":{{ d.acronyms | jsonify }},"exclude_papers":{{ d.exclude_papers | jsonify }},"match_venue":{% if d.match_venue %}true{% else %}false{% endif %}},
 {%- for s in d.sensors -%}
 {"key":"{{ d.key }}-{{ s.key }}","en":{{ d.en | append: " · " | append: s.en | jsonify }},"words":{{ s.words | jsonify }},"acronyms":{{ s.acronyms | jsonify }},"requires":{{ d.key | jsonify }}}{% unless forloop.last %},{% endunless %}
 {%- endfor -%}{% unless forloop.last %},{% endunless %}

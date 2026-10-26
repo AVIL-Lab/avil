@@ -34,6 +34,7 @@
       var low = text.toLowerCase();
       var ok = (t.words || []).some(function (w) { return low.indexOf(w) !== -1; }) ||
                (t.acronyms || []).some(function (a) { return text.indexOf(a) !== -1; });
+      ok = ok && !(t.exclude_papers || []).some(function (x) { return title.indexOf(x) !== -1; });
       return ok && (!t.requires || hitTopic(topicByKey[t.requires], title, venue));
     }
 

@@ -22,6 +22,8 @@
 #   match_venue      also test the domain keywords against the venue (e.g. a paper
 #                    at the Korea Institute of Military Science and Technology
 #                    conference counts as defense work)
+#   exclude_papers   title substrings (case-sensitive) of papers kept out of the
+#                    domain and its sub-segments even when the keywords match
 
 - key: defense
   en: Defense AI
@@ -94,6 +96,7 @@
   funders: [Korea Institute for Robot Industry Advancement]
   words: [vision-language-action, world model, embodied, physical ai, manipulat, grasp, robot, humanoid, bimanual, agentic, 6d pose, 6dof, pose estimation, mobile manipulator, sim-to-real, agent, language model, llava, 3d object, lidar, 로봇, 파지, 매니퓰레이, 에이전트, 자세 추정, 피지컬, 양팔, 라이다, 휴머노이드]
   acronyms: [VLA, VLM, LLM, 6D]
+  exclude_papers: [Fusion VLM-Gait, C3G-VM6D, 함정 최적 침로]
   # For this domain the sub-segments are research directions rather than sensors.
   sensors:
     - key: vla
@@ -107,7 +110,7 @@
         ko: >-
           카메라 관측과 자연어 지시를 로봇 행동으로 변환하는 모델. 3D 기하와 깊이 인식 공간 추론을
           VLA 정책에 결합하는 연구.
-      equipment_names: [Deep Learning Server]
+      equipment_names: [RTX PRO 6000 Blackwell servers, LeRobot manipulator, Piper manipulator, AgileX bimanual manipulator, RGB-D sensors]
       words: [vision-language-action, vision language, language model, llava, clip, 비전-언어, 언어 모델]
       acronyms: [VLA, VLM, LLM]
     - key: worldmodel
@@ -121,7 +124,7 @@
         ko: >-
           로봇의 행동에 따라 장면이 어떻게 변할지 예측하는 학습 모델로, 움직이기 전에 결과를 예측하고
           계획할 수 있게 함.
-      equipment_names: [Deep Learning Server]
+      equipment_names: [RTX PRO 6000 Blackwell servers, RGB-D sensors]
       words: [world model, sim-to-real, latent dynamics, 월드 모델, 시뮬레이션]
     - key: agentic
       en: Agentic Robotics
@@ -134,6 +137,8 @@
         ko: >-
           긴 작업을 단계로 나누고, 기술과 도구를 선택하며, 스스로 진행을 점검하고 실패에서 복구하는 AI
           에이전트 기반 로봇.
+      members: [Selim Sarowar]
+      equipment_names: [RTX PRO 6000 Blackwell servers, LeRobot manipulator, Piper manipulator, RGB-D sensors]
       words: [agent, agentic, motion planning, reinforcement, proximal policy, 에이전트, 모션 플래닝, 강화학습]
       acronyms: [PPO]
     - key: embodied
@@ -147,7 +152,7 @@
         ko: >-
           6D 물체 자세 추정부터 파지, 모바일 매니퓰레이션까지 물리 세계와의 상호작용을 통해 학습하는
           인지, 추론, 행동.
-      equipment_names: [RGB-D camera, Stereo camera, Turn table, Mobile robot]
+      equipment_names: [LeRobot manipulator, Piper manipulator, AgileX bimanual manipulator, Revo2 Touch Hand, RGB-D sensors]
       words: [embodied, physical ai, grasp, manipulat, 6d pose, 6dof, object pose, mobile manipulator, robot, 파지, 매니퓰레이, 로봇, 피지컬, 체화]
       acronyms: [6D]
     - key: humanoid
@@ -161,6 +166,7 @@
         ko: >-
           사람과 공간을 공유하는 휴머노이드 로봇을 위한 인지와 의사결정 연구로, 인간 자세 이해와 양팔
           매니퓰레이션을 기반으로 함.
+      equipment_names: [AgileX bimanual manipulator, Revo2 Touch Hand, RGB-D sensors]
       words: [humanoid, bimanual, human pose, human skeleton, 휴머노이드, 양팔, 휴먼 스켈레톤, 보행자 자세]
 
 - key: medical

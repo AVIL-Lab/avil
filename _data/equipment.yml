@@ -1,5 +1,38 @@
-# Lab equipment from the Wix "Projects" page (보유 장비), 2026-10-17.
-#   category thermal | spectral | visible | aerial | platform | compute
+# Lab equipment from the Wix "Projects" page (보유 장비), 2026-10-17; the
+# physical items were added at the lab's request on 2026-10-26.
+#   category thermal | spectral | visible | aerial | platform | compute | physical
+- name: LeRobot manipulator
+  name_ko: LeRobot 매니퓰레이터
+  use: Robot manipulation and VLA policy experiments
+  use_ko: 로봇 매니퓰레이션 및 VLA 정책 실험
+  category: physical
+- name: Piper manipulator
+  name_ko: Piper 매니퓰레이터
+  use: Robot manipulation and VLA policy experiments
+  use_ko: 로봇 매니퓰레이션 및 VLA 정책 실험
+  category: physical
+- name: AgileX bimanual manipulator
+  name_ko: AgileX 양팔 매니퓰레이터
+  use: Bimanual manipulation experiments
+  use_ko: 양팔 매니퓰레이션 실험
+  category: physical
+- name: Revo2 Touch Hand
+  name_ko: Revo2 Touch 핸드
+  use: Dexterous grasping experiments
+  use_ko: 다지 핸드 파지 실험
+  category: physical
+- name: RTX PRO 6000 Blackwell servers
+  name_ko: RTX PRO 6000 Blackwell 서버
+  use: VLA and world model training
+  use_ko: VLA 및 월드 모델 학습
+  category: physical
+- name: RGB-D sensors
+  name_ko: RGB-D 센서
+  spec: 4 units
+  spec_ko: 4대
+  use: RGB-D perception for robot manipulation
+  use_ko: 로봇 매니퓰레이션용 RGB-D 인지
+  category: physical
 - name: Deep Learning Server
   spec: Titan RTX x4, RTX 3090 x4, RTX 4090 x2 등
   spec_ko: Titan RTX x4, RTX 3090 x4, RTX 4090 x2 등

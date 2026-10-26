@@ -46,6 +46,7 @@
 .equip__use { margin: 0; font-size: .86rem; color: var(--muted); }
 .equip--thermal { --c: #ea580c; } .equip--spectral { --c: #16a34a; } .equip--visible { --c: #2563eb; }
 .equip--aerial { --c: #0891b2; } .equip--platform { --c: #ca8a04; } .equip--compute { --c: #7c3aed; }
+.equip--physical { --c: #db2777; }
 
 @media (max-width: 900px) {
   .proj-stats { grid-template-columns: repeat(2, 1fr); }

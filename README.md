@@ -307,9 +307,9 @@ When a project ends, change `status: current` to `status: past`. The progress ba
 
 ### 5.9 Update equipment · 보유 장비 수정
 
-Edit `_data/equipment.yml`. Each item has `name` (and optional `name_ko`), `spec` / `spec_ko`, `use` / `use_ko`, and a `category`: `thermal`, `spectral`, `visible`, `aerial`, `platform` or `compute`. The category decides the colour, the filter button and which research explorer panels list the item.
+Edit `_data/equipment.yml`. Each item has `name` (and optional `name_ko`), `spec` / `spec_ko`, `use` / `use_ko`, and a `category`: `thermal`, `spectral`, `visible`, `aerial`, `platform`, `compute` or `physical` (Physical AI robots, sensors and servers). The category decides the colour, the filter button and which research explorer panels list the item.
 
-`_data/equipment.yml`을 수정합니다. 각 장비에는 `name`(선택적으로 `name_ko`), `spec` / `spec_ko`, `use` / `use_ko`, 그리고 `category`가 있습니다. category는 `thermal`, `spectral`, `visible`, `aerial`, `platform`, `compute` 중 하나이며 색상, 필터 버튼, 연구 탐색 화면에서의 표시 위치를 정합니다.
+`_data/equipment.yml`을 수정합니다. 각 장비에는 `name`(선택적으로 `name_ko`), `spec` / `spec_ko`, `use` / `use_ko`, 그리고 `category`가 있습니다. category는 `thermal`, `spectral`, `visible`, `aerial`, `platform`, `compute`, `physical`(피지컬 AI 로봇, 센서, 서버) 중 하나이며 색상, 필터 버튼, 연구 탐색 화면에서의 표시 위치를 정합니다.
 
 ### 5.10 Edit the lab introduction, contact and partners · 연구실 소개, 연락처, 협력 기관 수정
 
@@ -347,9 +347,9 @@ Below the robotics cards is a **Live demo** of a Franka Panda arm in MuJoCo. It 
 
 로보틱스 카드 아래에는 MuJoCo로 구동되는 Franka Panda 로봇팔 **라이브 데모**가 있습니다. `https://s-elim.github.io/learn/mujoco/embed.html?lab=frankavla`에서 가져오며, 방문자가 *라이브 데모 실행*을 누를 때만 불러옵니다. 다른 실습을 보여 주려면 `research.html`의 `demo_url`에서 `lab=` 값을 바꾸고 (그 강좌에 등록된 실습 이름이면 됩니다) 미리보기 이미지 `assets/img/research/franka-libero-demo.webp`를 교체합니다.
 
-The **themes** further down the Research page come from `_data/themes.yml`. Members are listed under a theme when their `interests` match its keywords. To keep someone out of a theme, add their exact name to that theme's `exclude_members: [...]` list.
+The **themes** further down the Research page come from `_data/themes.yml`. Members are listed under a theme when their `interests` match its keywords. To keep someone out of a theme, add their exact name to that theme's `exclude_members: [...]` list. Papers join a theme when their title matches its keywords; to keep a paper out, add a distinctive part of its title (exact capitalisation) to `exclude_papers: [...]`. The same `exclude_papers` field works on a domain in `_data/domains.yml` and then also applies to its sub-tabs.
 
-연구 페이지 아래쪽 **연구 주제**는 `_data/themes.yml`에서 나옵니다. 구성원의 `interests`가 주제의 키워드와 맞으면 그 주제에 표시됩니다. 특정 구성원을 주제에서 빼려면 그 주제의 `exclude_members: [...]` 목록에 정확한 이름을 추가합니다.
+연구 페이지 아래쪽 **연구 주제**는 `_data/themes.yml`에서 나옵니다. 구성원의 `interests`가 주제의 키워드와 맞으면 그 주제에 표시됩니다. 특정 구성원을 주제에서 빼려면 그 주제의 `exclude_members: [...]` 목록에 정확한 이름을 추가합니다. 논문은 제목이 주제 키워드와 맞으면 표시됩니다. 특정 논문을 빼려면 제목의 고유한 일부(대소문자 그대로)를 `exclude_papers: [...]`에 추가합니다. 같은 `exclude_papers` 필드는 `_data/domains.yml`의 도메인에도 쓸 수 있으며, 그 하위 탭에도 적용됩니다.
 
 ### 5.13 Conference deadlines and Q1 journals · 학회 마감일과 Q1 저널
 

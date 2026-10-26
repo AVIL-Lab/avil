@@ -2,14 +2,16 @@
 # listed research areas match it, plus matching projects and paper titles, by
 # keyword (same rules as modalities.yml). Labels group existing content only.
 # exclude_members: names (as in members.yml) never listed under the theme.
+# exclude_papers: title substrings (case-sensitive) of papers kept out of the theme.
 
 - key: physical-ai
   en: Physical AI & Embodied Intelligence
   ko: 피지컬 AI 및 체화 지능
   icon: cpu
-  words: [vision-language-action, world model, embodied, physical ai, 6d pose, vision language, manipulation, 매니퓰레이션]
+  words: [vision-language-action, robot, humanoid, world model, agentic, manipulat, grasp, 로봇, 휴머노이드, 월드 모델, 에이전틱, 매니퓰레이, 파지]
   exclude_members: [Tanvir Ahmmed]
-  acronyms: [VLA, VLM]
+  exclude_papers: [함정 최적 침로]
+  acronyms: [VLA]
 - key: spectral-imaging
   en: Hyperspectral & Spectral Imaging
   ko: 초분광 및 분광 영상

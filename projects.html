@@ -142,7 +142,7 @@ description: "Current and past research projects, the RLRC center and the equipm
         <span class="rule" aria-hidden="true"></span>
       </div>
     </div>
-    {%- assign cats = "thermal,spectral,visible,aerial,platform,compute" | split: "," -%}
+    {%- assign cats = "physical,thermal,spectral,visible,aerial,platform,compute" | split: "," -%}
     <div class="toolbar__group equip-filter" role="group" aria-label="Filter equipment" id="equip-filter">
       <button type="button" class="pill is-active" data-cat="all">{% include t.html en="All" ko="전체" %} <span class="pill__count">{{ site.data.equipment | size }}</span></button>
       {%- for c in cats %}
