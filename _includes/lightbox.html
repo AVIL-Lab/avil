@@ -1,8 +1,17 @@
 {%- comment -%} Shared photo viewer for News and Gallery; filled by media.js from #photo-data. {%- endcomment -%}
 <script type="application/json" id="photo-data">[
 {%- assign lb_events = events | default: site.data.events -%}
+{%- assign first_p = true -%}
 {%- for e in lb_events -%}
-{"id":{{ e.photo | remove: ".webp" | remove: ".png" | remove: ".jpg" | jsonify }},"src":{{ '/assets/img/gallery/' | append: e.photo | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}{% unless forloop.last %},{% endunless %}
+{%- if e.photos and e.photos.size > 0 -%}
+{%- for ph in e.photos -%}
+{%- unless first_p -%},{%- endunless -%}{%- assign first_p = false -%}
+{"id":{{ ph | remove: ".webp" | remove: ".png" | remove: ".jpg" | jsonify }},"src":{{ '/assets/img/gallery/' | append: ph | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}
+{%- endfor -%}
+{%- else -%}
+{%- unless first_p -%},{%- endunless -%}{%- assign first_p = false -%}
+{"id":{{ e.photo | remove: ".webp" | remove: ".png" | remove: ".jpg" | jsonify }},"src":{{ '/assets/img/gallery/' | append: e.photo | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}
+{%- endif -%}
 {%- endfor -%}
 ]</script>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">

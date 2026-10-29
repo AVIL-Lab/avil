@@ -33,6 +33,24 @@
     });
     yearSel.addEventListener("change", function () { state.year = yearSel.value; apply(); });
     q.addEventListener("input", function () { state.q = q.value.trim().toLowerCase(); apply(); });
+
+    document.querySelectorAll("[data-carousel]").forEach(function (car) {
+      var slides = Array.prototype.slice.call(car.querySelectorAll(".news-item__slide"));
+      var badge = car.querySelector("[data-carousel-badge]");
+      var idx = 0;
+      function setSlide(k) {
+        idx = (k + slides.length) % slides.length;
+        slides.forEach(function (s, i) { s.classList.toggle("is-active", i === idx); });
+        if (badge) badge.textContent = (idx + 1) + " / " + slides.length;
+      }
+      car.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-carousel-dir]");
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        setSlide(idx + (+btn.getAttribute("data-carousel-dir")));
+      });
+    });
   }
 
   function initGallery() {

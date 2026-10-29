@@ -33,19 +33,38 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
 
     <div class="news" id="news-list">
       {%- assign idx = 0 -%}
+      {%- assign p_idx = 0 -%}
       {%- for g in by_year %}
       <section class="news-year" data-year="{{ g.name }}">
         <h2 class="news-year__label mono">{{ g.name }}</h2>
         <ol class="news-items">
           {%- for e in g.items %}
           {%- assign idx = idx | plus: 1 -%}
+          {%- assign e_photos = e.photos | default: e.photo -%}
           <li class="news-item" id="e-{{ e.date }}-{{ idx }}" data-tag="{{ e.tag }}" data-year="{{ g.name }}" data-search="{{ e.en | downcase | escape }} {{ e.ko | escape }} {{ e.when }}">
             <time class="news-item__date mono" datetime="{{ e.date }}">{{ e.date | date: "%b %-d" }}</time>
             <span class="news-item__rail" aria-hidden="true"><span class="dot dot--{{ e.tag }}"></span></span>
             <div class="news-item__body card">
-              <a class="news-item__photo js-lightbox" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ idx | minus: 1 }}" aria-label="View photo">
+              {%- if e.photos and e.photos.size > 1 %}
+              <div class="news-item__carousel" data-carousel>
+                <div class="news-item__slides">
+                  {%- for ph in e.photos %}
+                  <a class="news-item__photo news-item__slide{% if forloop.first %} is-active{% endif %} js-lightbox" href="{{ '/assets/img/gallery/' | append: ph | relative_url }}" data-index="{{ p_idx }}" aria-label="View photo {{ forloop.index }} of {{ e.photos.size }}">
+                    <img src="{{ '/assets/img/gallery/thumbs/' | append: ph | relative_url }}" alt="{{ e.en | escape }} ({{ forloop.index }}/{{ e.photos.size }})" width="640" height="427" loading="lazy">
+                  </a>
+                  {%- assign p_idx = p_idx | plus: 1 -%}
+                  {%- endfor %}
+                </div>
+                <button type="button" class="news-carousel__btn news-carousel__btn--prev" data-carousel-dir="-1" aria-label="Previous photo"><svg class="i i--sm" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+                <button type="button" class="news-carousel__btn news-carousel__btn--next" data-carousel-dir="1" aria-label="Next photo"><svg class="i i--sm" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+                <span class="news-carousel__badge mono" data-carousel-badge>1 / {{ e.photos.size }}</span>
+              </div>
+              {%- else %}
+              <a class="news-item__photo js-lightbox" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ p_idx }}" aria-label="View photo">
                 <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
               </a>
+              {%- assign p_idx = p_idx | plus: 1 -%}
+              {%- endif %}
               <div class="news-item__text">
                 <span class="tag tag--{{ e.tag }}">{% include tag-label.html tag=e.tag %}</span>
                 <p>{% include t.html en=e.en ko=e.ko %}</p>

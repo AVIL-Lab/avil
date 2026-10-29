@@ -277,7 +277,10 @@ Each news item is one photo with a caption. It appears on the News page and in t
   tag: conference                 # conference | expo | award | rlrc | graduation | lab | field
   ko: CVPR 2027 학회 참여 및 논문 발표
   en: Attended CVPR 2027 and presented a paper
-  photo: 2027-03-cvpr.png
+  photo: 2027-03-cvpr-1.png
+  photos:                         # optional: multiple photos shown as a carousel in one event · 선택: 한 행사에 사진 여러 장을 슬라이드로 표시
+    - 2027-03-cvpr-1.png
+    - 2027-03-cvpr-2.png
 ```
 
 `tag` controls the colored label and the filters: `conference` (conferences, seminars), `expo` (exhibitions, industry expos), `award`, `rlrc` (RLRC events), `graduation`, `lab` (lab life) and `field` (field work, data collection).
