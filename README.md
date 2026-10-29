@@ -143,9 +143,9 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
 
 ### 5.1 Add a new member · 새 구성원 추가
 
-**Step 1. Prepare the photo.** Use a portrait (vertical) photo with the face in the upper third. Crop it to a 3:4 ratio, for example 360 × 480 pixels, and save it as `.webp` or `.jpg` under 200 KB. Name the file with lowercase English letters and hyphens, such as `gildong-hong.webp`. Upload it to `assets/img/members/`.
+**Step 1. Prepare the photo.** Use a portrait (vertical) photo with the face in the upper third, in a 3:4 ratio. Keep the photo at its full high resolution in `.png` or `.jpg` format (do not downscale or convert to `.webp`). Name the file with lowercase English letters and hyphens, such as `gildong-hong.png`. Upload it to `assets/img/members/`.
 
-**1단계. 사진 준비.** 얼굴이 위쪽 3분의 1에 오는 세로 사진을 사용합니다. 3:4 비율(예: 360 × 480 픽셀)로 자르고 200KB 이하의 `.webp` 또는 `.jpg`로 저장합니다. 파일 이름은 영어 소문자와 하이픈으로 `gildong-hong.webp`처럼 짓고 `assets/img/members/` 폴더에 올립니다.
+**1단계. 사진 준비.** 얼굴이 위쪽 3분의 1에 오는 3:4 비율의 세로 사진을 사용합니다. 사진은 원본 고해상도 그대로 `.png` 또는 `.jpg` 형식으로 유지합니다 (해상도를 낮추거나 `.webp`로 변환하지 마세요). 파일 이름은 영어 소문자와 하이픈으로 `gildong-hong.png`처럼 짓고 `assets/img/members/` 폴더에 올립니다.
 
 **Step 2. Add an entry to `_data/members.yml`.** Copy an existing member block and change the values. Members appear on the page in the order of this file, grouped by `role`.
 
@@ -155,7 +155,7 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
 - name: Gildong Hong              # English name shown on the card · 카드에 표시할 영어 이름
   name_ko: 홍길동                  # Korean name (optional) · 한국어 이름 (선택)
   role: ms                         # postdoc | phd | ms | undergrad
-  photo: gildong-hong.webp         # file name in assets/img/members/ · 사진 파일 이름
+  photo: gildong-hong.png          # file name in assets/img/members/ · 사진 파일 이름
   interests: [Vision-Language-Action (VLA), World Model]   # research areas · 연구 분야
   email: gildong@yu.ac.kr          # optional · 선택
   linkedin: ""                     # full URL, or "" if none · 전체 주소, 없으면 ""
@@ -263,9 +263,9 @@ Each news item is one photo with a caption. It appears on the News page and in t
 
 소식 하나는 사진 한 장과 설명 한 줄입니다. 소식 페이지와 갤러리에 표시됩니다.
 
-**Step 1.** Prepare two versions of the photo with the same file name, for example `2027-03-cvpr.webp`: a large one (longest side about 1600 px, under 500 KB) uploaded to `assets/img/gallery/`, and a thumbnail cropped to 640 × 427 px uploaded to `assets/img/gallery/thumbs/`.
+**Step 1.** Keep the photo at its full original resolution in `.png` or `.jpg` format (do not downscale and do not convert to `.webp`). Save it with the same file name in both `assets/img/gallery/` and `assets/img/gallery/thumbs/`, for example `2027-03-cvpr.png`.
 
-**1단계.** 같은 파일 이름(예: `2027-03-cvpr.webp`)으로 사진 두 개를 준비합니다. 큰 사진(긴 변 약 1600픽셀, 500KB 이하)은 `assets/img/gallery/`에, 640 × 427픽셀로 자른 썸네일은 `assets/img/gallery/thumbs/`에 올립니다.
+**1단계.** 사진은 원본 고해상도 그대로 `.png` 또는 `.jpg` 형식으로 유지합니다 (해상도를 낮추거나 `.webp`로 변환하지 마세요). 같은 파일 이름(예: `2027-03-cvpr.png`)으로 `assets/img/gallery/`와 `assets/img/gallery/thumbs/` 두 폴더에 모두 올립니다.
 
 **Step 2.** Add an entry at the **top** of `_data/events.yml`:
 
@@ -277,7 +277,7 @@ Each news item is one photo with a caption. It appears on the News page and in t
   tag: conference                 # conference | expo | award | rlrc | graduation | lab | field
   ko: CVPR 2027 학회 참여 및 논문 발표
   en: Attended CVPR 2027 and presented a paper
-  photo: 2027-03-cvpr.webp
+  photo: 2027-03-cvpr.png
 ```
 
 `tag` controls the colored label and the filters: `conference` (conferences, seminars), `expo` (exhibitions, industry expos), `award`, `rlrc` (RLRC events), `graduation`, `lab` (lab life) and `field` (field work, data collection).
@@ -393,15 +393,15 @@ Always put the `description` in quotes. A description containing a colon without
 
 | Image · 이미지 | Folder · 폴더 | Size · 크기 |
 |---|---|---|
-| Member / alumni photo · 구성원/졸업생 사진 | `assets/img/members/` | 3:4 portrait, e.g. 360 × 480, under 200 KB · 3:4 세로, 예: 360 × 480, 200KB 이하 |
-| Professor photo · 교수 사진 | `assets/img/members/` | 4:5 portrait, e.g. 400 × 500 · 4:5 세로, 예: 400 × 500 |
-| News photo (large) · 소식 사진 (큰 사진) | `assets/img/gallery/` | longest side about 1600 px, under 500 KB · 긴 변 약 1600픽셀, 500KB 이하 |
-| News thumbnail · 소식 썸네일 | `assets/img/gallery/thumbs/` | 640 × 427, same file name as the large photo · 640 × 427, 큰 사진과 같은 이름 |
-| Partner logo · 협력 기관 로고 | `assets/img/partners/` | about 360 px wide · 가로 약 360픽셀 |
+| Member / alumni photo · 구성원/졸업생 사진 | `assets/img/members/` | 3:4 portrait, full high resolution (`.png` or `.jpg`, no `.webp` conversion) · 3:4 세로, 원본 고해상도 유지 (`.png` 또는 `.jpg`, `.webp` 변환 불필요) |
+| Professor photo · 교수 사진 | `assets/img/members/` | 4:5 portrait, full high resolution · 4:5 세로, 원본 고해상도 유지 |
+| News photo (large) · 소식 사진 (큰 사진) | `assets/img/gallery/` | Full original high resolution (`.png` or `.jpg`, do not convert to `.webp`) · 원본 고해상도 그대로 유지 (`.png` 또는 `.jpg`, `.webp` 변환 금지) |
+| News thumbnail · 소식 썸네일 | `assets/img/gallery/thumbs/` | Full original high resolution, same file name as in `assets/img/gallery/` · 원본 고해상도 유지, `assets/img/gallery/`와 같은 파일 이름 |
+| Partner logo · 협력 기관 로고 | `assets/img/partners/` | Full high resolution · 고해상도 유지 |
 
-Use `.webp` (smallest) or `.jpg`. File names: lowercase English letters, numbers and hyphens only, with no spaces or Korean characters (`gildong-hong.webp`, not `홍길동 사진.JPG`). File names are case-sensitive on the live site: `Photo.webp` and `photo.webp` are different files. Free tools such as <https://squoosh.app> resize, crop and convert images to WebP in the browser.
+Always keep images at high resolution in `.png` or `.jpg` format; do not downscale or convert new uploads to `.webp` (existing `.webp` files from the initial migration remain as-is). File names: lowercase English letters, numbers and hyphens only, with no spaces or Korean characters (`gildong-hong.png`, not `홍길동 사진.JPG`). File names are case-sensitive on the live site: `Photo.png` and `photo.png` are different files.
 
-`.webp`(가장 작음) 또는 `.jpg`를 사용합니다. 파일 이름은 영어 소문자, 숫자, 하이픈만 쓰고 공백과 한글은 쓰지 않습니다 (`홍길동 사진.JPG`가 아니라 `gildong-hong.webp`). 사이트에서는 대소문자를 구분하므로 `Photo.webp`와 `photo.webp`는 다른 파일입니다. <https://squoosh.app> 같은 무료 도구로 브라우저에서 크기 조절, 자르기, WebP 변환을 할 수 있습니다.
+이미지는 항상 원본 고해상도 `.png` 또는 `.jpg` 형식으로 유지하며, 해상도를 낮추거나 `.webp`로 변환하지 않습니다 (초기 이전 때 생성된 기존 `.webp` 파일만 그대로 둡니다). 파일 이름은 영어 소문자, 숫자, 하이픈만 쓰고 공백과 한글은 쓰지 않습니다 (`홍길동 사진.JPG`가 아니라 `gildong-hong.png`). 사이트에서는 대소문자를 구분하므로 `Photo.png`와 `photo.png`는 다른 파일입니다.
 
 ---
 
@@ -477,7 +477,7 @@ Before making any changes, read README.md completely and strictly follow the exi
      * `_data/alumni.yml` (alumni newest first: `name_ko`, `name`, `degree`, `graduated` as `YYYY-MM`, optional `next`/`next_ko`, optional `email`, `photo`, `linkedin` URL or `""`).
      * `_data/professor.yml` (PI profile, contact, `links`, `scholar` citation metrics, `career` timeline).
      * `_data/publications.yml` (papers newest year first; within the same year, region, and type, group consecutive papers from the same conference together, e.g., KIEES, ICROS, IEIE; optional `url`).
-     * `_data/events.yml` (news/gallery items newest first, with matching full photo in `assets/img/gallery/` and 640x427 thumbnail in `assets/img/gallery/thumbs/`).
+     * `_data/events.yml` (news/gallery items newest first, with matching full-resolution `.png` or `.jpg` photo in both `assets/img/gallery/` and `assets/img/gallery/thumbs/`; never downscale or convert new images to `.webp`).
      * `_data/projects.yml`, `_data/equipment.yml`, `_data/lab.yml`, `_data/domains.yml`, `_data/themes.yml`, `_data/modalities.yml`, `_data/navigation.yml`.
    - Do NOT manually edit `_data/conferences.yml`, `_data/journals.yml`, or `_data/deadlines_meta.yml`; these are auto-generated weekly by `scripts/update_deadlines.py`.
 

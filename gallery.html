@@ -31,7 +31,7 @@ description: "Photos from conferences, workshops, graduations and everyday life 
     <div class="masonry" id="gallery-grid">
       {%- for e in events %}
       {%- assign y = e.date | slice: 0, 4 | plus: 0 -%}
-      <a class="shot js-lightbox" id="{{ e.photo | remove: '.webp' }}" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ forloop.index0 }}" data-year="{{ y }}" data-tag="{{ e.tag }}">
+      <a class="shot js-lightbox" id="{{ e.photo | remove: '.webp' | remove: '.png' | remove: '.jpg' }}" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ forloop.index0 }}" data-year="{{ y }}" data-tag="{{ e.tag }}">
         <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
         <span class="shot__cap">
           <span class="shot__when mono">{{ e.when }}</span>
