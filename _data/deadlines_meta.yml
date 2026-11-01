@@ -1,11 +1,13 @@
 # Written by scripts/update_deadlines.py. Do not edit.
-updated: '2026-10-25'
+updated: '2026-11-01'
 conferences: 60
-from_ccfddl: 3
-site_checked: 16
+from_ccfddl: 5
+site_checked: 17
 site_found: 13
 changes:
 - 'ICME: 2027 -> 2027, next stage Paper Submission on 2026-12-30'
+- 'COLT: 2027 -> 2027, next stage Paper Submission (Expected rebuttal March 29 - April 2; author notification on or before May 3.) on 2027-01-29'
 - 'ICDM: 2027 -> 2027, next stage Paper Submission (Full papers; dates are tentative and subject to change) on 2027-06-06'
 - 'KR: 2027 -> 2027, next stage Abstract Deadline on 2027-04-23'
+- 'GECCO: 2027 -> 2027, next stage Abstract Deadline on 2027-01-18'
 disagreements: []
