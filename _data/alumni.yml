@@ -20,7 +20,7 @@
 - { name_ko: 김도녕, name: Donyung Kim, degree: M.S., graduated: 2025-02, next: Navifra, next_ko: 나비프라(Navifra), photo: donyung-kim.webp, linkedin: "" }
 - { name_ko: 신연하, name: Yeonha Shin, degree: M.S., graduated: 2024-08, next: FutureDrive, next_ko: 퓨처드라이브(FutureDrive), photo: yeonha-shin.webp, linkedin: "", aliases: ["Shin, Y.", "Shin, Yeonha"] }
 - { name: Indah Monisa Firdiantika, degree: M.S., graduated: 2024-08, photo: indah-monisa-firdiantika.webp, linkedin: "", aliases: ["Indah Monisa firdiantika", "Firdiantika, Indah Monisa"] }
-- { name: Chaitali Bhattacharyya, degree: M.S., graduated: 2024-08, next: DGIST, next_ko: DGIST, photo: chaitali-bhattacharyya.webp, linkedin: https://www.linkedin.com/in/chaitaliynu/, aliases: ["Bhattacharyya Chaitali", "Bhattacharyya, Chaitali", "Bhattacharyya, C."] }
+- { name: Chaitali Bhattacharyya, degree: M.S., graduated: 2024-08, next: POSTECH, next_ko: POSTECH, photo: chaitali-bhattacharyya.webp, linkedin: https://www.linkedin.com/in/chaitaliynu/, aliases: ["Bhattacharyya Chaitali", "Bhattacharyya, Chaitali", "Bhattacharyya, C."] }
 - { name_ko: 조상호, name: Sangho Jo, degree: M.S., graduated: 2023-08, photo: sangho-jo.webp, linkedin: "", aliases: ["Jo, S.", "Sangho jo"] }
 - { name_ko: 송익환, name: Ikhwan Song, degree: M.S., graduated: 2022-02, next: ADD (Agency for Defense Development), next_ko: ADD (국방과학연구소), photo: ikhwan-song.webp, linkedin: "" }
 - { name_ko: 김종찬, name: Jongchan Kim, degree: M.S., graduated: 2022-02, next: THYROSCOPE, next_ko: THYROSCOPE, photo: jongchan-kim.webp, linkedin: "" }
