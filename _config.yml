@@ -21,7 +21,11 @@ plugins:
 
 defaults:
   - scope: { path: "" }
-    values: { layout: default }
+    values:
+      layout: default
+      # The picture apps show beside the link when the site is shared.
+      image: { path: /assets/img/brand/share-icon.png, width: 800, height: 800 }
+      twitter: { card: summary }
 
 exclude:
   - README.md
