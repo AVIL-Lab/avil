@@ -2,11 +2,8 @@
 <header class="site-header" id="top">
   <div class="site-header__bar wrap">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ lab.name }} home">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40"><use href="#brand-mark"/></svg>
-      </span>
+      <img class="brand__logo" src="{{ '/assets/img/brand/avil-logo.png' | relative_url }}" alt="{{ lab.name }} logo" width="1711" height="437">
       <span class="brand__text">
-        <span class="brand__short">{{ lab.short }}</span>
         <span class="brand__long">{% include t.html en=lab.name ko=lab.name_ko %}</span>
       </span>
     </a>

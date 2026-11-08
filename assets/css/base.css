@@ -13,8 +13,8 @@
   --brand: #1d5c97;
   --brand-strong: #154a7c;
   --brand-soft: #e3eef8;
-  --mark-bg: #0b1f33;
-  --mark-fg: #ffffff;
+
+
   --hero-bg: #0b1f33;
   --hero-text: #e9f1f9;
   --focus: #2563eb;
@@ -41,7 +41,7 @@
   --bg: #08111b; --surface: #0f1b29; --surface-2: #142335; --surface-3: #1a2d43;
   --ink: #eef4fa; --text: #d5dfea; --muted: #93a6ba; --line: #213449; --line-strong: #2d4560;
   --brand: #7db8ea; --brand-strong: #a4cdf2; --brand-soft: #14304b;
-  --mark-bg: #eef4fa; --mark-fg: #0b1f33; --hero-bg: #060d16; --focus: #7db8ea;
+ --hero-bg: #060d16; --focus: #7db8ea;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4); --shadow: 0 10px 30px -12px rgba(0, 0, 0, .7);
   --t-conference: #9dbcfb; --t-conference-bg: #172a4d;
   --t-expo: #7dd3fc; --t-expo-bg: #0c2b42;
@@ -99,12 +99,11 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .site-header .spectrum-line { height: 2px; opacity: 0; transition: opacity .3s; }
 .site-header.is-scrolled .spectrum-line { opacity: .85; }
 .site-header__bar { display: flex; align-items: center; gap: 18px; height: var(--header-h); max-width: var(--wrap); }
-.brand { display: flex; flex: none; align-items: center; gap: 10px; color: var(--ink); }
+.brand { display: flex; flex: none; align-items: center; color: var(--ink); }
 .brand:hover { text-decoration: none; }
-.brand__mark svg { width: 38px; height: 38px; }
+.brand__logo { display: block; width: auto; height: 46px; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
-.brand__short { font-weight: 850; font-size: 1.12rem; letter-spacing: .06em; }
-.brand__long { font-size: .74rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand__long { margin-left: 10px; font-size: .74rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nav { margin-left: auto; }
 .nav__list { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
 .nav__link { display: inline-flex; align-items: center; gap: 4px; padding: 7px 10px; border-radius: 8px; color: var(--text); font-size: .92rem; font-weight: 550; background: none; border: 0; white-space: nowrap; }
@@ -142,7 +141,10 @@ html[data-lang="ko"] body { word-break: keep-all; }
   .tools { margin-left: auto; }
 }
 @media (max-width: 1120px) and (min-width: 640px) { .brand__long { display: block; } }
-@media (max-width: 520px) { .tool--search { padding: 0 8px; } }
+/* The wordmark logo is wide, so it scales with the room the inline menu leaves (none near 1200px). */
+@media (min-width: 1121px) and (max-width: 1499px) { .site-header .brand__logo { height: clamp(23.5px, calc(23.5px + (100vw - 1200px) * .075), 46px); } }
+@media (min-width: 1121px) and (max-width: 1720px) { .site-header .brand__long { display: none; } }
+@media (max-width: 520px) { .tool--search { padding: 0 8px; } .site-header .brand__logo { height: clamp(23.5px, 6.6vw, 34px); } }
 
 /* ---- Page structure ----------------------------------------------------- */
 .page-hero { padding: 28px 0 18px; background: radial-gradient(1200px 300px at 10% -40%, var(--brand-soft), transparent 70%); border-bottom: 1px solid var(--line); }
@@ -244,8 +246,9 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .site-footer a { color: #e6eef7; }
 .site-footer__grid { display: grid; gap: 28px; grid-template-columns: 1.4fr 1fr 1fr 1.3fr; padding-top: 44px; padding-bottom: 28px; }
 .site-footer__brand .brand { color: #fff; }
-.site-footer__brand .brand__long { display: block; color: #93a6ba; white-space: normal; }
-.site-footer__brand .brand__mark svg { --mark-bg: #eef4fa; --mark-fg: #0b1f33; }
+.site-footer__brand .brand__long { display: block; margin-left: 0; color: #93a6ba; white-space: normal; }
+.site-footer__brand .brand { flex-direction: column; align-items: flex-start; gap: 8px; }
+.site-footer__brand .brand__logo { height: 58px; max-width: 100%; }
 .site-footer__tag { margin: 10px 0 12px; color: #93a6ba; font-size: .9rem; }
 .site-footer__h { color: #7db8ea; font: 650 .72rem/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 14px; }
 .site-footer p { margin: 0 0 6px; font-size: .92rem; }

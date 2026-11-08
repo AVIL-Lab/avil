@@ -4,8 +4,8 @@
   <div class="wrap site-footer__grid">
     <div class="site-footer__brand">
       <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 40 40"><use href="#brand-mark"/></svg></span>
-        <span class="brand__text"><span class="brand__short">{{ lab.short }}</span><span class="brand__long">{% include t.html en=lab.name ko=lab.name_ko %}</span></span>
+        <img class="brand__logo" src="{{ '/assets/img/brand/avil-logo.png' | relative_url }}" alt="{{ lab.name }} logo" width="1711" height="437" loading="lazy">
+        <span class="brand__text"><span class="brand__long">{% include t.html en=lab.name ko=lab.name_ko %}</span></span>
       </a>
       <p class="site-footer__tag">{{ lab.tagline }}</p>
       <a class="link-arrow" href="{{ '/contact/' | relative_url }}">{% include t.html en="Join our lab" ko="연구실 지원" %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
