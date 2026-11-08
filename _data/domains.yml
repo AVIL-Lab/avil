@@ -83,7 +83,8 @@
   # Optional: a different name for this domain's tab on the home page only.
   tab_en: "Physical AI. Robotics"
   tab_ko: "피지컬 AI. 로보틱스"
-  icon: humanoid-robot
+  # Optional: a picture for this domain's tab, used instead of an `icon` from _includes/icons.html.
+  icon_image: /assets/img/brand/physical-ai-robot.png
   color: "#8b3fe0"
   summary:
     en: >-

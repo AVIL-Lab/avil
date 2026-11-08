@@ -34,7 +34,7 @@
   {%- assign tab_en = d.tab_en | default: d.en -%}{%- assign tab_ko = d.tab_ko | default: d.ko -%}
   {%- capture tab -%}
   <button type="button" role="tab" class="domx__domain" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
-    <span class="domx__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ d.icon }}"/></svg></span>
+    <span class="domx__icon">{% if d.icon_image %}<img class="i" src="{{ d.icon_image | relative_url }}" alt="" width="44" height="44">{% else %}<svg class="i" aria-hidden="true"><use href="#i-{{ d.icon }}"/></svg>{% endif %}</span>
     <span class="domx__name">{% include t.html en=tab_en ko=tab_ko %}</span>
   </button>
   {%- endcapture -%}
