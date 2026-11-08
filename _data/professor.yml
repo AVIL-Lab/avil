@@ -46,7 +46,7 @@ scholar:
   - year: 2026
     citations: 250
 career:
-- start: 2026.10
+- start: "2026.10"
   kind: research
   en: Principal Investigator, IITP (Institute of Information & Communications Technology Planning & Evaluation)
   ko: IITP(정보통신기획평가원) 연구책임자
