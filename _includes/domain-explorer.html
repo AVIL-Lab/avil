@@ -31,10 +31,11 @@
   {%- comment -%} Domain members, in the order listed in domains.yml {%- endcomment -%}
   {%- assign team_names = d.core_team | default: d.members -%}
 
+  {%- assign tab_en = d.tab_en | default: d.en -%}{%- assign tab_ko = d.tab_ko | default: d.ko -%}
   {%- capture tab -%}
   <button type="button" role="tab" class="domx__domain" id="dtab-{{ d.key }}" aria-controls="dpanel-{{ d.key }}" aria-selected="{{ dfirst }}"{% unless dfirst %} tabindex="-1"{% endunless %} style="--d: {{ d.color }}">
     <span class="domx__icon"><svg class="i" aria-hidden="true"><use href="#i-{{ d.icon }}"/></svg></span>
-    <span class="domx__name">{% include t.html en=d.en ko=d.ko %}</span>
+    <span class="domx__name">{% include t.html en=tab_en ko=tab_ko %}</span>
   </button>
   {%- endcapture -%}
   {%- assign tabs_html = tabs_html | append: tab -%}
