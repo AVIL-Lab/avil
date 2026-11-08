@@ -81,9 +81,9 @@
   en: Physical AI (Super Intelligence)
   ko: 피지컬 AI (슈퍼 인텔리전스)
   # Optional: a different name for this domain's tab on the home page only.
-  tab_en: "Physical AI | Robotics"
-  tab_ko: "피지컬 AI | 로보틱스"
-  icon: bot
+  tab_en: "Physical AI. Robotics"
+  tab_ko: "피지컬 AI. 로보틱스"
+  icon: humanoid-robot
   color: "#8b3fe0"
   summary:
     en: >-

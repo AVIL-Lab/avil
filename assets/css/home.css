@@ -227,6 +227,7 @@
 .domx__domain[aria-selected="true"]::before { opacity: 1; }
 .domx__icon { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: color-mix(in srgb, var(--d) 14%, var(--surface)); color: var(--d); }
 .domx__icon .i { width: 26px; height: 26px; }
+#dtab-psi .domx__icon .i { width: 44px; height: 44px; }
 .domx__name { font-size: 1.15rem; font-weight: 800; color: var(--ink); line-height: 1.2; }
 .domx__tagline { font-size: .84rem; color: var(--muted); line-height: 1.35; }
 .domx__counts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: .8rem; color: var(--muted); }
