@@ -143,9 +143,9 @@ The data files use **YAML**. It is simple, but a single mistake stops the whole 
 
 ### 5.1 Add a new member · 새 구성원 추가
 
-**Step 1. Prepare the photo.** Use a portrait (vertical) photo with the face in the upper third, in a 3:4 ratio. Keep the photo at its full high resolution in `.png` or `.jpg` format (do not downscale or convert to `.webp`). Name the file with lowercase English letters and hyphens, such as `gildong-hong.png`. Upload it to `assets/img/members/`.
+**Step 1. Prepare the photo.** Use a portrait (vertical) photo with the face in the upper third, in a 3:4 ratio. Keep the photo in `.png` or `.jpg` format (do not convert to `.webp`). You may downscale a very large photo, as long as it stays sharp on the page. Name the file with lowercase English letters and hyphens, such as `gildong-hong.png`. Upload it to `assets/img/members/`.
 
-**1단계. 사진 준비.** 얼굴이 위쪽 3분의 1에 오는 3:4 비율의 세로 사진을 사용합니다. 사진은 원본 고해상도 그대로 `.png` 또는 `.jpg` 형식으로 유지합니다 (해상도를 낮추거나 `.webp`로 변환하지 마세요). 파일 이름은 영어 소문자와 하이픈으로 `gildong-hong.png`처럼 짓고 `assets/img/members/` 폴더에 올립니다.
+**1단계. 사진 준비.** 얼굴이 위쪽 3분의 1에 오는 3:4 비율의 세로 사진을 사용합니다. 사진은 `.png` 또는 `.jpg` 형식으로 유지합니다 (`.webp`로 변환하지 마세요). 너무 큰 사진은 페이지에서 선명하게 보이는 범위에서 해상도를 낮춰도 됩니다. 파일 이름은 영어 소문자와 하이픈으로 `gildong-hong.png`처럼 짓고 `assets/img/members/` 폴더에 올립니다.
 
 **Step 2. Add an entry to `_data/members.yml`.** Copy an existing member block and change the values. Members appear on the page in the order of this file, grouped by `role`.
 
@@ -263,9 +263,9 @@ Each news item is one photo with a caption. It appears on the News page and in t
 
 소식 하나는 사진 한 장과 설명 한 줄입니다. 소식 페이지와 갤러리에 표시됩니다.
 
-**Step 1.** Keep the photo at its full original resolution in `.png` or `.jpg` format (do not downscale and do not convert to `.webp`). Save it with the same file name in both `assets/img/gallery/` and `assets/img/gallery/thumbs/`, for example `2027-03-cvpr.png`.
+**Step 1.** Keep the photo in `.png` or `.jpg` format (do not convert to `.webp`). You may downscale a very large photo, as long as it stays sharp on the page. Save it with the same file name in both `assets/img/gallery/` and `assets/img/gallery/thumbs/`, for example `2027-03-cvpr.png`.
 
-**1단계.** 사진은 원본 고해상도 그대로 `.png` 또는 `.jpg` 형식으로 유지합니다 (해상도를 낮추거나 `.webp`로 변환하지 마세요). 같은 파일 이름(예: `2027-03-cvpr.png`)으로 `assets/img/gallery/`와 `assets/img/gallery/thumbs/` 두 폴더에 모두 올립니다.
+**1단계.** 사진은 `.png` 또는 `.jpg` 형식으로 유지합니다 (`.webp`로 변환하지 마세요). 너무 큰 사진은 페이지에서 선명하게 보이는 범위에서 해상도를 낮춰도 됩니다. 같은 파일 이름(예: `2027-03-cvpr.png`)으로 `assets/img/gallery/`와 `assets/img/gallery/thumbs/` 두 폴더에 모두 올립니다.
 
 **Step 2.** Add an entry at the **top** of `_data/events.yml`:
 
@@ -396,15 +396,15 @@ Always put the `description` in quotes. A description containing a colon without
 
 | Image · 이미지 | Folder · 폴더 | Size · 크기 |
 |---|---|---|
-| Member / alumni photo · 구성원/졸업생 사진 | `assets/img/members/` | 3:4 portrait, full high resolution (`.png` or `.jpg`, no `.webp` conversion) · 3:4 세로, 원본 고해상도 유지 (`.png` 또는 `.jpg`, `.webp` 변환 불필요) |
-| Professor photo · 교수 사진 | `assets/img/members/` | 4:5 portrait, full high resolution · 4:5 세로, 원본 고해상도 유지 |
-| News photo (large) · 소식 사진 (큰 사진) | `assets/img/gallery/` | Full original high resolution (`.png` or `.jpg`, do not convert to `.webp`) · 원본 고해상도 그대로 유지 (`.png` 또는 `.jpg`, `.webp` 변환 금지) |
-| News thumbnail · 소식 썸네일 | `assets/img/gallery/thumbs/` | Full original high resolution, same file name as in `assets/img/gallery/` · 원본 고해상도 유지, `assets/img/gallery/`와 같은 파일 이름 |
-| Partner logo · 협력 기관 로고 | `assets/img/partners/` | Full high resolution · 고해상도 유지 |
+| Member / alumni photo · 구성원/졸업생 사진 | `assets/img/members/` | 3:4 portrait, high resolution, downscaling allowed (`.png` or `.jpg`, no `.webp` conversion) · 3:4 세로, 고해상도 권장, 축소 가능 (`.png` 또는 `.jpg`, `.webp` 변환 불필요) |
+| Professor photo · 교수 사진 | `assets/img/members/` | 4:5 portrait, high resolution, downscaling allowed · 4:5 세로, 고해상도 권장, 축소 가능 |
+| News photo (large) · 소식 사진 (큰 사진) | `assets/img/gallery/` | High resolution, downscaling allowed (`.png` or `.jpg`, do not convert to `.webp`) · 고해상도 권장, 축소 가능 (`.png` 또는 `.jpg`, `.webp` 변환 금지) |
+| News thumbnail · 소식 썸네일 | `assets/img/gallery/thumbs/` | High resolution, downscaling allowed, same file name as in `assets/img/gallery/` · 고해상도 권장, 축소 가능, `assets/img/gallery/`와 같은 파일 이름 |
+| Partner logo · 협력 기관 로고 | `assets/img/partners/` | High resolution, downscaling allowed · 고해상도 권장, 축소 가능 |
 
-Always keep images at high resolution in `.png` or `.jpg` format; do not downscale or convert new uploads to `.webp` (existing `.webp` files from the initial migration remain as-is). File names: lowercase English letters, numbers and hyphens only, with no spaces or Korean characters (`gildong-hong.png`, not `홍길동 사진.JPG`). File names are case-sensitive on the live site: `Photo.png` and `photo.png` are different files.
+Keep images in `.png` or `.jpg` format and do not convert new uploads to `.webp` (existing `.webp` files from the initial migration remain as-is). Downscaling is allowed: a large image may be resized as long as it stays sharp at the size it is shown, and anything displayed small, such as an icon, should be. File names: lowercase English letters, numbers and hyphens only, with no spaces or Korean characters (`gildong-hong.png`, not `홍길동 사진.JPG`). File names are case-sensitive on the live site: `Photo.png` and `photo.png` are different files.
 
-이미지는 항상 원본 고해상도 `.png` 또는 `.jpg` 형식으로 유지하며, 해상도를 낮추거나 `.webp`로 변환하지 않습니다 (초기 이전 때 생성된 기존 `.webp` 파일만 그대로 둡니다). 파일 이름은 영어 소문자, 숫자, 하이픈만 쓰고 공백과 한글은 쓰지 않습니다 (`홍길동 사진.JPG`가 아니라 `gildong-hong.png`). 사이트에서는 대소문자를 구분하므로 `Photo.png`와 `photo.png`는 다른 파일입니다.
+이미지는 `.png` 또는 `.jpg` 형식으로 유지하며, 새 이미지를 `.webp`로 변환하지 않습니다 (초기 이전 때 생성된 기존 `.webp` 파일만 그대로 둡니다). 해상도는 낮춰도 됩니다. 표시되는 크기에서 선명하기만 하면 큰 이미지를 줄여도 되며, 아이콘처럼 작게 표시되는 이미지는 줄여서 올립니다. 파일 이름은 영어 소문자, 숫자, 하이픈만 쓰고 공백과 한글은 쓰지 않습니다 (`홍길동 사진.JPG`가 아니라 `gildong-hong.png`). 사이트에서는 대소문자를 구분하므로 `Photo.png`와 `photo.png`는 다른 파일입니다.
 
 ---
 
@@ -480,7 +480,7 @@ Before making any changes, read README.md completely and strictly follow the exi
      * `_data/alumni.yml` (alumni newest first: `name_ko`, `name`, `degree`, `graduated` as `YYYY-MM`, optional `next`/`next_ko`, optional `email`, `photo`, `linkedin` URL or `""`).
      * `_data/professor.yml` (PI profile, contact, `links`, `scholar` citation metrics, `career` timeline).
      * `_data/publications.yml` (papers newest year first; within the same year, region, and type, group consecutive papers from the same conference together, e.g., KIEES, ICROS, IEIE; optional `url`).
-     * `_data/events.yml` (news/gallery items newest first, with matching full-resolution `.png` or `.jpg` photo in both `assets/img/gallery/` and `assets/img/gallery/thumbs/`; never downscale or convert new images to `.webp`).
+     * `_data/events.yml` (news/gallery items newest first, with matching `.png` or `.jpg` photo in both `assets/img/gallery/` and `assets/img/gallery/thumbs/`; downscaling is allowed, but never convert new images to `.webp`).
      * `_data/projects.yml`, `_data/equipment.yml`, `_data/lab.yml`, `_data/domains.yml`, `_data/themes.yml`, `_data/modalities.yml`, `_data/navigation.yml`.
    - Do NOT manually edit `_data/conferences.yml`, `_data/journals.yml`, or `_data/deadlines_meta.yml`; these are auto-generated weekly by `scripts/update_deadlines.py`.
 
