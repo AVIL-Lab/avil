@@ -176,7 +176,7 @@
 - key: medical
   en: Medical AI
   ko: 의료 AI
-  icon: activity
+  icon_image: /assets/img/brand/medical-ai.png
   color: "#e0365f"
   summary:
     en: >-
