@@ -35,7 +35,7 @@ description: "Photos from conferences, workshops, graduations and everyday life 
       {%- if e.photos and e.photos.size > 0 %}
       {%- for ph in e.photos %}
       <a class="shot js-lightbox" id="{{ ph | remove: '.webp' | remove: '.png' | remove: '.jpg' }}" href="{{ '/assets/img/gallery/' | append: ph | relative_url }}" data-index="{{ g_idx }}" data-year="{{ y }}" data-tag="{{ e.tag }}">
-        <img src="{{ '/assets/img/gallery/thumbs/' | append: ph | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
+        <img src="{{ '/assets/img/gallery/thumbs/' | append: ph | relative_url }}" alt="{{ e.en | strip_html | escape }}" width="640" height="427" loading="lazy">
         <span class="shot__cap">
           <span class="shot__when mono">{{ e.when }}</span>
           <span class="shot__text">{% include t.html en=e.en ko=e.ko %}</span>
@@ -45,7 +45,7 @@ description: "Photos from conferences, workshops, graduations and everyday life 
       {%- endfor %}
       {%- else %}
       <a class="shot js-lightbox" id="{{ e.photo | remove: '.webp' | remove: '.png' | remove: '.jpg' }}" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ g_idx }}" data-year="{{ y }}" data-tag="{{ e.tag }}">
-        <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
+        <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | strip_html | escape }}" width="640" height="427" loading="lazy">
         <span class="shot__cap">
           <span class="shot__when mono">{{ e.when }}</span>
           <span class="shot__text">{% include t.html en=e.en ko=e.ko %}</span>

@@ -41,7 +41,7 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
           {%- for e in g.items %}
           {%- assign idx = idx | plus: 1 -%}
           {%- assign e_photos = e.photos | default: e.photo -%}
-          <li class="news-item" id="e-{{ e.date }}-{{ idx }}" data-tag="{{ e.tag }}" data-year="{{ g.name }}" data-search="{{ e.en | downcase | escape }} {{ e.ko | escape }} {{ e.when }}">
+          <li class="news-item" id="e-{{ e.date }}-{{ idx }}" data-tag="{{ e.tag }}" data-year="{{ g.name }}" data-search="{{ e.en | strip_html | downcase | escape }} {{ e.ko | strip_html | escape }} {{ e.when }}">
             <time class="news-item__date mono" datetime="{{ e.date }}">{{ e.date | date: "%b %-d" }}</time>
             <span class="news-item__rail" aria-hidden="true"><span class="dot dot--{{ e.tag }}"></span></span>
             <div class="news-item__body card{% unless e.photos or e.photo %} news-item__body--text{% endunless %}">
@@ -50,7 +50,7 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
                 <div class="news-item__slides">
                   {%- for ph in e.photos %}
                   <a class="news-item__photo news-item__slide{% if forloop.first %} is-active{% endif %} js-lightbox" href="{{ '/assets/img/gallery/' | append: ph | relative_url }}" data-index="{{ p_idx }}" aria-label="View photo {{ forloop.index }} of {{ e.photos.size }}">
-                    <img src="{{ '/assets/img/gallery/thumbs/' | append: ph | relative_url }}" alt="{{ e.en | escape }} ({{ forloop.index }}/{{ e.photos.size }})" width="640" height="427" loading="lazy">
+                    <img src="{{ '/assets/img/gallery/thumbs/' | append: ph | relative_url }}" alt="{{ e.en | strip_html | escape }} ({{ forloop.index }}/{{ e.photos.size }})" width="640" height="427" loading="lazy">
                   </a>
                   {%- assign p_idx = p_idx | plus: 1 -%}
                   {%- endfor %}
@@ -61,7 +61,7 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
               </div>
               {%- elsif e.photo %}
               <a class="news-item__photo js-lightbox" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ p_idx }}" aria-label="View photo">
-                <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
+                <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | strip_html | escape }}" width="640" height="427" loading="lazy">
               </a>
               {%- assign p_idx = p_idx | plus: 1 -%}
               {%- endif %}

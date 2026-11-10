@@ -28,7 +28,7 @@ permalink: /search.json
 {"t":"project","title":{{ pr.title | jsonify }},"sub":{{ pr.funder | append: ", " | append: pr.period | jsonify }},"extra":{{ pr.title_ko | append: " " | append: pr.funder_ko | jsonify }},"url":"/projects/#{{ pr.status }}"},
 {%- endfor %}
 {%- for e in site.data.events %}
-{"t":"news","title":{{ e.en | jsonify }},"sub":{{ e.when | append: " · " | append: e.ko | jsonify }},"url":"/news/#e-{{ e.date }}-{{ forloop.index }}"},
+{"t":"news","title":{{ e.en | strip_html | jsonify }},"sub":{{ e.when | append: " · " | append: e.ko | strip_html | jsonify }},"url":"/news/#e-{{ e.date }}-{{ forloop.index }}"},
 {%- endfor %}
 {%- for c in site.data.conferences %}
 {"t":"conf","title":{{ c.name | append: " " | append: c.edition | jsonify }},"sub":{{ c.location | append: " · " | append: c.category | jsonify }},"url":"/deadlines/#conf-{{ c.name | slugify }}"},

@@ -10,8 +10,8 @@
   when: 2026/11/13
   tag: contest
   news_only: true
-  ko: 'Team Avengers(신일한, 이원종, Selim Sarowar, 최현지), 2026 국제로봇콘테스트(IRC, International Robot Contest) 매니퓰레이터 부문 참가 (대구 EXCO)'
-  en: 'Team Avengers (Ilhan Sin, Wonjong Lee, Selim Sarowar, Hyeonji Choi) participated in the International Robot Contest (IRC) 2026, Manipulator category, at EXCO, Daegu'
+  ko: '<strong>Team Avengers</strong>(<strong>신일한</strong>, <strong>이원종</strong>, <strong>Selim Sarowar</strong>, <strong>최현지</strong>), 2026 국제로봇콘테스트(IRC, International Robot Contest) 매니퓰레이터 부문 참가 (대구 EXCO)'
+  en: '<strong>Team Avengers</strong> (<strong>Ilhan Sin</strong>, <strong>Wonjong Lee</strong>, <strong>Selim Sarowar</strong>, <strong>Hyeonji Choi</strong>) participated in the International Robot Contest (IRC) 2026, Manipulator category, at EXCO, Daegu'
   link: https://jk070599999-png.github.io/raccoon_ai_teacher/
   link_en: 'Project page: RaccoonBot AI Teacher'
   link_ko: '프로젝트 페이지: 라쿤봇 AI 선생님'
@@ -48,14 +48,14 @@
 - date: '2026-07-29'
   when: 2026/07/29
   tag: conference
-  ko: Uday Debnath, Sreya Deb Srestha, EMBC 2026 학회 참여 및 논문 발표
-  en: Uday Debnath & Sreya Deb Srestha attended EMBC 2026 and presented a paper
+  ko: '<strong>Uday Debnath</strong>, <strong>Sreya Deb Srestha</strong>, EMBC 2026 학회 참여 및 논문 발표'
+  en: '<strong>Uday Debnath</strong> & <strong>Sreya Deb Srestha</strong> attended EMBC 2026 and presented a paper'
   photo: 6f551c_f74fdaf10dd6426d98b862eaf3413f6a.webp
 - date: '2026-07-09'
   when: 2026/07/09
   tag: conference
-  ko: Selim Sarowar, ICML 2026 (A*) 학회 참여 및 VLA 워크샵 논문 발표
-  en: Selim Sarowar attended ICML 2026 (A*) and presented a VLA workshop paper
+  ko: '<strong>Selim Sarowar</strong>, ICML 2026 (A*) 학회 참여 및 VLA 워크샵 논문 발표'
+  en: '<strong>Selim Sarowar</strong> attended ICML 2026 (A*) and presented a VLA workshop paper'
   photo: 6f551c_9394ee6d002b4fa78b046777a9d58b21.webp
 - date: '2026-07-03'
   when: 2026/07/03
