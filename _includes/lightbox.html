@@ -8,7 +8,7 @@
 {%- unless first_p -%},{%- endunless -%}{%- assign first_p = false -%}
 {"id":{{ ph | remove: ".webp" | remove: ".png" | remove: ".jpg" | jsonify }},"src":{{ '/assets/img/gallery/' | append: ph | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}
 {%- endfor -%}
-{%- else -%}
+{%- elsif e.photo -%}
 {%- unless first_p -%},{%- endunless -%}{%- assign first_p = false -%}
 {"id":{{ e.photo | remove: ".webp" | remove: ".png" | remove: ".jpg" | jsonify }},"src":{{ '/assets/img/gallery/' | append: e.photo | relative_url | jsonify }},"en":{{ e.en | jsonify }},"ko":{{ e.ko | jsonify }},"when":{{ e.when | jsonify }},"tag":{{ e.tag | jsonify }}}
 {%- endif -%}

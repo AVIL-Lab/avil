@@ -1,9 +1,16 @@
 # Lab events, one per photo, migrated from the Wix "Pictures" page (2026-10-17).
 # Drives the News page, the home page news list and the Gallery.
 #   date  YYYY-MM-DD (first day of the event)   when  date text as written on Wix
-#   tag   conference | expo | award | rlrc | graduation | lab | field
+#   tag   conference | expo | award | rlrc | iitp | graduation | lab | field
 #   ko    original caption   en  English translation
 #   photo file in assets/img/gallery/ (thumbnail: same name in gallery/thumbs/)
+#         optional for news_only entries: with no photo the News card is text-only
+- date: '2026-11-09'
+  when: 2026/11/09
+  tag: iitp
+  news_only: true
+  ko: '제조특화 휴머노이드 사업단(HuMAN) 개소식: "지역에서 시작하는 혁신, 세계로 도약하는 피지컬 AI" (과학기술정보통신부·IITP AI 최고급 신진연구자 지원사업)'
+  en: 'Launch ceremony of the Manufacturing-Specialized Humanoid Project Group (HuMAN): "Innovation Starting in the Region, Physical AI Leaping to the World" (MSIT · IITP AI Star Fellowship program)'
 - date: '2026-10-22'
   when: 2026/10/22
   tag: expo

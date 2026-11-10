@@ -1,7 +1,7 @@
 /* News timeline, gallery grid, lightbox. */
 
 .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
-.dot--conference { color: var(--t-conference); } .dot--expo { color: var(--t-expo); } .dot--award { color: var(--t-award); } .dot--rlrc { color: var(--t-rlrc); }
+.dot--conference { color: var(--t-conference); } .dot--expo { color: var(--t-expo); } .dot--award { color: var(--t-award); } .dot--rlrc { color: var(--t-rlrc); } .dot--iitp { color: var(--t-iitp); }
 .dot--graduation { color: var(--t-graduation); } .dot--lab { color: var(--t-lab); } .dot--field { color: var(--t-field); }
 .pill.is-active .dot { color: var(--bg); }
 
@@ -16,6 +16,7 @@
 .news-item__rail .dot { position: relative; margin-top: 21px; width: 12px; height: 12px; box-shadow: 0 0 0 4px var(--bg); }
 .news-item__body { display: grid; grid-template-columns: 180px 1fr; gap: 16px; align-items: center; padding: 10px; margin: 6px 0; transition: transform .15s, box-shadow .15s; }
 .news-item__body:hover { transform: translateX(3px); box-shadow: var(--shadow); }
+.news-item__body--text { grid-template-columns: 1fr; padding: 14px 16px; } /* news entry with no photo */
 .news-item:target .news-item__body { box-shadow: 0 0 0 3px var(--brand), var(--shadow); }
 .news-item__photo { display: block; border-radius: 10px; overflow: hidden; }
 .news-item__photo img { width: 180px; height: 120px; object-fit: cover; transition: transform .35s; }

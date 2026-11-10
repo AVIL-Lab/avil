@@ -6,7 +6,7 @@ js: [media]
 description: "News from the Advanced Visual Intelligence Lab: conferences, awards, graduations, RLRC milestones and lab life."
 ---
 {%- assign events = site.data.events -%}
-{%- assign tags = "conference,expo,award,rlrc,graduation,lab,field" | split: "," -%}
+{%- assign tags = "conference,expo,award,rlrc,iitp,graduation,lab,field" | split: "," -%}
 {%- assign by_year = events | group_by_exp: "e", "e.date | slice: 0, 4" -%}
 {% include page-hero.html eyebrow_en="News" eyebrow_ko="소식" title_en="Lab news" title_ko="연구실 소식" lead_en="Conferences, awards, graduations, RLRC milestones and lab life, newest first. Switch to 한국어 in the header for the original captions." lead_ko="학회 참석, 수상, 졸업, RLRC 행사와 연구실 생활 소식입니다." %}
 
@@ -44,7 +44,7 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
           <li class="news-item" id="e-{{ e.date }}-{{ idx }}" data-tag="{{ e.tag }}" data-year="{{ g.name }}" data-search="{{ e.en | downcase | escape }} {{ e.ko | escape }} {{ e.when }}">
             <time class="news-item__date mono" datetime="{{ e.date }}">{{ e.date | date: "%b %-d" }}</time>
             <span class="news-item__rail" aria-hidden="true"><span class="dot dot--{{ e.tag }}"></span></span>
-            <div class="news-item__body card">
+            <div class="news-item__body card{% unless e.photos or e.photo %} news-item__body--text{% endunless %}">
               {%- if e.photos and e.photos.size > 1 %}
               <div class="news-item__carousel" data-carousel>
                 <div class="news-item__slides">
@@ -59,7 +59,7 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
                 <button type="button" class="news-carousel__btn news-carousel__btn--next" data-carousel-dir="1" aria-label="Next photo"><svg class="i i--sm" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
                 <span class="news-carousel__badge mono" data-carousel-badge>1 / {{ e.photos.size }}</span>
               </div>
-              {%- else %}
+              {%- elsif e.photo %}
               <a class="news-item__photo js-lightbox" href="{{ '/assets/img/gallery/' | append: e.photo | relative_url }}" data-index="{{ p_idx }}" aria-label="View photo">
                 <img src="{{ '/assets/img/gallery/thumbs/' | append: e.photo | relative_url }}" alt="{{ e.en | escape }}" width="640" height="427" loading="lazy">
               </a>

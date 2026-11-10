@@ -274,7 +274,7 @@ Each news item is one photo with a caption. It appears on the News page and in t
 ```yaml
 - date: '2027-03-15'              # first day of the event · 행사 시작일
   when: 2027/03/15~03/18          # date as you want it shown · 화면에 보일 날짜 표기
-  tag: conference                 # conference | expo | award | rlrc | graduation | lab | field
+  tag: conference                 # conference | expo | award | rlrc | iitp | graduation | lab | field
   ko: CVPR 2027 학회 참여 및 논문 발표
   en: Attended CVPR 2027 and presented a paper
   photo: 2027-03-cvpr-1.png
@@ -283,9 +283,9 @@ Each news item is one photo with a caption. It appears on the News page and in t
     - 2027-03-cvpr-2.png
 ```
 
-`tag` controls the colored label and the filters: `conference` (conferences, seminars), `expo` (exhibitions, industry expos), `award`, `rlrc` (RLRC events), `graduation`, `lab` (lab life) and `field` (field work, data collection).
+`tag` controls the colored label and the filters: `conference` (conferences, seminars), `expo` (exhibitions, industry expos), `award`, `rlrc` (RLRC events), `iitp` (IITP project events), `graduation`, `lab` (lab life) and `field` (field work, data collection). A `news_only` event may leave out `photo`; its News card is then text-only.
 
-`tag`는 색 라벨과 필터를 정합니다: `conference`(학회, 세미나), `expo`(전시/박람회), `award`(수상), `rlrc`(RLRC 행사), `graduation`(졸업), `lab`(연구실 생활), `field`(실험, 촬영).
+`tag`는 색 라벨과 필터를 정합니다: `conference`(학회, 세미나), `expo`(전시/박람회), `award`(수상), `rlrc`(RLRC 행사), `iitp`(IITP 과제 행사), `graduation`(졸업), `lab`(연구실 생활), `field`(실험, 촬영).
 
 ### 5.8 Add or update a project · 과제 추가 및 수정
 
