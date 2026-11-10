@@ -1,10 +1,20 @@
 # Lab events, one per photo, migrated from the Wix "Pictures" page (2026-10-17).
 # Drives the News page, the home page news list and the Gallery.
 #   date  YYYY-MM-DD (first day of the event)   when  date text as written on Wix
-#   tag   conference | expo | award | rlrc | iitp | graduation | lab | field
+#   tag   conference | expo | contest | award | rlrc | iitp | graduation | lab | field
+#   link  optional URL shown under the caption; link_en / link_ko = button text
 #   ko    original caption   en  English translation
 #   photo file in assets/img/gallery/ (thumbnail: same name in gallery/thumbs/)
 #         optional for news_only entries: with no photo the News card is text-only
+- date: '2026-11-13'
+  when: 2026/11/13
+  tag: contest
+  news_only: true
+  ko: 'Team Avengers(신일한, 이원종, Selim Sarowar, 최현지), 2026 국제로봇콘테스트(IRC, International Robot Contest) 매니퓰레이터 부문 참가 (대구 EXCO)'
+  en: 'Team Avengers (Ilhan Sin, Wonjong Lee, Selim Sarowar, Hyeonji Choi) participated in the International Robot Contest (IRC) 2026, Manipulator category, at EXCO, Daegu'
+  link: https://jk070599999-png.github.io/raccoon_ai_teacher/
+  link_en: 'Project page: RaccoonBot AI Teacher'
+  link_ko: '프로젝트 페이지: 라쿤봇 AI 선생님'
 - date: '2026-11-09'
   when: 2026/11/09
   tag: iitp

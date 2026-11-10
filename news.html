@@ -6,7 +6,7 @@ js: [media]
 description: "News from the Advanced Visual Intelligence Lab: conferences, awards, graduations, RLRC milestones and lab life."
 ---
 {%- assign events = site.data.events -%}
-{%- assign tags = "conference,expo,award,rlrc,iitp,graduation,lab,field" | split: "," -%}
+{%- assign tags = "conference,expo,contest,award,rlrc,iitp,graduation,lab,field" | split: "," -%}
 {%- assign by_year = events | group_by_exp: "e", "e.date | slice: 0, 4" -%}
 {% include page-hero.html eyebrow_en="News" eyebrow_ko="소식" title_en="Lab news" title_ko="연구실 소식" lead_en="Conferences, awards, graduations, RLRC milestones and lab life, newest first. Switch to 한국어 in the header for the original captions." lead_ko="학회 참석, 수상, 졸업, RLRC 행사와 연구실 생활 소식입니다." %}
 
@@ -69,6 +69,9 @@ description: "News from the Advanced Visual Intelligence Lab: conferences, award
                 <span class="tag tag--{{ e.tag }}">{% include tag-label.html tag=e.tag %}</span>
                 <p>{% include t.html en=e.en ko=e.ko %}</p>
                 <p class="news-item__when mono muted">{{ e.when }}</p>
+                {%- if e.link %}
+                <a class="news-item__link link-arrow" href="{{ e.link }}" target="_blank" rel="noopener">{% include t.html en=e.link_en ko=e.link_ko %} <svg class="i i--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                {%- endif %}
               </div>
             </div>
           </li>

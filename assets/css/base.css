@@ -29,6 +29,7 @@
   --t-award: #a15c00; --t-award-bg: #fdf0d5;
   --t-rlrc: #0f766e; --t-rlrc-bg: #d7f3ef;
   --t-iitp: #be185d; --t-iitp-bg: #fce7f3;
+  --t-contest: #b91c1c; --t-contest-bg: #fee2e2;
   --t-graduation: #6d28d9; --t-graduation-bg: #ede5fd;
   --t-lab: #3f6212; --t-lab-bg: #e8f3d6;
   --t-field: #c2410c; --t-field-bg: #fde6d8;
@@ -49,6 +50,7 @@
   --t-award: #f5c46b; --t-award-bg: #3a2b0e;
   --t-rlrc: #6ee0d2; --t-rlrc-bg: #0e3532;
   --t-iitp: #f9a8d4; --t-iitp-bg: #3f1530;
+  --t-contest: #fca5a5; --t-contest-bg: #3b1212;
   --t-graduation: #c4a8fb; --t-graduation-bg: #2b1d4d;
   --t-lab: #b6dc7c; --t-lab-bg: #233113;
   --t-field: #fbab80; --t-field-bg: #3f2213;
@@ -188,6 +190,7 @@ html[data-lang="ko"] body { word-break: keep-all; }
 .tag--award { color: var(--t-award); background: var(--t-award-bg); }
 .tag--rlrc { color: var(--t-rlrc); background: var(--t-rlrc-bg); }
 .tag--iitp { color: var(--t-iitp); background: var(--t-iitp-bg); }
+.tag--contest { color: var(--t-contest); background: var(--t-contest-bg); }
 .tag--psi { color: #1d4ed8; background: #e0e9fd; }
 :root[data-theme="dark"] .tag--psi { color: #93c5fd; background: #172a4d; }
 .tag--graduation { color: var(--t-graduation); background: var(--t-graduation-bg); }
