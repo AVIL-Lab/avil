@@ -5,6 +5,13 @@
 - region: international
   type: journal
   year: 2026
+  authors: Wonjong Lee, Ilhan Sin, Eunjae Ha, Heejo Woo, Sungho Kim
+  title: 'Maritime-Aware Image Deblurring: Benchmark, Information Limit, and a Lightweight Directional Context Module'
+  venue: 'IEEE Access, 14, 169109-169123, 2026. DOI: 10.1109/ACCESS.2026.3748712'
+  url: 'https://ieeexplore.ieee.org/document/11769493'
+- region: international
+  type: journal
+  year: 2026
   authors: Manar Alnaasan, Md Selim Sarowar & Sungho Kim*
   title: 'Fusion VLM-Gait: RGB-D fusion in vision-language models for explainable multi-task Parkinsonian gait analysis'
   venue: 'Scientific Reports, 2026. DOI: 10.1038/s41598-026-67440-x'
