@@ -115,6 +115,12 @@
 - region: domestic
   type: conference
   year: 2026
+  authors: Md Selim Sarowar, Sungho Kim*
+  title: 'VFM-VLM: Vision Foundation Model and Vision Language Model based Visual Comparison for 3D Pose Estimation'
+  venue: IEIE 2026
+- region: domestic
+  type: conference
+  year: 2026
   authors: Sin I, Kim S, Jeong N
   title: Domain-Specific Image Classification for USV Identification in Maritime Surveillance
   venue: 한국과학기술학회 학술대회, 2026
